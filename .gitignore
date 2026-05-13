@@ -1,0 +1,96 @@
+# WordPress Core (if managed separately)
+# Uncomment these if you do not want to track WordPress core files
+# wp-admin/
+# wp-includes/
+# index.php
+# wp-activate.php
+# wp-blog-header.php
+# wp-comments-post.php
+# wp-cron.php
+# wp-links-opml.php
+# wp-load.php
+# wp-login.php
+# wp-mail.php
+# wp-settings.php
+# wp-signup.php
+# wp-trackback.php
+# xmlrpc.php
+
+# Environment Configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# WordPress Configuration & Credentials
+wp-config.php
+!wp-config-sample.php
+
+# WordPress Content & User Data
+wp-content/uploads/
+wp-content/cache/
+wp-content/updraft/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/w3tc-config/
+
+# Dependencies
+node_modules/
+vendor/
+# Note: composer.lock, package-lock.json, and yarn.lock are NOT ignored so they can be tracked.
+
+# Third-Party Plugins & Themes
+# If you ONLY want to commit your custom theme/plugins, uncomment these lines and add your paths:
+# wp-content/plugins/*
+# !wp-content/plugins/upagency-core/
+# wp-content/themes/*
+# !wp-content/themes/upagency-theme/
+
+# Log Files
+*.log
+debug.log
+wp-content/debug.log
+
+# Database Dumps and Backups
+*.sql
+*.sql.gz
+*.gz
+*.tar
+*.tar.gz
+*.zip
+
+# Local / Dev Tooling Overrides
+*.local.yml
+docker-compose.override.yml
+*.override.yml
+wp-cli.local.yml
+
+# Private Certificates and SSH Keys
+*.pem
+*.key
+*.crt
+*.cert
+id_rsa
+id_rsa.pub
+
+# Secrets, API Keys, License Keys
+# Generally stored in .env or wp-config.php, but ignoring common config secret files:
+auth.json
+secrets.yml
+
+# OS and Editor files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Internal Development Docs
+# These are dev-only guides and action plans, not part of the public codebase
+docs/
