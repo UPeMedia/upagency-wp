@@ -1,0 +1,747 @@
+{
+  "id": 2003,
+  "name": "up-section-hero",
+  "title": "UP Group Studio — 01 Hero & Clients",
+  "type": "section",
+  "templateType": "section",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "j6ad2e",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "he8697"
+      ],
+      "settings": {
+        "_cssClasses": "dark-zone hero-section",
+        "_hidden": {
+          "_cssClasses": "dark-zone hero-section"
+        },
+        "_cssId": "hero"
+      },
+      "label": "Hero & Clients Section"
+    },
+    {
+      "id": "he8697",
+      "name": "container",
+      "parent": "j6ad2e",
+      "children": [
+        "z20699",
+        "m0cc38"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Hero Container"
+    },
+    {
+      "id": "z20699",
+      "name": "block",
+      "parent": "he8697",
+      "children": [
+        "m7b3bd",
+        "y3ea86",
+        "za0414"
+      ],
+      "settings": {
+        "_cssClasses": "hero-mesh-card",
+        "_hidden": {
+          "_cssClasses": "hero-mesh-card"
+        }
+      },
+      "label": "Hero Mesh Gradient Card"
+    },
+    {
+      "id": "m7b3bd",
+      "name": "block",
+      "parent": "z20699",
+      "children": [],
+      "settings": {
+        "_cssClasses": "mesh-grain",
+        "_hidden": {
+          "_cssClasses": "mesh-grain"
+        }
+      },
+      "label": "Mesh Grain Overlay"
+    },
+    {
+      "id": "y3ea86",
+      "name": "block",
+      "parent": "z20699",
+      "children": [
+        "k87008",
+        "e61c3b"
+      ],
+      "settings": {
+        "_cssClasses": "hero-mesh-card__content",
+        "_hidden": {
+          "_cssClasses": "hero-mesh-card__content"
+        }
+      },
+      "label": "Hero Copy Wrapper"
+    },
+    {
+      "id": "k87008",
+      "name": "heading",
+      "parent": "y3ea86",
+      "children": [],
+      "settings": {
+        "_cssClasses": "hero-title",
+        "_hidden": {
+          "_cssClasses": "hero-title"
+        },
+        "tag": "h1",
+        "text": "Enciende tu<br>Potencial Digital",
+        "_attributes": [
+          {
+            "id": "i19a1f",
+            "name": "data-i18n",
+            "value": "hero.title"
+          }
+        ]
+      },
+      "label": "Hero Title"
+    },
+    {
+      "id": "e61c3b",
+      "name": "text-basic",
+      "parent": "y3ea86",
+      "children": [],
+      "settings": {
+        "_cssClasses": "hero-subtitle",
+        "_hidden": {
+          "_cssClasses": "hero-subtitle"
+        },
+        "tag": "p",
+        "text": "Somos <strong>UP Group Studio</strong>, un estudio digital en Guatemala y Houston, TX. Llevamos más de 15 años creando sitios web a medida, identidades visuales y estrategias digitales que cautivan y convierten.",
+        "_attributes": [
+          {
+            "id": "b34745",
+            "name": "data-i18n",
+            "value": "hero.desc"
+          }
+        ]
+      },
+      "label": "Hero Subtitle"
+    },
+    {
+      "id": "za0414",
+      "name": "shortcode",
+      "parent": "z20699",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_scroll_stamp]"
+      },
+      "label": "Hero Rotating Stamp"
+    },
+    {
+      "id": "m0cc38",
+      "name": "block",
+      "parent": "he8697",
+      "children": [
+        "s775b2"
+      ],
+      "settings": {
+        "_cssClasses": "clients-section",
+        "_hidden": {
+          "_cssClasses": "clients-section"
+        }
+      },
+      "label": "Clients Logos Wrapper"
+    },
+    {
+      "id": "s775b2",
+      "name": "block",
+      "parent": "m0cc38",
+      "children": [
+        "u6230c",
+        "q9cae5",
+        "ra31c3",
+        "cda5a4",
+        "e65ce5",
+        "le8846",
+        "ff7517",
+        "f80787",
+        "k26adf",
+        "p1d91d",
+        "y2a6c8",
+        "sa6ba0"
+      ],
+      "settings": {
+        "_cssClasses": "clients-grid",
+        "_hidden": {
+          "_cssClasses": "clients-grid"
+        }
+      },
+      "label": "Clients Grid (2x6)"
+    },
+    {
+      "id": "u6230c",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "pe8caf"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client INDE"
+    },
+    {
+      "id": "pe8caf",
+      "name": "block",
+      "parent": "u6230c",
+      "children": [
+        "w47c36",
+        "l20212"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark INDE"
+    },
+    {
+      "id": "w47c36",
+      "name": "icon",
+      "parent": "pe8caf",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-bolt"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "l20212",
+      "name": "text-basic",
+      "parent": "pe8caf",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "INDE"
+      },
+      "label": "INDE"
+    },
+    {
+      "id": "q9cae5",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "b50ff7"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client NANAJUANA"
+    },
+    {
+      "id": "b50ff7",
+      "name": "block",
+      "parent": "q9cae5",
+      "children": [
+        "f5ef0b"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--serif",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--serif"
+        },
+        "tag": "span"
+      },
+      "label": "Mark NANAJUANA"
+    },
+    {
+      "id": "f5ef0b",
+      "name": "text-basic",
+      "parent": "b50ff7",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "NANAJUANA"
+      },
+      "label": "NANAJUANA"
+    },
+    {
+      "id": "ra31c3",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "m22185"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client TIKAL FUTURA"
+    },
+    {
+      "id": "m22185",
+      "name": "block",
+      "parent": "ra31c3",
+      "children": [
+        "lbae77",
+        "j636f4"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark TIKAL FUTURA"
+    },
+    {
+      "id": "lbae77",
+      "name": "icon",
+      "parent": "m22185",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-building-columns"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "j636f4",
+      "name": "text-basic",
+      "parent": "m22185",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "TIKAL FUTURA"
+      },
+      "label": "TIKAL FUTURA"
+    },
+    {
+      "id": "cda5a4",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "p06dec"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client HYUNDAI"
+    },
+    {
+      "id": "p06dec",
+      "name": "block",
+      "parent": "cda5a4",
+      "children": [
+        "e49d64"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--bold",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--bold"
+        },
+        "tag": "span"
+      },
+      "label": "Mark HYUNDAI"
+    },
+    {
+      "id": "e49d64",
+      "name": "text-basic",
+      "parent": "p06dec",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "HYUNDAI"
+      },
+      "label": "HYUNDAI"
+    },
+    {
+      "id": "e65ce5",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "m96eb1"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client BBDO"
+    },
+    {
+      "id": "m96eb1",
+      "name": "block",
+      "parent": "e65ce5",
+      "children": [
+        "h20742"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--heavy",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--heavy"
+        },
+        "tag": "span"
+      },
+      "label": "Mark BBDO"
+    },
+    {
+      "id": "h20742",
+      "name": "text-basic",
+      "parent": "m96eb1",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "BBDO"
+      },
+      "label": "BBDO"
+    },
+    {
+      "id": "le8846",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "m86ffb"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client CAMINO REAL"
+    },
+    {
+      "id": "m86ffb",
+      "name": "block",
+      "parent": "le8846",
+      "children": [
+        "ha8129"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--serif",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--serif"
+        },
+        "tag": "span"
+      },
+      "label": "Mark CAMINO REAL"
+    },
+    {
+      "id": "ha8129",
+      "name": "text-basic",
+      "parent": "m86ffb",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "CAMINO REAL"
+      },
+      "label": "CAMINO REAL"
+    },
+    {
+      "id": "ff7517",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "a4b69e"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client BILTMORE"
+    },
+    {
+      "id": "a4b69e",
+      "name": "block",
+      "parent": "ff7517",
+      "children": [
+        "rb6b9e"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark BILTMORE"
+    },
+    {
+      "id": "rb6b9e",
+      "name": "text-basic",
+      "parent": "a4b69e",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "BILTMORE"
+      },
+      "label": "BILTMORE"
+    },
+    {
+      "id": "f80787",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "tcf031"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client MRC GLOBAL"
+    },
+    {
+      "id": "tcf031",
+      "name": "block",
+      "parent": "f80787",
+      "children": [
+        "t9c33e"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--bold",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--bold"
+        },
+        "tag": "span"
+      },
+      "label": "Mark MRC GLOBAL"
+    },
+    {
+      "id": "t9c33e",
+      "name": "text-basic",
+      "parent": "tcf031",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "MRC GLOBAL"
+      },
+      "label": "MRC GLOBAL"
+    },
+    {
+      "id": "k26adf",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "i46428"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client COASTAL DEBT"
+    },
+    {
+      "id": "i46428",
+      "name": "block",
+      "parent": "k26adf",
+      "children": [
+        "yaf9b8",
+        "j506b4"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark COASTAL DEBT"
+    },
+    {
+      "id": "yaf9b8",
+      "name": "icon",
+      "parent": "i46428",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-shield-halved"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "j506b4",
+      "name": "text-basic",
+      "parent": "i46428",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "COASTAL DEBT"
+      },
+      "label": "COASTAL DEBT"
+    },
+    {
+      "id": "p1d91d",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "bba8c9"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client CIMCA"
+    },
+    {
+      "id": "bba8c9",
+      "name": "block",
+      "parent": "p1d91d",
+      "children": [
+        "jba16d"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark CIMCA"
+    },
+    {
+      "id": "jba16d",
+      "name": "text-basic",
+      "parent": "bba8c9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "CIMCA"
+      },
+      "label": "CIMCA"
+    },
+    {
+      "id": "y2a6c8",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "h1bd4d"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client ALDEAS SOS"
+    },
+    {
+      "id": "h1bd4d",
+      "name": "block",
+      "parent": "y2a6c8",
+      "children": [
+        "yca0a2",
+        "de9c32"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark ALDEAS SOS"
+    },
+    {
+      "id": "yca0a2",
+      "name": "icon",
+      "parent": "h1bd4d",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-hand-holding-heart"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "de9c32",
+      "name": "text-basic",
+      "parent": "h1bd4d",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "ALDEAS SOS"
+      },
+      "label": "ALDEAS SOS"
+    },
+    {
+      "id": "sa6ba0",
+      "name": "block",
+      "parent": "s775b2",
+      "children": [
+        "pfc154"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client RODRI8"
+    },
+    {
+      "id": "pfc154",
+      "name": "block",
+      "parent": "sa6ba0",
+      "children": [
+        "af76f9"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--mono",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--mono"
+        },
+        "tag": "span"
+      },
+      "label": "Mark RODRI8"
+    },
+    {
+      "id": "af76f9",
+      "name": "text-basic",
+      "parent": "pfc154",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "RODRI8"
+      },
+      "label": "RODRI8"
+    }
+  ]
+}

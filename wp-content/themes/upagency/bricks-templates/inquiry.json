@@ -1,0 +1,269 @@
+{
+  "id": 2007,
+  "name": "up-section-inquiry",
+  "title": "UP Group Studio — 05 Split Rocket CTA & Inquiry Form",
+  "type": "section",
+  "templateType": "section",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "u94bef",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "d25ac5"
+      ],
+      "settings": {
+        "_cssClasses": "light-zone cta-banner-section",
+        "_hidden": {
+          "_cssClasses": "light-zone cta-banner-section"
+        },
+        "_cssId": "inquiry"
+      },
+      "label": "Split Rocket CTA & Inquiry Form"
+    },
+    {
+      "id": "d25ac5",
+      "name": "container",
+      "parent": "u94bef",
+      "children": [
+        "r8a490",
+        "c00f6c"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Inquiry Container"
+    },
+    {
+      "id": "r8a490",
+      "name": "block",
+      "parent": "d25ac5",
+      "children": [
+        "o802cc",
+        "ab09d3"
+      ],
+      "settings": {
+        "_cssClasses": "split-rocket-card",
+        "_hidden": {
+          "_cssClasses": "split-rocket-card"
+        }
+      },
+      "label": "Split Rocket Card"
+    },
+    {
+      "id": "o802cc",
+      "name": "block",
+      "parent": "r8a490",
+      "children": [
+        "u1deeb",
+        "o5c84a",
+        "c53b56",
+        "te7cab"
+      ],
+      "settings": {
+        "_cssClasses": "split-rocket-card__left",
+        "_hidden": {
+          "_cssClasses": "split-rocket-card__left"
+        }
+      },
+      "label": "Split Left Copy"
+    },
+    {
+      "id": "u1deeb",
+      "name": "text-basic",
+      "parent": "o802cc",
+      "children": [],
+      "settings": {
+        "_cssClasses": "split-kicker",
+        "_hidden": {
+          "_cssClasses": "split-kicker"
+        },
+        "tag": "span",
+        "text": "¿LISTO PARA DESPEGAR?",
+        "_attributes": [
+          {
+            "id": "n9f66c",
+            "name": "data-i18n",
+            "value": "ctaBanner.kicker"
+          }
+        ]
+      },
+      "label": "Kicker"
+    },
+    {
+      "id": "o5c84a",
+      "name": "heading",
+      "parent": "o802cc",
+      "children": [],
+      "settings": {
+        "_cssClasses": "split-title",
+        "_hidden": {
+          "_cssClasses": "split-title"
+        },
+        "tag": "h2",
+        "text": "¿Necesitas un<br><span class=\"doodle-word\">sitio web</span> de alto nivel?",
+        "_attributes": [
+          {
+            "id": "zedb12",
+            "name": "data-i18n",
+            "value": "ctaBanner.title"
+          }
+        ]
+      },
+      "label": "Split Title"
+    },
+    {
+      "id": "c53b56",
+      "name": "text-basic",
+      "parent": "o802cc",
+      "children": [],
+      "settings": {
+        "_cssClasses": "split-desc",
+        "_hidden": {
+          "_cssClasses": "split-desc"
+        },
+        "tag": "p",
+        "text": "Completa tus datos abajo para enviarnos un resumen directo por WhatsApp o mensaje directo.",
+        "_attributes": [
+          {
+            "id": "u4b498",
+            "name": "data-i18n",
+            "value": "ctaBanner.desc"
+          }
+        ]
+      },
+      "label": "Split Description"
+    },
+    {
+      "id": "te7cab",
+      "name": "block",
+      "parent": "o802cc",
+      "children": [
+        "x6cc0a",
+        "x8e721"
+      ],
+      "settings": {
+        "_cssClasses": "split-badges",
+        "_hidden": {
+          "_cssClasses": "split-badges"
+        }
+      },
+      "label": "Location Badges"
+    },
+    {
+      "id": "x6cc0a",
+      "name": "block",
+      "parent": "te7cab",
+      "children": [
+        "v59a77",
+        "a6b901"
+      ],
+      "settings": {
+        "tag": "span"
+      },
+      "label": "Guatemala"
+    },
+    {
+      "id": "v59a77",
+      "name": "icon",
+      "parent": "x6cc0a",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-check"
+        },
+        "iconSize": "12"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "a6b901",
+      "name": "text-basic",
+      "parent": "x6cc0a",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Guatemala"
+      },
+      "label": "Guatemala"
+    },
+    {
+      "id": "x8e721",
+      "name": "block",
+      "parent": "te7cab",
+      "children": [
+        "f9a337",
+        "ba9e2a"
+      ],
+      "settings": {
+        "tag": "span"
+      },
+      "label": "Houston, TX"
+    },
+    {
+      "id": "f9a337",
+      "name": "icon",
+      "parent": "x8e721",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-check"
+        },
+        "iconSize": "12"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ba9e2a",
+      "name": "text-basic",
+      "parent": "x8e721",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Houston, TX"
+      },
+      "label": "Houston, TX"
+    },
+    {
+      "id": "ab09d3",
+      "name": "block",
+      "parent": "r8a490",
+      "children": [
+        "w32785"
+      ],
+      "settings": {
+        "_cssClasses": "split-rocket-card__right",
+        "_hidden": {
+          "_cssClasses": "split-rocket-card__right"
+        }
+      },
+      "label": "Split Right Rocket Art"
+    },
+    {
+      "id": "w32785",
+      "name": "shortcode",
+      "parent": "ab09d3",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_rocket_illustration]"
+      },
+      "label": "Rocket Vector Illustration"
+    },
+    {
+      "id": "c00f6c",
+      "name": "shortcode",
+      "parent": "d25ac5",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_inquiry_form]"
+      },
+      "label": "Interactive Project Inquiry Form"
+    }
+  ]
+}

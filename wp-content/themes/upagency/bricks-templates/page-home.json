@@ -1,0 +1,4433 @@
+{
+  "id": 2008,
+  "name": "up-page-home",
+  "title": "UP Group Studio — Complete Home Page",
+  "type": "content",
+  "templateType": "content",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "o118b6",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "u147bd"
+      ],
+      "settings": {
+        "_cssClasses": "dark-zone hero-section",
+        "_hidden": {
+          "_cssClasses": "dark-zone hero-section"
+        },
+        "_cssId": "hero"
+      },
+      "label": "Hero & Clients Section"
+    },
+    {
+      "id": "u147bd",
+      "name": "container",
+      "parent": "o118b6",
+      "children": [
+        "l9c60e",
+        "c60e0e"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Hero Container"
+    },
+    {
+      "id": "l9c60e",
+      "name": "block",
+      "parent": "u147bd",
+      "children": [
+        "d7be15",
+        "c1f535",
+        "yca427"
+      ],
+      "settings": {
+        "_cssClasses": "hero-mesh-card",
+        "_hidden": {
+          "_cssClasses": "hero-mesh-card"
+        }
+      },
+      "label": "Hero Mesh Gradient Card"
+    },
+    {
+      "id": "d7be15",
+      "name": "block",
+      "parent": "l9c60e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "mesh-grain",
+        "_hidden": {
+          "_cssClasses": "mesh-grain"
+        }
+      },
+      "label": "Mesh Grain Overlay"
+    },
+    {
+      "id": "c1f535",
+      "name": "block",
+      "parent": "l9c60e",
+      "children": [
+        "e547e1",
+        "q7607e"
+      ],
+      "settings": {
+        "_cssClasses": "hero-mesh-card__content",
+        "_hidden": {
+          "_cssClasses": "hero-mesh-card__content"
+        }
+      },
+      "label": "Hero Copy Wrapper"
+    },
+    {
+      "id": "e547e1",
+      "name": "heading",
+      "parent": "c1f535",
+      "children": [],
+      "settings": {
+        "_cssClasses": "hero-title",
+        "_hidden": {
+          "_cssClasses": "hero-title"
+        },
+        "tag": "h1",
+        "text": "Enciende tu<br>Potencial Digital",
+        "_attributes": [
+          {
+            "id": "m0d848",
+            "name": "data-i18n",
+            "value": "hero.title"
+          }
+        ]
+      },
+      "label": "Hero Title"
+    },
+    {
+      "id": "q7607e",
+      "name": "text-basic",
+      "parent": "c1f535",
+      "children": [],
+      "settings": {
+        "_cssClasses": "hero-subtitle",
+        "_hidden": {
+          "_cssClasses": "hero-subtitle"
+        },
+        "tag": "p",
+        "text": "Somos <strong>UP Group Studio</strong>, un estudio digital en Guatemala y Houston, TX. Llevamos más de 15 años creando sitios web a medida, identidades visuales y estrategias digitales que cautivan y convierten.",
+        "_attributes": [
+          {
+            "id": "ka02d6",
+            "name": "data-i18n",
+            "value": "hero.desc"
+          }
+        ]
+      },
+      "label": "Hero Subtitle"
+    },
+    {
+      "id": "yca427",
+      "name": "shortcode",
+      "parent": "l9c60e",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_scroll_stamp]"
+      },
+      "label": "Hero Rotating Stamp"
+    },
+    {
+      "id": "c60e0e",
+      "name": "block",
+      "parent": "u147bd",
+      "children": [
+        "j0c5ae"
+      ],
+      "settings": {
+        "_cssClasses": "clients-section",
+        "_hidden": {
+          "_cssClasses": "clients-section"
+        }
+      },
+      "label": "Clients Logos Wrapper"
+    },
+    {
+      "id": "j0c5ae",
+      "name": "block",
+      "parent": "c60e0e",
+      "children": [
+        "n954ad",
+        "r83d79",
+        "vdb611",
+        "n005a6",
+        "c04b0c",
+        "e18b85",
+        "zb84ee",
+        "t56c32",
+        "l6871e",
+        "xdd510",
+        "o62d6f",
+        "e29ef8"
+      ],
+      "settings": {
+        "_cssClasses": "clients-grid",
+        "_hidden": {
+          "_cssClasses": "clients-grid"
+        }
+      },
+      "label": "Clients Grid (2x6)"
+    },
+    {
+      "id": "n954ad",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "ia0de4"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client INDE"
+    },
+    {
+      "id": "ia0de4",
+      "name": "block",
+      "parent": "n954ad",
+      "children": [
+        "c8e3c8",
+        "mf2976"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark INDE"
+    },
+    {
+      "id": "c8e3c8",
+      "name": "icon",
+      "parent": "ia0de4",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-bolt"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "mf2976",
+      "name": "text-basic",
+      "parent": "ia0de4",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "INDE"
+      },
+      "label": "INDE"
+    },
+    {
+      "id": "r83d79",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "tee038"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client NANAJUANA"
+    },
+    {
+      "id": "tee038",
+      "name": "block",
+      "parent": "r83d79",
+      "children": [
+        "z59b00"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--serif",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--serif"
+        },
+        "tag": "span"
+      },
+      "label": "Mark NANAJUANA"
+    },
+    {
+      "id": "z59b00",
+      "name": "text-basic",
+      "parent": "tee038",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "NANAJUANA"
+      },
+      "label": "NANAJUANA"
+    },
+    {
+      "id": "vdb611",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "oe7acc"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client TIKAL FUTURA"
+    },
+    {
+      "id": "oe7acc",
+      "name": "block",
+      "parent": "vdb611",
+      "children": [
+        "g0a219",
+        "d007ab"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark TIKAL FUTURA"
+    },
+    {
+      "id": "g0a219",
+      "name": "icon",
+      "parent": "oe7acc",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-building-columns"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "d007ab",
+      "name": "text-basic",
+      "parent": "oe7acc",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "TIKAL FUTURA"
+      },
+      "label": "TIKAL FUTURA"
+    },
+    {
+      "id": "n005a6",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "a34238"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client HYUNDAI"
+    },
+    {
+      "id": "a34238",
+      "name": "block",
+      "parent": "n005a6",
+      "children": [
+        "wf1f45"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--bold",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--bold"
+        },
+        "tag": "span"
+      },
+      "label": "Mark HYUNDAI"
+    },
+    {
+      "id": "wf1f45",
+      "name": "text-basic",
+      "parent": "a34238",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "HYUNDAI"
+      },
+      "label": "HYUNDAI"
+    },
+    {
+      "id": "c04b0c",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "b9df85"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client BBDO"
+    },
+    {
+      "id": "b9df85",
+      "name": "block",
+      "parent": "c04b0c",
+      "children": [
+        "s57666"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--heavy",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--heavy"
+        },
+        "tag": "span"
+      },
+      "label": "Mark BBDO"
+    },
+    {
+      "id": "s57666",
+      "name": "text-basic",
+      "parent": "b9df85",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "BBDO"
+      },
+      "label": "BBDO"
+    },
+    {
+      "id": "e18b85",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "fbf2af"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client CAMINO REAL"
+    },
+    {
+      "id": "fbf2af",
+      "name": "block",
+      "parent": "e18b85",
+      "children": [
+        "ac7889"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--serif",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--serif"
+        },
+        "tag": "span"
+      },
+      "label": "Mark CAMINO REAL"
+    },
+    {
+      "id": "ac7889",
+      "name": "text-basic",
+      "parent": "fbf2af",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "CAMINO REAL"
+      },
+      "label": "CAMINO REAL"
+    },
+    {
+      "id": "zb84ee",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "k26bdb"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client BILTMORE"
+    },
+    {
+      "id": "k26bdb",
+      "name": "block",
+      "parent": "zb84ee",
+      "children": [
+        "h9b386"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark BILTMORE"
+    },
+    {
+      "id": "h9b386",
+      "name": "text-basic",
+      "parent": "k26bdb",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "BILTMORE"
+      },
+      "label": "BILTMORE"
+    },
+    {
+      "id": "t56c32",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "q4cbcc"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client MRC GLOBAL"
+    },
+    {
+      "id": "q4cbcc",
+      "name": "block",
+      "parent": "t56c32",
+      "children": [
+        "d9aa4c"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--bold",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--bold"
+        },
+        "tag": "span"
+      },
+      "label": "Mark MRC GLOBAL"
+    },
+    {
+      "id": "d9aa4c",
+      "name": "text-basic",
+      "parent": "q4cbcc",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "MRC GLOBAL"
+      },
+      "label": "MRC GLOBAL"
+    },
+    {
+      "id": "l6871e",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "i427e3"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client COASTAL DEBT"
+    },
+    {
+      "id": "i427e3",
+      "name": "block",
+      "parent": "l6871e",
+      "children": [
+        "m60752",
+        "nf2f71"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark COASTAL DEBT"
+    },
+    {
+      "id": "m60752",
+      "name": "icon",
+      "parent": "i427e3",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-shield-halved"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "nf2f71",
+      "name": "text-basic",
+      "parent": "i427e3",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "COASTAL DEBT"
+      },
+      "label": "COASTAL DEBT"
+    },
+    {
+      "id": "xdd510",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "vd0e4b"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client CIMCA"
+    },
+    {
+      "id": "vd0e4b",
+      "name": "block",
+      "parent": "xdd510",
+      "children": [
+        "r77ed2"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark CIMCA"
+    },
+    {
+      "id": "r77ed2",
+      "name": "text-basic",
+      "parent": "vd0e4b",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "CIMCA"
+      },
+      "label": "CIMCA"
+    },
+    {
+      "id": "o62d6f",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "scfedd"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client ALDEAS SOS"
+    },
+    {
+      "id": "scfedd",
+      "name": "block",
+      "parent": "o62d6f",
+      "children": [
+        "p40bf6",
+        "ee1f16"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark",
+        "_hidden": {
+          "_cssClasses": "logo-mark"
+        },
+        "tag": "span"
+      },
+      "label": "Mark ALDEAS SOS"
+    },
+    {
+      "id": "p40bf6",
+      "name": "icon",
+      "parent": "scfedd",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-hand-holding-heart"
+        },
+        "iconSize": "16"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ee1f16",
+      "name": "text-basic",
+      "parent": "scfedd",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "ALDEAS SOS"
+      },
+      "label": "ALDEAS SOS"
+    },
+    {
+      "id": "e29ef8",
+      "name": "block",
+      "parent": "j0c5ae",
+      "children": [
+        "wdaa3b"
+      ],
+      "settings": {
+        "_cssClasses": "client-logo-item",
+        "_hidden": {
+          "_cssClasses": "client-logo-item"
+        }
+      },
+      "label": "Client RODRI8"
+    },
+    {
+      "id": "wdaa3b",
+      "name": "block",
+      "parent": "e29ef8",
+      "children": [
+        "w0b542"
+      ],
+      "settings": {
+        "_cssClasses": "logo-mark logo-mark--mono",
+        "_hidden": {
+          "_cssClasses": "logo-mark logo-mark--mono"
+        },
+        "tag": "span"
+      },
+      "label": "Mark RODRI8"
+    },
+    {
+      "id": "w0b542",
+      "name": "text-basic",
+      "parent": "wdaa3b",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "RODRI8"
+      },
+      "label": "RODRI8"
+    },
+    {
+      "id": "dc582b",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "i4ca22",
+        "v83ec1"
+      ],
+      "settings": {
+        "_cssClasses": "dark-zone portfolio-section",
+        "_hidden": {
+          "_cssClasses": "dark-zone portfolio-section"
+        },
+        "_cssId": "works"
+      },
+      "label": "Portfolio Bento & Manifesto 1"
+    },
+    {
+      "id": "i4ca22",
+      "name": "container",
+      "parent": "dc582b",
+      "children": [
+        "kb009f",
+        "df0b32"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Portfolio Container"
+    },
+    {
+      "id": "kb009f",
+      "name": "block",
+      "parent": "i4ca22",
+      "children": [
+        "h46769",
+        "w5dabd",
+        "if3a09",
+        "r6cab2",
+        "eb7d40",
+        "ld817b"
+      ],
+      "settings": {
+        "_cssClasses": "portfolio-bento",
+        "_hidden": {
+          "_cssClasses": "portfolio-bento"
+        }
+      },
+      "label": "Portfolio Bento Grid"
+    },
+    {
+      "id": "h46769",
+      "name": "block",
+      "parent": "kb009f",
+      "children": [
+        "d10739",
+        "ibdafa"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item",
+        "_hidden": {
+          "_cssClasses": "bento-item"
+        },
+        "tag": "article"
+      },
+      "label": "Project Nanajuana Río Dulce"
+    },
+    {
+      "id": "d10739",
+      "name": "block",
+      "parent": "h46769",
+      "children": [
+        "m19d78",
+        "vf635e"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--lilac",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--lilac"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "i26cf2",
+            "name": "data-project",
+            "value": "Nanajuana Río Dulce"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=nanajuana"
+        }
+      },
+      "label": "Card Nanajuana Río Dulce"
+    },
+    {
+      "id": "m19d78",
+      "name": "block",
+      "parent": "d10739",
+      "children": [
+        "t76286"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "t76286",
+      "name": "block",
+      "parent": "m19d78",
+      "children": [
+        "d092d2",
+        "rcd786",
+        "z658a7"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "d092d2",
+      "name": "icon",
+      "parent": "t76286",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-anchor"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "rcd786",
+      "name": "text-basic",
+      "parent": "t76286",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "NANAJUANA"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "z658a7",
+      "name": "text-basic",
+      "parent": "t76286",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "RÍO DULCE • MARINA & RESORT"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "vf635e",
+      "name": "block",
+      "parent": "d10739",
+      "children": [
+        "t1021c",
+        "m11672",
+        "cd0954"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "t1021c",
+      "name": "text-basic",
+      "parent": "vf635e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "UI/UX • Booking Engine • Brand Content",
+        "_attributes": [
+          {
+            "id": "xe0994",
+            "name": "data-i18n",
+            "value": "works.p1Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "m11672",
+      "name": "text-basic",
+      "parent": "vf635e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Experiencia digital inmersiva y reservas directas para el destino náutico más exclusivo de Guatemala.",
+        "_attributes": [
+          {
+            "id": "p13db2",
+            "name": "data-i18n",
+            "value": "works.p1Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "cd0954",
+      "name": "block",
+      "parent": "vf635e",
+      "children": [
+        "z70a86",
+        "a103a3"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "z70a86",
+      "name": "text-basic",
+      "parent": "cd0954",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "qeb631",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "a103a3",
+      "name": "icon",
+      "parent": "cd0954",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ibdafa",
+      "name": "block",
+      "parent": "h46769",
+      "children": [
+        "mc4eba",
+        "uef554"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "mc4eba",
+      "name": "heading",
+      "parent": "ibdafa",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Nanajuana Río Dulce"
+      },
+      "label": "Nanajuana Río Dulce"
+    },
+    {
+      "id": "uef554",
+      "name": "text-basic",
+      "parent": "ibdafa",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Diseño Web & Motor de Reservas",
+        "_attributes": [
+          {
+            "id": "t76629",
+            "name": "data-i18n",
+            "value": "works.p1Cat"
+          }
+        ]
+      },
+      "label": "Diseño Web & Motor de Reservas"
+    },
+    {
+      "id": "w5dabd",
+      "name": "block",
+      "parent": "kb009f",
+      "children": [
+        "gc296b",
+        "sef24c"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item bento-item--staggered",
+        "_hidden": {
+          "_cssClasses": "bento-item bento-item--staggered"
+        },
+        "tag": "article"
+      },
+      "label": "Project Grand Tikal Futura"
+    },
+    {
+      "id": "gc296b",
+      "name": "block",
+      "parent": "w5dabd",
+      "children": [
+        "oa998e",
+        "be6ea1"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--blue",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--blue"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "pbd9e2",
+            "name": "data-project",
+            "value": "Grand Tikal Futura"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=tikal-futura"
+        }
+      },
+      "label": "Card Grand Tikal Futura"
+    },
+    {
+      "id": "oa998e",
+      "name": "block",
+      "parent": "gc296b",
+      "children": [
+        "ycfa38"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "ycfa38",
+      "name": "block",
+      "parent": "oa998e",
+      "children": [
+        "bcf369",
+        "w1ac3f",
+        "m584ce"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "bcf369",
+      "name": "icon",
+      "parent": "ycfa38",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-gem"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "w1ac3f",
+      "name": "text-basic",
+      "parent": "ycfa38",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "TIKAL FUTURA"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "m584ce",
+      "name": "text-basic",
+      "parent": "ycfa38",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "GRAND HOTEL & CONVENTION CENTER"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "be6ea1",
+      "name": "block",
+      "parent": "gc296b",
+      "children": [
+        "ud9055",
+        "v647ad",
+        "qfd2c3"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "ud9055",
+      "name": "text-basic",
+      "parent": "be6ea1",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Arquitectura Corporativa • Portal de Eventos",
+        "_attributes": [
+          {
+            "id": "ea0074",
+            "name": "data-i18n",
+            "value": "works.p2Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "v647ad",
+      "name": "text-basic",
+      "parent": "be6ea1",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala.",
+        "_attributes": [
+          {
+            "id": "fa3dcc",
+            "name": "data-i18n",
+            "value": "works.p2Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "qfd2c3",
+      "name": "block",
+      "parent": "be6ea1",
+      "children": [
+        "t161bf",
+        "o0deca"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "t161bf",
+      "name": "text-basic",
+      "parent": "qfd2c3",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "p0d5a3",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "o0deca",
+      "name": "icon",
+      "parent": "qfd2c3",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "sef24c",
+      "name": "block",
+      "parent": "w5dabd",
+      "children": [
+        "ge6a3f",
+        "h0a662"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "ge6a3f",
+      "name": "heading",
+      "parent": "sef24c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Grand Tikal Futura"
+      },
+      "label": "Grand Tikal Futura"
+    },
+    {
+      "id": "h0a662",
+      "name": "text-basic",
+      "parent": "sef24c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Portal Corporativo & Convenciones",
+        "_attributes": [
+          {
+            "id": "yb6a40",
+            "name": "data-i18n",
+            "value": "works.p2Cat"
+          }
+        ]
+      },
+      "label": "Portal Corporativo & Convenciones"
+    },
+    {
+      "id": "if3a09",
+      "name": "block",
+      "parent": "kb009f",
+      "children": [
+        "d5a862",
+        "z77a70"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item",
+        "_hidden": {
+          "_cssClasses": "bento-item"
+        },
+        "tag": "article"
+      },
+      "label": "Project INDE Guatemala"
+    },
+    {
+      "id": "d5a862",
+      "name": "block",
+      "parent": "if3a09",
+      "children": [
+        "d311bc",
+        "kfc651"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--coral",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--coral"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "c3920b",
+            "name": "data-project",
+            "value": "INDE Guatemala"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=inde"
+        }
+      },
+      "label": "Card INDE Guatemala"
+    },
+    {
+      "id": "d311bc",
+      "name": "block",
+      "parent": "d5a862",
+      "children": [
+        "k36e99"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "k36e99",
+      "name": "block",
+      "parent": "d311bc",
+      "children": [
+        "w4f5e0",
+        "dea23a",
+        "w6d48e"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "w4f5e0",
+      "name": "icon",
+      "parent": "k36e99",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-bolt-lightning"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "dea23a",
+      "name": "text-basic",
+      "parent": "k36e99",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "INDE"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "w6d48e",
+      "name": "text-basic",
+      "parent": "k36e99",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "INSTITUTO NACIONAL DE ELECTRIFICACIÓN"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "kfc651",
+      "name": "block",
+      "parent": "d5a862",
+      "children": [
+        "a689f3",
+        "y5daa9",
+        "m2f78b"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "a689f3",
+      "name": "text-basic",
+      "parent": "kfc651",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Portal Institucional • Alta Disponibilidad",
+        "_attributes": [
+          {
+            "id": "lb734f",
+            "name": "data-i18n",
+            "value": "works.p3Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "y5daa9",
+      "name": "text-basic",
+      "parent": "kfc651",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Plataforma de alto tráfico con visualización energética nacional, estándares de accesibilidad y ciberseguridad.",
+        "_attributes": [
+          {
+            "id": "m45d9c",
+            "name": "data-i18n",
+            "value": "works.p3Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "m2f78b",
+      "name": "block",
+      "parent": "kfc651",
+      "children": [
+        "z68c61",
+        "u68def"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "z68c61",
+      "name": "text-basic",
+      "parent": "m2f78b",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "jd737a",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "u68def",
+      "name": "icon",
+      "parent": "m2f78b",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "z77a70",
+      "name": "block",
+      "parent": "if3a09",
+      "children": [
+        "y923ca",
+        "fc343d"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "y923ca",
+      "name": "heading",
+      "parent": "z77a70",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "INDE Guatemala"
+      },
+      "label": "INDE Guatemala"
+    },
+    {
+      "id": "fc343d",
+      "name": "text-basic",
+      "parent": "z77a70",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Plataforma Institucional & Datos",
+        "_attributes": [
+          {
+            "id": "rf3156",
+            "name": "data-i18n",
+            "value": "works.p3Cat"
+          }
+        ]
+      },
+      "label": "Plataforma Institucional & Datos"
+    },
+    {
+      "id": "r6cab2",
+      "name": "block",
+      "parent": "kb009f",
+      "children": [
+        "ca9b41",
+        "k76146"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item bento-item--staggered",
+        "_hidden": {
+          "_cssClasses": "bento-item bento-item--staggered"
+        },
+        "tag": "article"
+      },
+      "label": "Project Hyundai Comerciales"
+    },
+    {
+      "id": "ca9b41",
+      "name": "block",
+      "parent": "r6cab2",
+      "children": [
+        "i16e08",
+        "xcaa29"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--orchid",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--orchid"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "u58838",
+            "name": "data-project",
+            "value": "Hyundai Comerciales"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=hyundai"
+        }
+      },
+      "label": "Card Hyundai Comerciales"
+    },
+    {
+      "id": "i16e08",
+      "name": "block",
+      "parent": "ca9b41",
+      "children": [
+        "nb2237"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "nb2237",
+      "name": "block",
+      "parent": "i16e08",
+      "children": [
+        "nddbca",
+        "df4e20",
+        "m4febf"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "nddbca",
+      "name": "icon",
+      "parent": "nb2237",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-truck-fast"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "df4e20",
+      "name": "text-basic",
+      "parent": "nb2237",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "HYUNDAI"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "m4febf",
+      "name": "text-basic",
+      "parent": "nb2237",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "VEHÍCULOS COMERCIALES & FLOTILLAS"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "xcaa29",
+      "name": "block",
+      "parent": "ca9b41",
+      "children": [
+        "f63832",
+        "oc0ab1",
+        "r9fcc2"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "f63832",
+      "name": "text-basic",
+      "parent": "xcaa29",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Catálogo B2B • Embudo de Leads",
+        "_attributes": [
+          {
+            "id": "o8df2c",
+            "name": "data-i18n",
+            "value": "works.p4Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "oc0ab1",
+      "name": "text-basic",
+      "parent": "xcaa29",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Catálogo interactivo y cotizador en tiempo real para la línea de camiones y autobuses Hyundai.",
+        "_attributes": [
+          {
+            "id": "i0aadd",
+            "name": "data-i18n",
+            "value": "works.p4Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "r9fcc2",
+      "name": "block",
+      "parent": "xcaa29",
+      "children": [
+        "o6f4e9",
+        "b8e7f8"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "o6f4e9",
+      "name": "text-basic",
+      "parent": "r9fcc2",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "eda648",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "b8e7f8",
+      "name": "icon",
+      "parent": "r9fcc2",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "k76146",
+      "name": "block",
+      "parent": "r6cab2",
+      "children": [
+        "kf4a56",
+        "wf74ce"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "kf4a56",
+      "name": "heading",
+      "parent": "k76146",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Hyundai Comerciales"
+      },
+      "label": "Hyundai Comerciales"
+    },
+    {
+      "id": "wf74ce",
+      "name": "text-basic",
+      "parent": "k76146",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Catálogo Digital & Lead Generation",
+        "_attributes": [
+          {
+            "id": "d33759",
+            "name": "data-i18n",
+            "value": "works.p4Cat"
+          }
+        ]
+      },
+      "label": "Catálogo Digital & Lead Generation"
+    },
+    {
+      "id": "eb7d40",
+      "name": "block",
+      "parent": "kb009f",
+      "children": [
+        "g2e518",
+        "nbf8c1"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item",
+        "_hidden": {
+          "_cssClasses": "bento-item"
+        },
+        "tag": "article"
+      },
+      "label": "Project Coastal Debt (USA)"
+    },
+    {
+      "id": "g2e518",
+      "name": "block",
+      "parent": "eb7d40",
+      "children": [
+        "ld9e0b",
+        "ef02ad"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--mint",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--mint"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "cf3cd6",
+            "name": "data-project",
+            "value": "Coastal Debt (USA)"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=coastal-debt"
+        }
+      },
+      "label": "Card Coastal Debt (USA)"
+    },
+    {
+      "id": "ld9e0b",
+      "name": "block",
+      "parent": "g2e518",
+      "children": [
+        "he957b"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "he957b",
+      "name": "block",
+      "parent": "ld9e0b",
+      "children": [
+        "wc3769",
+        "uc6cda",
+        "d44bfb"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "wc3769",
+      "name": "icon",
+      "parent": "he957b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chart-line"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "uc6cda",
+      "name": "text-basic",
+      "parent": "he957b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "COASTAL DEBT"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "d44bfb",
+      "name": "text-basic",
+      "parent": "he957b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "FINANCIAL RELIEF • UNITED STATES"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "ef02ad",
+      "name": "block",
+      "parent": "g2e518",
+      "children": [
+        "lca2be",
+        "vc43fe",
+        "td8f01"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "lca2be",
+      "name": "text-basic",
+      "parent": "ef02ad",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "US Fintech Market • Speed Optimization",
+        "_attributes": [
+          {
+            "id": "h94dc0",
+            "name": "data-i18n",
+            "value": "works.p5Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "vc43fe",
+      "name": "text-basic",
+      "parent": "ef02ad",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Plataforma financiera para el mercado de EE.UU. con calculadoras interactivas y conversión de alto rendimiento.",
+        "_attributes": [
+          {
+            "id": "v0a07b",
+            "name": "data-i18n",
+            "value": "works.p5Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "td8f01",
+      "name": "block",
+      "parent": "ef02ad",
+      "children": [
+        "oc7c27",
+        "j99ed2"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "oc7c27",
+      "name": "text-basic",
+      "parent": "td8f01",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "x716fb",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "j99ed2",
+      "name": "icon",
+      "parent": "td8f01",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "nbf8c1",
+      "name": "block",
+      "parent": "eb7d40",
+      "children": [
+        "xc3d9d",
+        "u29fee"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "xc3d9d",
+      "name": "heading",
+      "parent": "nbf8c1",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Coastal Debt (USA)"
+      },
+      "label": "Coastal Debt (USA)"
+    },
+    {
+      "id": "u29fee",
+      "name": "text-basic",
+      "parent": "nbf8c1",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Fintech Web & Optimización",
+        "_attributes": [
+          {
+            "id": "i785eb",
+            "name": "data-i18n",
+            "value": "works.p5Cat"
+          }
+        ]
+      },
+      "label": "Fintech Web & Optimización"
+    },
+    {
+      "id": "ld817b",
+      "name": "block",
+      "parent": "kb009f",
+      "children": [
+        "o9f83f",
+        "f8f89b"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item bento-item--staggered",
+        "_hidden": {
+          "_cssClasses": "bento-item bento-item--staggered"
+        },
+        "tag": "article"
+      },
+      "label": "Project BBDO Guatemala"
+    },
+    {
+      "id": "o9f83f",
+      "name": "block",
+      "parent": "ld817b",
+      "children": [
+        "n60be0",
+        "p547f2"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--amber",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--amber"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "g6979b",
+            "name": "data-project",
+            "value": "BBDO Guatemala"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=bbdo"
+        }
+      },
+      "label": "Card BBDO Guatemala"
+    },
+    {
+      "id": "n60be0",
+      "name": "block",
+      "parent": "o9f83f",
+      "children": [
+        "h4a420"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "h4a420",
+      "name": "block",
+      "parent": "n60be0",
+      "children": [
+        "p15dce",
+        "h6c34b",
+        "pfc3d9"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "p15dce",
+      "name": "icon",
+      "parent": "h4a420",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-award"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "h6c34b",
+      "name": "text-basic",
+      "parent": "h4a420",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "BBDO"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "pfc3d9",
+      "name": "text-basic",
+      "parent": "h4a420",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "CREATIVE AGENCY NETWORK"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "p547f2",
+      "name": "block",
+      "parent": "o9f83f",
+      "children": [
+        "b16926",
+        "b2e619",
+        "l9c81e"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "b16926",
+      "name": "text-basic",
+      "parent": "p547f2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Creative Showcase • Video Portfolio",
+        "_attributes": [
+          {
+            "id": "db9862",
+            "name": "data-i18n",
+            "value": "works.p6Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "b2e619",
+      "name": "text-basic",
+      "parent": "p547f2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Showcase editorial multipremiado exhibiendo campañas regionales con fluidez y velocidad instantánea.",
+        "_attributes": [
+          {
+            "id": "yb60a9",
+            "name": "data-i18n",
+            "value": "works.p6Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "l9c81e",
+      "name": "block",
+      "parent": "p547f2",
+      "children": [
+        "teaadc",
+        "u0859e"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "teaadc",
+      "name": "text-basic",
+      "parent": "l9c81e",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "q77ab1",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "u0859e",
+      "name": "icon",
+      "parent": "l9c81e",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "f8f89b",
+      "name": "block",
+      "parent": "ld817b",
+      "children": [
+        "lf819e",
+        "bd2538"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "lf819e",
+      "name": "heading",
+      "parent": "f8f89b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "BBDO Guatemala"
+      },
+      "label": "BBDO Guatemala"
+    },
+    {
+      "id": "bd2538",
+      "name": "text-basic",
+      "parent": "f8f89b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Diseño Editorial & Portafolio",
+        "_attributes": [
+          {
+            "id": "gd383f",
+            "name": "data-i18n",
+            "value": "works.p6Cat"
+          }
+        ]
+      },
+      "label": "Diseño Editorial & Portafolio"
+    },
+    {
+      "id": "df0b32",
+      "name": "block",
+      "parent": "i4ca22",
+      "children": [
+        "d4d70d"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-section manifesto-section--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-section manifesto-section--dark"
+        }
+      },
+      "label": "Manifesto 1 Dark"
+    },
+    {
+      "id": "d4d70d",
+      "name": "block",
+      "parent": "df0b32",
+      "children": [
+        "z14183",
+        "ie442b"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-grid",
+        "_hidden": {
+          "_cssClasses": "manifesto-grid"
+        }
+      },
+      "label": "Manifesto Grid"
+    },
+    {
+      "id": "z14183",
+      "name": "block",
+      "parent": "d4d70d",
+      "children": [
+        "r3010f"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-stamp-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-stamp-col"
+        }
+      },
+      "label": "Stamp Column"
+    },
+    {
+      "id": "r3010f",
+      "name": "shortcode",
+      "parent": "z14183",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_manifesto_stamp_dark]"
+      },
+      "label": "Manifesto 1 Rotating Stamp"
+    },
+    {
+      "id": "ie442b",
+      "name": "block",
+      "parent": "d4d70d",
+      "children": [
+        "w67e2c",
+        "u8752f",
+        "l12685"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-copy-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-copy-col"
+        }
+      },
+      "label": "Manifesto Copy Column"
+    },
+    {
+      "id": "w67e2c",
+      "name": "text-basic",
+      "parent": "ie442b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead"
+        },
+        "tag": "p",
+        "text": "No solo hacemos <span class=\"doodle-word doodle-word--yellow\">sitios web.</span> Los hacemos visibles ante los ojos de todos y en Google. Hablamos geek, pero te explicamos cada paso sin tecnicismos incomprensibles para que tu proyecto digital sea <span class=\"doodle-word doodle-word--mint\">genial.</span>",
+        "_attributes": [
+          {
+            "id": "c3c0fc",
+            "name": "data-i18n",
+            "value": "manifesto1.p1"
+          }
+        ]
+      },
+      "label": "Manifesto Paragraph 1"
+    },
+    {
+      "id": "u8752f",
+      "name": "text-basic",
+      "parent": "ie442b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead"
+        },
+        "tag": "p",
+        "text": "Hemos trabajado en proyectos que salen de lo ordinario: retos que nos impulsan a <span class=\"doodle-word doodle-word--blue\">crear a medida</span> y superar expectativas. Eso es lo que amamos 💖: la excelencia técnica y visual, jamás el copiar y pegar.",
+        "_attributes": [
+          {
+            "id": "tf3480",
+            "name": "data-i18n",
+            "value": "manifesto1.p2"
+          }
+        ]
+      },
+      "label": "Manifesto Paragraph 2"
+    },
+    {
+      "id": "l12685",
+      "name": "block",
+      "parent": "ie442b",
+      "children": [
+        "mb7c0e",
+        "nc8dbc"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-footer",
+        "_hidden": {
+          "_cssClasses": "manifesto-footer"
+        }
+      },
+      "label": "Manifesto Footer"
+    },
+    {
+      "id": "mb7c0e",
+      "name": "text-basic",
+      "parent": "l12685",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-caption",
+        "_hidden": {
+          "_cssClasses": "manifesto-caption"
+        },
+        "tag": "p",
+        "text": "¿Tienes un proyecto en mente? Cuéntanos tus objetivos.",
+        "_attributes": [
+          {
+            "id": "oe1be7",
+            "name": "data-i18n",
+            "value": "manifesto1.caption"
+          }
+        ]
+      },
+      "label": "Manifesto Caption"
+    },
+    {
+      "id": "nc8dbc",
+      "name": "text-link",
+      "parent": "l12685",
+      "children": [],
+      "settings": {
+        "_cssClasses": "btn-gradient-pill",
+        "_hidden": {
+          "_cssClasses": "btn-gradient-pill"
+        },
+        "text": "Iniciar una conversación",
+        "_attributes": [
+          {
+            "id": "nfbce7",
+            "name": "data-i18n",
+            "value": "manifesto1.cta"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Manifesto CTA"
+    },
+    {
+      "id": "v83ec1",
+      "name": "shortcode",
+      "parent": "dc582b",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_marquee_ribbons]"
+      },
+      "label": "Criss-Crossed Marquee Ribbons"
+    },
+    {
+      "id": "x2d725",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "y6bab7",
+        "wfd568"
+      ],
+      "settings": {
+        "_cssClasses": "light-zone services-section",
+        "_hidden": {
+          "_cssClasses": "light-zone services-section"
+        },
+        "_cssId": "services"
+      },
+      "label": "Services À La Carte Section"
+    },
+    {
+      "id": "y6bab7",
+      "name": "block",
+      "parent": "x2d725",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-aurora-bg",
+        "_hidden": {
+          "_cssClasses": "services-aurora-bg"
+        }
+      },
+      "label": "Pastel Aurora Glow"
+    },
+    {
+      "id": "wfd568",
+      "name": "container",
+      "parent": "x2d725",
+      "children": [
+        "scbb48",
+        "w7de71"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Services Container"
+    },
+    {
+      "id": "scbb48",
+      "name": "block",
+      "parent": "wfd568",
+      "children": [
+        "e3c53f",
+        "pbceed",
+        "l10766"
+      ],
+      "settings": {
+        "_cssClasses": "services-header",
+        "_hidden": {
+          "_cssClasses": "services-header"
+        }
+      },
+      "label": "Services Header"
+    },
+    {
+      "id": "e3c53f",
+      "name": "text-basic",
+      "parent": "scbb48",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-kicker",
+        "_hidden": {
+          "_cssClasses": "services-kicker"
+        },
+        "tag": "span",
+        "text": "SOLUCIONES A LA MEDIDA DE TU NEGOCIO",
+        "_attributes": [
+          {
+            "id": "ce3853",
+            "name": "data-i18n",
+            "value": "services.kicker"
+          }
+        ]
+      },
+      "label": "Services Kicker"
+    },
+    {
+      "id": "pbceed",
+      "name": "heading",
+      "parent": "scbb48",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-main-title",
+        "_hidden": {
+          "_cssClasses": "services-main-title"
+        },
+        "tag": "h2",
+        "text": "<span data-i18n=\"services.title\">Nuestros servicios<br>à la carte</span> <span class=\"services-sticker\">🎨</span>"
+      },
+      "label": "Services Title"
+    },
+    {
+      "id": "l10766",
+      "name": "text-basic",
+      "parent": "scbb48",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-subtitle",
+        "_hidden": {
+          "_cssClasses": "services-subtitle"
+        },
+        "tag": "p",
+        "text": "Sin ataduras a un solo CMS ni plantillas prefabricadas. Elegimos la tecnología exacta que tu empresa necesita para escalar en Guatemala o Estados Unidos.",
+        "_attributes": [
+          {
+            "id": "e858ae",
+            "name": "data-i18n",
+            "value": "services.subtitle"
+          }
+        ]
+      },
+      "label": "Services Subtitle"
+    },
+    {
+      "id": "w7de71",
+      "name": "block",
+      "parent": "wfd568",
+      "children": [
+        "e66844",
+        "y5f919",
+        "v2746a",
+        "g53db3",
+        "s2f18c"
+      ],
+      "settings": {
+        "_cssClasses": "services-cards-grid",
+        "_hidden": {
+          "_cssClasses": "services-cards-grid"
+        }
+      },
+      "label": "Services Cards Grid"
+    },
+    {
+      "id": "e66844",
+      "name": "block",
+      "parent": "w7de71",
+      "children": [
+        "gd4b79",
+        "u6d713",
+        "m7a6b5"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-1",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-1"
+        },
+        "tag": "article"
+      },
+      "label": "Desarrollo Web a Medida"
+    },
+    {
+      "id": "gd4b79",
+      "name": "block",
+      "parent": "e66844",
+      "children": [
+        "jd6a42"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "jd6a42",
+      "name": "icon",
+      "parent": "gd4b79",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-code"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "u6d713",
+      "name": "block",
+      "parent": "e66844",
+      "children": [
+        "dca3ae",
+        "a2c597"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "dca3ae",
+      "name": "heading",
+      "parent": "u6d713",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Desarrollo de<br>sitios web a medida",
+        "_attributes": [
+          {
+            "id": "f7bb75",
+            "name": "data-i18n",
+            "value": "services.s1Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "a2c597",
+      "name": "text-basic",
+      "parent": "u6d713",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Portales corporativos, sitios institucionales y plataformas web rápidas, seguras y adaptadas al 100% a tus objetivos comerciales.",
+        "_attributes": [
+          {
+            "id": "id8805",
+            "name": "data-i18n",
+            "value": "services.s1Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "m7a6b5",
+      "name": "block",
+      "parent": "e66844",
+      "children": [
+        "g54d84"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "g54d84",
+      "name": "text-link",
+      "parent": "m7a6b5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "f81ade",
+            "name": "data-select-service",
+            "value": "Desarrollo Web a Medida"
+          },
+          {
+            "id": "o9be39",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "y5f919",
+      "name": "block",
+      "parent": "w7de71",
+      "children": [
+        "qd157f",
+        "ge3d56",
+        "hdb4c2"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-2",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-2"
+        },
+        "tag": "article"
+      },
+      "label": "UI/UX Design & Branding"
+    },
+    {
+      "id": "qd157f",
+      "name": "block",
+      "parent": "y5f919",
+      "children": [
+        "v6635f"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "v6635f",
+      "name": "icon",
+      "parent": "qd157f",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-pen-nib"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ge3d56",
+      "name": "block",
+      "parent": "y5f919",
+      "children": [
+        "icf07b",
+        "x8b9b9"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "icf07b",
+      "name": "heading",
+      "parent": "ge3d56",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Diseño UI/UX &<br>Identidad visual",
+        "_attributes": [
+          {
+            "id": "ha5b92",
+            "name": "data-i18n",
+            "value": "services.s2Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "x8b9b9",
+      "name": "text-basic",
+      "parent": "ge3d56",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Interfaces memorables, sistemas de diseño, dirección de arte, fotografía comercial y producción audiovisual de alto impacto.",
+        "_attributes": [
+          {
+            "id": "dec2a7",
+            "name": "data-i18n",
+            "value": "services.s2Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "hdb4c2",
+      "name": "block",
+      "parent": "y5f919",
+      "children": [
+        "x0d418"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "x0d418",
+      "name": "text-link",
+      "parent": "hdb4c2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "g9da53",
+            "name": "data-select-service",
+            "value": "UI/UX Design & Branding"
+          },
+          {
+            "id": "x10c34",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "v2746a",
+      "name": "block",
+      "parent": "w7de71",
+      "children": [
+        "tda14d",
+        "ldea97",
+        "l95bfd"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-3",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-3"
+        },
+        "tag": "article"
+      },
+      "label": "E-Commerce"
+    },
+    {
+      "id": "tda14d",
+      "name": "block",
+      "parent": "v2746a",
+      "children": [
+        "uc040e"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "uc040e",
+      "name": "icon",
+      "parent": "tda14d",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-bag-shopping"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ldea97",
+      "name": "block",
+      "parent": "v2746a",
+      "children": [
+        "z7f5be",
+        "k71a7f"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "z7f5be",
+      "name": "heading",
+      "parent": "ldea97",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Tiendas Online &<br>E-Commerce",
+        "_attributes": [
+          {
+            "id": "w25337",
+            "name": "data-i18n",
+            "value": "services.s3Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "k71a7f",
+      "name": "text-basic",
+      "parent": "ldea97",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Comercio electrónico diseñado para vender 24/7 con pasarelas locales (Guatemala) e internacionales (Stripe, PayPal en EE.UU.).",
+        "_attributes": [
+          {
+            "id": "k9c997",
+            "name": "data-i18n",
+            "value": "services.s3Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "l95bfd",
+      "name": "block",
+      "parent": "v2746a",
+      "children": [
+        "p13efb"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "p13efb",
+      "name": "text-link",
+      "parent": "l95bfd",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "qb6d28",
+            "name": "data-select-service",
+            "value": "E-Commerce"
+          },
+          {
+            "id": "tf1513",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "g53db3",
+      "name": "block",
+      "parent": "w7de71",
+      "children": [
+        "uae1e2",
+        "t90551",
+        "p36f92"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-4",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-4"
+        },
+        "tag": "article"
+      },
+      "label": "Mantenimiento & Velocidad"
+    },
+    {
+      "id": "uae1e2",
+      "name": "block",
+      "parent": "g53db3",
+      "children": [
+        "jd89ee"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "jd89ee",
+      "name": "icon",
+      "parent": "uae1e2",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-gauge-high"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "t90551",
+      "name": "block",
+      "parent": "g53db3",
+      "children": [
+        "xb0e77",
+        "s24b26"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "xb0e77",
+      "name": "heading",
+      "parent": "t90551",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Mantenimiento &<br>Optimización Web",
+        "_attributes": [
+          {
+            "id": "a940ef",
+            "name": "data-i18n",
+            "value": "services.s4Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "s24b26",
+      "name": "text-basic",
+      "parent": "t90551",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Aceleración de Core Web Vitals (95+ en Google PageSpeed), blindaje de seguridad, backups y soporte técnico continuo.",
+        "_attributes": [
+          {
+            "id": "nc99eb",
+            "name": "data-i18n",
+            "value": "services.s4Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "p36f92",
+      "name": "block",
+      "parent": "g53db3",
+      "children": [
+        "a6c0a8"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "a6c0a8",
+      "name": "text-link",
+      "parent": "p36f92",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "abf0f3",
+            "name": "data-select-service",
+            "value": "Mantenimiento & Velocidad"
+          },
+          {
+            "id": "u78e73",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "s2f18c",
+      "name": "block",
+      "parent": "w7de71",
+      "children": [
+        "a70e83",
+        "n5e935",
+        "r41f1e"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-5",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-5"
+        },
+        "tag": "article"
+      },
+      "label": "Automatizaciones & IA"
+    },
+    {
+      "id": "a70e83",
+      "name": "block",
+      "parent": "s2f18c",
+      "children": [
+        "c819d8"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "c819d8",
+      "name": "icon",
+      "parent": "a70e83",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-wand-magic-sparkles"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "n5e935",
+      "name": "block",
+      "parent": "s2f18c",
+      "children": [
+        "r135de",
+        "pea31e"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "r135de",
+      "name": "heading",
+      "parent": "n5e935",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Automatización &<br>Inteligencia Artificial",
+        "_attributes": [
+          {
+            "id": "u5c6ad",
+            "name": "data-i18n",
+            "value": "services.s5Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "pea31e",
+      "name": "text-basic",
+      "parent": "n5e935",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Conexión inteligente de formularios a WhatsApp y CRM, agentes de IA de atención al cliente y optimización de flujos operativos.",
+        "_attributes": [
+          {
+            "id": "i0a6af",
+            "name": "data-i18n",
+            "value": "services.s5Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "r41f1e",
+      "name": "block",
+      "parent": "s2f18c",
+      "children": [
+        "nef343"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "nef343",
+      "name": "text-link",
+      "parent": "r41f1e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "e5a6dd",
+            "name": "data-select-service",
+            "value": "Automatizaciones & IA"
+          },
+          {
+            "id": "y5b063",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "uf9592",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "ddc4a0"
+      ],
+      "settings": {
+        "_cssClasses": "light-zone manifesto-section manifesto-section--light",
+        "_hidden": {
+          "_cssClasses": "light-zone manifesto-section manifesto-section--light"
+        },
+        "_cssId": "studio"
+      },
+      "label": "Studio Leadership Section"
+    },
+    {
+      "id": "ddc4a0",
+      "name": "container",
+      "parent": "uf9592",
+      "children": [
+        "ueea38"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Studio Container"
+    },
+    {
+      "id": "ueea38",
+      "name": "block",
+      "parent": "ddc4a0",
+      "children": [
+        "j50cd7",
+        "r0fa06"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-grid",
+        "_hidden": {
+          "_cssClasses": "manifesto-grid"
+        }
+      },
+      "label": "Studio Manifesto Grid"
+    },
+    {
+      "id": "j50cd7",
+      "name": "block",
+      "parent": "ueea38",
+      "children": [
+        "k4ec8c"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-stamp-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-stamp-col"
+        }
+      },
+      "label": "Light Stamp Column"
+    },
+    {
+      "id": "k4ec8c",
+      "name": "shortcode",
+      "parent": "j50cd7",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_manifesto_stamp_light]"
+      },
+      "label": "Manifesto 2 Rotating Stamp"
+    },
+    {
+      "id": "r0fa06",
+      "name": "block",
+      "parent": "ueea38",
+      "children": [
+        "q63b23",
+        "xc6442",
+        "tef8cb",
+        "i0b51c"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-copy-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-copy-col"
+        }
+      },
+      "label": "Studio Copy Column"
+    },
+    {
+      "id": "q63b23",
+      "name": "text-basic",
+      "parent": "r0fa06",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead manifesto-lead--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead manifesto-lead--dark"
+        },
+        "tag": "p",
+        "text": "No nos gustan los sitios creados en serie. Cada proyecto es diseñado artesanalmente para reflejar tu identidad y responder a tus <span class=\"doodle-word\">objetivos.</span>",
+        "_attributes": [
+          {
+            "id": "h0d588",
+            "name": "data-i18n",
+            "value": "manifesto2.p1"
+          }
+        ]
+      },
+      "label": "Studio Lead 1"
+    },
+    {
+      "id": "xc6442",
+      "name": "text-basic",
+      "parent": "r0fa06",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead manifesto-lead--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead manifesto-lead--dark"
+        },
+        "tag": "p",
+        "text": "Colaborar con UP Group Studio es elegir una dupla <span class=\"doodle-word\">humana y senior</span> que domina su oficio, responde directo por WhatsApp y te acompaña a largo plazo desde <strong>Guatemala</strong> y <strong>Houston, Texas</strong> ✹",
+        "_attributes": [
+          {
+            "id": "k80d44",
+            "name": "data-i18n",
+            "value": "manifesto2.p2"
+          }
+        ]
+      },
+      "label": "Studio Lead 2"
+    },
+    {
+      "id": "tef8cb",
+      "name": "block",
+      "parent": "r0fa06",
+      "children": [
+        "kdfbf2",
+        "z3cd96"
+      ],
+      "settings": {
+        "_cssClasses": "studio-duo-grid",
+        "_hidden": {
+          "_cssClasses": "studio-duo-grid"
+        }
+      },
+      "label": "Leadership Duo Grid"
+    },
+    {
+      "id": "kdfbf2",
+      "name": "block",
+      "parent": "tef8cb",
+      "children": [
+        "x8a954",
+        "xb7df2"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card",
+        "_hidden": {
+          "_cssClasses": "duo-card"
+        }
+      },
+      "label": "Rodrigo Campos Card"
+    },
+    {
+      "id": "x8a954",
+      "name": "block",
+      "parent": "kdfbf2",
+      "children": [
+        "g12e7e"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__avatar duo-card__avatar--rodrigo",
+        "_hidden": {
+          "_cssClasses": "duo-card__avatar duo-card__avatar--rodrigo"
+        }
+      },
+      "label": "Avatar RC"
+    },
+    {
+      "id": "g12e7e",
+      "name": "text-basic",
+      "parent": "x8a954",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "RC"
+      },
+      "label": "RC Initials"
+    },
+    {
+      "id": "xb7df2",
+      "name": "block",
+      "parent": "kdfbf2",
+      "children": [
+        "jb00e6",
+        "l726b9",
+        "j90d6b"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__info",
+        "_hidden": {
+          "_cssClasses": "duo-card__info"
+        }
+      },
+      "label": "Info RC"
+    },
+    {
+      "id": "jb00e6",
+      "name": "block",
+      "parent": "xb7df2",
+      "children": [
+        "tcaa12",
+        "je6970"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__head",
+        "_hidden": {
+          "_cssClasses": "duo-card__head"
+        }
+      },
+      "label": "Head RC"
+    },
+    {
+      "id": "tcaa12",
+      "name": "heading",
+      "parent": "jb00e6",
+      "children": [],
+      "settings": {
+        "tag": "h4",
+        "text": "Rodrigo Campos"
+      },
+      "label": "Rodrigo Campos"
+    },
+    {
+      "id": "je6970",
+      "name": "text-basic",
+      "parent": "jb00e6",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-badge",
+        "_hidden": {
+          "_cssClasses": "duo-badge"
+        },
+        "tag": "span",
+        "text": "15+ YRS EXP"
+      },
+      "label": "15+ YRS EXP"
+    },
+    {
+      "id": "l726b9",
+      "name": "text-basic",
+      "parent": "xb7df2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-role",
+        "_hidden": {
+          "_cssClasses": "duo-role"
+        },
+        "tag": "p",
+        "text": "Founder • Web Development & Digital Product Design",
+        "_attributes": [
+          {
+            "id": "p7a89f",
+            "name": "data-i18n",
+            "value": "studio.rodrigoRole"
+          }
+        ]
+      },
+      "label": "Role RC"
+    },
+    {
+      "id": "j90d6b",
+      "name": "block",
+      "parent": "xb7df2",
+      "children": [
+        "b0a885",
+        "h41ad0"
+      ],
+      "settings": {
+        "_cssClasses": "duo-links",
+        "_hidden": {
+          "_cssClasses": "duo-links"
+        }
+      },
+      "label": "Links RC"
+    },
+    {
+      "id": "b0a885",
+      "name": "text-link",
+      "parent": "j90d6b",
+      "children": [],
+      "settings": {
+        "text": "rodri8.com",
+        "link": {
+          "type": "external",
+          "url": "https://rodri8.com",
+          "newTab": true
+        }
+      },
+      "label": "rodri8.com"
+    },
+    {
+      "id": "h41ad0",
+      "name": "text-link",
+      "parent": "j90d6b",
+      "children": [],
+      "settings": {
+        "text": "LinkedIn",
+        "link": {
+          "type": "external",
+          "url": "https://www.linkedin.com/in/rodri8/",
+          "newTab": true
+        }
+      },
+      "label": "LinkedIn"
+    },
+    {
+      "id": "z3cd96",
+      "name": "block",
+      "parent": "tef8cb",
+      "children": [
+        "x3f262",
+        "u96408"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card",
+        "_hidden": {
+          "_cssClasses": "duo-card"
+        }
+      },
+      "label": "Yulcer Card"
+    },
+    {
+      "id": "x3f262",
+      "name": "block",
+      "parent": "z3cd96",
+      "children": [
+        "f71191"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__avatar duo-card__avatar--yulcer",
+        "_hidden": {
+          "_cssClasses": "duo-card__avatar duo-card__avatar--yulcer"
+        }
+      },
+      "label": "Avatar YC"
+    },
+    {
+      "id": "f71191",
+      "name": "text-basic",
+      "parent": "x3f262",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "YC"
+      },
+      "label": "YC Initials"
+    },
+    {
+      "id": "u96408",
+      "name": "block",
+      "parent": "z3cd96",
+      "children": [
+        "i96cad",
+        "w19a3f",
+        "m575d9"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__info",
+        "_hidden": {
+          "_cssClasses": "duo-card__info"
+        }
+      },
+      "label": "Info YC"
+    },
+    {
+      "id": "i96cad",
+      "name": "block",
+      "parent": "u96408",
+      "children": [
+        "v7600d",
+        "r5e24d"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__head",
+        "_hidden": {
+          "_cssClasses": "duo-card__head"
+        }
+      },
+      "label": "Head YC"
+    },
+    {
+      "id": "v7600d",
+      "name": "heading",
+      "parent": "i96cad",
+      "children": [],
+      "settings": {
+        "tag": "h4",
+        "text": "Yulcer"
+      },
+      "label": "Yulcer"
+    },
+    {
+      "id": "r5e24d",
+      "name": "text-basic",
+      "parent": "i96cad",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-badge duo-badge--lilac",
+        "_hidden": {
+          "_cssClasses": "duo-badge duo-badge--lilac"
+        },
+        "tag": "span",
+        "text": "CREATIVE LEAD"
+      },
+      "label": "CREATIVE LEAD"
+    },
+    {
+      "id": "w19a3f",
+      "name": "text-basic",
+      "parent": "u96408",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-role",
+        "_hidden": {
+          "_cssClasses": "duo-role"
+        },
+        "tag": "p",
+        "text": "Co-Lead • Visual Design, Video & Commercial Photography",
+        "_attributes": [
+          {
+            "id": "cb0fa3",
+            "name": "data-i18n",
+            "value": "studio.yulcerRole"
+          }
+        ]
+      },
+      "label": "Role YC"
+    },
+    {
+      "id": "m575d9",
+      "name": "block",
+      "parent": "u96408",
+      "children": [
+        "xa1cd1",
+        "z4a48f",
+        "oca0af"
+      ],
+      "settings": {
+        "_cssClasses": "duo-tags",
+        "_hidden": {
+          "_cssClasses": "duo-tags"
+        }
+      },
+      "label": "Tags YC"
+    },
+    {
+      "id": "xa1cd1",
+      "name": "text-basic",
+      "parent": "m575d9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Art Direction"
+      },
+      "label": "Art Direction"
+    },
+    {
+      "id": "z4a48f",
+      "name": "text-basic",
+      "parent": "m575d9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Video"
+      },
+      "label": "Video"
+    },
+    {
+      "id": "oca0af",
+      "name": "text-basic",
+      "parent": "m575d9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Photo"
+      },
+      "label": "Photo"
+    },
+    {
+      "id": "i0b51c",
+      "name": "block",
+      "parent": "r0fa06",
+      "children": [
+        "j626e6",
+        "o11e07"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-footer",
+        "_hidden": {
+          "_cssClasses": "manifesto-footer"
+        }
+      },
+      "label": "Studio Footer"
+    },
+    {
+      "id": "j626e6",
+      "name": "text-basic",
+      "parent": "i0b51c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-caption manifesto-caption--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-caption manifesto-caption--dark"
+        },
+        "tag": "p",
+        "text": "Respuesta directa en menos de 2 horas hábiles.",
+        "_attributes": [
+          {
+            "id": "q7676b",
+            "name": "data-i18n",
+            "value": "manifesto2.caption"
+          }
+        ]
+      },
+      "label": "Response Time Caption"
+    },
+    {
+      "id": "o11e07",
+      "name": "text-link",
+      "parent": "i0b51c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "btn-pastel-blue",
+        "_hidden": {
+          "_cssClasses": "btn-pastel-blue"
+        },
+        "text": "Cotizar mi proyecto",
+        "_attributes": [
+          {
+            "id": "a3f44c",
+            "name": "data-i18n",
+            "value": "manifesto2.cta"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar CTA"
+    },
+    {
+      "id": "ke41b5",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "g61dd5"
+      ],
+      "settings": {
+        "_cssClasses": "light-zone cta-banner-section",
+        "_hidden": {
+          "_cssClasses": "light-zone cta-banner-section"
+        },
+        "_cssId": "inquiry"
+      },
+      "label": "Split Rocket CTA & Inquiry Form"
+    },
+    {
+      "id": "g61dd5",
+      "name": "container",
+      "parent": "ke41b5",
+      "children": [
+        "fac78f",
+        "d92d73"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Inquiry Container"
+    },
+    {
+      "id": "fac78f",
+      "name": "block",
+      "parent": "g61dd5",
+      "children": [
+        "ye513b",
+        "od6440"
+      ],
+      "settings": {
+        "_cssClasses": "split-rocket-card",
+        "_hidden": {
+          "_cssClasses": "split-rocket-card"
+        }
+      },
+      "label": "Split Rocket Card"
+    },
+    {
+      "id": "ye513b",
+      "name": "block",
+      "parent": "fac78f",
+      "children": [
+        "h832b2",
+        "e1b57d",
+        "od2a1c",
+        "u11a56"
+      ],
+      "settings": {
+        "_cssClasses": "split-rocket-card__left",
+        "_hidden": {
+          "_cssClasses": "split-rocket-card__left"
+        }
+      },
+      "label": "Split Left Copy"
+    },
+    {
+      "id": "h832b2",
+      "name": "text-basic",
+      "parent": "ye513b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "split-kicker",
+        "_hidden": {
+          "_cssClasses": "split-kicker"
+        },
+        "tag": "span",
+        "text": "¿LISTO PARA DESPEGAR?",
+        "_attributes": [
+          {
+            "id": "o85108",
+            "name": "data-i18n",
+            "value": "ctaBanner.kicker"
+          }
+        ]
+      },
+      "label": "Kicker"
+    },
+    {
+      "id": "e1b57d",
+      "name": "heading",
+      "parent": "ye513b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "split-title",
+        "_hidden": {
+          "_cssClasses": "split-title"
+        },
+        "tag": "h2",
+        "text": "¿Necesitas un<br><span class=\"doodle-word\">sitio web</span> de alto nivel?",
+        "_attributes": [
+          {
+            "id": "mf6475",
+            "name": "data-i18n",
+            "value": "ctaBanner.title"
+          }
+        ]
+      },
+      "label": "Split Title"
+    },
+    {
+      "id": "od2a1c",
+      "name": "text-basic",
+      "parent": "ye513b",
+      "children": [],
+      "settings": {
+        "_cssClasses": "split-desc",
+        "_hidden": {
+          "_cssClasses": "split-desc"
+        },
+        "tag": "p",
+        "text": "Completa tus datos abajo para enviarnos un resumen directo por WhatsApp o mensaje directo.",
+        "_attributes": [
+          {
+            "id": "ocaddf",
+            "name": "data-i18n",
+            "value": "ctaBanner.desc"
+          }
+        ]
+      },
+      "label": "Split Description"
+    },
+    {
+      "id": "u11a56",
+      "name": "block",
+      "parent": "ye513b",
+      "children": [
+        "p6ef46",
+        "gef329"
+      ],
+      "settings": {
+        "_cssClasses": "split-badges",
+        "_hidden": {
+          "_cssClasses": "split-badges"
+        }
+      },
+      "label": "Location Badges"
+    },
+    {
+      "id": "p6ef46",
+      "name": "block",
+      "parent": "u11a56",
+      "children": [
+        "y1268c",
+        "z4442c"
+      ],
+      "settings": {
+        "tag": "span"
+      },
+      "label": "Guatemala"
+    },
+    {
+      "id": "y1268c",
+      "name": "icon",
+      "parent": "p6ef46",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-check"
+        },
+        "iconSize": "12"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "z4442c",
+      "name": "text-basic",
+      "parent": "p6ef46",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Guatemala"
+      },
+      "label": "Guatemala"
+    },
+    {
+      "id": "gef329",
+      "name": "block",
+      "parent": "u11a56",
+      "children": [
+        "u0fba1",
+        "f57b0e"
+      ],
+      "settings": {
+        "tag": "span"
+      },
+      "label": "Houston, TX"
+    },
+    {
+      "id": "u0fba1",
+      "name": "icon",
+      "parent": "gef329",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-check"
+        },
+        "iconSize": "12"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "f57b0e",
+      "name": "text-basic",
+      "parent": "gef329",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Houston, TX"
+      },
+      "label": "Houston, TX"
+    },
+    {
+      "id": "od6440",
+      "name": "block",
+      "parent": "fac78f",
+      "children": [
+        "x20796"
+      ],
+      "settings": {
+        "_cssClasses": "split-rocket-card__right",
+        "_hidden": {
+          "_cssClasses": "split-rocket-card__right"
+        }
+      },
+      "label": "Split Right Rocket Art"
+    },
+    {
+      "id": "x20796",
+      "name": "shortcode",
+      "parent": "od6440",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_rocket_illustration]"
+      },
+      "label": "Rocket Vector Illustration"
+    },
+    {
+      "id": "d92d73",
+      "name": "shortcode",
+      "parent": "g61dd5",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_inquiry_form]"
+      },
+      "label": "Interactive Project Inquiry Form"
+    }
+  ]
+}

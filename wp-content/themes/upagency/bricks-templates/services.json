@@ -1,0 +1,911 @@
+{
+  "id": 2005,
+  "name": "up-section-services",
+  "title": "UP Group Studio — 03 Services À La Carte",
+  "type": "section",
+  "templateType": "section",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "c34545",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "ac51cc",
+        "p7dfa8"
+      ],
+      "settings": {
+        "_cssClasses": "light-zone services-section",
+        "_hidden": {
+          "_cssClasses": "light-zone services-section"
+        },
+        "_cssId": "services"
+      },
+      "label": "Services À La Carte Section"
+    },
+    {
+      "id": "ac51cc",
+      "name": "block",
+      "parent": "c34545",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-aurora-bg",
+        "_hidden": {
+          "_cssClasses": "services-aurora-bg"
+        }
+      },
+      "label": "Pastel Aurora Glow"
+    },
+    {
+      "id": "p7dfa8",
+      "name": "container",
+      "parent": "c34545",
+      "children": [
+        "l7d0f9",
+        "b0bec5"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Services Container"
+    },
+    {
+      "id": "l7d0f9",
+      "name": "block",
+      "parent": "p7dfa8",
+      "children": [
+        "ube54f",
+        "t78688",
+        "odde50"
+      ],
+      "settings": {
+        "_cssClasses": "services-header",
+        "_hidden": {
+          "_cssClasses": "services-header"
+        }
+      },
+      "label": "Services Header"
+    },
+    {
+      "id": "ube54f",
+      "name": "text-basic",
+      "parent": "l7d0f9",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-kicker",
+        "_hidden": {
+          "_cssClasses": "services-kicker"
+        },
+        "tag": "span",
+        "text": "SOLUCIONES A LA MEDIDA DE TU NEGOCIO",
+        "_attributes": [
+          {
+            "id": "s8255e",
+            "name": "data-i18n",
+            "value": "services.kicker"
+          }
+        ]
+      },
+      "label": "Services Kicker"
+    },
+    {
+      "id": "t78688",
+      "name": "heading",
+      "parent": "l7d0f9",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-main-title",
+        "_hidden": {
+          "_cssClasses": "services-main-title"
+        },
+        "tag": "h2",
+        "text": "<span data-i18n=\"services.title\">Nuestros servicios<br>à la carte</span> <span class=\"services-sticker\">🎨</span>"
+      },
+      "label": "Services Title"
+    },
+    {
+      "id": "odde50",
+      "name": "text-basic",
+      "parent": "l7d0f9",
+      "children": [],
+      "settings": {
+        "_cssClasses": "services-subtitle",
+        "_hidden": {
+          "_cssClasses": "services-subtitle"
+        },
+        "tag": "p",
+        "text": "Sin ataduras a un solo CMS ni plantillas prefabricadas. Elegimos la tecnología exacta que tu empresa necesita para escalar en Guatemala o Estados Unidos.",
+        "_attributes": [
+          {
+            "id": "w97022",
+            "name": "data-i18n",
+            "value": "services.subtitle"
+          }
+        ]
+      },
+      "label": "Services Subtitle"
+    },
+    {
+      "id": "b0bec5",
+      "name": "block",
+      "parent": "p7dfa8",
+      "children": [
+        "y3f196",
+        "b86977",
+        "d0af41",
+        "jb61cf",
+        "f91f36"
+      ],
+      "settings": {
+        "_cssClasses": "services-cards-grid",
+        "_hidden": {
+          "_cssClasses": "services-cards-grid"
+        }
+      },
+      "label": "Services Cards Grid"
+    },
+    {
+      "id": "y3f196",
+      "name": "block",
+      "parent": "b0bec5",
+      "children": [
+        "we3956",
+        "s796fd",
+        "qa0a09"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-1",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-1"
+        },
+        "tag": "article"
+      },
+      "label": "Desarrollo Web a Medida"
+    },
+    {
+      "id": "we3956",
+      "name": "block",
+      "parent": "y3f196",
+      "children": [
+        "of1cde"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "of1cde",
+      "name": "icon",
+      "parent": "we3956",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-code"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "s796fd",
+      "name": "block",
+      "parent": "y3f196",
+      "children": [
+        "k46e2b",
+        "h3eb70"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "k46e2b",
+      "name": "heading",
+      "parent": "s796fd",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Desarrollo de<br>sitios web a medida",
+        "_attributes": [
+          {
+            "id": "s3bceb",
+            "name": "data-i18n",
+            "value": "services.s1Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "h3eb70",
+      "name": "text-basic",
+      "parent": "s796fd",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Portales corporativos, sitios institucionales y plataformas web rápidas, seguras y adaptadas al 100% a tus objetivos comerciales.",
+        "_attributes": [
+          {
+            "id": "k9b825",
+            "name": "data-i18n",
+            "value": "services.s1Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "qa0a09",
+      "name": "block",
+      "parent": "y3f196",
+      "children": [
+        "u7a388"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "u7a388",
+      "name": "text-link",
+      "parent": "qa0a09",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "hc4815",
+            "name": "data-select-service",
+            "value": "Desarrollo Web a Medida"
+          },
+          {
+            "id": "pfd57d",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "b86977",
+      "name": "block",
+      "parent": "b0bec5",
+      "children": [
+        "bc08a0",
+        "cf8c67",
+        "p21be6"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-2",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-2"
+        },
+        "tag": "article"
+      },
+      "label": "UI/UX Design & Branding"
+    },
+    {
+      "id": "bc08a0",
+      "name": "block",
+      "parent": "b86977",
+      "children": [
+        "fd1f86"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "fd1f86",
+      "name": "icon",
+      "parent": "bc08a0",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-pen-nib"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "cf8c67",
+      "name": "block",
+      "parent": "b86977",
+      "children": [
+        "rdaadc",
+        "c91687"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "rdaadc",
+      "name": "heading",
+      "parent": "cf8c67",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Diseño UI/UX &<br>Identidad visual",
+        "_attributes": [
+          {
+            "id": "m9a69c",
+            "name": "data-i18n",
+            "value": "services.s2Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "c91687",
+      "name": "text-basic",
+      "parent": "cf8c67",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Interfaces memorables, sistemas de diseño, dirección de arte, fotografía comercial y producción audiovisual de alto impacto.",
+        "_attributes": [
+          {
+            "id": "mf329d",
+            "name": "data-i18n",
+            "value": "services.s2Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "p21be6",
+      "name": "block",
+      "parent": "b86977",
+      "children": [
+        "l26858"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "l26858",
+      "name": "text-link",
+      "parent": "p21be6",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "oc34c8",
+            "name": "data-select-service",
+            "value": "UI/UX Design & Branding"
+          },
+          {
+            "id": "gad978",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "d0af41",
+      "name": "block",
+      "parent": "b0bec5",
+      "children": [
+        "q162f5",
+        "ka5cb8",
+        "mbcc2c"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-3",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-3"
+        },
+        "tag": "article"
+      },
+      "label": "E-Commerce"
+    },
+    {
+      "id": "q162f5",
+      "name": "block",
+      "parent": "d0af41",
+      "children": [
+        "s891d5"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "s891d5",
+      "name": "icon",
+      "parent": "q162f5",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-bag-shopping"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ka5cb8",
+      "name": "block",
+      "parent": "d0af41",
+      "children": [
+        "e06122",
+        "ndb64a"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "e06122",
+      "name": "heading",
+      "parent": "ka5cb8",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Tiendas Online &<br>E-Commerce",
+        "_attributes": [
+          {
+            "id": "p4eb03",
+            "name": "data-i18n",
+            "value": "services.s3Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "ndb64a",
+      "name": "text-basic",
+      "parent": "ka5cb8",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Comercio electrónico diseñado para vender 24/7 con pasarelas locales (Guatemala) e internacionales (Stripe, PayPal en EE.UU.).",
+        "_attributes": [
+          {
+            "id": "c3a7b0",
+            "name": "data-i18n",
+            "value": "services.s3Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "mbcc2c",
+      "name": "block",
+      "parent": "d0af41",
+      "children": [
+        "f07495"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "f07495",
+      "name": "text-link",
+      "parent": "mbcc2c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "j1b61c",
+            "name": "data-select-service",
+            "value": "E-Commerce"
+          },
+          {
+            "id": "d83405",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "jb61cf",
+      "name": "block",
+      "parent": "b0bec5",
+      "children": [
+        "f117b4",
+        "k80f67",
+        "u40737"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-4",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-4"
+        },
+        "tag": "article"
+      },
+      "label": "Mantenimiento & Velocidad"
+    },
+    {
+      "id": "f117b4",
+      "name": "block",
+      "parent": "jb61cf",
+      "children": [
+        "baca31"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "baca31",
+      "name": "icon",
+      "parent": "f117b4",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-gauge-high"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "k80f67",
+      "name": "block",
+      "parent": "jb61cf",
+      "children": [
+        "cef918",
+        "y03641"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "cef918",
+      "name": "heading",
+      "parent": "k80f67",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Mantenimiento &<br>Optimización Web",
+        "_attributes": [
+          {
+            "id": "xebecb",
+            "name": "data-i18n",
+            "value": "services.s4Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "y03641",
+      "name": "text-basic",
+      "parent": "k80f67",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Aceleración de Core Web Vitals (95+ en Google PageSpeed), blindaje de seguridad, backups y soporte técnico continuo.",
+        "_attributes": [
+          {
+            "id": "u3375a",
+            "name": "data-i18n",
+            "value": "services.s4Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "u40737",
+      "name": "block",
+      "parent": "jb61cf",
+      "children": [
+        "y210d6"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "y210d6",
+      "name": "text-link",
+      "parent": "u40737",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "r4e420",
+            "name": "data-select-service",
+            "value": "Mantenimiento & Velocidad"
+          },
+          {
+            "id": "u47e0b",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    },
+    {
+      "id": "f91f36",
+      "name": "block",
+      "parent": "b0bec5",
+      "children": [
+        "hae8d8",
+        "z40ad5",
+        "z60971"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card srv-card--glow-5",
+        "_hidden": {
+          "_cssClasses": "srv-card srv-card--glow-5"
+        },
+        "tag": "article"
+      },
+      "label": "Automatizaciones & IA"
+    },
+    {
+      "id": "hae8d8",
+      "name": "block",
+      "parent": "f91f36",
+      "children": [
+        "h1c1ff"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__icon",
+        "_hidden": {
+          "_cssClasses": "srv-card__icon"
+        }
+      },
+      "label": "Service Icon Box"
+    },
+    {
+      "id": "h1c1ff",
+      "name": "icon",
+      "parent": "hae8d8",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-wand-magic-sparkles"
+        },
+        "iconSize": "18"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "z40ad5",
+      "name": "block",
+      "parent": "f91f36",
+      "children": [
+        "c536f7",
+        "q7ad88"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__body",
+        "_hidden": {
+          "_cssClasses": "srv-card__body"
+        }
+      },
+      "label": "Service Body"
+    },
+    {
+      "id": "c536f7",
+      "name": "heading",
+      "parent": "z40ad5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__title",
+        "_hidden": {
+          "_cssClasses": "srv-card__title"
+        },
+        "tag": "h3",
+        "text": "Automatización &<br>Inteligencia Artificial",
+        "_attributes": [
+          {
+            "id": "jd9ac1",
+            "name": "data-i18n",
+            "value": "services.s5Title"
+          }
+        ]
+      },
+      "label": "Service Title"
+    },
+    {
+      "id": "q7ad88",
+      "name": "text-basic",
+      "parent": "z40ad5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-card__desc",
+        "_hidden": {
+          "_cssClasses": "srv-card__desc"
+        },
+        "tag": "p",
+        "text": "Conexión inteligente de formularios a WhatsApp y CRM, agentes de IA de atención al cliente y optimización de flujos operativos.",
+        "_attributes": [
+          {
+            "id": "g28ead",
+            "name": "data-i18n",
+            "value": "services.s5Desc"
+          }
+        ]
+      },
+      "label": "Service Description"
+    },
+    {
+      "id": "z60971",
+      "name": "block",
+      "parent": "f91f36",
+      "children": [
+        "j42eba"
+      ],
+      "settings": {
+        "_cssClasses": "srv-card__footer",
+        "_hidden": {
+          "_cssClasses": "srv-card__footer"
+        }
+      },
+      "label": "Service Footer"
+    },
+    {
+      "id": "j42eba",
+      "name": "text-link",
+      "parent": "z60971",
+      "children": [],
+      "settings": {
+        "_cssClasses": "srv-pill-btn",
+        "_hidden": {
+          "_cssClasses": "srv-pill-btn"
+        },
+        "text": "Cotizar",
+        "_attributes": [
+          {
+            "id": "nfc0d1",
+            "name": "data-select-service",
+            "value": "Automatizaciones & IA"
+          },
+          {
+            "id": "l8341c",
+            "name": "data-i18n",
+            "value": "services.btn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar Button"
+    }
+  ]
+}

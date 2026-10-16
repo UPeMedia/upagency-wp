@@ -1,0 +1,565 @@
+{
+  "id": 2006,
+  "name": "up-section-studio",
+  "title": "UP Group Studio — 04 Studio Leadership",
+  "type": "section",
+  "templateType": "section",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "y412d5",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "bf8df9"
+      ],
+      "settings": {
+        "_cssClasses": "light-zone manifesto-section manifesto-section--light",
+        "_hidden": {
+          "_cssClasses": "light-zone manifesto-section manifesto-section--light"
+        },
+        "_cssId": "studio"
+      },
+      "label": "Studio Leadership Section"
+    },
+    {
+      "id": "bf8df9",
+      "name": "container",
+      "parent": "y412d5",
+      "children": [
+        "j5be47"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Studio Container"
+    },
+    {
+      "id": "j5be47",
+      "name": "block",
+      "parent": "bf8df9",
+      "children": [
+        "b23192",
+        "h0c098"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-grid",
+        "_hidden": {
+          "_cssClasses": "manifesto-grid"
+        }
+      },
+      "label": "Studio Manifesto Grid"
+    },
+    {
+      "id": "b23192",
+      "name": "block",
+      "parent": "j5be47",
+      "children": [
+        "h5dd3f"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-stamp-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-stamp-col"
+        }
+      },
+      "label": "Light Stamp Column"
+    },
+    {
+      "id": "h5dd3f",
+      "name": "shortcode",
+      "parent": "b23192",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_manifesto_stamp_light]"
+      },
+      "label": "Manifesto 2 Rotating Stamp"
+    },
+    {
+      "id": "h0c098",
+      "name": "block",
+      "parent": "j5be47",
+      "children": [
+        "kcf54d",
+        "aa88b9",
+        "nc6db5",
+        "i38ded"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-copy-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-copy-col"
+        }
+      },
+      "label": "Studio Copy Column"
+    },
+    {
+      "id": "kcf54d",
+      "name": "text-basic",
+      "parent": "h0c098",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead manifesto-lead--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead manifesto-lead--dark"
+        },
+        "tag": "p",
+        "text": "No nos gustan los sitios creados en serie. Cada proyecto es diseñado artesanalmente para reflejar tu identidad y responder a tus <span class=\"doodle-word\">objetivos.</span>",
+        "_attributes": [
+          {
+            "id": "k82cfe",
+            "name": "data-i18n",
+            "value": "manifesto2.p1"
+          }
+        ]
+      },
+      "label": "Studio Lead 1"
+    },
+    {
+      "id": "aa88b9",
+      "name": "text-basic",
+      "parent": "h0c098",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead manifesto-lead--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead manifesto-lead--dark"
+        },
+        "tag": "p",
+        "text": "Colaborar con UP Group Studio es elegir una dupla <span class=\"doodle-word\">humana y senior</span> que domina su oficio, responde directo por WhatsApp y te acompaña a largo plazo desde <strong>Guatemala</strong> y <strong>Houston, Texas</strong> ✹",
+        "_attributes": [
+          {
+            "id": "j9cd34",
+            "name": "data-i18n",
+            "value": "manifesto2.p2"
+          }
+        ]
+      },
+      "label": "Studio Lead 2"
+    },
+    {
+      "id": "nc6db5",
+      "name": "block",
+      "parent": "h0c098",
+      "children": [
+        "ef60ca",
+        "w89d42"
+      ],
+      "settings": {
+        "_cssClasses": "studio-duo-grid",
+        "_hidden": {
+          "_cssClasses": "studio-duo-grid"
+        }
+      },
+      "label": "Leadership Duo Grid"
+    },
+    {
+      "id": "ef60ca",
+      "name": "block",
+      "parent": "nc6db5",
+      "children": [
+        "g70392",
+        "r316f1"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card",
+        "_hidden": {
+          "_cssClasses": "duo-card"
+        }
+      },
+      "label": "Rodrigo Campos Card"
+    },
+    {
+      "id": "g70392",
+      "name": "block",
+      "parent": "ef60ca",
+      "children": [
+        "y2f067"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__avatar duo-card__avatar--rodrigo",
+        "_hidden": {
+          "_cssClasses": "duo-card__avatar duo-card__avatar--rodrigo"
+        }
+      },
+      "label": "Avatar RC"
+    },
+    {
+      "id": "y2f067",
+      "name": "text-basic",
+      "parent": "g70392",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "RC"
+      },
+      "label": "RC Initials"
+    },
+    {
+      "id": "r316f1",
+      "name": "block",
+      "parent": "ef60ca",
+      "children": [
+        "k4983d",
+        "k75c8c",
+        "rde667"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__info",
+        "_hidden": {
+          "_cssClasses": "duo-card__info"
+        }
+      },
+      "label": "Info RC"
+    },
+    {
+      "id": "k4983d",
+      "name": "block",
+      "parent": "r316f1",
+      "children": [
+        "x88674",
+        "h4952a"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__head",
+        "_hidden": {
+          "_cssClasses": "duo-card__head"
+        }
+      },
+      "label": "Head RC"
+    },
+    {
+      "id": "x88674",
+      "name": "heading",
+      "parent": "k4983d",
+      "children": [],
+      "settings": {
+        "tag": "h4",
+        "text": "Rodrigo Campos"
+      },
+      "label": "Rodrigo Campos"
+    },
+    {
+      "id": "h4952a",
+      "name": "text-basic",
+      "parent": "k4983d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-badge",
+        "_hidden": {
+          "_cssClasses": "duo-badge"
+        },
+        "tag": "span",
+        "text": "15+ YRS EXP"
+      },
+      "label": "15+ YRS EXP"
+    },
+    {
+      "id": "k75c8c",
+      "name": "text-basic",
+      "parent": "r316f1",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-role",
+        "_hidden": {
+          "_cssClasses": "duo-role"
+        },
+        "tag": "p",
+        "text": "Founder • Web Development & Digital Product Design",
+        "_attributes": [
+          {
+            "id": "w871df",
+            "name": "data-i18n",
+            "value": "studio.rodrigoRole"
+          }
+        ]
+      },
+      "label": "Role RC"
+    },
+    {
+      "id": "rde667",
+      "name": "block",
+      "parent": "r316f1",
+      "children": [
+        "p96b06",
+        "y503ab"
+      ],
+      "settings": {
+        "_cssClasses": "duo-links",
+        "_hidden": {
+          "_cssClasses": "duo-links"
+        }
+      },
+      "label": "Links RC"
+    },
+    {
+      "id": "p96b06",
+      "name": "text-link",
+      "parent": "rde667",
+      "children": [],
+      "settings": {
+        "text": "rodri8.com",
+        "link": {
+          "type": "external",
+          "url": "https://rodri8.com",
+          "newTab": true
+        }
+      },
+      "label": "rodri8.com"
+    },
+    {
+      "id": "y503ab",
+      "name": "text-link",
+      "parent": "rde667",
+      "children": [],
+      "settings": {
+        "text": "LinkedIn",
+        "link": {
+          "type": "external",
+          "url": "https://www.linkedin.com/in/rodri8/",
+          "newTab": true
+        }
+      },
+      "label": "LinkedIn"
+    },
+    {
+      "id": "w89d42",
+      "name": "block",
+      "parent": "nc6db5",
+      "children": [
+        "e297ca",
+        "e14d63"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card",
+        "_hidden": {
+          "_cssClasses": "duo-card"
+        }
+      },
+      "label": "Yulcer Card"
+    },
+    {
+      "id": "e297ca",
+      "name": "block",
+      "parent": "w89d42",
+      "children": [
+        "t2fa0a"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__avatar duo-card__avatar--yulcer",
+        "_hidden": {
+          "_cssClasses": "duo-card__avatar duo-card__avatar--yulcer"
+        }
+      },
+      "label": "Avatar YC"
+    },
+    {
+      "id": "t2fa0a",
+      "name": "text-basic",
+      "parent": "e297ca",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "YC"
+      },
+      "label": "YC Initials"
+    },
+    {
+      "id": "e14d63",
+      "name": "block",
+      "parent": "w89d42",
+      "children": [
+        "c93e7c",
+        "x1bfd6",
+        "sfbf8a"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__info",
+        "_hidden": {
+          "_cssClasses": "duo-card__info"
+        }
+      },
+      "label": "Info YC"
+    },
+    {
+      "id": "c93e7c",
+      "name": "block",
+      "parent": "e14d63",
+      "children": [
+        "q42bc0",
+        "xbf01d"
+      ],
+      "settings": {
+        "_cssClasses": "duo-card__head",
+        "_hidden": {
+          "_cssClasses": "duo-card__head"
+        }
+      },
+      "label": "Head YC"
+    },
+    {
+      "id": "q42bc0",
+      "name": "heading",
+      "parent": "c93e7c",
+      "children": [],
+      "settings": {
+        "tag": "h4",
+        "text": "Yulcer"
+      },
+      "label": "Yulcer"
+    },
+    {
+      "id": "xbf01d",
+      "name": "text-basic",
+      "parent": "c93e7c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-badge duo-badge--lilac",
+        "_hidden": {
+          "_cssClasses": "duo-badge duo-badge--lilac"
+        },
+        "tag": "span",
+        "text": "CREATIVE LEAD"
+      },
+      "label": "CREATIVE LEAD"
+    },
+    {
+      "id": "x1bfd6",
+      "name": "text-basic",
+      "parent": "e14d63",
+      "children": [],
+      "settings": {
+        "_cssClasses": "duo-role",
+        "_hidden": {
+          "_cssClasses": "duo-role"
+        },
+        "tag": "p",
+        "text": "Co-Lead • Visual Design, Video & Commercial Photography",
+        "_attributes": [
+          {
+            "id": "aeaf9f",
+            "name": "data-i18n",
+            "value": "studio.yulcerRole"
+          }
+        ]
+      },
+      "label": "Role YC"
+    },
+    {
+      "id": "sfbf8a",
+      "name": "block",
+      "parent": "e14d63",
+      "children": [
+        "cd86c1",
+        "wa20c9",
+        "ic1f84"
+      ],
+      "settings": {
+        "_cssClasses": "duo-tags",
+        "_hidden": {
+          "_cssClasses": "duo-tags"
+        }
+      },
+      "label": "Tags YC"
+    },
+    {
+      "id": "cd86c1",
+      "name": "text-basic",
+      "parent": "sfbf8a",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Art Direction"
+      },
+      "label": "Art Direction"
+    },
+    {
+      "id": "wa20c9",
+      "name": "text-basic",
+      "parent": "sfbf8a",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Video"
+      },
+      "label": "Video"
+    },
+    {
+      "id": "ic1f84",
+      "name": "text-basic",
+      "parent": "sfbf8a",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Photo"
+      },
+      "label": "Photo"
+    },
+    {
+      "id": "i38ded",
+      "name": "block",
+      "parent": "h0c098",
+      "children": [
+        "sfbbbf",
+        "q73a82"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-footer",
+        "_hidden": {
+          "_cssClasses": "manifesto-footer"
+        }
+      },
+      "label": "Studio Footer"
+    },
+    {
+      "id": "sfbbbf",
+      "name": "text-basic",
+      "parent": "i38ded",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-caption manifesto-caption--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-caption manifesto-caption--dark"
+        },
+        "tag": "p",
+        "text": "Respuesta directa en menos de 2 horas hábiles.",
+        "_attributes": [
+          {
+            "id": "pa18b2",
+            "name": "data-i18n",
+            "value": "manifesto2.caption"
+          }
+        ]
+      },
+      "label": "Response Time Caption"
+    },
+    {
+      "id": "q73a82",
+      "name": "text-link",
+      "parent": "i38ded",
+      "children": [],
+      "settings": {
+        "_cssClasses": "btn-pastel-blue",
+        "_hidden": {
+          "_cssClasses": "btn-pastel-blue"
+        },
+        "text": "Cotizar mi proyecto",
+        "_attributes": [
+          {
+            "id": "h33e3b",
+            "name": "data-i18n",
+            "value": "manifesto2.cta"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Cotizar CTA"
+    }
+  ]
+}

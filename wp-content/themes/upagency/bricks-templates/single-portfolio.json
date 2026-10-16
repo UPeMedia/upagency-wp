@@ -1,0 +1,1585 @@
+{
+  "id": 2009,
+  "name": "up-single-portfolio",
+  "title": "UP Group Studio — Single Portfolio Case Study (VML Layout)",
+  "type": "content",
+  "templateType": "content",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "tc2090",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "tdbe89"
+      ],
+      "settings": {
+        "_cssClasses": "case-hero-cover",
+        "_hidden": {
+          "_cssClasses": "case-hero-cover"
+        },
+        "_cssId": "caseHeroCover"
+      },
+      "label": "Case Study Hero Cover"
+    },
+    {
+      "id": "tdbe89",
+      "name": "block",
+      "parent": "tc2090",
+      "children": [
+        "y5c549",
+        "icf339"
+      ],
+      "settings": {
+        "_cssClasses": "cover-stage-art",
+        "_hidden": {
+          "_cssClasses": "cover-stage-art"
+        }
+      },
+      "label": "Cover Stage Art"
+    },
+    {
+      "id": "y5c549",
+      "name": "block",
+      "parent": "tdbe89",
+      "children": [],
+      "settings": {
+        "_cssClasses": "cover-stage-art__bokeh",
+        "_hidden": {
+          "_cssClasses": "cover-stage-art__bokeh"
+        }
+      },
+      "label": "Bokeh Overlay"
+    },
+    {
+      "id": "icf339",
+      "name": "container",
+      "parent": "tdbe89",
+      "children": [
+        "h432b7"
+      ],
+      "settings": {
+        "_cssClasses": "container cover-stage-art__inner",
+        "_hidden": {
+          "_cssClasses": "container cover-stage-art__inner"
+        }
+      },
+      "label": "Cover Container"
+    },
+    {
+      "id": "h432b7",
+      "name": "block",
+      "parent": "icf339",
+      "children": [
+        "c3bddd",
+        "j92f30",
+        "jf8aef"
+      ],
+      "settings": {
+        "_cssClasses": "cover-Floating-composition",
+        "_hidden": {
+          "_cssClasses": "cover-Floating-composition"
+        }
+      },
+      "label": "Floating Multi-Device Stage"
+    },
+    {
+      "id": "c3bddd",
+      "name": "block",
+      "parent": "h432b7",
+      "children": [
+        "n3a155"
+      ],
+      "settings": {
+        "_cssClasses": "cover-device cover-device--left",
+        "_hidden": {
+          "_cssClasses": "cover-device cover-device--left"
+        }
+      },
+      "label": "Left Tilted Card"
+    },
+    {
+      "id": "n3a155",
+      "name": "block",
+      "parent": "c3bddd",
+      "children": [
+        "x90167",
+        "h6d841"
+      ],
+      "settings": {
+        "_cssClasses": "cover-device__screen",
+        "_hidden": {
+          "_cssClasses": "cover-device__screen"
+        }
+      },
+      "label": "Left Screen"
+    },
+    {
+      "id": "x90167",
+      "name": "icon",
+      "parent": "n3a155",
+      "children": [],
+      "settings": {
+        "_cssClasses": "cover-device__icon",
+        "_hidden": {
+          "_cssClasses": "cover-device__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-anchor"
+        },
+        "iconSize": "32"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "h6d841",
+      "name": "heading",
+      "parent": "n3a155",
+      "children": [],
+      "settings": {
+        "tag": "h4",
+        "text": "{post_title}"
+      },
+      "label": "Project Badge"
+    },
+    {
+      "id": "j92f30",
+      "name": "block",
+      "parent": "h432b7",
+      "children": [
+        "ya38cc"
+      ],
+      "settings": {
+        "_cssClasses": "cover-device cover-device--center",
+        "_hidden": {
+          "_cssClasses": "cover-device cover-device--center"
+        }
+      },
+      "label": "Center Flagship Display"
+    },
+    {
+      "id": "ya38cc",
+      "name": "block",
+      "parent": "j92f30",
+      "children": [
+        "s5aafb",
+        "m7dd50",
+        "f69901"
+      ],
+      "settings": {
+        "_cssClasses": "cover-device__screen cover-device__screen--main",
+        "_hidden": {
+          "_cssClasses": "cover-device__screen cover-device__screen--main"
+        }
+      },
+      "label": "Main Screen"
+    },
+    {
+      "id": "s5aafb",
+      "name": "text-basic",
+      "parent": "ya38cc",
+      "children": [],
+      "settings": {
+        "_cssClasses": "cover-chip",
+        "_hidden": {
+          "_cssClasses": "cover-chip"
+        },
+        "tag": "span",
+        "text": "UP GROUP STUDIO CASE STUDY"
+      },
+      "label": "Project Category"
+    },
+    {
+      "id": "m7dd50",
+      "name": "heading",
+      "parent": "ya38cc",
+      "children": [],
+      "settings": {
+        "tag": "h2",
+        "text": "{post_title}"
+      },
+      "label": "Main Display Title"
+    },
+    {
+      "id": "f69901",
+      "name": "text-basic",
+      "parent": "ya38cc",
+      "children": [],
+      "settings": {
+        "tag": "p",
+        "text": "{post_excerpt}"
+      },
+      "label": "Main Display Excerpt"
+    },
+    {
+      "id": "jf8aef",
+      "name": "block",
+      "parent": "h432b7",
+      "children": [
+        "vdcf6c"
+      ],
+      "settings": {
+        "_cssClasses": "cover-device cover-device--right",
+        "_hidden": {
+          "_cssClasses": "cover-device cover-device--right"
+        }
+      },
+      "label": "Right Mobile Card"
+    },
+    {
+      "id": "vdcf6c",
+      "name": "block",
+      "parent": "jf8aef",
+      "children": [
+        "l47e36",
+        "ka111f",
+        "zbee2c"
+      ],
+      "settings": {
+        "_cssClasses": "cover-device__screen",
+        "_hidden": {
+          "_cssClasses": "cover-device__screen"
+        }
+      },
+      "label": "Right Screen"
+    },
+    {
+      "id": "l47e36",
+      "name": "text-basic",
+      "parent": "vdcf6c",
+      "children": [],
+      "settings": {
+        "_cssClasses": "cover-mobile-tag",
+        "_hidden": {
+          "_cssClasses": "cover-mobile-tag"
+        },
+        "tag": "span",
+        "text": "MOBILE FIRST"
+      },
+      "label": "Mobile Tag"
+    },
+    {
+      "id": "ka111f",
+      "name": "heading",
+      "parent": "vdcf6c",
+      "children": [],
+      "settings": {
+        "tag": "h4",
+        "text": "98/100"
+      },
+      "label": "Metric Highlight"
+    },
+    {
+      "id": "zbee2c",
+      "name": "text-basic",
+      "parent": "vdcf6c",
+      "children": [],
+      "settings": {
+        "tag": "p",
+        "text": "Google PageSpeed"
+      },
+      "label": "Metric Label"
+    },
+    {
+      "id": "ka6e63",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "kd1205",
+        "kb5be2"
+      ],
+      "settings": {
+        "_cssClasses": "case-intro-band",
+        "_hidden": {
+          "_cssClasses": "case-intro-band"
+        },
+        "_cssId": "caseIntroBand"
+      },
+      "label": "Colored Editorial Intro Band"
+    },
+    {
+      "id": "kd1205",
+      "name": "block",
+      "parent": "ka6e63",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-intro-band__halftone",
+        "_hidden": {
+          "_cssClasses": "case-intro-band__halftone"
+        }
+      },
+      "label": "Halftone Pattern Overlay"
+    },
+    {
+      "id": "kb5be2",
+      "name": "container",
+      "parent": "ka6e63",
+      "children": [
+        "oae36f",
+        "a3c1b7"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Intro Band Container"
+    },
+    {
+      "id": "oae36f",
+      "name": "block",
+      "parent": "kb5be2",
+      "children": [
+        "l510d9"
+      ],
+      "settings": {
+        "_cssClasses": "case-intro-band__top",
+        "_hidden": {
+          "_cssClasses": "case-intro-band__top"
+        }
+      },
+      "label": "Top Kicker Divider"
+    },
+    {
+      "id": "l510d9",
+      "name": "text-basic",
+      "parent": "oae36f",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-kicker-label",
+        "_hidden": {
+          "_cssClasses": "case-kicker-label"
+        },
+        "tag": "span",
+        "text": "{post_title} × UP Group Studio"
+      },
+      "label": "Kicker Text"
+    },
+    {
+      "id": "a3c1b7",
+      "name": "block",
+      "parent": "kb5be2",
+      "children": [
+        "m75392",
+        "rd5825"
+      ],
+      "settings": {
+        "_cssClasses": "case-intro-band__Offset",
+        "_hidden": {
+          "_cssClasses": "case-intro-band__Offset"
+        }
+      },
+      "label": "Indented Editorial Content"
+    },
+    {
+      "id": "m75392",
+      "name": "heading",
+      "parent": "a3c1b7",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-headline",
+        "_hidden": {
+          "_cssClasses": "case-headline"
+        },
+        "tag": "h1",
+        "text": "Experiencia digital inmersiva y arquitectura a medida diseñada para liderar su industria"
+      },
+      "label": "Case Study Headline"
+    },
+    {
+      "id": "rd5825",
+      "name": "block",
+      "parent": "a3c1b7",
+      "children": [
+        "vc0f33",
+        "ue94bb",
+        "ud4dfd",
+        "deab0e"
+      ],
+      "settings": {
+        "_cssClasses": "case-meta-grid",
+        "_hidden": {
+          "_cssClasses": "case-meta-grid"
+        }
+      },
+      "label": "Case Metadata Row"
+    },
+    {
+      "id": "vc0f33",
+      "name": "block",
+      "parent": "rd5825",
+      "children": [
+        "n818e9",
+        "na9ad5"
+      ],
+      "settings": {
+        "_cssClasses": "case-meta-item",
+        "_hidden": {
+          "_cssClasses": "case-meta-item"
+        }
+      },
+      "label": "Meta Estudio"
+    },
+    {
+      "id": "n818e9",
+      "name": "text-basic",
+      "parent": "vc0f33",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-label",
+        "_hidden": {
+          "_cssClasses": "case-meta-label"
+        },
+        "tag": "span",
+        "text": "Estudio"
+      },
+      "label": "Estudio"
+    },
+    {
+      "id": "na9ad5",
+      "name": "text-basic",
+      "parent": "vc0f33",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-value",
+        "_hidden": {
+          "_cssClasses": "case-meta-value"
+        },
+        "tag": "span",
+        "text": "Guatemala & Houston"
+      },
+      "label": "Guatemala & Houston"
+    },
+    {
+      "id": "ue94bb",
+      "name": "block",
+      "parent": "rd5825",
+      "children": [
+        "k9e33a",
+        "e7c3ac"
+      ],
+      "settings": {
+        "_cssClasses": "case-meta-item",
+        "_hidden": {
+          "_cssClasses": "case-meta-item"
+        }
+      },
+      "label": "Meta Cliente"
+    },
+    {
+      "id": "k9e33a",
+      "name": "text-basic",
+      "parent": "ue94bb",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-label",
+        "_hidden": {
+          "_cssClasses": "case-meta-label"
+        },
+        "tag": "span",
+        "text": "Cliente"
+      },
+      "label": "Cliente"
+    },
+    {
+      "id": "e7c3ac",
+      "name": "text-basic",
+      "parent": "ue94bb",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-value",
+        "_hidden": {
+          "_cssClasses": "case-meta-value"
+        },
+        "tag": "span",
+        "text": "{post_title}"
+      },
+      "label": "{post_title}"
+    },
+    {
+      "id": "ud4dfd",
+      "name": "block",
+      "parent": "rd5825",
+      "children": [
+        "b79ddd",
+        "kb7ef0"
+      ],
+      "settings": {
+        "_cssClasses": "case-meta-item",
+        "_hidden": {
+          "_cssClasses": "case-meta-item"
+        }
+      },
+      "label": "Meta Especialidad"
+    },
+    {
+      "id": "b79ddd",
+      "name": "text-basic",
+      "parent": "ud4dfd",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-label",
+        "_hidden": {
+          "_cssClasses": "case-meta-label"
+        },
+        "tag": "span",
+        "text": "Especialidad"
+      },
+      "label": "Especialidad"
+    },
+    {
+      "id": "kb7ef0",
+      "name": "text-basic",
+      "parent": "ud4dfd",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-value",
+        "_hidden": {
+          "_cssClasses": "case-meta-value"
+        },
+        "tag": "span",
+        "text": "UI/UX & Custom Web Dev"
+      },
+      "label": "UI/UX & Custom Web Dev"
+    },
+    {
+      "id": "deab0e",
+      "name": "block",
+      "parent": "rd5825",
+      "children": [
+        "fa9d37",
+        "ydd8ae"
+      ],
+      "settings": {
+        "_cssClasses": "case-meta-item",
+        "_hidden": {
+          "_cssClasses": "case-meta-item"
+        }
+      },
+      "label": "Meta Año"
+    },
+    {
+      "id": "fa9d37",
+      "name": "text-basic",
+      "parent": "deab0e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-label",
+        "_hidden": {
+          "_cssClasses": "case-meta-label"
+        },
+        "tag": "span",
+        "text": "Año"
+      },
+      "label": "Año"
+    },
+    {
+      "id": "ydd8ae",
+      "name": "text-basic",
+      "parent": "deab0e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-meta-value",
+        "_hidden": {
+          "_cssClasses": "case-meta-value"
+        },
+        "tag": "span",
+        "text": "2025 — 2026"
+      },
+      "label": "2025 — 2026"
+    },
+    {
+      "id": "c77dc6",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "jaee7d"
+      ],
+      "settings": {
+        "_cssClasses": "case-light-canvas",
+        "_hidden": {
+          "_cssClasses": "case-light-canvas"
+        }
+      },
+      "label": "Case Study Editorial Body"
+    },
+    {
+      "id": "jaee7d",
+      "name": "container",
+      "parent": "c77dc6",
+      "children": [
+        "u8d73e",
+        "s50e35"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Case Body Container"
+    },
+    {
+      "id": "u8d73e",
+      "name": "block",
+      "parent": "jaee7d",
+      "children": [
+        "ubb432",
+        "kadd50",
+        "f69e68",
+        "r13024"
+      ],
+      "settings": {
+        "_cssClasses": "case-editorial-col",
+        "_hidden": {
+          "_cssClasses": "case-editorial-col"
+        }
+      },
+      "label": "Narrow Editorial Column"
+    },
+    {
+      "id": "ubb432",
+      "name": "text-basic",
+      "parent": "u8d73e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-lead-copy",
+        "_hidden": {
+          "_cssClasses": "case-lead-copy"
+        },
+        "tag": "p",
+        "text": "Diseñamos una plataforma digital sensorial que combina dirección de arte, velocidad de carga instantánea y un flujo de conversión sin fricciones pensado para usuarios en Guatemala y Estados Unidos."
+      },
+      "label": "Lead Overview Paragraph"
+    },
+    {
+      "id": "kadd50",
+      "name": "block",
+      "parent": "u8d73e",
+      "children": [
+        "xf24b0"
+      ],
+      "settings": {
+        "_cssClasses": "case-video-frame",
+        "_hidden": {
+          "_cssClasses": "case-video-frame"
+        },
+        "_cssId": "caseVideoFrame"
+      },
+      "label": "Featured Video Frame"
+    },
+    {
+      "id": "xf24b0",
+      "name": "block",
+      "parent": "kadd50",
+      "children": [
+        "abeb4d",
+        "b4dbcf"
+      ],
+      "settings": {
+        "_cssClasses": "case-video-frame__overlay",
+        "_hidden": {
+          "_cssClasses": "case-video-frame__overlay"
+        }
+      },
+      "label": "Video Play Overlay"
+    },
+    {
+      "id": "abeb4d",
+      "name": "block",
+      "parent": "xf24b0",
+      "children": [
+        "zd187b"
+      ],
+      "settings": {
+        "_cssClasses": "case-play-box",
+        "_hidden": {
+          "_cssClasses": "case-play-box"
+        },
+        "tag": "span"
+      },
+      "label": "Square Play Button"
+    },
+    {
+      "id": "zd187b",
+      "name": "icon",
+      "parent": "abeb4d",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chevron-right"
+        },
+        "iconSize": "22"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "b4dbcf",
+      "name": "text-basic",
+      "parent": "xf24b0",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-video-caption",
+        "_hidden": {
+          "_cssClasses": "case-video-caption"
+        },
+        "tag": "span",
+        "text": "Ver recorrido interactivo del sitio (01:24)"
+      },
+      "label": "Video Caption"
+    },
+    {
+      "id": "f69e68",
+      "name": "block",
+      "parent": "u8d73e",
+      "children": [
+        "bda9da",
+        "q966b1",
+        "gbce24",
+        "vd4d55"
+      ],
+      "settings": {
+        "_cssClasses": "case-accordion",
+        "_hidden": {
+          "_cssClasses": "case-accordion"
+        }
+      },
+      "label": "4-Row Case Accordion"
+    },
+    {
+      "id": "bda9da",
+      "name": "block",
+      "parent": "f69e68",
+      "children": [
+        "ac2f13",
+        "ed979c"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-item open",
+        "_hidden": {
+          "_cssClasses": "case-acc-item open"
+        }
+      },
+      "label": "El Reto (Challenge)"
+    },
+    {
+      "id": "ac2f13",
+      "name": "block",
+      "parent": "bda9da",
+      "children": [
+        "oe2aad",
+        "r03201"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-trigger",
+        "_hidden": {
+          "_cssClasses": "case-acc-trigger"
+        },
+        "tag": "button",
+        "_attributes": [
+          {
+            "id": "e3883c",
+            "name": "aria-expanded",
+            "value": "true"
+          }
+        ]
+      },
+      "label": "Trigger El Reto (Challenge)"
+    },
+    {
+      "id": "oe2aad",
+      "name": "text-basic",
+      "parent": "ac2f13",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-title",
+        "_hidden": {
+          "_cssClasses": "case-acc-title"
+        },
+        "tag": "span",
+        "text": "El Reto (Challenge)"
+      },
+      "label": "El Reto (Challenge)"
+    },
+    {
+      "id": "r03201",
+      "name": "icon",
+      "parent": "ac2f13",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-icon",
+        "_hidden": {
+          "_cssClasses": "case-acc-icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chevron-down"
+        },
+        "iconSize": "13"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ed979c",
+      "name": "block",
+      "parent": "bda9da",
+      "children": [
+        "e89170"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-panel",
+        "_hidden": {
+          "_cssClasses": "case-acc-panel"
+        }
+      },
+      "label": "Panel El Reto (Challenge)"
+    },
+    {
+      "id": "e89170",
+      "name": "text-basic",
+      "parent": "ed979c",
+      "children": [],
+      "settings": {
+        "tag": "p",
+        "text": "Modernizar la presencia digital eliminando fricciones técnicas y transmitiendo el valor real de la marca desde el primer segundo."
+      },
+      "label": "Panel Copy"
+    },
+    {
+      "id": "q966b1",
+      "name": "block",
+      "parent": "f69e68",
+      "children": [
+        "e61cd8",
+        "f38b2c"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-item",
+        "_hidden": {
+          "_cssClasses": "case-acc-item"
+        }
+      },
+      "label": "Inspiración (Inspiration)"
+    },
+    {
+      "id": "e61cd8",
+      "name": "block",
+      "parent": "q966b1",
+      "children": [
+        "pf2e22",
+        "dfa9ab"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-trigger",
+        "_hidden": {
+          "_cssClasses": "case-acc-trigger"
+        },
+        "tag": "button",
+        "_attributes": [
+          {
+            "id": "ifb51e",
+            "name": "aria-expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "label": "Trigger Inspiración (Inspiration)"
+    },
+    {
+      "id": "pf2e22",
+      "name": "text-basic",
+      "parent": "e61cd8",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-title",
+        "_hidden": {
+          "_cssClasses": "case-acc-title"
+        },
+        "tag": "span",
+        "text": "Inspiración (Inspiration)"
+      },
+      "label": "Inspiración (Inspiration)"
+    },
+    {
+      "id": "dfa9ab",
+      "name": "icon",
+      "parent": "e61cd8",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-icon",
+        "_hidden": {
+          "_cssClasses": "case-acc-icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chevron-down"
+        },
+        "iconSize": "13"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "f38b2c",
+      "name": "block",
+      "parent": "q966b1",
+      "children": [
+        "qe9bd3"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-panel",
+        "_hidden": {
+          "_cssClasses": "case-acc-panel"
+        }
+      },
+      "label": "Panel Inspiración (Inspiration)"
+    },
+    {
+      "id": "qe9bd3",
+      "name": "text-basic",
+      "parent": "f38b2c",
+      "children": [],
+      "settings": {
+        "tag": "p",
+        "text": "Un sistema de diseño editorial donde la tipografía, el contraste y el contenido audiovisual respiran con claridad."
+      },
+      "label": "Panel Copy"
+    },
+    {
+      "id": "gbce24",
+      "name": "block",
+      "parent": "f69e68",
+      "children": [
+        "ua33e0",
+        "bbe19d"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-item",
+        "_hidden": {
+          "_cssClasses": "case-acc-item"
+        }
+      },
+      "label": "La Solución (Idea)"
+    },
+    {
+      "id": "ua33e0",
+      "name": "block",
+      "parent": "gbce24",
+      "children": [
+        "o1453a",
+        "fce68a"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-trigger",
+        "_hidden": {
+          "_cssClasses": "case-acc-trigger"
+        },
+        "tag": "button",
+        "_attributes": [
+          {
+            "id": "fa6717",
+            "name": "aria-expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "label": "Trigger La Solución (Idea)"
+    },
+    {
+      "id": "o1453a",
+      "name": "text-basic",
+      "parent": "ua33e0",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-title",
+        "_hidden": {
+          "_cssClasses": "case-acc-title"
+        },
+        "tag": "span",
+        "text": "La Solución (Idea)"
+      },
+      "label": "La Solución (Idea)"
+    },
+    {
+      "id": "fce68a",
+      "name": "icon",
+      "parent": "ua33e0",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-icon",
+        "_hidden": {
+          "_cssClasses": "case-acc-icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chevron-down"
+        },
+        "iconSize": "13"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "bbe19d",
+      "name": "block",
+      "parent": "gbce24",
+      "children": [
+        "qaedeb"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-panel",
+        "_hidden": {
+          "_cssClasses": "case-acc-panel"
+        }
+      },
+      "label": "Panel La Solución (Idea)"
+    },
+    {
+      "id": "qaedeb",
+      "name": "text-basic",
+      "parent": "bbe19d",
+      "children": [],
+      "settings": {
+        "tag": "p",
+        "text": "Arquitectura web a medida de alto rendimiento con flujos de conversión directa e integración inteligente con WhatsApp y CRM."
+      },
+      "label": "Panel Copy"
+    },
+    {
+      "id": "vd4d55",
+      "name": "block",
+      "parent": "f69e68",
+      "children": [
+        "b168e3",
+        "bdf164"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-item",
+        "_hidden": {
+          "_cssClasses": "case-acc-item"
+        }
+      },
+      "label": "Impacto (Growth)"
+    },
+    {
+      "id": "b168e3",
+      "name": "block",
+      "parent": "vd4d55",
+      "children": [
+        "n5c220",
+        "l7c88c"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-trigger",
+        "_hidden": {
+          "_cssClasses": "case-acc-trigger"
+        },
+        "tag": "button",
+        "_attributes": [
+          {
+            "id": "gb915d",
+            "name": "aria-expanded",
+            "value": "false"
+          }
+        ]
+      },
+      "label": "Trigger Impacto (Growth)"
+    },
+    {
+      "id": "n5c220",
+      "name": "text-basic",
+      "parent": "b168e3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-title",
+        "_hidden": {
+          "_cssClasses": "case-acc-title"
+        },
+        "tag": "span",
+        "text": "Impacto (Growth)"
+      },
+      "label": "Impacto (Growth)"
+    },
+    {
+      "id": "l7c88c",
+      "name": "icon",
+      "parent": "b168e3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-acc-icon",
+        "_hidden": {
+          "_cssClasses": "case-acc-icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chevron-down"
+        },
+        "iconSize": "13"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "bdf164",
+      "name": "block",
+      "parent": "vd4d55",
+      "children": [
+        "s55499"
+      ],
+      "settings": {
+        "_cssClasses": "case-acc-panel",
+        "_hidden": {
+          "_cssClasses": "case-acc-panel"
+        }
+      },
+      "label": "Panel Impacto (Growth)"
+    },
+    {
+      "id": "s55499",
+      "name": "text-basic",
+      "parent": "bdf164",
+      "children": [],
+      "settings": {
+        "tag": "p",
+        "text": "Incremento sostenido en conversiones directas, reducción en tiempos de carga y puntuación superior a 96/100 en Google PageSpeed."
+      },
+      "label": "Panel Copy"
+    },
+    {
+      "id": "r13024",
+      "name": "block",
+      "parent": "u8d73e",
+      "children": [
+        "r00cb1"
+      ],
+      "settings": {
+        "_cssClasses": "case-metrics-block",
+        "_hidden": {
+          "_cssClasses": "case-metrics-block"
+        }
+      },
+      "label": "Impact Metrics Strip"
+    },
+    {
+      "id": "r00cb1",
+      "name": "block",
+      "parent": "r13024",
+      "children": [
+        "g992ec",
+        "o14801",
+        "c54e28"
+      ],
+      "settings": {
+        "_cssClasses": "case-metrics-grid",
+        "_hidden": {
+          "_cssClasses": "case-metrics-grid"
+        }
+      },
+      "label": "Metrics 3-Column Grid"
+    },
+    {
+      "id": "g992ec",
+      "name": "block",
+      "parent": "r00cb1",
+      "children": [
+        "g816b2",
+        "kea766"
+      ],
+      "settings": {
+        "_cssClasses": "case-metric-card",
+        "_hidden": {
+          "_cssClasses": "case-metric-card"
+        }
+      },
+      "label": "Metric +185%"
+    },
+    {
+      "id": "g816b2",
+      "name": "text-basic",
+      "parent": "g992ec",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-number",
+        "_hidden": {
+          "_cssClasses": "case-metric-number"
+        },
+        "tag": "span",
+        "text": "+185%"
+      },
+      "label": "+185%"
+    },
+    {
+      "id": "kea766",
+      "name": "text-basic",
+      "parent": "g992ec",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-label",
+        "_hidden": {
+          "_cssClasses": "case-metric-label"
+        },
+        "tag": "span",
+        "text": "Incremento en conversión directa"
+      },
+      "label": "Incremento en conversión directa"
+    },
+    {
+      "id": "o14801",
+      "name": "block",
+      "parent": "r00cb1",
+      "children": [
+        "j109d0",
+        "db39c5"
+      ],
+      "settings": {
+        "_cssClasses": "case-metric-card",
+        "_hidden": {
+          "_cssClasses": "case-metric-card"
+        }
+      },
+      "label": "Metric 98/100"
+    },
+    {
+      "id": "j109d0",
+      "name": "text-basic",
+      "parent": "o14801",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-number",
+        "_hidden": {
+          "_cssClasses": "case-metric-number"
+        },
+        "tag": "span",
+        "text": "98/100"
+      },
+      "label": "98/100"
+    },
+    {
+      "id": "db39c5",
+      "name": "text-basic",
+      "parent": "o14801",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-label",
+        "_hidden": {
+          "_cssClasses": "case-metric-label"
+        },
+        "tag": "span",
+        "text": "Google PageSpeed Performance"
+      },
+      "label": "Google PageSpeed Performance"
+    },
+    {
+      "id": "c54e28",
+      "name": "block",
+      "parent": "r00cb1",
+      "children": [
+        "m82217",
+        "g2ef92"
+      ],
+      "settings": {
+        "_cssClasses": "case-metric-card",
+        "_hidden": {
+          "_cssClasses": "case-metric-card"
+        }
+      },
+      "label": "Metric 1.1s"
+    },
+    {
+      "id": "m82217",
+      "name": "text-basic",
+      "parent": "c54e28",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-number",
+        "_hidden": {
+          "_cssClasses": "case-metric-number"
+        },
+        "tag": "span",
+        "text": "1.1s"
+      },
+      "label": "1.1s"
+    },
+    {
+      "id": "g2ef92",
+      "name": "text-basic",
+      "parent": "c54e28",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-label",
+        "_hidden": {
+          "_cssClasses": "case-metric-label"
+        },
+        "tag": "span",
+        "text": "Tiempo de carga inicial (LCP)"
+      },
+      "label": "Tiempo de carga inicial (LCP)"
+    },
+    {
+      "id": "s50e35",
+      "name": "block",
+      "parent": "jaee7d",
+      "children": [
+        "d174dd",
+        "w4e6e2"
+      ],
+      "settings": {
+        "_cssClasses": "case-keep-reading",
+        "_hidden": {
+          "_cssClasses": "case-keep-reading"
+        }
+      },
+      "label": "Keep Reading Section"
+    },
+    {
+      "id": "d174dd",
+      "name": "heading",
+      "parent": "s50e35",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-keep-reading__heading",
+        "_hidden": {
+          "_cssClasses": "case-keep-reading__heading"
+        },
+        "tag": "h2",
+        "text": "Seguir explorando",
+        "_attributes": [
+          {
+            "id": "r1e839",
+            "name": "data-i18n",
+            "value": "case.keepReading"
+          }
+        ]
+      },
+      "label": "Seguir explorando"
+    },
+    {
+      "id": "w4e6e2",
+      "name": "block",
+      "parent": "s50e35",
+      "children": [
+        "y6bdcf",
+        "c24faa"
+      ],
+      "settings": {
+        "_cssClasses": "case-related-grid",
+        "_hidden": {
+          "_cssClasses": "case-related-grid"
+        }
+      },
+      "label": "Related 2-Column Grid"
+    },
+    {
+      "id": "y6bdcf",
+      "name": "block",
+      "parent": "w4e6e2",
+      "children": [
+        "lce9a5",
+        "gfd083",
+        "f71f92"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card",
+        "_hidden": {
+          "_cssClasses": "related-case-card"
+        },
+        "tag": "article"
+      },
+      "label": "Related Grand Tikal Futura"
+    },
+    {
+      "id": "lce9a5",
+      "name": "block",
+      "parent": "y6bdcf",
+      "children": [
+        "e432ef"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card__thumb bento-card--blue",
+        "_hidden": {
+          "_cssClasses": "related-case-card__thumb bento-card--blue"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "/project/?id=tikal-futura"
+        }
+      },
+      "label": "Related Thumbnail"
+    },
+    {
+      "id": "e432ef",
+      "name": "block",
+      "parent": "lce9a5",
+      "children": [
+        "fbb52a",
+        "f0b52e"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card__emblem",
+        "_hidden": {
+          "_cssClasses": "related-case-card__emblem"
+        }
+      },
+      "label": "Related Emblem"
+    },
+    {
+      "id": "fbb52a",
+      "name": "text-basic",
+      "parent": "e432ef",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Grand Tikal Futura"
+      },
+      "label": "Grand Tikal Futura"
+    },
+    {
+      "id": "f0b52e",
+      "name": "text-basic",
+      "parent": "e432ef",
+      "children": [],
+      "settings": {
+        "tag": "small",
+        "text": "HOTEL & CONVENTION CENTER"
+      },
+      "label": "HOTEL & CONVENTION CENTER"
+    },
+    {
+      "id": "gfd083",
+      "name": "heading",
+      "parent": "y6bdcf",
+      "children": [],
+      "settings": {
+        "_cssClasses": "related-case-card__title",
+        "_hidden": {
+          "_cssClasses": "related-case-card__title"
+        },
+        "tag": "h3",
+        "text": "Grand Tikal Futura"
+      },
+      "label": "Grand Tikal Futura"
+    },
+    {
+      "id": "f71f92",
+      "name": "text-basic",
+      "parent": "y6bdcf",
+      "children": [],
+      "settings": {
+        "_cssClasses": "related-case-card__desc",
+        "_hidden": {
+          "_cssClasses": "related-case-card__desc"
+        },
+        "tag": "p",
+        "text": "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala."
+      },
+      "label": "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala."
+    },
+    {
+      "id": "c24faa",
+      "name": "block",
+      "parent": "w4e6e2",
+      "children": [
+        "k04ac2",
+        "n057ee",
+        "e7e046"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card",
+        "_hidden": {
+          "_cssClasses": "related-case-card"
+        },
+        "tag": "article"
+      },
+      "label": "Related INDE Guatemala"
+    },
+    {
+      "id": "k04ac2",
+      "name": "block",
+      "parent": "c24faa",
+      "children": [
+        "h157fa"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card__thumb bento-card--blue",
+        "_hidden": {
+          "_cssClasses": "related-case-card__thumb bento-card--blue"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "/project/?id=inde"
+        }
+      },
+      "label": "Related Thumbnail"
+    },
+    {
+      "id": "h157fa",
+      "name": "block",
+      "parent": "k04ac2",
+      "children": [
+        "yeec12",
+        "nce2d3"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card__emblem",
+        "_hidden": {
+          "_cssClasses": "related-case-card__emblem"
+        }
+      },
+      "label": "Related Emblem"
+    },
+    {
+      "id": "yeec12",
+      "name": "text-basic",
+      "parent": "h157fa",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "INDE Guatemala"
+      },
+      "label": "INDE Guatemala"
+    },
+    {
+      "id": "nce2d3",
+      "name": "text-basic",
+      "parent": "h157fa",
+      "children": [],
+      "settings": {
+        "tag": "small",
+        "text": "PLATAFORMA INSTITUCIONAL"
+      },
+      "label": "PLATAFORMA INSTITUCIONAL"
+    },
+    {
+      "id": "n057ee",
+      "name": "heading",
+      "parent": "c24faa",
+      "children": [],
+      "settings": {
+        "_cssClasses": "related-case-card__title",
+        "_hidden": {
+          "_cssClasses": "related-case-card__title"
+        },
+        "tag": "h3",
+        "text": "INDE Guatemala"
+      },
+      "label": "INDE Guatemala"
+    },
+    {
+      "id": "e7e046",
+      "name": "text-basic",
+      "parent": "c24faa",
+      "children": [],
+      "settings": {
+        "_cssClasses": "related-case-card__desc",
+        "_hidden": {
+          "_cssClasses": "related-case-card__desc"
+        },
+        "tag": "p",
+        "text": "Plataforma de alto tráfico con visualización energética nacional y estándares AA+ de accesibilidad."
+      },
+      "label": "Plataforma de alto tráfico con visualización energética nacional y estándares AA+ de accesibilidad."
+    }
+  ]
+}

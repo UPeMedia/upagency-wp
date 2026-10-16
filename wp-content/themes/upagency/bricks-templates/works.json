@@ -1,0 +1,1981 @@
+{
+  "id": 2004,
+  "name": "up-section-works",
+  "title": "UP Group Studio — 02 Portfolio Bento & Manifesto",
+  "type": "section",
+  "templateType": "section",
+  "global_classes": [],
+  "content": [
+    {
+      "id": "lf853a",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "n6d466",
+        "e18b78"
+      ],
+      "settings": {
+        "_cssClasses": "dark-zone portfolio-section",
+        "_hidden": {
+          "_cssClasses": "dark-zone portfolio-section"
+        },
+        "_cssId": "works"
+      },
+      "label": "Portfolio Bento & Manifesto 1"
+    },
+    {
+      "id": "n6d466",
+      "name": "container",
+      "parent": "lf853a",
+      "children": [
+        "r55c44",
+        "s8f4b1"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Portfolio Container"
+    },
+    {
+      "id": "r55c44",
+      "name": "block",
+      "parent": "n6d466",
+      "children": [
+        "f0b607",
+        "we398b",
+        "m38f18",
+        "h3830a",
+        "f921a1",
+        "i70945"
+      ],
+      "settings": {
+        "_cssClasses": "portfolio-bento",
+        "_hidden": {
+          "_cssClasses": "portfolio-bento"
+        }
+      },
+      "label": "Portfolio Bento Grid"
+    },
+    {
+      "id": "f0b607",
+      "name": "block",
+      "parent": "r55c44",
+      "children": [
+        "ef032e",
+        "g250dc"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item",
+        "_hidden": {
+          "_cssClasses": "bento-item"
+        },
+        "tag": "article"
+      },
+      "label": "Project Nanajuana Río Dulce"
+    },
+    {
+      "id": "ef032e",
+      "name": "block",
+      "parent": "f0b607",
+      "children": [
+        "d632d9",
+        "md7e60"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--lilac",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--lilac"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "h3f0d9",
+            "name": "data-project",
+            "value": "Nanajuana Río Dulce"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=nanajuana"
+        }
+      },
+      "label": "Card Nanajuana Río Dulce"
+    },
+    {
+      "id": "d632d9",
+      "name": "block",
+      "parent": "ef032e",
+      "children": [
+        "x37191"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "x37191",
+      "name": "block",
+      "parent": "d632d9",
+      "children": [
+        "b47e03",
+        "c1d092",
+        "eb112e"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "b47e03",
+      "name": "icon",
+      "parent": "x37191",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-anchor"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "c1d092",
+      "name": "text-basic",
+      "parent": "x37191",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "NANAJUANA"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "eb112e",
+      "name": "text-basic",
+      "parent": "x37191",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "RÍO DULCE • MARINA & RESORT"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "md7e60",
+      "name": "block",
+      "parent": "ef032e",
+      "children": [
+        "id601e",
+        "mf85df",
+        "acf6b4"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "id601e",
+      "name": "text-basic",
+      "parent": "md7e60",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "UI/UX • Booking Engine • Brand Content",
+        "_attributes": [
+          {
+            "id": "s1d389",
+            "name": "data-i18n",
+            "value": "works.p1Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "mf85df",
+      "name": "text-basic",
+      "parent": "md7e60",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Experiencia digital inmersiva y reservas directas para el destino náutico más exclusivo de Guatemala.",
+        "_attributes": [
+          {
+            "id": "ifb77d",
+            "name": "data-i18n",
+            "value": "works.p1Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "acf6b4",
+      "name": "block",
+      "parent": "md7e60",
+      "children": [
+        "j9b39a",
+        "q8c31c"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "j9b39a",
+      "name": "text-basic",
+      "parent": "acf6b4",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "hbbbcf",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "q8c31c",
+      "name": "icon",
+      "parent": "acf6b4",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "g250dc",
+      "name": "block",
+      "parent": "f0b607",
+      "children": [
+        "ud2289",
+        "idf31c"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "ud2289",
+      "name": "heading",
+      "parent": "g250dc",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Nanajuana Río Dulce"
+      },
+      "label": "Nanajuana Río Dulce"
+    },
+    {
+      "id": "idf31c",
+      "name": "text-basic",
+      "parent": "g250dc",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Diseño Web & Motor de Reservas",
+        "_attributes": [
+          {
+            "id": "f13cb3",
+            "name": "data-i18n",
+            "value": "works.p1Cat"
+          }
+        ]
+      },
+      "label": "Diseño Web & Motor de Reservas"
+    },
+    {
+      "id": "we398b",
+      "name": "block",
+      "parent": "r55c44",
+      "children": [
+        "eef008",
+        "ca0bf9"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item bento-item--staggered",
+        "_hidden": {
+          "_cssClasses": "bento-item bento-item--staggered"
+        },
+        "tag": "article"
+      },
+      "label": "Project Grand Tikal Futura"
+    },
+    {
+      "id": "eef008",
+      "name": "block",
+      "parent": "we398b",
+      "children": [
+        "zc1a67",
+        "mc4f56"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--blue",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--blue"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "g939a1",
+            "name": "data-project",
+            "value": "Grand Tikal Futura"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=tikal-futura"
+        }
+      },
+      "label": "Card Grand Tikal Futura"
+    },
+    {
+      "id": "zc1a67",
+      "name": "block",
+      "parent": "eef008",
+      "children": [
+        "z21673"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "z21673",
+      "name": "block",
+      "parent": "zc1a67",
+      "children": [
+        "hf8b7d",
+        "ibd74f",
+        "xf8063"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "hf8b7d",
+      "name": "icon",
+      "parent": "z21673",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-gem"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ibd74f",
+      "name": "text-basic",
+      "parent": "z21673",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "TIKAL FUTURA"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "xf8063",
+      "name": "text-basic",
+      "parent": "z21673",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "GRAND HOTEL & CONVENTION CENTER"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "mc4f56",
+      "name": "block",
+      "parent": "eef008",
+      "children": [
+        "s479b5",
+        "r84fa9",
+        "m84076"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "s479b5",
+      "name": "text-basic",
+      "parent": "mc4f56",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Arquitectura Corporativa • Portal de Eventos",
+        "_attributes": [
+          {
+            "id": "l3834b",
+            "name": "data-i18n",
+            "value": "works.p2Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "r84fa9",
+      "name": "text-basic",
+      "parent": "mc4f56",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala.",
+        "_attributes": [
+          {
+            "id": "b5b4fe",
+            "name": "data-i18n",
+            "value": "works.p2Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "m84076",
+      "name": "block",
+      "parent": "mc4f56",
+      "children": [
+        "o93f18",
+        "qa168e"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "o93f18",
+      "name": "text-basic",
+      "parent": "m84076",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "yb7686",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "qa168e",
+      "name": "icon",
+      "parent": "m84076",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "ca0bf9",
+      "name": "block",
+      "parent": "we398b",
+      "children": [
+        "u41026",
+        "ldd77d"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "u41026",
+      "name": "heading",
+      "parent": "ca0bf9",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Grand Tikal Futura"
+      },
+      "label": "Grand Tikal Futura"
+    },
+    {
+      "id": "ldd77d",
+      "name": "text-basic",
+      "parent": "ca0bf9",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Portal Corporativo & Convenciones",
+        "_attributes": [
+          {
+            "id": "m42391",
+            "name": "data-i18n",
+            "value": "works.p2Cat"
+          }
+        ]
+      },
+      "label": "Portal Corporativo & Convenciones"
+    },
+    {
+      "id": "m38f18",
+      "name": "block",
+      "parent": "r55c44",
+      "children": [
+        "o7f6ea",
+        "e00125"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item",
+        "_hidden": {
+          "_cssClasses": "bento-item"
+        },
+        "tag": "article"
+      },
+      "label": "Project INDE Guatemala"
+    },
+    {
+      "id": "o7f6ea",
+      "name": "block",
+      "parent": "m38f18",
+      "children": [
+        "a6d5e0",
+        "c093fe"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--coral",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--coral"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "d2cb1d",
+            "name": "data-project",
+            "value": "INDE Guatemala"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=inde"
+        }
+      },
+      "label": "Card INDE Guatemala"
+    },
+    {
+      "id": "a6d5e0",
+      "name": "block",
+      "parent": "o7f6ea",
+      "children": [
+        "e10b82"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "e10b82",
+      "name": "block",
+      "parent": "a6d5e0",
+      "children": [
+        "j33960",
+        "cbe138",
+        "naca66"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "j33960",
+      "name": "icon",
+      "parent": "e10b82",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-bolt-lightning"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "cbe138",
+      "name": "text-basic",
+      "parent": "e10b82",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "INDE"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "naca66",
+      "name": "text-basic",
+      "parent": "e10b82",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "INSTITUTO NACIONAL DE ELECTRIFICACIÓN"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "c093fe",
+      "name": "block",
+      "parent": "o7f6ea",
+      "children": [
+        "q82be8",
+        "pa0f8c",
+        "a25ba6"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "q82be8",
+      "name": "text-basic",
+      "parent": "c093fe",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Portal Institucional • Alta Disponibilidad",
+        "_attributes": [
+          {
+            "id": "lbc64b",
+            "name": "data-i18n",
+            "value": "works.p3Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "pa0f8c",
+      "name": "text-basic",
+      "parent": "c093fe",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Plataforma de alto tráfico con visualización energética nacional, estándares de accesibilidad y ciberseguridad.",
+        "_attributes": [
+          {
+            "id": "j9c48f",
+            "name": "data-i18n",
+            "value": "works.p3Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "a25ba6",
+      "name": "block",
+      "parent": "c093fe",
+      "children": [
+        "m0132b",
+        "ec5efc"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "m0132b",
+      "name": "text-basic",
+      "parent": "a25ba6",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "j7267b",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "ec5efc",
+      "name": "icon",
+      "parent": "a25ba6",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "e00125",
+      "name": "block",
+      "parent": "m38f18",
+      "children": [
+        "o10ad4",
+        "eea601"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "o10ad4",
+      "name": "heading",
+      "parent": "e00125",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "INDE Guatemala"
+      },
+      "label": "INDE Guatemala"
+    },
+    {
+      "id": "eea601",
+      "name": "text-basic",
+      "parent": "e00125",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Plataforma Institucional & Datos",
+        "_attributes": [
+          {
+            "id": "ocfe17",
+            "name": "data-i18n",
+            "value": "works.p3Cat"
+          }
+        ]
+      },
+      "label": "Plataforma Institucional & Datos"
+    },
+    {
+      "id": "h3830a",
+      "name": "block",
+      "parent": "r55c44",
+      "children": [
+        "t4cd0f",
+        "w8591f"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item bento-item--staggered",
+        "_hidden": {
+          "_cssClasses": "bento-item bento-item--staggered"
+        },
+        "tag": "article"
+      },
+      "label": "Project Hyundai Comerciales"
+    },
+    {
+      "id": "t4cd0f",
+      "name": "block",
+      "parent": "h3830a",
+      "children": [
+        "g09062",
+        "gf3764"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--orchid",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--orchid"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "z6ca7e",
+            "name": "data-project",
+            "value": "Hyundai Comerciales"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=hyundai"
+        }
+      },
+      "label": "Card Hyundai Comerciales"
+    },
+    {
+      "id": "g09062",
+      "name": "block",
+      "parent": "t4cd0f",
+      "children": [
+        "e37c1d"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "e37c1d",
+      "name": "block",
+      "parent": "g09062",
+      "children": [
+        "p9f9c7",
+        "wd858b",
+        "q3b985"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "p9f9c7",
+      "name": "icon",
+      "parent": "e37c1d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-truck-fast"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "wd858b",
+      "name": "text-basic",
+      "parent": "e37c1d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "HYUNDAI"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "q3b985",
+      "name": "text-basic",
+      "parent": "e37c1d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "VEHÍCULOS COMERCIALES & FLOTILLAS"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "gf3764",
+      "name": "block",
+      "parent": "t4cd0f",
+      "children": [
+        "y06048",
+        "i62a5f",
+        "ia3512"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "y06048",
+      "name": "text-basic",
+      "parent": "gf3764",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Catálogo B2B • Embudo de Leads",
+        "_attributes": [
+          {
+            "id": "y82045",
+            "name": "data-i18n",
+            "value": "works.p4Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "i62a5f",
+      "name": "text-basic",
+      "parent": "gf3764",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Catálogo interactivo y cotizador en tiempo real para la línea de camiones y autobuses Hyundai.",
+        "_attributes": [
+          {
+            "id": "n5031f",
+            "name": "data-i18n",
+            "value": "works.p4Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "ia3512",
+      "name": "block",
+      "parent": "gf3764",
+      "children": [
+        "idb7ca",
+        "f63b6b"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "idb7ca",
+      "name": "text-basic",
+      "parent": "ia3512",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "p191ee",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "f63b6b",
+      "name": "icon",
+      "parent": "ia3512",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "w8591f",
+      "name": "block",
+      "parent": "h3830a",
+      "children": [
+        "yd6003",
+        "a3e4b4"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "yd6003",
+      "name": "heading",
+      "parent": "w8591f",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Hyundai Comerciales"
+      },
+      "label": "Hyundai Comerciales"
+    },
+    {
+      "id": "a3e4b4",
+      "name": "text-basic",
+      "parent": "w8591f",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Catálogo Digital & Lead Generation",
+        "_attributes": [
+          {
+            "id": "b0bab6",
+            "name": "data-i18n",
+            "value": "works.p4Cat"
+          }
+        ]
+      },
+      "label": "Catálogo Digital & Lead Generation"
+    },
+    {
+      "id": "f921a1",
+      "name": "block",
+      "parent": "r55c44",
+      "children": [
+        "y28985",
+        "fddac6"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item",
+        "_hidden": {
+          "_cssClasses": "bento-item"
+        },
+        "tag": "article"
+      },
+      "label": "Project Coastal Debt (USA)"
+    },
+    {
+      "id": "y28985",
+      "name": "block",
+      "parent": "f921a1",
+      "children": [
+        "s36769",
+        "wd49a4"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--mint",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--mint"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "g5cc69",
+            "name": "data-project",
+            "value": "Coastal Debt (USA)"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=coastal-debt"
+        }
+      },
+      "label": "Card Coastal Debt (USA)"
+    },
+    {
+      "id": "s36769",
+      "name": "block",
+      "parent": "y28985",
+      "children": [
+        "pced33"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "pced33",
+      "name": "block",
+      "parent": "s36769",
+      "children": [
+        "m70b3f",
+        "r5cf85",
+        "fa6ff1"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "m70b3f",
+      "name": "icon",
+      "parent": "pced33",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-chart-line"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "r5cf85",
+      "name": "text-basic",
+      "parent": "pced33",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "COASTAL DEBT"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "fa6ff1",
+      "name": "text-basic",
+      "parent": "pced33",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "FINANCIAL RELIEF • UNITED STATES"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "wd49a4",
+      "name": "block",
+      "parent": "y28985",
+      "children": [
+        "r9e2c6",
+        "fb4640",
+        "r52709"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "r9e2c6",
+      "name": "text-basic",
+      "parent": "wd49a4",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "US Fintech Market • Speed Optimization",
+        "_attributes": [
+          {
+            "id": "zed178",
+            "name": "data-i18n",
+            "value": "works.p5Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "fb4640",
+      "name": "text-basic",
+      "parent": "wd49a4",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Plataforma financiera para el mercado de EE.UU. con calculadoras interactivas y conversión de alto rendimiento.",
+        "_attributes": [
+          {
+            "id": "k4350c",
+            "name": "data-i18n",
+            "value": "works.p5Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "r52709",
+      "name": "block",
+      "parent": "wd49a4",
+      "children": [
+        "uace97",
+        "m43a64"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "uace97",
+      "name": "text-basic",
+      "parent": "r52709",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "i7a74a",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "m43a64",
+      "name": "icon",
+      "parent": "r52709",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "fddac6",
+      "name": "block",
+      "parent": "f921a1",
+      "children": [
+        "w9c0a4",
+        "td14c0"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "w9c0a4",
+      "name": "heading",
+      "parent": "fddac6",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "Coastal Debt (USA)"
+      },
+      "label": "Coastal Debt (USA)"
+    },
+    {
+      "id": "td14c0",
+      "name": "text-basic",
+      "parent": "fddac6",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Fintech Web & Optimización",
+        "_attributes": [
+          {
+            "id": "i32fb6",
+            "name": "data-i18n",
+            "value": "works.p5Cat"
+          }
+        ]
+      },
+      "label": "Fintech Web & Optimización"
+    },
+    {
+      "id": "i70945",
+      "name": "block",
+      "parent": "r55c44",
+      "children": [
+        "u3319e",
+        "he8367"
+      ],
+      "settings": {
+        "_cssClasses": "bento-item bento-item--staggered",
+        "_hidden": {
+          "_cssClasses": "bento-item bento-item--staggered"
+        },
+        "tag": "article"
+      },
+      "label": "Project BBDO Guatemala"
+    },
+    {
+      "id": "u3319e",
+      "name": "block",
+      "parent": "i70945",
+      "children": [
+        "x4d3f6",
+        "cb7cd2"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card bento-card--amber",
+        "_hidden": {
+          "_cssClasses": "bento-card bento-card--amber"
+        },
+        "tag": "a",
+        "_attributes": [
+          {
+            "id": "vf0632",
+            "name": "data-project",
+            "value": "BBDO Guatemala"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "/project/?id=bbdo"
+        }
+      },
+      "label": "Card BBDO Guatemala"
+    },
+    {
+      "id": "x4d3f6",
+      "name": "block",
+      "parent": "u3319e",
+      "children": [
+        "yf829d"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__center",
+        "_hidden": {
+          "_cssClasses": "bento-card__center"
+        }
+      },
+      "label": "Center Emblem"
+    },
+    {
+      "id": "yf829d",
+      "name": "block",
+      "parent": "x4d3f6",
+      "children": [
+        "p9dd85",
+        "n5963b",
+        "j81a49"
+      ],
+      "settings": {
+        "_cssClasses": "bento-emblem",
+        "_hidden": {
+          "_cssClasses": "bento-emblem"
+        }
+      },
+      "label": "Emblem Inner"
+    },
+    {
+      "id": "p9dd85",
+      "name": "icon",
+      "parent": "yf829d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__icon",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__icon"
+        },
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-award"
+        },
+        "iconSize": "38"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "n5963b",
+      "name": "text-basic",
+      "parent": "yf829d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__name",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__name"
+        },
+        "tag": "span",
+        "text": "BBDO"
+      },
+      "label": "Emblem Name"
+    },
+    {
+      "id": "j81a49",
+      "name": "text-basic",
+      "parent": "yf829d",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-emblem__sub",
+        "_hidden": {
+          "_cssClasses": "bento-emblem__sub"
+        },
+        "tag": "span",
+        "text": "CREATIVE AGENCY NETWORK"
+      },
+      "label": "Emblem Subtitle"
+    },
+    {
+      "id": "cb7cd2",
+      "name": "block",
+      "parent": "u3319e",
+      "children": [
+        "nb5d14",
+        "e838bf",
+        "b1727c"
+      ],
+      "settings": {
+        "_cssClasses": "bento-card__hover-reveal",
+        "_hidden": {
+          "_cssClasses": "bento-card__hover-reveal"
+        }
+      },
+      "label": "Hover Reveal Overlay"
+    },
+    {
+      "id": "nb5d14",
+      "name": "text-basic",
+      "parent": "cb7cd2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-pill",
+        "_hidden": {
+          "_cssClasses": "reveal-pill"
+        },
+        "tag": "span",
+        "text": "Creative Showcase • Video Portfolio",
+        "_attributes": [
+          {
+            "id": "o9aea0",
+            "name": "data-i18n",
+            "value": "works.p6Tag"
+          }
+        ]
+      },
+      "label": "Reveal Tag"
+    },
+    {
+      "id": "e838bf",
+      "name": "text-basic",
+      "parent": "cb7cd2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "reveal-desc",
+        "_hidden": {
+          "_cssClasses": "reveal-desc"
+        },
+        "tag": "p",
+        "text": "Showcase editorial multipremiado exhibiendo campañas regionales con fluidez y velocidad instantánea.",
+        "_attributes": [
+          {
+            "id": "e4e635",
+            "name": "data-i18n",
+            "value": "works.p6Desc"
+          }
+        ]
+      },
+      "label": "Reveal Description"
+    },
+    {
+      "id": "b1727c",
+      "name": "block",
+      "parent": "cb7cd2",
+      "children": [
+        "oa414d",
+        "u41717"
+      ],
+      "settings": {
+        "_cssClasses": "reveal-cta",
+        "_hidden": {
+          "_cssClasses": "reveal-cta"
+        },
+        "tag": "span"
+      },
+      "label": "Reveal CTA"
+    },
+    {
+      "id": "oa414d",
+      "name": "text-basic",
+      "parent": "b1727c",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Explorar caso",
+        "_attributes": [
+          {
+            "id": "j42643",
+            "name": "data-i18n",
+            "value": "works.cta"
+          }
+        ]
+      },
+      "label": "Explorar caso"
+    },
+    {
+      "id": "u41717",
+      "name": "icon",
+      "parent": "b1727c",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-arrow-up-right-from-square"
+        },
+        "iconSize": "14"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "he8367",
+      "name": "block",
+      "parent": "i70945",
+      "children": [
+        "m7e5a3",
+        "qabf53"
+      ],
+      "settings": {
+        "_cssClasses": "bento-meta",
+        "_hidden": {
+          "_cssClasses": "bento-meta"
+        }
+      },
+      "label": "Project Meta"
+    },
+    {
+      "id": "m7e5a3",
+      "name": "heading",
+      "parent": "he8367",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-title",
+        "_hidden": {
+          "_cssClasses": "bento-title"
+        },
+        "tag": "h3",
+        "text": "BBDO Guatemala"
+      },
+      "label": "BBDO Guatemala"
+    },
+    {
+      "id": "qabf53",
+      "name": "text-basic",
+      "parent": "he8367",
+      "children": [],
+      "settings": {
+        "_cssClasses": "bento-category",
+        "_hidden": {
+          "_cssClasses": "bento-category"
+        },
+        "tag": "p",
+        "text": "Diseño Editorial & Portafolio",
+        "_attributes": [
+          {
+            "id": "me2fe6",
+            "name": "data-i18n",
+            "value": "works.p6Cat"
+          }
+        ]
+      },
+      "label": "Diseño Editorial & Portafolio"
+    },
+    {
+      "id": "s8f4b1",
+      "name": "block",
+      "parent": "n6d466",
+      "children": [
+        "id1ec9"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-section manifesto-section--dark",
+        "_hidden": {
+          "_cssClasses": "manifesto-section manifesto-section--dark"
+        }
+      },
+      "label": "Manifesto 1 Dark"
+    },
+    {
+      "id": "id1ec9",
+      "name": "block",
+      "parent": "s8f4b1",
+      "children": [
+        "o45b56",
+        "wb0eab"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-grid",
+        "_hidden": {
+          "_cssClasses": "manifesto-grid"
+        }
+      },
+      "label": "Manifesto Grid"
+    },
+    {
+      "id": "o45b56",
+      "name": "block",
+      "parent": "id1ec9",
+      "children": [
+        "d52d0d"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-stamp-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-stamp-col"
+        }
+      },
+      "label": "Stamp Column"
+    },
+    {
+      "id": "d52d0d",
+      "name": "shortcode",
+      "parent": "o45b56",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_manifesto_stamp_dark]"
+      },
+      "label": "Manifesto 1 Rotating Stamp"
+    },
+    {
+      "id": "wb0eab",
+      "name": "block",
+      "parent": "id1ec9",
+      "children": [
+        "x1f2ff",
+        "d519bd",
+        "a848a0"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-copy-col",
+        "_hidden": {
+          "_cssClasses": "manifesto-copy-col"
+        }
+      },
+      "label": "Manifesto Copy Column"
+    },
+    {
+      "id": "x1f2ff",
+      "name": "text-basic",
+      "parent": "wb0eab",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead"
+        },
+        "tag": "p",
+        "text": "No solo hacemos <span class=\"doodle-word doodle-word--yellow\">sitios web.</span> Los hacemos visibles ante los ojos de todos y en Google. Hablamos geek, pero te explicamos cada paso sin tecnicismos incomprensibles para que tu proyecto digital sea <span class=\"doodle-word doodle-word--mint\">genial.</span>",
+        "_attributes": [
+          {
+            "id": "d99d99",
+            "name": "data-i18n",
+            "value": "manifesto1.p1"
+          }
+        ]
+      },
+      "label": "Manifesto Paragraph 1"
+    },
+    {
+      "id": "d519bd",
+      "name": "text-basic",
+      "parent": "wb0eab",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-lead",
+        "_hidden": {
+          "_cssClasses": "manifesto-lead"
+        },
+        "tag": "p",
+        "text": "Hemos trabajado en proyectos que salen de lo ordinario: retos que nos impulsan a <span class=\"doodle-word doodle-word--blue\">crear a medida</span> y superar expectativas. Eso es lo que amamos 💖: la excelencia técnica y visual, jamás el copiar y pegar.",
+        "_attributes": [
+          {
+            "id": "w0757b",
+            "name": "data-i18n",
+            "value": "manifesto1.p2"
+          }
+        ]
+      },
+      "label": "Manifesto Paragraph 2"
+    },
+    {
+      "id": "a848a0",
+      "name": "block",
+      "parent": "wb0eab",
+      "children": [
+        "i92325",
+        "yfac43"
+      ],
+      "settings": {
+        "_cssClasses": "manifesto-footer",
+        "_hidden": {
+          "_cssClasses": "manifesto-footer"
+        }
+      },
+      "label": "Manifesto Footer"
+    },
+    {
+      "id": "i92325",
+      "name": "text-basic",
+      "parent": "a848a0",
+      "children": [],
+      "settings": {
+        "_cssClasses": "manifesto-caption",
+        "_hidden": {
+          "_cssClasses": "manifesto-caption"
+        },
+        "tag": "p",
+        "text": "¿Tienes un proyecto en mente? Cuéntanos tus objetivos.",
+        "_attributes": [
+          {
+            "id": "hb8ae6",
+            "name": "data-i18n",
+            "value": "manifesto1.caption"
+          }
+        ]
+      },
+      "label": "Manifesto Caption"
+    },
+    {
+      "id": "yfac43",
+      "name": "text-link",
+      "parent": "a848a0",
+      "children": [],
+      "settings": {
+        "_cssClasses": "btn-gradient-pill",
+        "_hidden": {
+          "_cssClasses": "btn-gradient-pill"
+        },
+        "text": "Iniciar una conversación",
+        "_attributes": [
+          {
+            "id": "t3fa83",
+            "name": "data-i18n",
+            "value": "manifesto1.cta"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Manifesto CTA"
+    },
+    {
+      "id": "e18b78",
+      "name": "shortcode",
+      "parent": "lf853a",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_marquee_ribbons]"
+      },
+      "label": "Criss-Crossed Marquee Ribbons"
+    }
+  ]
+}

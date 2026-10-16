@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Caso de Estudio — UP Group Studio | Guatemala &amp; Houston</title>
+  <meta name="description" content="Caso de estudio y resultados del proyecto desarrollado por UP Group Studio (studio.up.gt).">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+
+  <!-- Fonts: Geist, Geist Mono & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=3.0">
+</head>
+<body class="up-body case-study-body">
+
+  <!-- ========================================================================
+       DARK STICKY HEADER (CONSISTENT WITH HOME)
+       ======================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-logo" aria-label="UP Group Studio">
+        <img src="assets/logo.png" alt="UP Group Studio" class="site-logo__img">
+        <span class="sr-only">UP Group Studio</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="site-nav__list">
+          <li><a href="index.html#works" class="site-nav__link active" data-i18n="nav.works">Proyectos</a></li>
+          <li><a href="index.html#services" class="site-nav__link" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="index.html#studio" class="site-nav__link" data-i18n="nav.studio">El Estudio</a></li>
+          <li class="site-nav__cta-item">
+            <a href="index.html#inquiry" class="nav-contact-pill" data-i18n="nav.contact">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__right">
+        <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="es">ES</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html#works" class="mobile-link" data-i18n="nav.works">Proyectos</a></li>
+        <li><a href="index.html#services" class="mobile-link" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="index.html#studio" class="mobile-link" data-i18n="nav.studio">El Estudio</a></li>
+        <li><a href="index.html#inquiry" class="mobile-link mobile-link--btn" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Quick Project Switcher Bar (For Preview Convenience) -->
+  <div class="case-switcher-bar">
+    <div class="container case-switcher-bar__inner">
+      <a href="index.html#works" class="case-back-link">
+        <i class="fa-solid fa-arrow-left"></i> <span data-i18n="case.backToWorks">Volver a Proyectos</span>
+      </a>
+      <div class="case-quick-pills" id="caseQuickPills" aria-label="Cambiar de proyecto">
+        <a href="?id=nanajuana" class="case-pill" data-project-id="nanajuana">Nanajuana</a>
+        <a href="?id=tikal-futura" class="case-pill" data-project-id="tikal-futura">Tikal Futura</a>
+        <a href="?id=inde" class="case-pill" data-project-id="inde">INDE</a>
+        <a href="?id=hyundai" class="case-pill" data-project-id="hyundai">Hyundai</a>
+        <a href="?id=coastal-debt" class="case-pill" data-project-id="coastal-debt">Coastal Debt</a>
+        <a href="?id=bbdo" class="case-pill" data-project-id="bbdo">BBDO</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="caseMain">
+
+    <!-- ======================================================================
+         1. FULL-BLEED HERO VISUAL COVER (VML SCREENSHOT TOP BANNER)
+         ====================================================================== -->
+    <section class="case-hero-cover" id="caseHeroCover">
+      <div class="case-hero-cover__stage" id="caseCoverArtwork">
+        <!-- Populated dynamically with bespoke multi-device mockup & art for each project -->
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. COLORED EDITORIAL INTRO BAND WITH HALFTONE TEXTURE & METADATA
+         ====================================================================== -->
+    <section class="case-intro-band" id="caseIntroBand">
+      <div class="case-intro-band__halftone" aria-hidden="true"></div>
+      <div class="container">
+        <!-- Top Kicker + Full Divider Line -->
+        <div class="case-intro-band__top">
+          <span class="case-kicker-label" id="caseKicker">Nanajuana Río Dulce — Marina &amp; Resort</span>
+        </div>
+
+        <!-- Indented Editorial Title & Metadata Columns (Exact VML Layout) -->
+        <div class="case-intro-band__Offset">
+          <h1 class="case-headline" id="caseHeadline">
+            Experiencia digital inmersiva y motor de reservas directas que transformó el destino náutico más exclusivo de Guatemala
+          </h1>
+
+          <div class="case-meta-grid">
+            <div class="case-meta-item">
+              <span class="case-meta-label" data-i18n="case.metaOfficeLabel">Estudio</span>
+              <span class="case-meta-value" id="caseMetaOffice">Guatemala &amp; Houston</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label" data-i18n="case.metaClientLabel">Cliente</span>
+              <span class="case-meta-value" id="caseMetaClient">Nanajuana Río Dulce</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label" data-i18n="case.metaServiceLabel">Especialidad</span>
+              <span class="case-meta-value" id="caseMetaService">UI/UX, Web Dev &amp; Booking</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label" data-i18n="case.metaYearLabel">Año</span>
+              <span class="case-meta-value" id="caseMetaYear">2025 — 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. LIGHT EDITORIAL CONTENT ZONE (SUMMARY, VIDEO, ACCORDIONS, METRICS, CAROUSEL, KEEP READING)
+         ====================================================================== -->
+    <div class="case-light-canvas">
+      <div class="container">
+
+        <!-- Narrow Centered Editorial Column (Matches VML Proportions) -->
+        <div class="case-editorial-col">
+
+          <!-- Lead Overview Paragraph -->
+          <p class="case-lead-copy" id="caseLeadCopy">
+            Para posicionar a Nanajuana Río Dulce como el resort y marina líder del Caribe guatemalteco, diseñamos una plataforma digital sensorial que combina video aéreo inmersivo, arquitectura de velocidad instantánea y un flujo de reservación directa sin fricciones.
+          </p>
+
+          <!-- Featured Video / Interactive Reel Frame with Square Play Button -->
+          <div class="case-video-frame" id="caseVideoFrame" role="button" tabindex="0" aria-label="Reproducir recorrido interactivo del proyecto">
+            <div class="case-video-frame__visual" id="caseVideoVisual">
+              <!-- Dynamic visual preview -->
+            </div>
+            <div class="case-video-frame__overlay">
+              <span class="case-play-box">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+              <span class="case-video-caption" id="caseVideoCaption">Ver recorrido interactivo del sitio (01:15)</span>
+            </div>
+          </div>
+
+          <!-- 4-Row Case Study Accordion (Challenge, Inspiration, Idea, Growth) -->
+          <div class="case-accordion" id="caseAccordion">
+
+            <!-- Item 1: Challenge / El Reto -->
+            <div class="case-acc-item open">
+              <button type="button" class="case-acc-trigger" aria-expanded="true">
+                <span class="case-acc-title" data-i18n="case.accChallenge">Challenge</span>
+                <i class="fa-solid fa-chevron-down case-acc-icon"></i>
+              </button>
+              <div class="case-acc-panel">
+                <p id="caseAccChallengeText"></p>
+              </div>
+            </div>
+
+            <!-- Item 2: Inspiration / Inspiración -->
+            <div class="case-acc-item">
+              <button type="button" class="case-acc-trigger" aria-expanded="false">
+                <span class="case-acc-title" data-i18n="case.accInspiration">Inspiration</span>
+                <i class="fa-solid fa-chevron-down case-acc-icon"></i>
+              </button>
+              <div class="case-acc-panel">
+                <p id="caseAccInspirationText"></p>
+              </div>
+            </div>
+
+            <!-- Item 3: Idea / La Solución -->
+            <div class="case-acc-item">
+              <button type="button" class="case-acc-trigger" aria-expanded="false">
+                <span class="case-acc-title" data-i18n="case.accIdea">Idea</span>
+                <i class="fa-solid fa-chevron-down case-acc-icon"></i>
+              </button>
+              <div class="case-acc-panel">
+                <p id="caseAccIdeaText"></p>
+              </div>
+            </div>
+
+            <!-- Item 4: Growth / Impacto & Resultados -->
+            <div class="case-acc-item">
+              <button type="button" class="case-acc-trigger" aria-expanded="false">
+                <span class="case-acc-title" data-i18n="case.accGrowth">Growth</span>
+                <i class="fa-solid fa-chevron-down case-acc-icon"></i>
+              </button>
+              <div class="case-acc-panel">
+                <p id="caseAccGrowthText"></p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Key Impact Metrics Strip with < 1 / 2 > Pagination -->
+          <div class="case-metrics-block">
+            <div class="case-metrics-grid" id="caseMetricsGrid">
+              <!-- Populated dynamically with 3 metrics per page -->
+            </div>
+            <div class="case-pager">
+              <button type="button" class="case-pager__btn" id="metricsPrevBtn" aria-label="Métricas anteriores">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <span class="case-pager__count" id="metricsPageCount">1 / 2</span>
+              <button type="button" class="case-pager__btn" id="metricsNextBtn" aria-label="Siguientes métricas">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Gallery Carousel with < 1 / 4 > Pagination -->
+          <div class="case-gallery-block">
+            <div class="case-gallery-viewport" id="caseGalleryViewport">
+              <!-- Dynamic Slide Rendered Here -->
+            </div>
+            <div class="case-gallery-footer">
+              <span class="case-gallery-caption" id="caseGalleryCaption">Vista Desktop &amp; Sistema de Diseño</span>
+              <div class="case-pager">
+                <button type="button" class="case-pager__btn" id="galleryPrevBtn" aria-label="Imagen anterior">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <span class="case-pager__count" id="galleryPageCount">1 / 4</span>
+                <button type="button" class="case-pager__btn" id="galleryNextBtn" aria-label="Siguiente imagen">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.case-editorial-col -->
+
+        <!-- ==================================================================
+             4. "KEEP READING" / EXPLORAR MÁS PROYECTOS (2-COLUMN RELATED GRID)
+             ================================================================== -->
+        <section class="case-keep-reading">
+          <h2 class="case-keep-reading__heading" data-i18n="case.keepReading">Keep reading</h2>
+          <div class="case-related-grid" id="caseRelatedGrid">
+            <!-- Populated dynamically with the next 2 projects -->
+          </div>
+        </section>
+
+      </div>
+    </div><!-- /.case-light-canvas -->
+
+  </main>
+
+  <!-- ========================================================================
+       BLACK FOOTER (CONSISTENT WITH HOME)
+       ======================================================================== -->
+  <footer class="morez-footer" id="contact">
+    <div class="container">
+
+      <div class="footer-boxes">
+        <a href="https://wa.me/50237556857?text=Hola%20UP%20Group%20Studio,%20quisiera%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="footer-box">
+          <span class="footer-box__text"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="footer.box1">Chatear por WhatsApp</span></span>
+        </a>
+        <div class="footer-box">
+          <span class="footer-box__text"><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer.box2">Guatemala &bull; Houston, Texas</span></span>
+        </div>
+        <a href="index.html#inquiry" class="footer-box">
+          <span class="footer-box__text"><i class="fa-regular fa-paper-plane"></i> <span data-i18n="footer.box3">Iniciar Proyecto &bull; studio.up.gt</span></span>
+        </a>
+      </div>
+
+      <div class="footer-center-brand">
+        <a href="index.html" class="footer-wordmark">UP GROUP STUDIO</a>
+      </div>
+
+      <div class="footer-main-grid">
+        <div class="footer-cta-col">
+          <h2 class="footer-big-title">
+            <span data-i18n="footer.bigTitle">Es ahora que<br>todo comienza</span>
+            <span class="footer-script-accent" data-i18n="footer.scriptAccent">con nosotros</span>
+          </h2>
+          <a href="index.html#inquiry" class="btn-gradient-pill" data-i18n="footer.ctaBtn">Iniciar un proyecto</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title" data-i18n="footer.col1Title">Estudio</h4>
+          <ul>
+            <li><a href="index.html#works" data-i18n="nav.works">Proyectos</a></li>
+            <li><a href="index.html#studio" data-i18n="nav.studio">El Estudio</a></li>
+            <li><a href="https://rodri8.com" target="_blank" rel="noopener noreferrer">Portafolio Rodrigo</a></li>
+            <li><a href="index.html#inquiry" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title" data-i18n="footer.col2Title">Servicios &amp; Soluciones</h4>
+          <ul>
+            <li><a href="index.html#services" data-i18n="services.f1">Desarrollo Web a Medida</a></li>
+            <li><a href="index.html#services" data-i18n="services.f2">Diseño UI/UX &amp; Branding</a></li>
+            <li><a href="index.html#services" data-i18n="services.f3">E-Commerce &amp; Pagos</a></li>
+            <li><a href="index.html#services" data-i18n="services.f4">Optimización &amp; Velocidad</a></li>
+            <li><a href="index.html#services" data-i18n="services.f5">Automatizaciones &amp; IA</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-shapes-row" aria-hidden="true">
+        <svg class="f-shape f-shape--1" viewBox="0 0 60 60"><path d="M30 5V55M5 30H55M12 12L48 48M48 12L12 48" stroke="#BC80BB" stroke-width="8" stroke-linecap="round"/></svg>
+        <svg class="f-shape f-shape--2" viewBox="0 0 80 80"><g fill="#EB5F69"><ellipse cx="40" cy="18" rx="10" ry="16"/><ellipse cx="40" cy="62" rx="10" ry="16"/><ellipse cx="18" cy="40" rx="16" ry="10"/><ellipse cx="62" cy="40" rx="16" ry="10"/><ellipse cx="24" cy="24" rx="12" ry="12"/><ellipse cx="56" cy="56" rx="12" ry="12"/><ellipse cx="56" cy="24" rx="12" ry="12"/><ellipse cx="24" cy="56" rx="12" ry="12"/></g><circle cx="40" cy="40" r="8" fill="#050505"/></svg>
+        <svg class="f-shape f-shape--3" viewBox="0 0 90 90"><circle cx="45" cy="48" r="28" stroke="#F4A261" stroke-width="14" fill="none"/><path d="M32 18L45 5L58 18" stroke="#F4A261" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <svg class="f-shape f-shape--4" viewBox="0 0 80 80"><circle cx="40" cy="40" r="30" stroke="#71717A" stroke-width="8" fill="none"/><circle cx="40" cy="40" r="14" stroke="#71717A" stroke-width="8" fill="none"/></svg>
+        <svg class="f-shape f-shape--5" viewBox="0 0 70 70"><text x="12" y="56" fill="#669ACA" font-size="62" font-weight="800" font-family="Georgia, serif">&amp;</text></svg>
+        <svg class="f-shape f-shape--6" viewBox="0 0 80 80"><path d="M28 28H52V52H28V28ZM28 28C28 20 22 14 14 14C6 14 6 28 14 28H28ZM52 28C52 20 58 14 66 14C74 14 74 28 66 28H52ZM28 52C28 60 22 66 14 66C6 66 6 52 14 52H28ZM52 52C52 60 58 66 66 66C74 66 74 52 66 52H52Z" stroke="#96C594" stroke-width="7" fill="none"/></svg>
+        <svg class="f-shape f-shape--7" viewBox="0 0 60 60"><path d="M30 4V56M4 30H56M11 11L49 49M49 11L11 49M30 4L23 18M30 4L37 18" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="footer-legal">
+        <span>&copy; 2026 UP GROUP STUDIO (STUDIO.UP.GT) &bull; GUATEMALA &amp; HOUSTON</span>
+        <span data-i18n="footer.rights">TODOS LOS DERECHOS RESERVADOS</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <aside class="floating-whatsapp-container" aria-label="Contacto rápido por WhatsApp">
+    <a href="https://wa.me/50237556857?text=Hola%20UP%20Group%20Studio,%20quisiera%20conversar%20sobre%20un%20proyecto."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="floating-whatsapp"
+       id="floatingWhatsapp"
+       aria-label="Chatear por WhatsApp">
+      <span class="floating-whatsapp__tooltip" data-i18n="floating.whatsappTooltip">¿Hablamos por WhatsApp?</span>
+      <span class="floating-whatsapp__btn">
+        <i class="fa-brands fa-whatsapp"></i>
+      </span>
+      <span class="floating-whatsapp__pulse"></span>
+    </a>
+  </aside>
+
+  <!-- Case Study Interactive Script -->
+  <script src="js/project.js?v=3.0"></script>
+</body>
+</html>

@@ -1,0 +1,776 @@
+{
+  "id": 2001,
+  "name": "up-global-header",
+  "title": "UP Group Studio — Global Header",
+  "type": "header",
+  "templateType": "header",
+  "global_classes": [],
+  "header": [
+    {
+      "id": "dd37b7",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "r7d151"
+      ],
+      "settings": {
+        "_cssClasses": "site-header",
+        "_hidden": {
+          "_cssClasses": "site-header"
+        },
+        "tag": "header",
+        "_cssId": "header"
+      },
+      "label": "Header Section"
+    },
+    {
+      "id": "r7d151",
+      "name": "container",
+      "parent": "dd37b7",
+      "children": [
+        "y3896e",
+        "ta0a3e",
+        "beca9b"
+      ],
+      "settings": {
+        "_cssClasses": "container site-header__inner",
+        "_hidden": {
+          "_cssClasses": "container site-header__inner"
+        },
+        "_direction": "row",
+        "_alignItems": "center",
+        "_justifyContent": "space-between"
+      },
+      "label": "Header Container"
+    },
+    {
+      "id": "y3896e",
+      "name": "block",
+      "parent": "r7d151",
+      "children": [
+        "o6c1db",
+        "j1a970"
+      ],
+      "settings": {
+        "_cssClasses": "site-logo",
+        "_hidden": {
+          "_cssClasses": "site-logo"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "/"
+        },
+        "_widthMax": "max-content"
+      },
+      "label": "Site Logo Link"
+    },
+    {
+      "id": "o6c1db",
+      "name": "image",
+      "parent": "y3896e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-logo__img",
+        "_hidden": {
+          "_cssClasses": "site-logo__img"
+        },
+        "image": {
+          "url": "/wp-content/themes/upagency/screenshot.png",
+          "alt": "UP Group Studio"
+        },
+        "_height": "54",
+        "_heightMax": "54",
+        "_widthMax": "max-content"
+      },
+      "label": "Logo Image"
+    },
+    {
+      "id": "j1a970",
+      "name": "text-basic",
+      "parent": "y3896e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "sr-only",
+        "_hidden": {
+          "_cssClasses": "sr-only"
+        },
+        "tag": "span",
+        "text": "UP Group Studio"
+      },
+      "label": "SR Only Brand Text"
+    },
+    {
+      "id": "ta0a3e",
+      "name": "block",
+      "parent": "r7d151",
+      "children": [
+        "xc940d"
+      ],
+      "settings": {
+        "_cssClasses": "site-nav",
+        "_hidden": {
+          "_cssClasses": "site-nav"
+        },
+        "tag": "nav",
+        "_widthMax": "max-content"
+      },
+      "label": "Main Navigation"
+    },
+    {
+      "id": "xc940d",
+      "name": "block",
+      "parent": "ta0a3e",
+      "children": [
+        "p48d61",
+        "o31abf",
+        "tc2c72",
+        "pb05c8"
+      ],
+      "settings": {
+        "_cssClasses": "site-nav__list",
+        "_hidden": {
+          "_cssClasses": "site-nav__list"
+        },
+        "tag": "ul",
+        "_direction": "row",
+        "_alignItems": "center"
+      },
+      "label": "Nav List"
+    },
+    {
+      "id": "p48d61",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "s11768"
+      ],
+      "settings": {
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item Proyectos"
+    },
+    {
+      "id": "s11768",
+      "name": "text-link",
+      "parent": "p48d61",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-nav__link",
+        "_hidden": {
+          "_cssClasses": "site-nav__link"
+        },
+        "text": "Proyectos",
+        "_attributes": [
+          {
+            "id": "dd69b5",
+            "name": "data-i18n",
+            "value": "nav.works"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#works"
+        }
+      },
+      "label": "Proyectos"
+    },
+    {
+      "id": "o31abf",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "h34690"
+      ],
+      "settings": {
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item Servicios"
+    },
+    {
+      "id": "h34690",
+      "name": "text-link",
+      "parent": "o31abf",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-nav__link",
+        "_hidden": {
+          "_cssClasses": "site-nav__link"
+        },
+        "text": "Servicios",
+        "_attributes": [
+          {
+            "id": "u82f2a",
+            "name": "data-i18n",
+            "value": "nav.services"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Servicios"
+    },
+    {
+      "id": "tc2c72",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "ad1fc2"
+      ],
+      "settings": {
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item El Estudio"
+    },
+    {
+      "id": "ad1fc2",
+      "name": "text-link",
+      "parent": "tc2c72",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-nav__link",
+        "_hidden": {
+          "_cssClasses": "site-nav__link"
+        },
+        "text": "El Estudio",
+        "_attributes": [
+          {
+            "id": "eb4fa2",
+            "name": "data-i18n",
+            "value": "nav.studio"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#studio"
+        }
+      },
+      "label": "El Estudio"
+    },
+    {
+      "id": "pb05c8",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "ob65d9"
+      ],
+      "settings": {
+        "_cssClasses": "site-nav__cta-item",
+        "_hidden": {
+          "_cssClasses": "site-nav__cta-item"
+        },
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item Contacto CTA"
+    },
+    {
+      "id": "ob65d9",
+      "name": "text-link",
+      "parent": "pb05c8",
+      "children": [],
+      "settings": {
+        "_cssClasses": "nav-contact-pill",
+        "_hidden": {
+          "_cssClasses": "nav-contact-pill"
+        },
+        "text": "Contacto",
+        "_attributes": [
+          {
+            "id": "rd478f",
+            "name": "data-i18n",
+            "value": "nav.contact"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Contacto Button"
+    },
+    {
+      "id": "beca9b",
+      "name": "block",
+      "parent": "r7d151",
+      "children": [
+        "yb4fa3"
+      ],
+      "settings": {
+        "_cssClasses": "site-header__right",
+        "_hidden": {
+          "_cssClasses": "site-header__right"
+        },
+        "_direction": "row",
+        "_widthMax": "max-content"
+      },
+      "label": "Header Right"
+    },
+    {
+      "id": "yb4fa3",
+      "name": "block",
+      "parent": "beca9b",
+      "children": [
+        "dd87b0",
+        "g253af",
+        "b9bcd7"
+      ],
+      "settings": {
+        "_cssClasses": "lang-switcher",
+        "_hidden": {
+          "_cssClasses": "lang-switcher"
+        },
+        "_cssId": "langSwitcher",
+        "_direction": "row",
+        "_widthMax": "max-content"
+      },
+      "label": "Language Switcher"
+    },
+    {
+      "id": "dd87b0",
+      "name": "button",
+      "parent": "yb4fa3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "lang-btn active",
+        "_hidden": {
+          "_cssClasses": "lang-btn active"
+        },
+        "text": "ES",
+        "_attributes": [
+          {
+            "id": "c10b92",
+            "name": "data-lang",
+            "value": "es"
+          }
+        ]
+      },
+      "label": "ES Button"
+    },
+    {
+      "id": "g253af",
+      "name": "text-basic",
+      "parent": "yb4fa3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "lang-sep",
+        "_hidden": {
+          "_cssClasses": "lang-sep"
+        },
+        "tag": "span",
+        "text": "/"
+      },
+      "label": "Separator"
+    },
+    {
+      "id": "b9bcd7",
+      "name": "button",
+      "parent": "yb4fa3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "lang-btn",
+        "_hidden": {
+          "_cssClasses": "lang-btn"
+        },
+        "text": "EN",
+        "_attributes": [
+          {
+            "id": "tf0687",
+            "name": "data-lang",
+            "value": "en"
+          }
+        ]
+      },
+      "label": "EN Button"
+    }
+  ],
+  "content": [
+    {
+      "id": "dd37b7",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "r7d151"
+      ],
+      "settings": {
+        "_cssClasses": "site-header",
+        "_hidden": {
+          "_cssClasses": "site-header"
+        },
+        "tag": "header",
+        "_cssId": "header"
+      },
+      "label": "Header Section"
+    },
+    {
+      "id": "r7d151",
+      "name": "container",
+      "parent": "dd37b7",
+      "children": [
+        "y3896e",
+        "ta0a3e",
+        "beca9b"
+      ],
+      "settings": {
+        "_cssClasses": "container site-header__inner",
+        "_hidden": {
+          "_cssClasses": "container site-header__inner"
+        },
+        "_direction": "row",
+        "_alignItems": "center",
+        "_justifyContent": "space-between"
+      },
+      "label": "Header Container"
+    },
+    {
+      "id": "y3896e",
+      "name": "block",
+      "parent": "r7d151",
+      "children": [
+        "o6c1db",
+        "j1a970"
+      ],
+      "settings": {
+        "_cssClasses": "site-logo",
+        "_hidden": {
+          "_cssClasses": "site-logo"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "/"
+        },
+        "_widthMax": "max-content"
+      },
+      "label": "Site Logo Link"
+    },
+    {
+      "id": "o6c1db",
+      "name": "image",
+      "parent": "y3896e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-logo__img",
+        "_hidden": {
+          "_cssClasses": "site-logo__img"
+        },
+        "image": {
+          "url": "/wp-content/themes/upagency/screenshot.png",
+          "alt": "UP Group Studio"
+        },
+        "_height": "54",
+        "_heightMax": "54",
+        "_widthMax": "max-content"
+      },
+      "label": "Logo Image"
+    },
+    {
+      "id": "j1a970",
+      "name": "text-basic",
+      "parent": "y3896e",
+      "children": [],
+      "settings": {
+        "_cssClasses": "sr-only",
+        "_hidden": {
+          "_cssClasses": "sr-only"
+        },
+        "tag": "span",
+        "text": "UP Group Studio"
+      },
+      "label": "SR Only Brand Text"
+    },
+    {
+      "id": "ta0a3e",
+      "name": "block",
+      "parent": "r7d151",
+      "children": [
+        "xc940d"
+      ],
+      "settings": {
+        "_cssClasses": "site-nav",
+        "_hidden": {
+          "_cssClasses": "site-nav"
+        },
+        "tag": "nav",
+        "_widthMax": "max-content"
+      },
+      "label": "Main Navigation"
+    },
+    {
+      "id": "xc940d",
+      "name": "block",
+      "parent": "ta0a3e",
+      "children": [
+        "p48d61",
+        "o31abf",
+        "tc2c72",
+        "pb05c8"
+      ],
+      "settings": {
+        "_cssClasses": "site-nav__list",
+        "_hidden": {
+          "_cssClasses": "site-nav__list"
+        },
+        "tag": "ul",
+        "_direction": "row",
+        "_alignItems": "center"
+      },
+      "label": "Nav List"
+    },
+    {
+      "id": "p48d61",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "s11768"
+      ],
+      "settings": {
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item Proyectos"
+    },
+    {
+      "id": "s11768",
+      "name": "text-link",
+      "parent": "p48d61",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-nav__link",
+        "_hidden": {
+          "_cssClasses": "site-nav__link"
+        },
+        "text": "Proyectos",
+        "_attributes": [
+          {
+            "id": "dd69b5",
+            "name": "data-i18n",
+            "value": "nav.works"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#works"
+        }
+      },
+      "label": "Proyectos"
+    },
+    {
+      "id": "o31abf",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "h34690"
+      ],
+      "settings": {
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item Servicios"
+    },
+    {
+      "id": "h34690",
+      "name": "text-link",
+      "parent": "o31abf",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-nav__link",
+        "_hidden": {
+          "_cssClasses": "site-nav__link"
+        },
+        "text": "Servicios",
+        "_attributes": [
+          {
+            "id": "u82f2a",
+            "name": "data-i18n",
+            "value": "nav.services"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Servicios"
+    },
+    {
+      "id": "tc2c72",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "ad1fc2"
+      ],
+      "settings": {
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item El Estudio"
+    },
+    {
+      "id": "ad1fc2",
+      "name": "text-link",
+      "parent": "tc2c72",
+      "children": [],
+      "settings": {
+        "_cssClasses": "site-nav__link",
+        "_hidden": {
+          "_cssClasses": "site-nav__link"
+        },
+        "text": "El Estudio",
+        "_attributes": [
+          {
+            "id": "eb4fa2",
+            "name": "data-i18n",
+            "value": "nav.studio"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#studio"
+        }
+      },
+      "label": "El Estudio"
+    },
+    {
+      "id": "pb05c8",
+      "name": "block",
+      "parent": "xc940d",
+      "children": [
+        "ob65d9"
+      ],
+      "settings": {
+        "_cssClasses": "site-nav__cta-item",
+        "_hidden": {
+          "_cssClasses": "site-nav__cta-item"
+        },
+        "tag": "li",
+        "_widthMax": "max-content"
+      },
+      "label": "Item Contacto CTA"
+    },
+    {
+      "id": "ob65d9",
+      "name": "text-link",
+      "parent": "pb05c8",
+      "children": [],
+      "settings": {
+        "_cssClasses": "nav-contact-pill",
+        "_hidden": {
+          "_cssClasses": "nav-contact-pill"
+        },
+        "text": "Contacto",
+        "_attributes": [
+          {
+            "id": "rd478f",
+            "name": "data-i18n",
+            "value": "nav.contact"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Contacto Button"
+    },
+    {
+      "id": "beca9b",
+      "name": "block",
+      "parent": "r7d151",
+      "children": [
+        "yb4fa3"
+      ],
+      "settings": {
+        "_cssClasses": "site-header__right",
+        "_hidden": {
+          "_cssClasses": "site-header__right"
+        },
+        "_direction": "row",
+        "_widthMax": "max-content"
+      },
+      "label": "Header Right"
+    },
+    {
+      "id": "yb4fa3",
+      "name": "block",
+      "parent": "beca9b",
+      "children": [
+        "dd87b0",
+        "g253af",
+        "b9bcd7"
+      ],
+      "settings": {
+        "_cssClasses": "lang-switcher",
+        "_hidden": {
+          "_cssClasses": "lang-switcher"
+        },
+        "_cssId": "langSwitcher",
+        "_direction": "row",
+        "_widthMax": "max-content"
+      },
+      "label": "Language Switcher"
+    },
+    {
+      "id": "dd87b0",
+      "name": "button",
+      "parent": "yb4fa3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "lang-btn active",
+        "_hidden": {
+          "_cssClasses": "lang-btn active"
+        },
+        "text": "ES",
+        "_attributes": [
+          {
+            "id": "c10b92",
+            "name": "data-lang",
+            "value": "es"
+          }
+        ]
+      },
+      "label": "ES Button"
+    },
+    {
+      "id": "g253af",
+      "name": "text-basic",
+      "parent": "yb4fa3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "lang-sep",
+        "_hidden": {
+          "_cssClasses": "lang-sep"
+        },
+        "tag": "span",
+        "text": "/"
+      },
+      "label": "Separator"
+    },
+    {
+      "id": "b9bcd7",
+      "name": "button",
+      "parent": "yb4fa3",
+      "children": [],
+      "settings": {
+        "_cssClasses": "lang-btn",
+        "_hidden": {
+          "_cssClasses": "lang-btn"
+        },
+        "text": "EN",
+        "_attributes": [
+          {
+            "id": "tf0687",
+            "name": "data-lang",
+            "value": "en"
+          }
+        ]
+      },
+      "label": "EN Button"
+    }
+  ]
+}

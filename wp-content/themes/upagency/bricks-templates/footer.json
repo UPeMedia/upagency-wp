@@ -1,0 +1,1640 @@
+{
+  "id": 2002,
+  "name": "up-global-footer",
+  "title": "UP Group Studio — Global Footer",
+  "type": "footer",
+  "templateType": "footer",
+  "global_classes": [],
+  "footer": [
+    {
+      "id": "ka66cd",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "r9bcb4"
+      ],
+      "settings": {
+        "_cssClasses": "morez-footer",
+        "_hidden": {
+          "_cssClasses": "morez-footer"
+        },
+        "tag": "footer",
+        "_cssId": "contact"
+      },
+      "label": "Footer Section"
+    },
+    {
+      "id": "r9bcb4",
+      "name": "container",
+      "parent": "ka66cd",
+      "children": [
+        "ve3c34",
+        "xacf06",
+        "g9a0cf",
+        "df869e",
+        "j62ae9"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Footer Container"
+    },
+    {
+      "id": "ve3c34",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "ee6626",
+        "id94ee",
+        "d678bf"
+      ],
+      "settings": {
+        "_cssClasses": "footer-boxes",
+        "_hidden": {
+          "_cssClasses": "footer-boxes"
+        }
+      },
+      "label": "Top 3 Outlined Boxes"
+    },
+    {
+      "id": "ee6626",
+      "name": "block",
+      "parent": "ve3c34",
+      "children": [
+        "fbdf35"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box",
+        "_hidden": {
+          "_cssClasses": "footer-box"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "https://wa.me/50237556857?text=Hola%20UP%20Group%20Studio,%20quisiera%20conversar%20sobre%20un%20proyecto.",
+          "newTab": true
+        }
+      },
+      "label": "WhatsApp Box"
+    },
+    {
+      "id": "fbdf35",
+      "name": "block",
+      "parent": "ee6626",
+      "children": [
+        "u528bc",
+        "o1a0cc"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box__text",
+        "_hidden": {
+          "_cssClasses": "footer-box__text"
+        },
+        "tag": "span"
+      },
+      "label": "WA Text"
+    },
+    {
+      "id": "u528bc",
+      "name": "icon",
+      "parent": "fbdf35",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-brands fa-whatsapp"
+        },
+        "iconSize": "17"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "o1a0cc",
+      "name": "text-basic",
+      "parent": "fbdf35",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Chatear por WhatsApp",
+        "_attributes": [
+          {
+            "id": "t591df",
+            "name": "data-i18n",
+            "value": "footer.box1"
+          }
+        ]
+      },
+      "label": "Chatear por WhatsApp"
+    },
+    {
+      "id": "id94ee",
+      "name": "block",
+      "parent": "ve3c34",
+      "children": [
+        "mc4a73"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box",
+        "_hidden": {
+          "_cssClasses": "footer-box"
+        }
+      },
+      "label": "Locations Box"
+    },
+    {
+      "id": "mc4a73",
+      "name": "block",
+      "parent": "id94ee",
+      "children": [
+        "n855f7",
+        "r79669"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box__text",
+        "_hidden": {
+          "_cssClasses": "footer-box__text"
+        },
+        "tag": "span"
+      },
+      "label": "Locations Text"
+    },
+    {
+      "id": "n855f7",
+      "name": "icon",
+      "parent": "mc4a73",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-location-dot"
+        },
+        "iconSize": "17"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "r79669",
+      "name": "text-basic",
+      "parent": "mc4a73",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Guatemala • Houston, Texas",
+        "_attributes": [
+          {
+            "id": "g8fe42",
+            "name": "data-i18n",
+            "value": "footer.box2"
+          }
+        ]
+      },
+      "label": "Guatemala • Houston, Texas"
+    },
+    {
+      "id": "d678bf",
+      "name": "block",
+      "parent": "ve3c34",
+      "children": [
+        "i63645"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box",
+        "_hidden": {
+          "_cssClasses": "footer-box"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Domain Box"
+    },
+    {
+      "id": "i63645",
+      "name": "block",
+      "parent": "d678bf",
+      "children": [
+        "rff23d",
+        "x2e5cf"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box__text",
+        "_hidden": {
+          "_cssClasses": "footer-box__text"
+        },
+        "tag": "span"
+      },
+      "label": "Domain Text"
+    },
+    {
+      "id": "rff23d",
+      "name": "icon",
+      "parent": "i63645",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-regular fa-paper-plane"
+        },
+        "iconSize": "17"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "x2e5cf",
+      "name": "text-basic",
+      "parent": "i63645",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Iniciar Proyecto • studio.up.gt",
+        "_attributes": [
+          {
+            "id": "u75ccc",
+            "name": "data-i18n",
+            "value": "footer.box3"
+          }
+        ]
+      },
+      "label": "Iniciar Proyecto • studio.up.gt"
+    },
+    {
+      "id": "xacf06",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "d07928"
+      ],
+      "settings": {
+        "_cssClasses": "footer-center-brand",
+        "_hidden": {
+          "_cssClasses": "footer-center-brand"
+        }
+      },
+      "label": "Center Brand Wrapper"
+    },
+    {
+      "id": "d07928",
+      "name": "text-link",
+      "parent": "xacf06",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-wordmark",
+        "_hidden": {
+          "_cssClasses": "footer-wordmark"
+        },
+        "text": "UP GROUP STUDIO",
+        "link": {
+          "type": "external",
+          "url": "#hero"
+        }
+      },
+      "label": "UP GROUP STUDIO"
+    },
+    {
+      "id": "g9a0cf",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "k9f9a5",
+        "v42915",
+        "o38668"
+      ],
+      "settings": {
+        "_cssClasses": "footer-main-grid",
+        "_hidden": {
+          "_cssClasses": "footer-main-grid"
+        }
+      },
+      "label": "Footer Main Grid"
+    },
+    {
+      "id": "k9f9a5",
+      "name": "block",
+      "parent": "g9a0cf",
+      "children": [
+        "r22157",
+        "jbc1be"
+      ],
+      "settings": {
+        "_cssClasses": "footer-cta-col",
+        "_hidden": {
+          "_cssClasses": "footer-cta-col"
+        }
+      },
+      "label": "Footer CTA Column"
+    },
+    {
+      "id": "r22157",
+      "name": "heading",
+      "parent": "k9f9a5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-big-title",
+        "_hidden": {
+          "_cssClasses": "footer-big-title"
+        },
+        "tag": "h2",
+        "text": "<span data-i18n=\"footer.bigTitle\">Es ahora que<br>todo comienza</span><span class=\"footer-script-accent\" data-i18n=\"footer.scriptAccent\">con nosotros</span>"
+      },
+      "label": "Footer Big Title"
+    },
+    {
+      "id": "jbc1be",
+      "name": "text-link",
+      "parent": "k9f9a5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "btn-gradient-pill",
+        "_hidden": {
+          "_cssClasses": "btn-gradient-pill"
+        },
+        "text": "Iniciar un proyecto",
+        "_attributes": [
+          {
+            "id": "u5e7a8",
+            "name": "data-i18n",
+            "value": "footer.ctaBtn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Iniciar un proyecto"
+    },
+    {
+      "id": "v42915",
+      "name": "block",
+      "parent": "g9a0cf",
+      "children": [
+        "f3ba46",
+        "b49af0"
+      ],
+      "settings": {
+        "_cssClasses": "footer-nav-col",
+        "_hidden": {
+          "_cssClasses": "footer-nav-col"
+        }
+      },
+      "label": "Footer Studio Links"
+    },
+    {
+      "id": "f3ba46",
+      "name": "heading",
+      "parent": "v42915",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-col-title",
+        "_hidden": {
+          "_cssClasses": "footer-col-title"
+        },
+        "tag": "h4",
+        "text": "Estudio",
+        "_attributes": [
+          {
+            "id": "r68cbf",
+            "name": "data-i18n",
+            "value": "footer.col1Title"
+          }
+        ]
+      },
+      "label": "Estudio"
+    },
+    {
+      "id": "b49af0",
+      "name": "block",
+      "parent": "v42915",
+      "children": [
+        "wa0afe",
+        "j80a3a",
+        "b02f68",
+        "z3e6a9"
+      ],
+      "settings": {
+        "tag": "ul"
+      },
+      "label": "Studio List"
+    },
+    {
+      "id": "wa0afe",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "q1f38b"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Proyectos"
+    },
+    {
+      "id": "q1f38b",
+      "name": "text-link",
+      "parent": "wa0afe",
+      "children": [],
+      "settings": {
+        "text": "Proyectos",
+        "_attributes": [
+          {
+            "id": "b7922c",
+            "name": "data-i18n",
+            "value": "nav.works"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#works"
+        }
+      },
+      "label": "Proyectos"
+    },
+    {
+      "id": "j80a3a",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "g3476b"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "El Estudio"
+    },
+    {
+      "id": "g3476b",
+      "name": "text-link",
+      "parent": "j80a3a",
+      "children": [],
+      "settings": {
+        "text": "El Estudio",
+        "_attributes": [
+          {
+            "id": "ife55c",
+            "name": "data-i18n",
+            "value": "nav.studio"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#studio"
+        }
+      },
+      "label": "El Estudio"
+    },
+    {
+      "id": "b02f68",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "j7d335"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Portafolio Rodrigo"
+    },
+    {
+      "id": "j7d335",
+      "name": "text-link",
+      "parent": "b02f68",
+      "children": [],
+      "settings": {
+        "text": "Portafolio Rodrigo",
+        "link": {
+          "type": "external",
+          "url": "https://rodri8.com"
+        }
+      },
+      "label": "Portafolio Rodrigo"
+    },
+    {
+      "id": "z3e6a9",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "gcb38d"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Contacto"
+    },
+    {
+      "id": "gcb38d",
+      "name": "text-link",
+      "parent": "z3e6a9",
+      "children": [],
+      "settings": {
+        "text": "Contacto",
+        "_attributes": [
+          {
+            "id": "i61528",
+            "name": "data-i18n",
+            "value": "nav.contact"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Contacto"
+    },
+    {
+      "id": "o38668",
+      "name": "block",
+      "parent": "g9a0cf",
+      "children": [
+        "w8edb0",
+        "e36dac"
+      ],
+      "settings": {
+        "_cssClasses": "footer-nav-col",
+        "_hidden": {
+          "_cssClasses": "footer-nav-col"
+        }
+      },
+      "label": "Footer Services Links"
+    },
+    {
+      "id": "w8edb0",
+      "name": "heading",
+      "parent": "o38668",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-col-title",
+        "_hidden": {
+          "_cssClasses": "footer-col-title"
+        },
+        "tag": "h4",
+        "text": "Servicios & Soluciones",
+        "_attributes": [
+          {
+            "id": "fa7a02",
+            "name": "data-i18n",
+            "value": "footer.col2Title"
+          }
+        ]
+      },
+      "label": "Servicios & Soluciones"
+    },
+    {
+      "id": "e36dac",
+      "name": "block",
+      "parent": "o38668",
+      "children": [
+        "jd96ee",
+        "ec0fca",
+        "m01879",
+        "a4c124",
+        "od4f18"
+      ],
+      "settings": {
+        "tag": "ul"
+      },
+      "label": "Services List"
+    },
+    {
+      "id": "jd96ee",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "v2753a"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Desarrollo Web a Medida"
+    },
+    {
+      "id": "v2753a",
+      "name": "text-link",
+      "parent": "jd96ee",
+      "children": [],
+      "settings": {
+        "text": "Desarrollo Web a Medida",
+        "_attributes": [
+          {
+            "id": "lc2b59",
+            "name": "data-i18n",
+            "value": "services.f1"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Desarrollo Web a Medida"
+    },
+    {
+      "id": "ec0fca",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "pb45d4"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Diseño UI/UX & Branding"
+    },
+    {
+      "id": "pb45d4",
+      "name": "text-link",
+      "parent": "ec0fca",
+      "children": [],
+      "settings": {
+        "text": "Diseño UI/UX & Branding",
+        "_attributes": [
+          {
+            "id": "yef341",
+            "name": "data-i18n",
+            "value": "services.f2"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Diseño UI/UX & Branding"
+    },
+    {
+      "id": "m01879",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "q1d20c"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "E-Commerce & Pagos"
+    },
+    {
+      "id": "q1d20c",
+      "name": "text-link",
+      "parent": "m01879",
+      "children": [],
+      "settings": {
+        "text": "E-Commerce & Pagos",
+        "_attributes": [
+          {
+            "id": "z5e518",
+            "name": "data-i18n",
+            "value": "services.f3"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "E-Commerce & Pagos"
+    },
+    {
+      "id": "a4c124",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "l1b831"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Optimización & Velocidad"
+    },
+    {
+      "id": "l1b831",
+      "name": "text-link",
+      "parent": "a4c124",
+      "children": [],
+      "settings": {
+        "text": "Optimización & Velocidad",
+        "_attributes": [
+          {
+            "id": "od3ef5",
+            "name": "data-i18n",
+            "value": "services.f4"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Optimización & Velocidad"
+    },
+    {
+      "id": "od4f18",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "w3c733"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Automatizaciones & IA"
+    },
+    {
+      "id": "w3c733",
+      "name": "text-link",
+      "parent": "od4f18",
+      "children": [],
+      "settings": {
+        "text": "Automatizaciones & IA",
+        "_attributes": [
+          {
+            "id": "t4c0a9",
+            "name": "data-i18n",
+            "value": "services.f5"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Automatizaciones & IA"
+    },
+    {
+      "id": "df869e",
+      "name": "shortcode",
+      "parent": "r9bcb4",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_footer_shapes]"
+      },
+      "label": "Footer Shapes & Floating WhatsApp"
+    },
+    {
+      "id": "j62ae9",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "a4c0a9",
+        "jec6cd"
+      ],
+      "settings": {
+        "_cssClasses": "footer-legal",
+        "_hidden": {
+          "_cssClasses": "footer-legal"
+        }
+      },
+      "label": "Footer Legal Bar"
+    },
+    {
+      "id": "a4c0a9",
+      "name": "text-basic",
+      "parent": "j62ae9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "© 2026 UP GROUP STUDIO (STUDIO.UP.GT) • GUATEMALA & HOUSTON"
+      },
+      "label": "Copyright"
+    },
+    {
+      "id": "jec6cd",
+      "name": "text-basic",
+      "parent": "j62ae9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "TODOS LOS DERECHOS RESERVADOS",
+        "_attributes": [
+          {
+            "id": "vc65b5",
+            "name": "data-i18n",
+            "value": "footer.rights"
+          }
+        ]
+      },
+      "label": "Rights"
+    }
+  ],
+  "content": [
+    {
+      "id": "ka66cd",
+      "name": "section",
+      "parent": 0,
+      "children": [
+        "r9bcb4"
+      ],
+      "settings": {
+        "_cssClasses": "morez-footer",
+        "_hidden": {
+          "_cssClasses": "morez-footer"
+        },
+        "tag": "footer",
+        "_cssId": "contact"
+      },
+      "label": "Footer Section"
+    },
+    {
+      "id": "r9bcb4",
+      "name": "container",
+      "parent": "ka66cd",
+      "children": [
+        "ve3c34",
+        "xacf06",
+        "g9a0cf",
+        "df869e",
+        "j62ae9"
+      ],
+      "settings": {
+        "_cssClasses": "container",
+        "_hidden": {
+          "_cssClasses": "container"
+        }
+      },
+      "label": "Footer Container"
+    },
+    {
+      "id": "ve3c34",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "ee6626",
+        "id94ee",
+        "d678bf"
+      ],
+      "settings": {
+        "_cssClasses": "footer-boxes",
+        "_hidden": {
+          "_cssClasses": "footer-boxes"
+        }
+      },
+      "label": "Top 3 Outlined Boxes"
+    },
+    {
+      "id": "ee6626",
+      "name": "block",
+      "parent": "ve3c34",
+      "children": [
+        "fbdf35"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box",
+        "_hidden": {
+          "_cssClasses": "footer-box"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "https://wa.me/50237556857?text=Hola%20UP%20Group%20Studio,%20quisiera%20conversar%20sobre%20un%20proyecto.",
+          "newTab": true
+        }
+      },
+      "label": "WhatsApp Box"
+    },
+    {
+      "id": "fbdf35",
+      "name": "block",
+      "parent": "ee6626",
+      "children": [
+        "u528bc",
+        "o1a0cc"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box__text",
+        "_hidden": {
+          "_cssClasses": "footer-box__text"
+        },
+        "tag": "span"
+      },
+      "label": "WA Text"
+    },
+    {
+      "id": "u528bc",
+      "name": "icon",
+      "parent": "fbdf35",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-brands fa-whatsapp"
+        },
+        "iconSize": "17"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "o1a0cc",
+      "name": "text-basic",
+      "parent": "fbdf35",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Chatear por WhatsApp",
+        "_attributes": [
+          {
+            "id": "t591df",
+            "name": "data-i18n",
+            "value": "footer.box1"
+          }
+        ]
+      },
+      "label": "Chatear por WhatsApp"
+    },
+    {
+      "id": "id94ee",
+      "name": "block",
+      "parent": "ve3c34",
+      "children": [
+        "mc4a73"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box",
+        "_hidden": {
+          "_cssClasses": "footer-box"
+        }
+      },
+      "label": "Locations Box"
+    },
+    {
+      "id": "mc4a73",
+      "name": "block",
+      "parent": "id94ee",
+      "children": [
+        "n855f7",
+        "r79669"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box__text",
+        "_hidden": {
+          "_cssClasses": "footer-box__text"
+        },
+        "tag": "span"
+      },
+      "label": "Locations Text"
+    },
+    {
+      "id": "n855f7",
+      "name": "icon",
+      "parent": "mc4a73",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-solid fa-location-dot"
+        },
+        "iconSize": "17"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "r79669",
+      "name": "text-basic",
+      "parent": "mc4a73",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Guatemala • Houston, Texas",
+        "_attributes": [
+          {
+            "id": "g8fe42",
+            "name": "data-i18n",
+            "value": "footer.box2"
+          }
+        ]
+      },
+      "label": "Guatemala • Houston, Texas"
+    },
+    {
+      "id": "d678bf",
+      "name": "block",
+      "parent": "ve3c34",
+      "children": [
+        "i63645"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box",
+        "_hidden": {
+          "_cssClasses": "footer-box"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Domain Box"
+    },
+    {
+      "id": "i63645",
+      "name": "block",
+      "parent": "d678bf",
+      "children": [
+        "rff23d",
+        "x2e5cf"
+      ],
+      "settings": {
+        "_cssClasses": "footer-box__text",
+        "_hidden": {
+          "_cssClasses": "footer-box__text"
+        },
+        "tag": "span"
+      },
+      "label": "Domain Text"
+    },
+    {
+      "id": "rff23d",
+      "name": "icon",
+      "parent": "i63645",
+      "children": [],
+      "settings": {
+        "icon": {
+          "library": "fontawesome",
+          "icon": "fa-regular fa-paper-plane"
+        },
+        "iconSize": "17"
+      },
+      "label": "Icon"
+    },
+    {
+      "id": "x2e5cf",
+      "name": "text-basic",
+      "parent": "i63645",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "Iniciar Proyecto • studio.up.gt",
+        "_attributes": [
+          {
+            "id": "u75ccc",
+            "name": "data-i18n",
+            "value": "footer.box3"
+          }
+        ]
+      },
+      "label": "Iniciar Proyecto • studio.up.gt"
+    },
+    {
+      "id": "xacf06",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "d07928"
+      ],
+      "settings": {
+        "_cssClasses": "footer-center-brand",
+        "_hidden": {
+          "_cssClasses": "footer-center-brand"
+        }
+      },
+      "label": "Center Brand Wrapper"
+    },
+    {
+      "id": "d07928",
+      "name": "text-link",
+      "parent": "xacf06",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-wordmark",
+        "_hidden": {
+          "_cssClasses": "footer-wordmark"
+        },
+        "text": "UP GROUP STUDIO",
+        "link": {
+          "type": "external",
+          "url": "#hero"
+        }
+      },
+      "label": "UP GROUP STUDIO"
+    },
+    {
+      "id": "g9a0cf",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "k9f9a5",
+        "v42915",
+        "o38668"
+      ],
+      "settings": {
+        "_cssClasses": "footer-main-grid",
+        "_hidden": {
+          "_cssClasses": "footer-main-grid"
+        }
+      },
+      "label": "Footer Main Grid"
+    },
+    {
+      "id": "k9f9a5",
+      "name": "block",
+      "parent": "g9a0cf",
+      "children": [
+        "r22157",
+        "jbc1be"
+      ],
+      "settings": {
+        "_cssClasses": "footer-cta-col",
+        "_hidden": {
+          "_cssClasses": "footer-cta-col"
+        }
+      },
+      "label": "Footer CTA Column"
+    },
+    {
+      "id": "r22157",
+      "name": "heading",
+      "parent": "k9f9a5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-big-title",
+        "_hidden": {
+          "_cssClasses": "footer-big-title"
+        },
+        "tag": "h2",
+        "text": "<span data-i18n=\"footer.bigTitle\">Es ahora que<br>todo comienza</span><span class=\"footer-script-accent\" data-i18n=\"footer.scriptAccent\">con nosotros</span>"
+      },
+      "label": "Footer Big Title"
+    },
+    {
+      "id": "jbc1be",
+      "name": "text-link",
+      "parent": "k9f9a5",
+      "children": [],
+      "settings": {
+        "_cssClasses": "btn-gradient-pill",
+        "_hidden": {
+          "_cssClasses": "btn-gradient-pill"
+        },
+        "text": "Iniciar un proyecto",
+        "_attributes": [
+          {
+            "id": "u5e7a8",
+            "name": "data-i18n",
+            "value": "footer.ctaBtn"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Iniciar un proyecto"
+    },
+    {
+      "id": "v42915",
+      "name": "block",
+      "parent": "g9a0cf",
+      "children": [
+        "f3ba46",
+        "b49af0"
+      ],
+      "settings": {
+        "_cssClasses": "footer-nav-col",
+        "_hidden": {
+          "_cssClasses": "footer-nav-col"
+        }
+      },
+      "label": "Footer Studio Links"
+    },
+    {
+      "id": "f3ba46",
+      "name": "heading",
+      "parent": "v42915",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-col-title",
+        "_hidden": {
+          "_cssClasses": "footer-col-title"
+        },
+        "tag": "h4",
+        "text": "Estudio",
+        "_attributes": [
+          {
+            "id": "r68cbf",
+            "name": "data-i18n",
+            "value": "footer.col1Title"
+          }
+        ]
+      },
+      "label": "Estudio"
+    },
+    {
+      "id": "b49af0",
+      "name": "block",
+      "parent": "v42915",
+      "children": [
+        "wa0afe",
+        "j80a3a",
+        "b02f68",
+        "z3e6a9"
+      ],
+      "settings": {
+        "tag": "ul"
+      },
+      "label": "Studio List"
+    },
+    {
+      "id": "wa0afe",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "q1f38b"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Proyectos"
+    },
+    {
+      "id": "q1f38b",
+      "name": "text-link",
+      "parent": "wa0afe",
+      "children": [],
+      "settings": {
+        "text": "Proyectos",
+        "_attributes": [
+          {
+            "id": "b7922c",
+            "name": "data-i18n",
+            "value": "nav.works"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#works"
+        }
+      },
+      "label": "Proyectos"
+    },
+    {
+      "id": "j80a3a",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "g3476b"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "El Estudio"
+    },
+    {
+      "id": "g3476b",
+      "name": "text-link",
+      "parent": "j80a3a",
+      "children": [],
+      "settings": {
+        "text": "El Estudio",
+        "_attributes": [
+          {
+            "id": "ife55c",
+            "name": "data-i18n",
+            "value": "nav.studio"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#studio"
+        }
+      },
+      "label": "El Estudio"
+    },
+    {
+      "id": "b02f68",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "j7d335"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Portafolio Rodrigo"
+    },
+    {
+      "id": "j7d335",
+      "name": "text-link",
+      "parent": "b02f68",
+      "children": [],
+      "settings": {
+        "text": "Portafolio Rodrigo",
+        "link": {
+          "type": "external",
+          "url": "https://rodri8.com"
+        }
+      },
+      "label": "Portafolio Rodrigo"
+    },
+    {
+      "id": "z3e6a9",
+      "name": "block",
+      "parent": "b49af0",
+      "children": [
+        "gcb38d"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Contacto"
+    },
+    {
+      "id": "gcb38d",
+      "name": "text-link",
+      "parent": "z3e6a9",
+      "children": [],
+      "settings": {
+        "text": "Contacto",
+        "_attributes": [
+          {
+            "id": "i61528",
+            "name": "data-i18n",
+            "value": "nav.contact"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#inquiry"
+        }
+      },
+      "label": "Contacto"
+    },
+    {
+      "id": "o38668",
+      "name": "block",
+      "parent": "g9a0cf",
+      "children": [
+        "w8edb0",
+        "e36dac"
+      ],
+      "settings": {
+        "_cssClasses": "footer-nav-col",
+        "_hidden": {
+          "_cssClasses": "footer-nav-col"
+        }
+      },
+      "label": "Footer Services Links"
+    },
+    {
+      "id": "w8edb0",
+      "name": "heading",
+      "parent": "o38668",
+      "children": [],
+      "settings": {
+        "_cssClasses": "footer-col-title",
+        "_hidden": {
+          "_cssClasses": "footer-col-title"
+        },
+        "tag": "h4",
+        "text": "Servicios & Soluciones",
+        "_attributes": [
+          {
+            "id": "fa7a02",
+            "name": "data-i18n",
+            "value": "footer.col2Title"
+          }
+        ]
+      },
+      "label": "Servicios & Soluciones"
+    },
+    {
+      "id": "e36dac",
+      "name": "block",
+      "parent": "o38668",
+      "children": [
+        "jd96ee",
+        "ec0fca",
+        "m01879",
+        "a4c124",
+        "od4f18"
+      ],
+      "settings": {
+        "tag": "ul"
+      },
+      "label": "Services List"
+    },
+    {
+      "id": "jd96ee",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "v2753a"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Desarrollo Web a Medida"
+    },
+    {
+      "id": "v2753a",
+      "name": "text-link",
+      "parent": "jd96ee",
+      "children": [],
+      "settings": {
+        "text": "Desarrollo Web a Medida",
+        "_attributes": [
+          {
+            "id": "lc2b59",
+            "name": "data-i18n",
+            "value": "services.f1"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Desarrollo Web a Medida"
+    },
+    {
+      "id": "ec0fca",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "pb45d4"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Diseño UI/UX & Branding"
+    },
+    {
+      "id": "pb45d4",
+      "name": "text-link",
+      "parent": "ec0fca",
+      "children": [],
+      "settings": {
+        "text": "Diseño UI/UX & Branding",
+        "_attributes": [
+          {
+            "id": "yef341",
+            "name": "data-i18n",
+            "value": "services.f2"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Diseño UI/UX & Branding"
+    },
+    {
+      "id": "m01879",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "q1d20c"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "E-Commerce & Pagos"
+    },
+    {
+      "id": "q1d20c",
+      "name": "text-link",
+      "parent": "m01879",
+      "children": [],
+      "settings": {
+        "text": "E-Commerce & Pagos",
+        "_attributes": [
+          {
+            "id": "z5e518",
+            "name": "data-i18n",
+            "value": "services.f3"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "E-Commerce & Pagos"
+    },
+    {
+      "id": "a4c124",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "l1b831"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Optimización & Velocidad"
+    },
+    {
+      "id": "l1b831",
+      "name": "text-link",
+      "parent": "a4c124",
+      "children": [],
+      "settings": {
+        "text": "Optimización & Velocidad",
+        "_attributes": [
+          {
+            "id": "od3ef5",
+            "name": "data-i18n",
+            "value": "services.f4"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Optimización & Velocidad"
+    },
+    {
+      "id": "od4f18",
+      "name": "block",
+      "parent": "e36dac",
+      "children": [
+        "w3c733"
+      ],
+      "settings": {
+        "tag": "li"
+      },
+      "label": "Automatizaciones & IA"
+    },
+    {
+      "id": "w3c733",
+      "name": "text-link",
+      "parent": "od4f18",
+      "children": [],
+      "settings": {
+        "text": "Automatizaciones & IA",
+        "_attributes": [
+          {
+            "id": "t4c0a9",
+            "name": "data-i18n",
+            "value": "services.f5"
+          }
+        ],
+        "link": {
+          "type": "external",
+          "url": "#services"
+        }
+      },
+      "label": "Automatizaciones & IA"
+    },
+    {
+      "id": "df869e",
+      "name": "shortcode",
+      "parent": "r9bcb4",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_footer_shapes]"
+      },
+      "label": "Footer Shapes & Floating WhatsApp"
+    },
+    {
+      "id": "j62ae9",
+      "name": "block",
+      "parent": "r9bcb4",
+      "children": [
+        "a4c0a9",
+        "jec6cd"
+      ],
+      "settings": {
+        "_cssClasses": "footer-legal",
+        "_hidden": {
+          "_cssClasses": "footer-legal"
+        }
+      },
+      "label": "Footer Legal Bar"
+    },
+    {
+      "id": "a4c0a9",
+      "name": "text-basic",
+      "parent": "j62ae9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "© 2026 UP GROUP STUDIO (STUDIO.UP.GT) • GUATEMALA & HOUSTON"
+      },
+      "label": "Copyright"
+    },
+    {
+      "id": "jec6cd",
+      "name": "text-basic",
+      "parent": "j62ae9",
+      "children": [],
+      "settings": {
+        "tag": "span",
+        "text": "TODOS LOS DERECHOS RESERVADOS",
+        "_attributes": [
+          {
+            "id": "vc65b5",
+            "name": "data-i18n",
+            "value": "footer.rights"
+          }
+        ]
+      },
+      "label": "Rights"
+    }
+  ]
+}
