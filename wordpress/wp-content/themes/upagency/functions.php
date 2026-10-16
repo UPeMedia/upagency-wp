@@ -37,7 +37,7 @@ add_action( 'wp_enqueue_scripts', function() {
             $css_ver
         );
 
-        // Custom Child Theme Scripts (js/script.js)
+        // Custom Child Theme Scripts (js/script.js & js/project.js)
         $js_file = get_stylesheet_directory() . '/js/script.js';
         $js_ver  = file_exists($js_file) ? filemtime($js_file) : '3.0.0';
         wp_enqueue_script(
@@ -47,6 +47,17 @@ add_action( 'wp_enqueue_scripts', function() {
             $js_ver,
             true
         );
+
+        $proj_js = get_stylesheet_directory() . '/js/project.js';
+        if ( file_exists( $proj_js ) ) {
+            wp_enqueue_script(
+                'upagency-project',
+                get_stylesheet_directory_uri() . '/js/project.js',
+                ['upagency-script'],
+                filemtime( $proj_js ),
+                true
+            );
+        }
     }
 }, 20 );
 

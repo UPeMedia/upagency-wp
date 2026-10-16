@@ -1,0 +1,17 @@
+{
+  "name": "up-group-studio-redesign",
+  "version": "3.0.0",
+  "description": "UP Group Studio (studio.up.gt) — Static HTML/SCSS/JS Preview, WordPress Bricks Builder Child Theme & JSON Templates",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 3000 --directory src",
+    "sass:build": "sass src/scss/style.scss src/css/style.css --no-source-map && cp src/css/style.css child-theme/css/style.css",
+    "sass:watch": "sass --watch src/scss/style.scss:src/css/style.css",
+    "build:bricks": "python3 scripts/build_bricks_templates.py",
+    "sync": "bash scripts/sync-child-theme.sh",
+    "zip": "bash scripts/sync-child-theme.sh --zip"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
