@@ -72,8 +72,8 @@
       "parent": "icf339",
       "children": [
         "c3bddd",
-        "j92f30",
-        "jf8aef"
+        "ya38cc",
+        "vdcf6c"
       ],
       "settings": {
         "_cssClasses": "cover-Floating-composition",
@@ -81,7 +81,7 @@
           "_cssClasses": "cover-Floating-composition"
         }
       },
-      "label": "Floating Multi-Device Stage"
+      "label": "Floating 3-Box Stage"
     },
     {
       "id": "c3bddd",
@@ -96,7 +96,7 @@
           "_cssClasses": "cover-device cover-device--left"
         }
       },
-      "label": "Left Tilted Card"
+      "label": "Left Tilted Box"
     },
     {
       "id": "n3a155",
@@ -104,7 +104,8 @@
       "parent": "c3bddd",
       "children": [
         "x90167",
-        "h6d841"
+        "h6d841",
+        "j92f30"
       ],
       "settings": {
         "_cssClasses": "cover-device__screen",
@@ -126,7 +127,7 @@
         },
         "icon": {
           "library": "fontawesome",
-          "icon": "fa-solid fa-anchor"
+          "icon": "fa-solid fa-layer-group"
         },
         "iconSize": "32"
       },
@@ -139,16 +140,31 @@
       "children": [],
       "settings": {
         "tag": "h4",
-        "text": "{post_title}"
+        "text": "{post_terms_project_location:plain}"
       },
-      "label": "Project Badge"
+      "label": "Project Location"
     },
     {
       "id": "j92f30",
+      "name": "text-basic",
+      "parent": "n3a155",
+      "children": [],
+      "settings": {
+        "_cssClasses": "cover-mobile-tag",
+        "_hidden": {
+          "_cssClasses": "cover-mobile-tag"
+        },
+        "tag": "span",
+        "text": "{post_terms_project_sector:plain}"
+      },
+      "label": "Market Segment"
+    },
+    {
+      "id": "ya38cc",
       "name": "block",
       "parent": "h432b7",
       "children": [
-        "ya38cc"
+        "s5aafb"
       ],
       "settings": {
         "_cssClasses": "cover-device cover-device--center",
@@ -156,16 +172,16 @@
           "_cssClasses": "cover-device cover-device--center"
         }
       },
-      "label": "Center Flagship Display"
+      "label": "Center Flagship Box"
     },
     {
-      "id": "ya38cc",
+      "id": "s5aafb",
       "name": "block",
-      "parent": "j92f30",
+      "parent": "ya38cc",
       "children": [
-        "s5aafb",
         "m7dd50",
-        "f69901"
+        "f69901",
+        "jf8aef"
       ],
       "settings": {
         "_cssClasses": "cover-device__screen cover-device__screen--main",
@@ -176,9 +192,9 @@
       "label": "Main Screen"
     },
     {
-      "id": "s5aafb",
+      "id": "m7dd50",
       "name": "text-basic",
-      "parent": "ya38cc",
+      "parent": "s5aafb",
       "children": [],
       "settings": {
         "_cssClasses": "cover-chip",
@@ -186,14 +202,14 @@
           "_cssClasses": "cover-chip"
         },
         "tag": "span",
-        "text": "UP GROUP STUDIO CASE STUDY"
+        "text": "{post_terms_project_category:plain}"
       },
-      "label": "Project Category"
+      "label": "Project Categories"
     },
     {
-      "id": "m7dd50",
+      "id": "f69901",
       "name": "heading",
-      "parent": "ya38cc",
+      "parent": "s5aafb",
       "children": [],
       "settings": {
         "tag": "h2",
@@ -202,9 +218,9 @@
       "label": "Main Display Title"
     },
     {
-      "id": "f69901",
+      "id": "jf8aef",
       "name": "text-basic",
-      "parent": "ya38cc",
+      "parent": "s5aafb",
       "children": [],
       "settings": {
         "tag": "p",
@@ -213,11 +229,11 @@
       "label": "Main Display Excerpt"
     },
     {
-      "id": "jf8aef",
+      "id": "vdcf6c",
       "name": "block",
       "parent": "h432b7",
       "children": [
-        "vdcf6c"
+        "l47e36"
       ],
       "settings": {
         "_cssClasses": "cover-device cover-device--right",
@@ -225,16 +241,16 @@
           "_cssClasses": "cover-device cover-device--right"
         }
       },
-      "label": "Right Mobile Card"
+      "label": "Right Metric Box"
     },
     {
-      "id": "vdcf6c",
+      "id": "l47e36",
       "name": "block",
-      "parent": "jf8aef",
+      "parent": "vdcf6c",
       "children": [
-        "l47e36",
         "ka111f",
-        "zbee2c"
+        "zbee2c",
+        "ka6e63"
       ],
       "settings": {
         "_cssClasses": "cover-device__screen",
@@ -245,9 +261,9 @@
       "label": "Right Screen"
     },
     {
-      "id": "l47e36",
+      "id": "ka111f",
       "name": "text-basic",
-      "parent": "vdcf6c",
+      "parent": "l47e36",
       "children": [],
       "settings": {
         "_cssClasses": "cover-mobile-tag",
@@ -255,39 +271,39 @@
           "_cssClasses": "cover-mobile-tag"
         },
         "tag": "span",
-        "text": "MOBILE FIRST"
+        "text": "KEY IMPACT"
       },
       "label": "Mobile Tag"
     },
     {
-      "id": "ka111f",
+      "id": "zbee2c",
       "name": "heading",
-      "parent": "vdcf6c",
+      "parent": "l47e36",
       "children": [],
       "settings": {
         "tag": "h4",
-        "text": "98/100"
+        "text": "{acf_project_metric_1_val}"
       },
       "label": "Metric Highlight"
     },
     {
-      "id": "zbee2c",
+      "id": "ka6e63",
       "name": "text-basic",
-      "parent": "vdcf6c",
+      "parent": "l47e36",
       "children": [],
       "settings": {
         "tag": "p",
-        "text": "Google PageSpeed"
+        "text": "{acf_project_metric_1_label}"
       },
       "label": "Metric Label"
     },
     {
-      "id": "ka6e63",
+      "id": "kd1205",
       "name": "section",
       "parent": 0,
       "children": [
-        "kd1205",
-        "kb5be2"
+        "kb5be2",
+        "oae36f"
       ],
       "settings": {
         "_cssClasses": "case-intro-band",
@@ -299,9 +315,9 @@
       "label": "Colored Editorial Intro Band"
     },
     {
-      "id": "kd1205",
+      "id": "kb5be2",
       "name": "block",
-      "parent": "ka6e63",
+      "parent": "kd1205",
       "children": [],
       "settings": {
         "_cssClasses": "case-intro-band__halftone",
@@ -312,12 +328,12 @@
       "label": "Halftone Pattern Overlay"
     },
     {
-      "id": "kb5be2",
+      "id": "oae36f",
       "name": "container",
-      "parent": "ka6e63",
+      "parent": "kd1205",
       "children": [
-        "oae36f",
-        "a3c1b7"
+        "l510d9",
+        "m75392"
       ],
       "settings": {
         "_cssClasses": "container",
@@ -328,11 +344,11 @@
       "label": "Intro Band Container"
     },
     {
-      "id": "oae36f",
+      "id": "l510d9",
       "name": "block",
-      "parent": "kb5be2",
+      "parent": "oae36f",
       "children": [
-        "l510d9"
+        "a3c1b7"
       ],
       "settings": {
         "_cssClasses": "case-intro-band__top",
@@ -343,9 +359,9 @@
       "label": "Top Kicker Divider"
     },
     {
-      "id": "l510d9",
+      "id": "a3c1b7",
       "name": "text-basic",
-      "parent": "oae36f",
+      "parent": "l510d9",
       "children": [],
       "settings": {
         "_cssClasses": "case-kicker-label",
@@ -353,17 +369,17 @@
           "_cssClasses": "case-kicker-label"
         },
         "tag": "span",
-        "text": "{post_title} × UP Group Studio"
+        "text": "{acf_project_kicker}"
       },
       "label": "Kicker Text"
     },
     {
-      "id": "a3c1b7",
+      "id": "m75392",
       "name": "block",
-      "parent": "kb5be2",
+      "parent": "oae36f",
       "children": [
-        "m75392",
-        "rd5825"
+        "rd5825",
+        "vc0f33"
       ],
       "settings": {
         "_cssClasses": "case-intro-band__Offset",
@@ -374,9 +390,9 @@
       "label": "Indented Editorial Content"
     },
     {
-      "id": "m75392",
+      "id": "rd5825",
       "name": "heading",
-      "parent": "a3c1b7",
+      "parent": "m75392",
       "children": [],
       "settings": {
         "_cssClasses": "case-headline",
@@ -384,19 +400,19 @@
           "_cssClasses": "case-headline"
         },
         "tag": "h1",
-        "text": "Experiencia digital inmersiva y arquitectura a medida diseñada para liderar su industria"
+        "text": "{acf_project_headline}"
       },
       "label": "Case Study Headline"
     },
     {
-      "id": "rd5825",
+      "id": "vc0f33",
       "name": "block",
-      "parent": "a3c1b7",
+      "parent": "m75392",
       "children": [
-        "vc0f33",
-        "ue94bb",
-        "ud4dfd",
-        "deab0e"
+        "n818e9",
+        "k9e33a",
+        "b79ddd",
+        "fa9d37"
       ],
       "settings": {
         "_cssClasses": "case-meta-grid",
@@ -407,12 +423,12 @@
       "label": "Case Metadata Row"
     },
     {
-      "id": "vc0f33",
+      "id": "n818e9",
       "name": "block",
-      "parent": "rd5825",
+      "parent": "vc0f33",
       "children": [
-        "n818e9",
-        "na9ad5"
+        "na9ad5",
+        "ue94bb"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -420,12 +436,12 @@
           "_cssClasses": "case-meta-item"
         }
       },
-      "label": "Meta Estudio"
+      "label": "Meta Ubicación"
     },
     {
-      "id": "n818e9",
+      "id": "na9ad5",
       "name": "text-basic",
-      "parent": "vc0f33",
+      "parent": "n818e9",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -433,14 +449,14 @@
           "_cssClasses": "case-meta-label"
         },
         "tag": "span",
-        "text": "Estudio"
+        "text": "Ubicación"
       },
-      "label": "Estudio"
+      "label": "Ubicación"
     },
     {
-      "id": "na9ad5",
+      "id": "ue94bb",
       "name": "text-basic",
-      "parent": "vc0f33",
+      "parent": "n818e9",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -448,17 +464,17 @@
           "_cssClasses": "case-meta-value"
         },
         "tag": "span",
-        "text": "Guatemala & Houston"
+        "text": "{post_terms_project_location:plain}"
       },
-      "label": "Guatemala & Houston"
+      "label": "{post_terms_project_location:plain}"
     },
     {
-      "id": "ue94bb",
+      "id": "k9e33a",
       "name": "block",
-      "parent": "rd5825",
+      "parent": "vc0f33",
       "children": [
-        "k9e33a",
-        "e7c3ac"
+        "e7c3ac",
+        "ud4dfd"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -469,9 +485,9 @@
       "label": "Meta Cliente"
     },
     {
-      "id": "k9e33a",
+      "id": "e7c3ac",
       "name": "text-basic",
-      "parent": "ue94bb",
+      "parent": "k9e33a",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -484,9 +500,9 @@
       "label": "Cliente"
     },
     {
-      "id": "e7c3ac",
+      "id": "ud4dfd",
       "name": "text-basic",
-      "parent": "ue94bb",
+      "parent": "k9e33a",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -494,17 +510,17 @@
           "_cssClasses": "case-meta-value"
         },
         "tag": "span",
-        "text": "{post_title}"
+        "text": "{acf_project_client}"
       },
-      "label": "{post_title}"
+      "label": "{acf_project_client}"
     },
     {
-      "id": "ud4dfd",
+      "id": "b79ddd",
       "name": "block",
-      "parent": "rd5825",
+      "parent": "vc0f33",
       "children": [
-        "b79ddd",
-        "kb7ef0"
+        "kb7ef0",
+        "deab0e"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -512,12 +528,12 @@
           "_cssClasses": "case-meta-item"
         }
       },
-      "label": "Meta Especialidad"
+      "label": "Meta Categorías"
     },
     {
-      "id": "b79ddd",
+      "id": "kb7ef0",
       "name": "text-basic",
-      "parent": "ud4dfd",
+      "parent": "b79ddd",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -525,14 +541,14 @@
           "_cssClasses": "case-meta-label"
         },
         "tag": "span",
-        "text": "Especialidad"
+        "text": "Categorías"
       },
-      "label": "Especialidad"
+      "label": "Categorías"
     },
     {
-      "id": "kb7ef0",
+      "id": "deab0e",
       "name": "text-basic",
-      "parent": "ud4dfd",
+      "parent": "b79ddd",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -540,17 +556,17 @@
           "_cssClasses": "case-meta-value"
         },
         "tag": "span",
-        "text": "UI/UX & Custom Web Dev"
+        "text": "{post_terms_project_category:plain}"
       },
-      "label": "UI/UX & Custom Web Dev"
+      "label": "{post_terms_project_category:plain}"
     },
     {
-      "id": "deab0e",
+      "id": "fa9d37",
       "name": "block",
-      "parent": "rd5825",
+      "parent": "vc0f33",
       "children": [
-        "fa9d37",
-        "ydd8ae"
+        "ydd8ae",
+        "c77dc6"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -561,9 +577,9 @@
       "label": "Meta Año"
     },
     {
-      "id": "fa9d37",
+      "id": "ydd8ae",
       "name": "text-basic",
-      "parent": "deab0e",
+      "parent": "fa9d37",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -576,9 +592,9 @@
       "label": "Año"
     },
     {
-      "id": "ydd8ae",
+      "id": "c77dc6",
       "name": "text-basic",
-      "parent": "deab0e",
+      "parent": "fa9d37",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -586,16 +602,16 @@
           "_cssClasses": "case-meta-value"
         },
         "tag": "span",
-        "text": "2025 — 2026"
+        "text": "{acf_project_year}"
       },
-      "label": "2025 — 2026"
+      "label": "{acf_project_year}"
     },
     {
-      "id": "c77dc6",
+      "id": "jaee7d",
       "name": "section",
       "parent": 0,
       "children": [
-        "jaee7d"
+        "u8d73e"
       ],
       "settings": {
         "_cssClasses": "case-light-canvas",
@@ -606,12 +622,13 @@
       "label": "Case Study Editorial Body"
     },
     {
-      "id": "jaee7d",
+      "id": "u8d73e",
       "name": "container",
-      "parent": "c77dc6",
+      "parent": "jaee7d",
       "children": [
-        "u8d73e",
-        "s50e35"
+        "ubb432",
+        "kadd50",
+        "m82217"
       ],
       "settings": {
         "_cssClasses": "container",
@@ -622,14 +639,24 @@
       "label": "Case Body Container"
     },
     {
-      "id": "u8d73e",
+      "id": "ubb432",
+      "name": "shortcode",
+      "parent": "u8d73e",
+      "children": [],
+      "settings": {
+        "shortcode": "[up_case_hero_devices]"
+      },
+      "label": "Auto-Scrolling Desktop & Mobile Frames"
+    },
+    {
+      "id": "kadd50",
       "name": "block",
-      "parent": "jaee7d",
+      "parent": "u8d73e",
       "children": [
-        "ubb432",
-        "kadd50",
-        "f69e68",
-        "r13024"
+        "xf24b0",
+        "abeb4d",
+        "zd187b",
+        "bdf164"
       ],
       "settings": {
         "_cssClasses": "case-editorial-col",
@@ -640,9 +667,9 @@
       "label": "Narrow Editorial Column"
     },
     {
-      "id": "ubb432",
+      "id": "xf24b0",
       "name": "text-basic",
-      "parent": "u8d73e",
+      "parent": "kadd50",
       "children": [],
       "settings": {
         "_cssClasses": "case-lead-copy",
@@ -650,96 +677,29 @@
           "_cssClasses": "case-lead-copy"
         },
         "tag": "p",
-        "text": "Diseñamos una plataforma digital sensorial que combina dirección de arte, velocidad de carga instantánea y un flujo de conversión sin fricciones pensado para usuarios en Guatemala y Estados Unidos."
+        "text": "{acf_project_lead_copy}"
       },
       "label": "Lead Overview Paragraph"
     },
     {
-      "id": "kadd50",
-      "name": "block",
-      "parent": "u8d73e",
-      "children": [
-        "xf24b0"
-      ],
-      "settings": {
-        "_cssClasses": "case-video-frame",
-        "_hidden": {
-          "_cssClasses": "case-video-frame"
-        },
-        "_cssId": "caseVideoFrame"
-      },
-      "label": "Featured Video Frame"
-    },
-    {
-      "id": "xf24b0",
-      "name": "block",
-      "parent": "kadd50",
-      "children": [
-        "abeb4d",
-        "b4dbcf"
-      ],
-      "settings": {
-        "_cssClasses": "case-video-frame__overlay",
-        "_hidden": {
-          "_cssClasses": "case-video-frame__overlay"
-        }
-      },
-      "label": "Video Play Overlay"
-    },
-    {
       "id": "abeb4d",
-      "name": "block",
-      "parent": "xf24b0",
-      "children": [
-        "zd187b"
-      ],
+      "name": "shortcode",
+      "parent": "kadd50",
+      "children": [],
       "settings": {
-        "_cssClasses": "case-play-box",
-        "_hidden": {
-          "_cssClasses": "case-play-box"
-        },
-        "tag": "span"
+        "shortcode": "[up_case_media_actions]"
       },
-      "label": "Square Play Button"
+      "label": "Optional Live Link & Video Player"
     },
     {
       "id": "zd187b",
-      "name": "icon",
-      "parent": "abeb4d",
-      "children": [],
-      "settings": {
-        "icon": {
-          "library": "fontawesome",
-          "icon": "fa-solid fa-chevron-right"
-        },
-        "iconSize": "22"
-      },
-      "label": "Icon"
-    },
-    {
-      "id": "b4dbcf",
-      "name": "text-basic",
-      "parent": "xf24b0",
-      "children": [],
-      "settings": {
-        "_cssClasses": "case-video-caption",
-        "_hidden": {
-          "_cssClasses": "case-video-caption"
-        },
-        "tag": "span",
-        "text": "Ver recorrido interactivo del sitio (01:24)"
-      },
-      "label": "Video Caption"
-    },
-    {
-      "id": "f69e68",
       "name": "block",
-      "parent": "u8d73e",
+      "parent": "kadd50",
       "children": [
-        "bda9da",
-        "q966b1",
-        "gbce24",
-        "vd4d55"
+        "b4dbcf",
+        "ed979c",
+        "f38b2c",
+        "bbe19d"
       ],
       "settings": {
         "_cssClasses": "case-accordion",
@@ -750,12 +710,12 @@
       "label": "4-Row Case Accordion"
     },
     {
-      "id": "bda9da",
+      "id": "b4dbcf",
       "name": "block",
-      "parent": "f69e68",
+      "parent": "zd187b",
       "children": [
-        "ac2f13",
-        "ed979c"
+        "f69e68",
+        "oe2aad"
       ],
       "settings": {
         "_cssClasses": "case-acc-item open",
@@ -766,12 +726,12 @@
       "label": "El Reto (Challenge)"
     },
     {
-      "id": "ac2f13",
+      "id": "f69e68",
       "name": "block",
-      "parent": "bda9da",
+      "parent": "b4dbcf",
       "children": [
-        "oe2aad",
-        "r03201"
+        "ac2f13",
+        "e3883c"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -781,7 +741,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "e3883c",
+            "id": "bda9da",
             "name": "aria-expanded",
             "value": "true"
           }
@@ -790,9 +750,9 @@
       "label": "Trigger El Reto (Challenge)"
     },
     {
-      "id": "oe2aad",
+      "id": "ac2f13",
       "name": "text-basic",
-      "parent": "ac2f13",
+      "parent": "f69e68",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -805,9 +765,9 @@
       "label": "El Reto (Challenge)"
     },
     {
-      "id": "r03201",
+      "id": "e3883c",
       "name": "icon",
-      "parent": "ac2f13",
+      "parent": "f69e68",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -823,11 +783,11 @@
       "label": "Icon"
     },
     {
-      "id": "ed979c",
+      "id": "oe2aad",
       "name": "block",
-      "parent": "bda9da",
+      "parent": "b4dbcf",
       "children": [
-        "e89170"
+        "r03201"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -838,23 +798,23 @@
       "label": "Panel El Reto (Challenge)"
     },
     {
-      "id": "e89170",
+      "id": "r03201",
       "name": "text-basic",
-      "parent": "ed979c",
+      "parent": "oe2aad",
       "children": [],
       "settings": {
         "tag": "p",
-        "text": "Modernizar la presencia digital eliminando fricciones técnicas y transmitiendo el valor real de la marca desde el primer segundo."
+        "text": "{acf_project_challenge}"
       },
       "label": "Panel Copy"
     },
     {
-      "id": "q966b1",
+      "id": "ed979c",
       "name": "block",
-      "parent": "f69e68",
+      "parent": "zd187b",
       "children": [
-        "e61cd8",
-        "f38b2c"
+        "e89170",
+        "pf2e22"
       ],
       "settings": {
         "_cssClasses": "case-acc-item",
@@ -865,12 +825,12 @@
       "label": "Inspiración (Inspiration)"
     },
     {
-      "id": "e61cd8",
+      "id": "e89170",
       "name": "block",
-      "parent": "q966b1",
+      "parent": "ed979c",
       "children": [
-        "pf2e22",
-        "dfa9ab"
+        "e61cd8",
+        "ifb51e"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -880,7 +840,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "ifb51e",
+            "id": "q966b1",
             "name": "aria-expanded",
             "value": "false"
           }
@@ -889,9 +849,9 @@
       "label": "Trigger Inspiración (Inspiration)"
     },
     {
-      "id": "pf2e22",
+      "id": "e61cd8",
       "name": "text-basic",
-      "parent": "e61cd8",
+      "parent": "e89170",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -904,9 +864,9 @@
       "label": "Inspiración (Inspiration)"
     },
     {
-      "id": "dfa9ab",
+      "id": "ifb51e",
       "name": "icon",
-      "parent": "e61cd8",
+      "parent": "e89170",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -922,11 +882,11 @@
       "label": "Icon"
     },
     {
-      "id": "f38b2c",
+      "id": "pf2e22",
       "name": "block",
-      "parent": "q966b1",
+      "parent": "ed979c",
       "children": [
-        "qe9bd3"
+        "dfa9ab"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -937,23 +897,23 @@
       "label": "Panel Inspiración (Inspiration)"
     },
     {
-      "id": "qe9bd3",
+      "id": "dfa9ab",
       "name": "text-basic",
-      "parent": "f38b2c",
+      "parent": "pf2e22",
       "children": [],
       "settings": {
         "tag": "p",
-        "text": "Un sistema de diseño editorial donde la tipografía, el contraste y el contenido audiovisual respiran con claridad."
+        "text": "{acf_project_inspiration}"
       },
       "label": "Panel Copy"
     },
     {
-      "id": "gbce24",
+      "id": "f38b2c",
       "name": "block",
-      "parent": "f69e68",
+      "parent": "zd187b",
       "children": [
-        "ua33e0",
-        "bbe19d"
+        "qe9bd3",
+        "o1453a"
       ],
       "settings": {
         "_cssClasses": "case-acc-item",
@@ -964,12 +924,12 @@
       "label": "La Solución (Idea)"
     },
     {
-      "id": "ua33e0",
+      "id": "qe9bd3",
       "name": "block",
-      "parent": "gbce24",
+      "parent": "f38b2c",
       "children": [
-        "o1453a",
-        "fce68a"
+        "ua33e0",
+        "fa6717"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -979,7 +939,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "fa6717",
+            "id": "gbce24",
             "name": "aria-expanded",
             "value": "false"
           }
@@ -988,9 +948,9 @@
       "label": "Trigger La Solución (Idea)"
     },
     {
-      "id": "o1453a",
+      "id": "ua33e0",
       "name": "text-basic",
-      "parent": "ua33e0",
+      "parent": "qe9bd3",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -1003,9 +963,9 @@
       "label": "La Solución (Idea)"
     },
     {
-      "id": "fce68a",
+      "id": "fa6717",
       "name": "icon",
-      "parent": "ua33e0",
+      "parent": "qe9bd3",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -1021,11 +981,11 @@
       "label": "Icon"
     },
     {
-      "id": "bbe19d",
+      "id": "o1453a",
       "name": "block",
-      "parent": "gbce24",
+      "parent": "f38b2c",
       "children": [
-        "qaedeb"
+        "fce68a"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -1036,23 +996,23 @@
       "label": "Panel La Solución (Idea)"
     },
     {
-      "id": "qaedeb",
+      "id": "fce68a",
       "name": "text-basic",
-      "parent": "bbe19d",
+      "parent": "o1453a",
       "children": [],
       "settings": {
         "tag": "p",
-        "text": "Arquitectura web a medida de alto rendimiento con flujos de conversión directa e integración inteligente con WhatsApp y CRM."
+        "text": "{acf_project_idea}"
       },
       "label": "Panel Copy"
     },
     {
-      "id": "vd4d55",
+      "id": "bbe19d",
       "name": "block",
-      "parent": "f69e68",
+      "parent": "zd187b",
       "children": [
-        "b168e3",
-        "bdf164"
+        "qaedeb",
+        "n5c220"
       ],
       "settings": {
         "_cssClasses": "case-acc-item",
@@ -1063,12 +1023,12 @@
       "label": "Impacto (Growth)"
     },
     {
-      "id": "b168e3",
+      "id": "qaedeb",
       "name": "block",
-      "parent": "vd4d55",
+      "parent": "bbe19d",
       "children": [
-        "n5c220",
-        "l7c88c"
+        "b168e3",
+        "gb915d"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -1078,7 +1038,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "gb915d",
+            "id": "vd4d55",
             "name": "aria-expanded",
             "value": "false"
           }
@@ -1087,9 +1047,9 @@
       "label": "Trigger Impacto (Growth)"
     },
     {
-      "id": "n5c220",
+      "id": "b168e3",
       "name": "text-basic",
-      "parent": "b168e3",
+      "parent": "qaedeb",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -1102,9 +1062,9 @@
       "label": "Impacto (Growth)"
     },
     {
-      "id": "l7c88c",
+      "id": "gb915d",
       "name": "icon",
-      "parent": "b168e3",
+      "parent": "qaedeb",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -1120,11 +1080,11 @@
       "label": "Icon"
     },
     {
-      "id": "bdf164",
+      "id": "n5c220",
       "name": "block",
-      "parent": "vd4d55",
+      "parent": "bbe19d",
       "children": [
-        "s55499"
+        "l7c88c"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -1135,22 +1095,22 @@
       "label": "Panel Impacto (Growth)"
     },
     {
-      "id": "s55499",
+      "id": "l7c88c",
       "name": "text-basic",
-      "parent": "bdf164",
+      "parent": "n5c220",
       "children": [],
       "settings": {
         "tag": "p",
-        "text": "Incremento sostenido en conversiones directas, reducción en tiempos de carga y puntuación superior a 96/100 en Google PageSpeed."
+        "text": "{acf_project_growth}"
       },
       "label": "Panel Copy"
     },
     {
-      "id": "r13024",
+      "id": "bdf164",
       "name": "block",
-      "parent": "u8d73e",
+      "parent": "kadd50",
       "children": [
-        "r00cb1"
+        "s55499"
       ],
       "settings": {
         "_cssClasses": "case-metrics-block",
@@ -1161,13 +1121,13 @@
       "label": "Impact Metrics Strip"
     },
     {
-      "id": "r00cb1",
+      "id": "s55499",
       "name": "block",
-      "parent": "r13024",
+      "parent": "bdf164",
       "children": [
-        "g992ec",
-        "o14801",
-        "c54e28"
+        "r13024",
+        "g816b2",
+        "j109d0"
       ],
       "settings": {
         "_cssClasses": "case-metrics-grid",
@@ -1178,12 +1138,12 @@
       "label": "Metrics 3-Column Grid"
     },
     {
-      "id": "g992ec",
+      "id": "r13024",
       "name": "block",
-      "parent": "r00cb1",
+      "parent": "s55499",
       "children": [
-        "g816b2",
-        "kea766"
+        "r00cb1",
+        "g992ec"
       ],
       "settings": {
         "_cssClasses": "case-metric-card",
@@ -1191,12 +1151,12 @@
           "_cssClasses": "case-metric-card"
         }
       },
-      "label": "Metric +185%"
+      "label": "Metric {acf_project_metric_1_val}"
     },
     {
-      "id": "g816b2",
+      "id": "r00cb1",
       "name": "text-basic",
-      "parent": "g992ec",
+      "parent": "r13024",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-number",
@@ -1204,45 +1164,45 @@
           "_cssClasses": "case-metric-number"
         },
         "tag": "span",
-        "text": "+185%"
+        "text": "{acf_project_metric_1_val}"
       },
-      "label": "+185%"
+      "label": "{acf_project_metric_1_val}"
+    },
+    {
+      "id": "g992ec",
+      "name": "text-basic",
+      "parent": "r13024",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-label",
+        "_hidden": {
+          "_cssClasses": "case-metric-label"
+        },
+        "tag": "span",
+        "text": "{acf_project_metric_1_label}"
+      },
+      "label": "{acf_project_metric_1_label}"
+    },
+    {
+      "id": "g816b2",
+      "name": "block",
+      "parent": "s55499",
+      "children": [
+        "kea766",
+        "o14801"
+      ],
+      "settings": {
+        "_cssClasses": "case-metric-card",
+        "_hidden": {
+          "_cssClasses": "case-metric-card"
+        }
+      },
+      "label": "Metric {acf_project_metric_2_val}"
     },
     {
       "id": "kea766",
       "name": "text-basic",
-      "parent": "g992ec",
-      "children": [],
-      "settings": {
-        "_cssClasses": "case-metric-label",
-        "_hidden": {
-          "_cssClasses": "case-metric-label"
-        },
-        "tag": "span",
-        "text": "Incremento en conversión directa"
-      },
-      "label": "Incremento en conversión directa"
-    },
-    {
-      "id": "o14801",
-      "name": "block",
-      "parent": "r00cb1",
-      "children": [
-        "j109d0",
-        "db39c5"
-      ],
-      "settings": {
-        "_cssClasses": "case-metric-card",
-        "_hidden": {
-          "_cssClasses": "case-metric-card"
-        }
-      },
-      "label": "Metric 98/100"
-    },
-    {
-      "id": "j109d0",
-      "name": "text-basic",
-      "parent": "o14801",
+      "parent": "g816b2",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-number",
@@ -1250,45 +1210,45 @@
           "_cssClasses": "case-metric-number"
         },
         "tag": "span",
-        "text": "98/100"
+        "text": "{acf_project_metric_2_val}"
       },
-      "label": "98/100"
+      "label": "{acf_project_metric_2_val}"
+    },
+    {
+      "id": "o14801",
+      "name": "text-basic",
+      "parent": "g816b2",
+      "children": [],
+      "settings": {
+        "_cssClasses": "case-metric-label",
+        "_hidden": {
+          "_cssClasses": "case-metric-label"
+        },
+        "tag": "span",
+        "text": "{acf_project_metric_2_label}"
+      },
+      "label": "{acf_project_metric_2_label}"
+    },
+    {
+      "id": "j109d0",
+      "name": "block",
+      "parent": "s55499",
+      "children": [
+        "db39c5",
+        "c54e28"
+      ],
+      "settings": {
+        "_cssClasses": "case-metric-card",
+        "_hidden": {
+          "_cssClasses": "case-metric-card"
+        }
+      },
+      "label": "Metric {acf_project_metric_3_val}"
     },
     {
       "id": "db39c5",
       "name": "text-basic",
-      "parent": "o14801",
-      "children": [],
-      "settings": {
-        "_cssClasses": "case-metric-label",
-        "_hidden": {
-          "_cssClasses": "case-metric-label"
-        },
-        "tag": "span",
-        "text": "Google PageSpeed Performance"
-      },
-      "label": "Google PageSpeed Performance"
-    },
-    {
-      "id": "c54e28",
-      "name": "block",
-      "parent": "r00cb1",
-      "children": [
-        "m82217",
-        "g2ef92"
-      ],
-      "settings": {
-        "_cssClasses": "case-metric-card",
-        "_hidden": {
-          "_cssClasses": "case-metric-card"
-        }
-      },
-      "label": "Metric 1.1s"
-    },
-    {
-      "id": "m82217",
-      "name": "text-basic",
-      "parent": "c54e28",
+      "parent": "j109d0",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-number",
@@ -1296,14 +1256,14 @@
           "_cssClasses": "case-metric-number"
         },
         "tag": "span",
-        "text": "1.1s"
+        "text": "{acf_project_metric_3_val}"
       },
-      "label": "1.1s"
+      "label": "{acf_project_metric_3_val}"
     },
     {
-      "id": "g2ef92",
+      "id": "c54e28",
       "name": "text-basic",
-      "parent": "c54e28",
+      "parent": "j109d0",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-label",
@@ -1311,17 +1271,17 @@
           "_cssClasses": "case-metric-label"
         },
         "tag": "span",
-        "text": "Tiempo de carga inicial (LCP)"
+        "text": "{acf_project_metric_3_label}"
       },
-      "label": "Tiempo de carga inicial (LCP)"
+      "label": "{acf_project_metric_3_label}"
     },
     {
-      "id": "s50e35",
+      "id": "m82217",
       "name": "block",
-      "parent": "jaee7d",
+      "parent": "u8d73e",
       "children": [
-        "d174dd",
-        "w4e6e2"
+        "g2ef92",
+        "d174dd"
       ],
       "settings": {
         "_cssClasses": "case-keep-reading",
@@ -1332,9 +1292,9 @@
       "label": "Keep Reading Section"
     },
     {
-      "id": "d174dd",
+      "id": "g2ef92",
       "name": "heading",
-      "parent": "s50e35",
+      "parent": "m82217",
       "children": [],
       "settings": {
         "_cssClasses": "case-keep-reading__heading",
@@ -1345,7 +1305,7 @@
         "text": "Seguir explorando",
         "_attributes": [
           {
-            "id": "r1e839",
+            "id": "s50e35",
             "name": "data-i18n",
             "value": "case.keepReading"
           }
@@ -1354,12 +1314,11 @@
       "label": "Seguir explorando"
     },
     {
-      "id": "w4e6e2",
+      "id": "d174dd",
       "name": "block",
-      "parent": "s50e35",
+      "parent": "m82217",
       "children": [
-        "y6bdcf",
-        "c24faa"
+        "r1e839"
       ],
       "settings": {
         "_cssClasses": "case-related-grid",
@@ -1370,50 +1329,58 @@
       "label": "Related 2-Column Grid"
     },
     {
+      "id": "r1e839",
+      "name": "block",
+      "parent": "d174dd",
+      "children": [
+        "w4e6e2",
+        "fbb52a",
+        "f0b52e"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card",
+        "_hidden": {
+          "_cssClasses": "related-case-card"
+        },
+        "tag": "article",
+        "hasLoop": true,
+        "query": {
+          "post_type": [
+            "project"
+          ],
+          "posts_per_page": 2,
+          "orderby": "rand"
+        }
+      },
+      "label": "Related Project (Query Loop)"
+    },
+    {
+      "id": "w4e6e2",
+      "name": "block",
+      "parent": "r1e839",
+      "children": [
+        "y6bdcf"
+      ],
+      "settings": {
+        "_cssClasses": "related-case-card__thumb bento-card--blue",
+        "_hidden": {
+          "_cssClasses": "related-case-card__thumb bento-card--blue"
+        },
+        "tag": "a",
+        "link": {
+          "type": "external",
+          "url": "{post_url}"
+        }
+      },
+      "label": "Related Thumbnail"
+    },
+    {
       "id": "y6bdcf",
       "name": "block",
       "parent": "w4e6e2",
       "children": [
         "lce9a5",
-        "gfd083",
-        "f71f92"
-      ],
-      "settings": {
-        "_cssClasses": "related-case-card",
-        "_hidden": {
-          "_cssClasses": "related-case-card"
-        },
-        "tag": "article"
-      },
-      "label": "Related Grand Tikal Futura"
-    },
-    {
-      "id": "lce9a5",
-      "name": "block",
-      "parent": "y6bdcf",
-      "children": [
         "e432ef"
-      ],
-      "settings": {
-        "_cssClasses": "related-case-card__thumb bento-card--blue",
-        "_hidden": {
-          "_cssClasses": "related-case-card__thumb bento-card--blue"
-        },
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/project/?id=tikal-futura"
-        }
-      },
-      "label": "Related Thumbnail"
-    },
-    {
-      "id": "e432ef",
-      "name": "block",
-      "parent": "lce9a5",
-      "children": [
-        "fbb52a",
-        "f0b52e"
       ],
       "settings": {
         "_cssClasses": "related-case-card__emblem",
@@ -1424,46 +1391,50 @@
       "label": "Related Emblem"
     },
     {
-      "id": "fbb52a",
+      "id": "lce9a5",
       "name": "text-basic",
-      "parent": "e432ef",
+      "parent": "y6bdcf",
       "children": [],
       "settings": {
         "tag": "span",
-        "text": "Grand Tikal Futura"
+        "text": "{post_title}"
       },
-      "label": "Grand Tikal Futura"
+      "label": "Post Title"
+    },
+    {
+      "id": "e432ef",
+      "name": "text-basic",
+      "parent": "y6bdcf",
+      "children": [],
+      "settings": {
+        "tag": "small",
+        "text": "{post_terms_project_category:plain}"
+      },
+      "label": "Case Study Label"
+    },
+    {
+      "id": "fbb52a",
+      "name": "heading",
+      "parent": "r1e839",
+      "children": [],
+      "settings": {
+        "_cssClasses": "related-case-card__title",
+        "_hidden": {
+          "_cssClasses": "related-case-card__title"
+        },
+        "tag": "h3",
+        "text": "{post_title}",
+        "link": {
+          "type": "external",
+          "url": "{post_url}"
+        }
+      },
+      "label": "Related Title"
     },
     {
       "id": "f0b52e",
       "name": "text-basic",
-      "parent": "e432ef",
-      "children": [],
-      "settings": {
-        "tag": "small",
-        "text": "HOTEL & CONVENTION CENTER"
-      },
-      "label": "HOTEL & CONVENTION CENTER"
-    },
-    {
-      "id": "gfd083",
-      "name": "heading",
-      "parent": "y6bdcf",
-      "children": [],
-      "settings": {
-        "_cssClasses": "related-case-card__title",
-        "_hidden": {
-          "_cssClasses": "related-case-card__title"
-        },
-        "tag": "h3",
-        "text": "Grand Tikal Futura"
-      },
-      "label": "Grand Tikal Futura"
-    },
-    {
-      "id": "f71f92",
-      "name": "text-basic",
-      "parent": "y6bdcf",
+      "parent": "r1e839",
       "children": [],
       "settings": {
         "_cssClasses": "related-case-card__desc",
@@ -1471,115 +1442,9 @@
           "_cssClasses": "related-case-card__desc"
         },
         "tag": "p",
-        "text": "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala."
+        "text": "{post_excerpt}"
       },
-      "label": "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala."
-    },
-    {
-      "id": "c24faa",
-      "name": "block",
-      "parent": "w4e6e2",
-      "children": [
-        "k04ac2",
-        "n057ee",
-        "e7e046"
-      ],
-      "settings": {
-        "_cssClasses": "related-case-card",
-        "_hidden": {
-          "_cssClasses": "related-case-card"
-        },
-        "tag": "article"
-      },
-      "label": "Related INDE Guatemala"
-    },
-    {
-      "id": "k04ac2",
-      "name": "block",
-      "parent": "c24faa",
-      "children": [
-        "h157fa"
-      ],
-      "settings": {
-        "_cssClasses": "related-case-card__thumb bento-card--blue",
-        "_hidden": {
-          "_cssClasses": "related-case-card__thumb bento-card--blue"
-        },
-        "tag": "a",
-        "link": {
-          "type": "external",
-          "url": "/project/?id=inde"
-        }
-      },
-      "label": "Related Thumbnail"
-    },
-    {
-      "id": "h157fa",
-      "name": "block",
-      "parent": "k04ac2",
-      "children": [
-        "yeec12",
-        "nce2d3"
-      ],
-      "settings": {
-        "_cssClasses": "related-case-card__emblem",
-        "_hidden": {
-          "_cssClasses": "related-case-card__emblem"
-        }
-      },
-      "label": "Related Emblem"
-    },
-    {
-      "id": "yeec12",
-      "name": "text-basic",
-      "parent": "h157fa",
-      "children": [],
-      "settings": {
-        "tag": "span",
-        "text": "INDE Guatemala"
-      },
-      "label": "INDE Guatemala"
-    },
-    {
-      "id": "nce2d3",
-      "name": "text-basic",
-      "parent": "h157fa",
-      "children": [],
-      "settings": {
-        "tag": "small",
-        "text": "PLATAFORMA INSTITUCIONAL"
-      },
-      "label": "PLATAFORMA INSTITUCIONAL"
-    },
-    {
-      "id": "n057ee",
-      "name": "heading",
-      "parent": "c24faa",
-      "children": [],
-      "settings": {
-        "_cssClasses": "related-case-card__title",
-        "_hidden": {
-          "_cssClasses": "related-case-card__title"
-        },
-        "tag": "h3",
-        "text": "INDE Guatemala"
-      },
-      "label": "INDE Guatemala"
-    },
-    {
-      "id": "e7e046",
-      "name": "text-basic",
-      "parent": "c24faa",
-      "children": [],
-      "settings": {
-        "_cssClasses": "related-case-card__desc",
-        "_hidden": {
-          "_cssClasses": "related-case-card__desc"
-        },
-        "tag": "p",
-        "text": "Plataforma de alto tráfico con visualización energética nacional y estándares AA+ de accesibilidad."
-      },
-      "label": "Plataforma de alto tráfico con visualización energética nacional y estándares AA+ de accesibilidad."
+      "label": "Related Excerpt"
     }
   ]
 }

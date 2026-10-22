@@ -61,7 +61,8 @@
           "type": "external",
           "url": "/"
         },
-        "_widthMax": "max-content"
+        "_widthMax": "140px",
+        "_heightMax": "46px"
       },
       "label": "Site Logo Link"
     },
@@ -76,12 +77,13 @@
           "_cssClasses": "site-logo__img"
         },
         "image": {
-          "url": "/wp-content/themes/upagency/screenshot.png",
+          "url": "/wp-content/themes/upagency/assets/logo.png",
           "alt": "UP Group Studio"
         },
-        "_height": "54",
-        "_heightMax": "54",
-        "_widthMax": "max-content"
+        "_height": "46px",
+        "_heightMax": "46px",
+        "_width": "auto",
+        "_widthMax": "140px"
       },
       "label": "Logo Image"
     },
@@ -445,7 +447,8 @@
           "type": "external",
           "url": "/"
         },
-        "_widthMax": "max-content"
+        "_widthMax": "140px",
+        "_heightMax": "46px"
       },
       "label": "Site Logo Link"
     },
@@ -460,12 +463,13 @@
           "_cssClasses": "site-logo__img"
         },
         "image": {
-          "url": "/wp-content/themes/upagency/screenshot.png",
+          "url": "/wp-content/themes/upagency/assets/logo.png",
           "alt": "UP Group Studio"
         },
-        "_height": "54",
-        "_heightMax": "54",
-        "_widthMax": "max-content"
+        "_height": "46px",
+        "_heightMax": "46px",
+        "_width": "auto",
+        "_widthMax": "140px"
       },
       "label": "Logo Image"
     },

@@ -27,7 +27,7 @@ const uiLabels = {
     'case.keepReading': 'Seguir explorando',
     'footer.box1': 'Chatear por WhatsApp',
     'footer.box2': 'Guatemala • Houston, Texas',
-    'footer.box3': 'Iniciar Proyecto • studio.up.gt',
+    'footer.box3': 'Iniciar Proyecto • up.gt',
     'footer.bigTitle': 'Es ahora que<br>todo comienza',
     'footer.scriptAccent': 'con nosotros',
     'footer.ctaBtn': 'Iniciar un proyecto',
@@ -58,7 +58,7 @@ const uiLabels = {
     'case.keepReading': 'Keep reading',
     'footer.box1': 'Chat on WhatsApp',
     'footer.box2': 'Guatemala • Houston, Texas',
-    'footer.box3': 'Start a Project • studio.up.gt',
+    'footer.box3': 'Start a Project • up.gt',
     'footer.bigTitle': 'Now is when<br>everything begins',
     'footer.scriptAccent': 'with us',
     'footer.ctaBtn': 'Start a project',
@@ -568,7 +568,7 @@ function buildCoverArtworkHTML(project, copy) {
 
           <!-- Center Main Flagship Display -->
           <div class="cover-device cover-device--center">
-            <div class="cover-device__bar"><span></span><span></span><span></span><em>studio.up.gt / ${project.id}</em></div>
+            <div class="cover-device__bar"><span></span><span></span><span></span><em>up.gt / ${project.id}</em></div>
             <div class="cover-device__screen cover-device__screen--main">
               <span class="cover-chip">${project.badgeSub}</span>
               <h2>${project.badgeTitle}</h2>
@@ -792,7 +792,31 @@ function setLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize project from URL ?id=...
+  const isWordPress = Boolean(window.upPolylang && window.upPolylang.isWordPress);
+  const isStaticPreview = Boolean(document.getElementById('caseQuickPills')) && !isWordPress;
+
+  // Interactive Video Frame Click Effect (works in both WordPress & static preview)
+  const videoFrame = document.getElementById('caseVideoFrame');
+  if (videoFrame) {
+    const initialCaption = document.getElementById('caseVideoCaption')?.textContent || '';
+    videoFrame.addEventListener('click', () => {
+      videoFrame.classList.toggle('playing');
+      const caption = document.getElementById('caseVideoCaption');
+      if (caption) {
+        const isEn = (document.documentElement.lang || '').toLowerCase().startsWith('en');
+        caption.textContent = videoFrame.classList.contains('playing')
+          ? (isEn ? '✓ Interactive Preview Active — Click to pause' : '✓ Vista interactiva activa — Clic para pausar')
+          : (isStaticPreview ? projectsCatalog[currentProjectId][currentLang].videoCaption : initialCaption);
+      }
+    });
+  }
+
+  // In WordPress Bricks Builder, dynamic CPT fields & Polylang handle all content natively
+  if (!isStaticPreview) {
+    return;
+  }
+
+  // Static Preview Mode (project.html on localhost:3000): Initialize project from URL ?id=...
   const initialId = getProjectFromUrl();
   loadProject(initialId, false);
 
@@ -804,14 +828,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Language Switcher
+  // Language Switcher (static preview)
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       setLanguage(btn.getAttribute('data-lang'));
     });
   });
 
-  // Accordion toggles
+  // Accordion toggles (when project.html loads project.js standalone)
   document.querySelectorAll('.case-acc-trigger').forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const item = trigger.closest('.case-acc-item');
@@ -820,20 +844,6 @@ document.addEventListener('DOMContentLoaded', () => {
       trigger.setAttribute('aria-expanded', String(!isOpen));
     });
   });
-
-  // Interactive Video Frame Click Effect
-  const videoFrame = document.getElementById('caseVideoFrame');
-  if (videoFrame) {
-    videoFrame.addEventListener('click', () => {
-      videoFrame.classList.toggle('playing');
-      const caption = document.getElementById('caseVideoCaption');
-      if (caption) {
-        caption.textContent = videoFrame.classList.contains('playing')
-          ? (currentLang === 'en' ? '✓ Interactive Preview Active — Click to pause' : '✓ Vista interactiva activa — Clic para pausar')
-          : projectsCatalog[currentProjectId][currentLang].videoCaption;
-      }
-    });
-  }
 
   // Metrics Pagination (< 1 / 2 >)
   document.getElementById('metricsPrevBtn')?.addEventListener('click', () => {

@@ -1,7 +1,7 @@
 {
   "name": "up-group-studio-redesign",
   "version": "3.0.0",
-  "description": "UP Group Studio (studio.up.gt) — Static HTML/SCSS/JS Preview, WordPress Bricks Builder Child Theme & JSON Templates",
+  "description": "UP Group Studio (up.gt) — Static HTML/SCSS/JS Preview, WordPress Bricks Builder Child Theme & JSON Templates",
   "private": true,
   "scripts": {
     "dev": "python3 -m http.server 3000 --directory src",

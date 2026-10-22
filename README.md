@@ -1,6 +1,6 @@
-# UP Group Studio (`studio.up.gt`) — Website Redesign & Bricks Builder
+# UP Group Studio (`up.gt`) — Website Redesign & Bricks Builder
 
-Repositorio oficial del rediseño web de **UP Group Studio** (`studio.up.gt`), estudio de ingeniería web, e-commerce de alto tráfico y sistemas de diseño digitales con presencia en **Guatemala** y **Houston, Texas**.
+Repositorio oficial del rediseño web de **UP Group Studio** (`up.gt`), estudio de ingeniería web, e-commerce de alto tráfico y sistemas de diseño digitales con presencia en **Guatemala** y **Houston, Texas**.
 
 El proyecto sigue el flujo de trabajo de **HTML/SCSS/JS estático → Child Theme + Plantillas JSON para WordPress Bricks Builder**.
 
@@ -42,6 +42,7 @@ El proyecto sigue el flujo de trabajo de **HTML/SCSS/JS estático → Child Them
 ├── src/                         # Código fuente del Preview Estático (HTML/SCSS/CSS/JS)
 │   ├── index.html               # Vista previa de la Página de Inicio (3 actos: Dark/Light/Dark)
 │   ├── project.html             # Vista previa de Caso de Estudio Individual (?id=nanajuana, etc.)
+│   ├── design-system.html       # Catálogo visual interactivo del Design System v3.0
 │   ├── assets/                  # Imágenes y logotipo oficial de UP Group Studio
 │   ├── css/
 │   │   └── style.css            # CSS compilado listo para navegador y Bricks
@@ -53,6 +54,7 @@ El proyecto sigue el flujo de trabajo de **HTML/SCSS/JS estático → Child Them
 │
 ├── wordpress/                   # Respaldo / instalación base de WordPress
 ├── wp-snippets/                 # Snippets complementarios de WordPress (FluentSnippets)
+├── DESIGN_SYSTEM.md             # Documentación técnica completa del Design System v3.0
 ├── package.json                 # Scripts de desarrollo, compilación SCSS y empaquetado
 └── README.md                    # Documentación del proyecto
 ```
@@ -61,7 +63,7 @@ El proyecto sigue el flujo de trabajo de **HTML/SCSS/JS estático → Child Them
 
 ## Especificaciones de Marca y Diseño
 
-- **Nombre Oficial y Dominio**: **UP Group Studio** (`studio.up.gt`).
+- **Nombre Oficial y Dominio**: **UP Group Studio** (`up.gt`).
 - **Ubicaciones**: **Guatemala** y **Houston, Texas**.
 - **Titular Principal (Hero)**:
   - Español (`ES`, idioma por defecto): *«Enciende tu Potencial Digital»*
@@ -85,6 +87,7 @@ npm run dev
 - **Home Page**: [http://localhost:3000/](http://localhost:3000/)
 - **Caso de Estudio (Ej. Nanajuana)**: [http://localhost:3000/project.html?id=nanajuana](http://localhost:3000/project.html?id=nanajuana)
   - Slugs disponibles: `nanajuana`, `tikal-futura`, `inde`, `hyundai`, `coastal-debt`, `bbdo`.
+- **Design System Interactivo**: [http://localhost:3000/design-system.html](http://localhost:3000/design-system.html)
 
 ### 2. Compilar SCSS a CSS y sincronizar con `child-theme/`
 ```bash

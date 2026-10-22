@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# UP Group Studio (studio.up.gt) — Sync & Package Script
+# UP Group Studio (up.gt) — Sync & Package Script
 # Syncs compiled CSS, JS, and assets from src/ into child-theme/, regenerates
 # Bricks Builder JSON templates, and optionally packages deployment ZIPs.
 # ==============================================================================

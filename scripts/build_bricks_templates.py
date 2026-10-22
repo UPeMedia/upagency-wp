@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generator & Validator for UP Group Studio (studio.up.gt) Bricks Builder JSON Templates.
+Generator & Validator for UP Group Studio (up.gt) Bricks Builder JSON Templates.
 Strictly enforces all rules from the WordPress Bricks Builder skill:
 - Root elements are `name: "section"` with `parent: 0`
 - Bidirectional `parent` <-> `children` links
@@ -121,13 +121,15 @@ def build_header():
     # Logo Link Block
     logo_link = b.add("block", cnt, css="site-logo", label="Site Logo Link", tag="a", extra_settings={
         "link": {"type": "external", "url": "/"},
-        "_widthMax": "max-content"
+        "_widthMax": "140px",
+        "_heightMax": "46px"
     })
     b.add("image", logo_link, css="site-logo__img", label="Logo Image", extra_settings={
-        "image": {"url": "/wp-content/themes/upagency/screenshot.png", "alt": "UP Group Studio"},
-        "_height": "54",
-        "_heightMax": "54",
-        "_widthMax": "max-content"
+        "image": {"url": "/wp-content/themes/upagency/assets/logo.png", "alt": "UP Group Studio"},
+        "_height": "46px",
+        "_heightMax": "46px",
+        "_width": "auto",
+        "_widthMax": "140px"
     })
     b.add("text-basic", logo_link, css="sr-only", label="SR Only Brand Text", tag="span", text="UP Group Studio")
 
@@ -229,39 +231,38 @@ def append_works_section(b):
 
     bento = b.add("block", cnt, css="portfolio-bento", label="Portfolio Bento Grid")
 
-    projects = [
-        ("nanajuana", "Nanajuana Río Dulce", "NANAJUANA", "RÍO DULCE • MARINA & RESORT", "fa-solid fa-anchor", "bento-card--lilac", False, "works.p1Tag", "UI/UX • Booking Engine • Brand Content", "works.p1Desc", "Experiencia digital inmersiva y reservas directas para el destino náutico más exclusivo de Guatemala.", "works.p1Cat", "Diseño Web & Motor de Reservas"),
-        ("tikal-futura", "Grand Tikal Futura", "TIKAL FUTURA", "GRAND HOTEL & CONVENTION CENTER", "fa-solid fa-gem", "bento-card--blue", True, "works.p2Tag", "Arquitectura Corporativa • Portal de Eventos", "works.p2Desc", "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala.", "works.p2Cat", "Portal Corporativo & Convenciones"),
-        ("inde", "INDE Guatemala", "INDE", "INSTITUTO NACIONAL DE ELECTRIFICACIÓN", "fa-solid fa-bolt-lightning", "bento-card--coral", False, "works.p3Tag", "Portal Institucional • Alta Disponibilidad", "works.p3Desc", "Plataforma de alto tráfico con visualización energética nacional, estándares de accesibilidad y ciberseguridad.", "works.p3Cat", "Plataforma Institucional & Datos"),
-        ("hyundai", "Hyundai Comerciales", "HYUNDAI", "VEHÍCULOS COMERCIALES & FLOTILLAS", "fa-solid fa-truck-fast", "bento-card--orchid", True, "works.p4Tag", "Catálogo B2B • Embudo de Leads", "works.p4Desc", "Catálogo interactivo y cotizador en tiempo real para la línea de camiones y autobuses Hyundai.", "works.p4Cat", "Catálogo Digital & Lead Generation"),
-        ("coastal-debt", "Coastal Debt (USA)", "COASTAL DEBT", "FINANCIAL RELIEF • UNITED STATES", "fa-solid fa-chart-line", "bento-card--mint", False, "works.p5Tag", "US Fintech Market • Speed Optimization", "works.p5Desc", "Plataforma financiera para el mercado de EE.UU. con calculadoras interactivas y conversión de alto rendimiento.", "works.p5Cat", "Fintech Web & Optimización"),
-        ("bbdo", "BBDO Guatemala", "BBDO", "CREATIVE AGENCY NETWORK", "fa-solid fa-award", "bento-card--amber", True, "works.p6Tag", "Creative Showcase • Video Portfolio", "works.p6Desc", "Showcase editorial multipremiado exhibiendo campañas regionales con fluidez y velocidad instantánea.", "works.p6Cat", "Diseño Editorial & Portafolio"),
-    ]
+    # Single Query-Loop-Ready Card (Repeats automatically for CPT 'project' posts in Bricks + Polylang)
+    # CSS :nth-child(even) handles the staggered offset and :nth-child(6n+1..6) cycles the 6 Morez pastel colors
+    item = b.add("block", bento, css="bento-item", label="Project Item (Query Loop)", tag="article", extra_settings={
+        "hasLoop": True,
+        "query": {
+            "post_type": ["project"],
+            "posts_per_page": 6
+        }
+    })
 
-    for slug, title, emblem_name, emblem_sub, icon_cls, card_cls, staggered, tag_k, tag_v, desc_k, desc_v, cat_k, cat_v in projects:
-        item_cls = "bento-item bento-item--staggered" if staggered else "bento-item"
-        item = b.add("block", bento, css=item_cls, label=f"Project {title}", tag="article")
+    card = b.add("block", item, css="bento-card", label="Project Card Link", tag="a", extra_settings={
+        "link": {"type": "external", "url": "{post_url}"}
+    })
 
-        card = b.add("block", item, css=f"bento-card {card_cls}", label=f"Card {title}", tag="a",
-                     attrs={"data-project": title},
-                     extra_settings={"link": {"type": "external", "url": f"/project/?id={slug}"}})
+    center = b.add("block", card, css="bento-card__center", label="Center Emblem")
+    emb = b.add("block", center, css="bento-emblem", label="Emblem Inner")
+    b.icon(emb, "fa-solid fa-layer-group", size="38", css="bento-emblem__icon")
+    b.add("text-basic", emb, css="bento-emblem__name", label="Emblem Name", tag="span", text="{post_title}")
+    b.add("text-basic", emb, css="bento-emblem__sub", label="Emblem Subtitle", tag="span", text="{acf_project_emblem_sub}")
 
-        center = b.add("block", card, css="bento-card__center", label="Center Emblem")
-        emb = b.add("block", center, css="bento-emblem", label="Emblem Inner")
-        b.icon(emb, icon_cls, size="38", css="bento-emblem__icon")
-        b.add("text-basic", emb, css="bento-emblem__name", label="Emblem Name", tag="span", text=emblem_name)
-        b.add("text-basic", emb, css="bento-emblem__sub", label="Emblem Subtitle", tag="span", text=emblem_sub)
+    reveal = b.add("block", card, css="bento-card__hover-reveal", label="Hover Reveal Overlay")
+    b.add("text-basic", reveal, css="reveal-pill", label="Reveal Tag (Categories)", tag="span", text="{post_terms_project_category:plain}")
+    b.add("text-basic", reveal, css="reveal-desc", label="Reveal Excerpt", tag="p", text="{post_excerpt}")
+    cta = b.add("block", reveal, css="reveal-cta", label="Reveal CTA", tag="span")
+    b.add("text-basic", cta, label="Explorar caso", tag="span", text="Explorar caso")
+    b.icon(cta, "fa-solid fa-arrow-up-right-from-square", size="14")
 
-        reveal = b.add("block", card, css="bento-card__hover-reveal", label="Hover Reveal Overlay")
-        b.add("text-basic", reveal, css="reveal-pill", label="Reveal Tag", tag="span", text=tag_v, attrs={"data-i18n": tag_k})
-        b.add("text-basic", reveal, css="reveal-desc", label="Reveal Description", tag="p", text=desc_v, attrs={"data-i18n": desc_k})
-        cta = b.add("block", reveal, css="reveal-cta", label="Reveal CTA", tag="span")
-        b.add("text-basic", cta, label="Explorar caso", tag="span", text="Explorar caso", attrs={"data-i18n": "works.cta"})
-        b.icon(cta, "fa-solid fa-arrow-up-right-from-square", size="14")
-
-        meta = b.add("block", item, css="bento-meta", label="Project Meta")
-        b.add("heading", meta, css="bento-title", label=title, tag="h3", text=title)
-        b.add("text-basic", meta, css="bento-category", label=cat_v, tag="p", text=cat_v, attrs={"data-i18n": cat_k})
+    meta = b.add("block", item, css="bento-meta", label="Project Meta")
+    b.add("heading", meta, css="bento-title", label="Project Title", tag="h3", text="{post_title}", extra_settings={
+        "link": {"type": "external", "url": "{post_url}"}
+    })
+    b.add("text-basic", meta, css="bento-category", label="Project Category (Taxonomy)", tag="p", text="{post_terms_project_category:plain}")
 
     # Dark Editorial Manifesto 1
     man_wrap = b.add("block", cnt, css="manifesto-section manifesto-section--dark", label="Manifesto 1 Dark")
@@ -442,7 +443,7 @@ def build_footer():
     })
     box3_txt = b.add("block", box3, css="footer-box__text", label="Domain Text", tag="span")
     b.icon(box3_txt, "fa-regular fa-paper-plane", size="17")
-    b.add("text-basic", box3_txt, label="Iniciar Proyecto • studio.up.gt", tag="span", text="Iniciar Proyecto • studio.up.gt", attrs={"data-i18n": "footer.box3"})
+    b.add("text-basic", box3_txt, label="Iniciar Proyecto • up.gt", tag="span", text="Iniciar Proyecto • up.gt", attrs={"data-i18n": "footer.box3"})
 
     # Center Brand Wordmark
     center_brand = b.add("block", cnt, css="footer-center-brand", label="Center Brand Wrapper")
@@ -490,7 +491,7 @@ def build_footer():
 
     # Legal Bar
     legal = b.add("block", cnt, css="footer-legal", label="Footer Legal Bar")
-    b.add("text-basic", legal, label="Copyright", tag="span", text="© 2026 UP GROUP STUDIO (STUDIO.UP.GT) • GUATEMALA & HOUSTON")
+    b.add("text-basic", legal, label="Copyright", tag="span", text="© 2026 UP GROUP STUDIO (UP.GT) • GUATEMALA & HOUSTON")
     b.add("text-basic", legal, label="Rights", tag="span", text="TODOS LOS DERECHOS RESERVADOS", attrs={"data-i18n": "footer.rights"})
 
     els = b.validate()
@@ -512,77 +513,78 @@ def build_footer():
 def build_single_portfolio():
     b = BricksTreeBuilder("case")
 
-    # Section 1: Full-Bleed Visual Cover Stage
+    # Section 1: Full-Bleed Visual Cover Stage (3 Floating Boxes Header)
     sec_cover = b.add("section", 0, css="case-hero-cover", label="Case Study Hero Cover", extra_settings={"_cssId": "caseHeroCover"})
     stage = b.add("block", sec_cover, css="cover-stage-art", label="Cover Stage Art")
     b.add("block", stage, css="cover-stage-art__bokeh", label="Bokeh Overlay")
     cnt_cover = b.add("container", stage, css="container cover-stage-art__inner", label="Cover Container")
-    comp = b.add("block", cnt_cover, css="cover-Floating-composition", label="Floating Multi-Device Stage")
+    comp = b.add("block", cnt_cover, css="cover-Floating-composition", label="Floating 3-Box Stage")
 
-    # Left Tilted Device
-    dev_l = b.add("block", comp, css="cover-device cover-device--left", label="Left Tilted Card")
+    # Left Tilted Box
+    dev_l = b.add("block", comp, css="cover-device cover-device--left", label="Left Tilted Box")
     scr_l = b.add("block", dev_l, css="cover-device__screen", label="Left Screen")
-    b.icon(scr_l, "fa-solid fa-anchor", size="32", css="cover-device__icon")
-    b.add("heading", scr_l, label="Project Badge", tag="h4", text="{post_title}")
+    b.icon(scr_l, "fa-solid fa-layer-group", size="32", css="cover-device__icon")
+    b.add("heading", scr_l, label="Project Location", tag="h4", text="{post_terms_project_location:plain}")
+    b.add("text-basic", scr_l, css="cover-mobile-tag", label="Market Segment", tag="span", text="{post_terms_project_sector:plain}")
 
-    # Center Main Display
-    dev_c = b.add("block", comp, css="cover-device cover-device--center", label="Center Flagship Display")
+    # Center Main Display Box
+    dev_c = b.add("block", comp, css="cover-device cover-device--center", label="Center Flagship Box")
     scr_c = b.add("block", dev_c, css="cover-device__screen cover-device__screen--main", label="Main Screen")
-    b.add("text-basic", scr_c, css="cover-chip", label="Project Category", tag="span", text="UP GROUP STUDIO CASE STUDY")
+    b.add("text-basic", scr_c, css="cover-chip", label="Project Categories", tag="span", text="{post_terms_project_category:plain}")
     b.add("heading", scr_c, label="Main Display Title", tag="h2", text="{post_title}")
     b.add("text-basic", scr_c, label="Main Display Excerpt", tag="p", text="{post_excerpt}")
 
-    # Right Mobile Device
-    dev_r = b.add("block", comp, css="cover-device cover-device--right", label="Right Mobile Card")
+    # Right Tilted Box
+    dev_r = b.add("block", comp, css="cover-device cover-device--right", label="Right Metric Box")
     scr_r = b.add("block", dev_r, css="cover-device__screen", label="Right Screen")
-    b.add("text-basic", scr_r, css="cover-mobile-tag", label="Mobile Tag", tag="span", text="MOBILE FIRST")
-    b.add("heading", scr_r, label="Metric Highlight", tag="h4", text="98/100")
-    b.add("text-basic", scr_r, label="Metric Label", tag="p", text="Google PageSpeed")
+    b.add("text-basic", scr_r, css="cover-mobile-tag", label="Mobile Tag", tag="span", text="KEY IMPACT")
+    b.add("heading", scr_r, label="Metric Highlight", tag="h4", text="{acf_project_metric_1_val}")
+    b.add("text-basic", scr_r, label="Metric Label", tag="p", text="{acf_project_metric_1_label}")
 
     # Section 2: Colored Editorial Intro Band (VML Style)
     sec_band = b.add("section", 0, css="case-intro-band", label="Colored Editorial Intro Band", extra_settings={"_cssId": "caseIntroBand"})
     b.add("block", sec_band, css="case-intro-band__halftone", label="Halftone Pattern Overlay")
     cnt_band = b.add("container", sec_band, css="container", label="Intro Band Container")
     top_bar = b.add("block", cnt_band, css="case-intro-band__top", label="Top Kicker Divider")
-    b.add("text-basic", top_bar, css="case-kicker-label", label="Kicker Text", tag="span", text="{post_title} × UP Group Studio")
+    b.add("text-basic", top_bar, css="case-kicker-label", label="Kicker Text", tag="span", text="{acf_project_kicker}")
 
     offset = b.add("block", cnt_band, css="case-intro-band__Offset", label="Indented Editorial Content")
     b.add("heading", offset, css="case-headline", label="Case Study Headline", tag="h1",
-          text="Experiencia digital inmersiva y arquitectura a medida diseñada para liderar su industria")
+          text="{acf_project_headline}")
 
     meta_grid = b.add("block", offset, css="case-meta-grid", label="Case Metadata Row")
     for lbl, val in [
-        ("Estudio", "Guatemala & Houston"),
-        ("Cliente", "{post_title}"),
-        ("Especialidad", "UI/UX & Custom Web Dev"),
-        ("Año", "2025 — 2026")
+        ("Ubicación", "{post_terms_project_location:plain}"),
+        ("Cliente", "{acf_project_client}"),
+        ("Categorías", "{post_terms_project_category:plain}"),
+        ("Año", "{acf_project_year}")
     ]:
         m_item = b.add("block", meta_grid, css="case-meta-item", label=f"Meta {lbl}")
         b.add("text-basic", m_item, css="case-meta-label", label=lbl, tag="span", text=lbl)
         b.add("text-basic", m_item, css="case-meta-value", label=val, tag="span", text=val)
 
-    # Section 3: White Editorial Content Zone (Summary, Video, 4 Accordions, Metrics, Gallery, Keep Reading)
+    # Section 3: White Editorial Content Zone (Starts with Auto-Scrolling Devices Showcase, then Lead Copy, Live Link + Video, Accordions, Metrics, Keep Reading)
     sec_body = b.add("section", 0, css="case-light-canvas", label="Case Study Editorial Body")
     cnt_body = b.add("container", sec_body, css="container", label="Case Body Container")
+
+    # Auto-Scrolling Desktop & Mobile Frames at the very start of .case-light-canvas
+    b.shortcode(cnt_body, "[up_case_hero_devices]", label="Auto-Scrolling Desktop & Mobile Frames")
+
     ed_col = b.add("block", cnt_body, css="case-editorial-col", label="Narrow Editorial Column")
 
     b.add("text-basic", ed_col, css="case-lead-copy", label="Lead Overview Paragraph", tag="p",
-          text="Diseñamos una plataforma digital sensorial que combina dirección de arte, velocidad de carga instantánea y un flujo de conversión sin fricciones pensado para usuarios en Guatemala y Estados Unidos.")
+          text="{acf_project_lead_copy}")
 
-    # Featured Video / Interactive Reel Frame
-    vid_frame = b.add("block", ed_col, css="case-video-frame", label="Featured Video Frame", extra_settings={"_cssId": "caseVideoFrame"})
-    vid_overlay = b.add("block", vid_frame, css="case-video-frame__overlay", label="Video Play Overlay")
-    play_box = b.add("block", vid_overlay, css="case-play-box", label="Square Play Button", tag="span")
-    b.icon(play_box, "fa-solid fa-chevron-right", size="22")
-    b.add("text-basic", vid_overlay, css="case-video-caption", label="Video Caption", tag="span", text="Ver recorrido interactivo del sitio (01:24)")
+    # Optional Live Website Link & Embedded Video Player Underneath
+    b.shortcode(ed_col, "[up_case_media_actions]", label="Optional Live Link & Video Player")
 
     # 4-Row Case Study Accordion (Challenge, Inspiration, Idea, Growth)
     acc_wrap = b.add("block", ed_col, css="case-accordion", label="4-Row Case Accordion")
     acc_rows = [
-        ("El Reto (Challenge)", True, "Modernizar la presencia digital eliminando fricciones técnicas y transmitiendo el valor real de la marca desde el primer segundo."),
-        ("Inspiración (Inspiration)", False, "Un sistema de diseño editorial donde la tipografía, el contraste y el contenido audiovisual respiran con claridad."),
-        ("La Solución (Idea)", False, "Arquitectura web a medida de alto rendimiento con flujos de conversión directa e integración inteligente con WhatsApp y CRM."),
-        ("Impacto (Growth)", False, "Incremento sostenido en conversiones directas, reducción en tiempos de carga y puntuación superior a 96/100 en Google PageSpeed.")
+        ("El Reto (Challenge)", True, "{acf_project_challenge}"),
+        ("Inspiración (Inspiration)", False, "{acf_project_inspiration}"),
+        ("La Solución (Idea)", False, "{acf_project_idea}"),
+        ("Impacto (Growth)", False, "{acf_project_growth}")
     ]
     for title_txt, is_open, body_txt in acc_rows:
         item_cls = "case-acc-item open" if is_open else "case-acc-item"
@@ -599,30 +601,36 @@ def build_single_portfolio():
     metrics_block = b.add("block", ed_col, css="case-metrics-block", label="Impact Metrics Strip")
     metrics_grid = b.add("block", metrics_block, css="case-metrics-grid", label="Metrics 3-Column Grid")
     for num, lbl in [
-        ("+185%", "Incremento en conversión directa"),
-        ("98/100", "Google PageSpeed Performance"),
-        ("1.1s", "Tiempo de carga inicial (LCP)")
+        ("{acf_project_metric_1_val}", "{acf_project_metric_1_label}"),
+        ("{acf_project_metric_2_val}", "{acf_project_metric_2_label}"),
+        ("{acf_project_metric_3_val}", "{acf_project_metric_3_label}")
     ]:
         m_card = b.add("block", metrics_grid, css="case-metric-card", label=f"Metric {num}")
         b.add("text-basic", m_card, css="case-metric-number", label=num, tag="span", text=num)
         b.add("text-basic", m_card, css="case-metric-label", label=lbl, tag="span", text=lbl)
 
-    # Keep Reading Related Projects Section
+    # Keep Reading Related Projects Section (Query Loop Ready)
     keep = b.add("block", cnt_body, css="case-keep-reading", label="Keep Reading Section")
     b.add("heading", keep, css="case-keep-reading__heading", label="Seguir explorando", tag="h2", text="Seguir explorando", attrs={"data-i18n": "case.keepReading"})
     rel_grid = b.add("block", keep, css="case-related-grid", label="Related 2-Column Grid")
-    for r_title, r_sub, r_desc, r_url in [
-        ("Grand Tikal Futura", "HOTEL & CONVENTION CENTER", "Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala.", "/project/?id=tikal-futura"),
-        ("INDE Guatemala", "PLATAFORMA INSTITUCIONAL", "Plataforma de alto tráfico con visualización energética nacional y estándares AA+ de accesibilidad.", "/project/?id=inde")
-    ]:
-        r_card = b.add("block", rel_grid, css="related-case-card", label=f"Related {r_title}", tag="article")
-        r_thumb = b.add("block", r_card, css="related-case-card__thumb bento-card--blue", label="Related Thumbnail", tag="a",
-                        extra_settings={"link": {"type": "external", "url": r_url}})
-        r_emb = b.add("block", r_thumb, css="related-case-card__emblem", label="Related Emblem")
-        b.add("text-basic", r_emb, label=r_title, tag="span", text=r_title)
-        b.add("text-basic", r_emb, label=r_sub, tag="small", text=r_sub)
-        b.add("heading", r_card, css="related-case-card__title", label=r_title, tag="h3", text=r_title)
-        b.add("text-basic", r_card, css="related-case-card__desc", label=r_desc, tag="p", text=r_desc)
+
+    r_card = b.add("block", rel_grid, css="related-case-card", label="Related Project (Query Loop)", tag="article", extra_settings={
+        "hasLoop": True,
+        "query": {
+            "post_type": ["project"],
+            "posts_per_page": 2,
+            "orderby": "rand"
+        }
+    })
+    r_thumb = b.add("block", r_card, css="related-case-card__thumb bento-card--blue", label="Related Thumbnail", tag="a",
+                    extra_settings={"link": {"type": "external", "url": "{post_url}"}})
+    r_emb = b.add("block", r_thumb, css="related-case-card__emblem", label="Related Emblem")
+    b.add("text-basic", r_emb, label="Post Title", tag="span", text="{post_title}")
+    b.add("text-basic", r_emb, label="Case Study Label", tag="small", text="{post_terms_project_category:plain}")
+    b.add("heading", r_card, css="related-case-card__title", label="Related Title", tag="h3", text="{post_title}", extra_settings={
+        "link": {"type": "external", "url": "{post_url}"}
+    })
+    b.add("text-basic", r_card, css="related-case-card__desc", label="Related Excerpt", tag="p", text="{post_excerpt}")
 
     els = b.validate()
     return {

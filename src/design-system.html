@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System v3.0 — UP Group Studio (up.gt)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css?v=3.1" />
+  <style>
+    /* Design System Showcase Specific Layout Styles */
+    .ds-hero {
+      padding: 64px 0 56px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .ds-hero__grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: flex-end;
+    }
+    .ds-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--text-white);
+      margin-bottom: 20px;
+    }
+    .ds-kicker-badge__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--whatsapp-green);
+      box-shadow: 0 0 10px var(--whatsapp-green);
+    }
+    .ds-subnav {
+      position: sticky;
+      top: 75px;
+      z-index: 90;
+      background: rgba(13, 13, 18, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 0;
+    }
+    .ds-subnav__list {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .ds-subnav__link {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-white-muted);
+      transition: all 0.25s var(--ease-out);
+    }
+    .ds-subnav__link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-white);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+    .ds-section {
+      padding: 88px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .ds-section--light {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      border-bottom: 1px solid rgba(9, 9, 11, 0.08);
+    }
+    .ds-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ds-section--light .ds-header {
+      border-bottom-color: rgba(9, 9, 11, 0.1);
+    }
+    .ds-header__num {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--morez-coral);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .ds-header__title {
+      font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+    }
+    .ds-header__desc {
+      max-width: 460px;
+      font-size: 0.95rem;
+      color: var(--text-white-muted);
+    }
+    .ds-section--light .ds-header__desc {
+      color: var(--text-dark-muted);
+    }
+    .ds-group-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-white-subtle);
+      margin: 36px 0 18px;
+    }
+    .ds-section--light .ds-group-title {
+      color: var(--text-dark-muted);
+    }
+
+    /* Swatches */
+    .ds-swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .ds-swatch {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+      position: relative;
+    }
+    .ds-swatch:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+    .ds-swatch__color {
+      height: 96px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 10px 12px;
+    }
+    .ds-swatch__copy-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(5, 5, 5, 0.65);
+      color: #fff;
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .ds-swatch:hover .ds-swatch__copy-badge {
+      opacity: 1;
+    }
+    .ds-swatch__body {
+      padding: 14px 16px;
+    }
+    .ds-swatch__name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 4px;
+    }
+    .ds-swatch__var {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--morez-orchid);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .ds-swatch__hex {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-white-subtle);
+    }
+    .ds-swatch__usage {
+      font-size: 0.78rem;
+      color: var(--text-white-muted);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* Typography Table */
+    .ds-type-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .ds-type-row {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+      align-items: center;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .ds-type-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding-right: 20px;
+    }
+    .ds-type-meta__label {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-white);
+    }
+    .ds-type-meta__class {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--morez-coral);
+    }
+    .ds-type-meta__specs {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      color: var(--text-white-subtle);
+      line-height: 1.5;
+    }
+
+    /* Component Showcase Boxes */
+    .ds-box-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .ds-box {
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ds-section--light .ds-box {
+      background: #FFFFFF;
+      border-color: rgba(9, 9, 11, 0.08);
+      box-shadow: 0 10px 30px rgba(9, 9, 11, 0.03);
+    }
+    .ds-box__label {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-white-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      padding-bottom: 12px;
+    }
+    .ds-section--light .ds-box__label {
+      color: var(--text-dark-muted);
+      border-bottom-color: rgba(9, 9, 11, 0.08);
+    }
+    .ds-box__code {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--morez-coral);
+      background: rgba(235, 95, 105, 0.12);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .ds-box__canvas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      min-height: 80px;
+    }
+
+    /* Radius & Spacing Tokens */
+    .ds-token-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .ds-radius-demo {
+      height: 84px;
+      background: linear-gradient(135deg, rgba(235, 95, 105, 0.2), rgba(155, 126, 222, 0.2));
+      border: 2px solid var(--morez-orchid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-white);
+    }
+
+    @media (max-width: 860px) {
+      .ds-hero__grid,
+      .ds-type-row {
+        grid-template-columns: 1fr;
+      }
+      .ds-type-meta {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-right: 0;
+        padding-bottom: 14px;
+      }
+      .ds-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body class="up-body">
+
+  <!-- =====================================================================
+       GLOBAL HEADER (EXACT PRODUCTION HEADER MARKUP)
+       ===================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-logo" aria-label="UP Group Studio">
+        <img src="assets/logo.png" alt="UP Group Studio" class="site-logo__img" />
+        <span class="sr-only">UP Group Studio</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="site-nav__list">
+          <li><a href="index.html#works" class="site-nav__link">Proyectos</a></li>
+          <li><a href="index.html#services" class="site-nav__link">Servicios</a></li>
+          <li><a href="index.html#studio" class="site-nav__link">El Estudio</a></li>
+          <li><a href="project.html?id=nanajuana" class="site-nav__link">Vista Proyecto</a></li>
+          <li class="site-nav__cta-item">
+            <a href="index.html#inquiry" class="nav-contact-pill">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="site-header__right">
+        <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="es">ES</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       DESIGN SYSTEM HERO
+       ===================================================================== -->
+  <section class="ds-hero">
+    <div class="container ds-hero__grid">
+      <div>
+        <div class="ds-kicker-badge">
+          <span class="ds-kicker-badge__dot"></span>
+          <span>UP GROUP STUDIO • DESIGN SYSTEM v3.0</span>
+        </div>
+        <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.2rem); text-align: left; margin-bottom: 18px;">
+          Sistema de Diseño &amp; Librería UI
+        </h1>
+        <p class="hero-subtitle" style="max-width: 680px; margin: 0; text-align: left;">
+          Especificación viva de tokens cromáticos, escala tipográfica fluida, componentes interactivos en 3 actos (Dark / Warm Light / Dark), módulos de Case Study y reglas de compatibilidad para WordPress Bricks Builder (<strong>up.gt</strong>).
+        </p>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+        <span style="font-family: var(--font-script); font-size: 1.65rem; color: var(--morez-gold);">Haz clic en cualquier color para copiar su token ✨</span>
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-white-subtle); padding: 10px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);">
+          Dominio: <strong style="color: #fff;">up.gt</strong> &bull; Ubicaciones: <strong style="color: #fff;">Guatemala &amp; Houston</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Subnav -->
+  <nav class="ds-subnav" aria-label="Secciones del Design System">
+    <div class="container ds-subnav__list">
+      <a href="#colors" class="ds-subnav__link">01. Colores &amp; Tokens</a>
+      <a href="#typography" class="ds-subnav__link">02. Tipografía</a>
+      <a href="#buttons-stamps" class="ds-subnav__link">03. Botones, Píldoras &amp; Sellos 360°</a>
+      <a href="#cards-bento" class="ds-subnav__link">04. Portafolio Bento (Acto I)</a>
+      <a href="#light-zone-ui" class="ds-subnav__link">05. Servicios &amp; Chips (Acto II)</a>
+      <a href="#case-study-ui" class="ds-subnav__link">06. Case Study System (VML)</a>
+      <a href="#layout-bricks" class="ds-subnav__link">07. Radios &amp; Reglas Bricks</a>
+    </div>
+  </nav>
+
+  <!-- =====================================================================
+       01. COLOR PALETTE & TOKENS
+       ===================================================================== -->
+  <section class="ds-section" id="colors">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">01 / Fundamentos Cromáticos</span>
+          <h2 class="ds-header__title">Paleta de Colores &amp; Tokens CSS</h2>
+        </div>
+        <p class="ds-header__desc">
+          Arquitectura de alto contraste dividida entre el negro puro (<code>#050505</code>), marfil editorial cálido (<code>#FAF9F6</code>) y acentos pasteles vibrantes. Haz clic en cualquier tarjeta para copiar la variable CSS.
+        </p>
+      </div>
+
+      <!-- 1A. Surfaces -->
+      <h3 class="ds-group-title">Superficies (Acto I, Acto II &amp; Acto III)</h3>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch" data-copy="var(--bg-dark)">
+          <div class="ds-swatch__color" style="background: #050505; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Obsidian Black</div>
+            <code class="ds-swatch__var">--bg-dark</code>
+            <div class="ds-swatch__hex">#050505</div>
+            <p class="ds-swatch__usage">Fondo principal del Acto I (Dark Zone) y Acto III (Footer).</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--bg-dark-elevated)">
+          <div class="ds-swatch__color" style="background: #0D0D12; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Elevated Onyx</div>
+            <code class="ds-swatch__var">--bg-dark-elevated</code>
+            <div class="ds-swatch__hex">#0D0D12</div>
+            <p class="ds-swatch__usage">Tarjetas oscuras elevadas (<code>.srv-card</code>, <code>.split-rocket-card</code>).</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--bg-light)">
+          <div class="ds-swatch__color" style="background: #FAF9F6;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Warm Editorial Ivory</div>
+            <code class="ds-swatch__var">--bg-light</code>
+            <div class="ds-swatch__hex">#FAF9F6</div>
+            <p class="ds-swatch__usage">Fondo luminoso del Acto II (Servicios, Estudio, Contacto).</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--bg-light-card)">
+          <div class="ds-swatch__color" style="background: #FFFFFF;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Pure Editorial White</div>
+            <code class="ds-swatch__var">--bg-light-card</code>
+            <div class="ds-swatch__hex">#FFFFFF</div>
+            <p class="ds-swatch__usage">Tarjetas claras, caja de formulario e interior de Case Study.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1B. Vibrant Pastels & Accents -->
+      <h3 class="ds-group-title">Acentos Vibrantes &amp; Pasteles Editoriales</h3>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch" data-copy="var(--morez-coral)">
+          <div class="ds-swatch__color" style="background: #EB5F69;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Studio Coral</div>
+            <code class="ds-swatch__var">--morez-coral</code>
+            <div class="ds-swatch__hex">#EB5F69</div>
+            <p class="ds-swatch__usage">Acento primario, Bento Card Coral, Gradientes CTA.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--morez-lilac)">
+          <div class="ds-swatch__color" style="background: #BC80BB;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Electric Lilac</div>
+            <code class="ds-swatch__var">--morez-lilac</code>
+            <div class="ds-swatch__hex">#BC80BB</div>
+            <p class="ds-swatch__usage">Bento Card Lilac (Nanajuana), badges creativos y resplandores.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--morez-orchid)">
+          <div class="ds-swatch__color" style="background: #9B7EDE;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Digital Orchid</div>
+            <code class="ds-swatch__var">--morez-orchid</code>
+            <div class="ds-swatch__hex">#9B7EDE</div>
+            <p class="ds-swatch__usage">Bento Card Orchid (Hyundai), gradientes interactivos.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--morez-blue)">
+          <div class="ds-swatch__color" style="background: #669ACA;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Engineering Blue</div>
+            <code class="ds-swatch__var">--morez-blue</code>
+            <div class="ds-swatch__hex">#669ACA</div>
+            <p class="ds-swatch__usage">Bento Card Blue (Tikal Futura), botón <code>.btn-pastel-blue</code>.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--morez-mint)">
+          <div class="ds-swatch__color" style="background: #8CC099;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Growth Mint</div>
+            <code class="ds-swatch__var">--morez-mint</code>
+            <div class="ds-swatch__hex">#8CC099</div>
+            <p class="ds-swatch__usage">Bento Card Mint (Coastal Debt), indicadores de rendimiento.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--morez-amber)">
+          <div class="ds-swatch__color" style="background: #F4A261;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Warm Amber</div>
+            <code class="ds-swatch__var">--morez-amber</code>
+            <div class="ds-swatch__hex">#F4A261</div>
+            <p class="ds-swatch__usage">Bento Card Amber (BBDO), ilustraciones y formas geométricas.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--morez-gold)">
+          <div class="ds-swatch__color" style="background: #FBBF24;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">Doodle Gold</div>
+            <code class="ds-swatch__var">--morez-gold</code>
+            <div class="ds-swatch__hex">#FBBF24</div>
+            <p class="ds-swatch__usage">Subrayados manuscritos SVG (<code>.doodle-svg</code>) y acentos Caveat.</p>
+          </div>
+        </div>
+
+        <div class="ds-swatch" data-copy="var(--whatsapp-green)">
+          <div class="ds-swatch__color" style="background: #25D366;">
+            <span class="ds-swatch__copy-badge">Copiar var()</span>
+          </div>
+          <div class="ds-swatch__body">
+            <div class="ds-swatch__name">WhatsApp Direct</div>
+            <code class="ds-swatch__var">--whatsapp-green</code>
+            <div class="ds-swatch__hex">#25D366</div>
+            <p class="ds-swatch__usage">Botón flotante persistente (<code>.floating-whatsapp</code>) hacia <code>+50237556857</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       02. TYPOGRAPHY SCALE
+       ===================================================================== -->
+  <section class="ds-section" id="typography">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">02 / Arquitectura Tipográfica</span>
+          <h2 class="ds-header__title">Escala Tipográfica Fluida</h2>
+        </div>
+        <p class="ds-header__desc">
+          Combinación de <strong>Geist</strong> para titulares geométricos de alto impacto, <strong>Geist Mono</strong> para metadatos técnicos y <strong>Caveat</strong> para acentos editoriales orgánicos.
+        </p>
+      </div>
+
+      <div class="ds-type-list">
+        <!-- Hero Title -->
+        <div class="ds-type-row">
+          <div class="ds-type-meta">
+            <span class="ds-type-meta__label">Hero Display H1</span>
+            <code class="ds-type-meta__class">.hero-title</code>
+            <div class="ds-type-meta__specs">
+              Font: Geist (800 ExtraBold)<br/>
+              Size: clamp(2.85rem, 6.2vw, 5.25rem)<br/>
+              Line-height: 1.04 | Tracking: -0.04em
+            </div>
+          </div>
+          <div>
+            <div class="hero-title" style="margin: 0; text-align: left;">
+              Enciende tu<br/>Potencial Digital
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study Intro Headline -->
+        <div class="ds-type-row">
+          <div class="ds-type-meta">
+            <span class="ds-type-meta__label">Case Study Display</span>
+            <code class="ds-type-meta__class">.case-headline</code>
+            <div class="ds-type-meta__specs">
+              Font: Geist (500 Medium)<br/>
+              Size: clamp(2rem, 4.2vw, 3.5rem)<br/>
+              Line-height: 1.12 | Tracking: -0.03em
+            </div>
+          </div>
+          <div>
+            <div class="case-headline" style="margin: 0;">
+              Experiencia digital inmersiva y motor de reservas directas para el destino náutico más exclusivo.
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Main Title -->
+        <div class="ds-type-row">
+          <div class="ds-type-meta">
+            <span class="ds-type-meta__label">Section Heading H2</span>
+            <code class="ds-type-meta__class">.services-main-title</code>
+            <div class="ds-type-meta__specs">
+              Font: Geist (800 ExtraBold)<br/>
+              Size: clamp(2.1rem, 4.2vw, 3.4rem)<br/>
+              Line-height: 1.08 | Tracking: -0.035em
+            </div>
+          </div>
+          <div>
+            <h2 class="services-main-title" style="margin: 0; color: #fff;">
+              Nuestros servicios à la carte <span class="services-sticker">🎨</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Manifesto Lead with Hand-drawn Doodle -->
+        <div class="ds-type-row">
+          <div class="ds-type-meta">
+            <span class="ds-type-meta__label">Manifesto Lead + Doodle</span>
+            <code class="ds-type-meta__class">.manifesto-lead / .doodle-word</code>
+            <div class="ds-type-meta__specs">
+              Font: Geist (600 SemiBold)<br/>
+              Size: clamp(1.5rem, 2.8vw, 2.25rem)<br/>
+              Line-height: 1.35
+            </div>
+          </div>
+          <div>
+            <p class="manifesto-lead" style="margin: 0;">
+              No solo hacemos <span class="doodle-word doodle-word--yellow">sitios web.<svg class="doodle-svg" viewBox="0 0 120 14" fill="none"><path d="M2 10 Q15 2 30 10 T60 10 T90 10 T118 8" stroke="#FBBF24" stroke-width="3.5" stroke-linecap="round"/></svg></span> Hablamos geek, pero sin tecnicismos incomprensibles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Handwritten Script Accent -->
+        <div class="ds-type-row">
+          <div class="ds-type-meta">
+            <span class="ds-type-meta__label">Script Callout</span>
+            <code class="ds-type-meta__class">.footer-script-accent</code>
+            <div class="ds-type-meta__specs">
+              Font: Caveat (700 Bold)<br/>
+              Color: var(--morez-coral) / var(--morez-gold)
+            </div>
+          </div>
+          <div>
+            <h2 class="footer-big-title" style="margin: 0;">
+              <span>Es ahora que todo comienza</span>
+              <span class="footer-script-accent">con nosotros</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       03. BUTTONS, PILLS & 360° ROTATING STAMPS
+       ===================================================================== -->
+  <section class="ds-section" id="buttons-stamps">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">03 / Controles Interactivos &amp; Sellos</span>
+          <h2 class="ds-header__title">Botones, Navegación &amp; Sellos 360°</h2>
+        </div>
+        <p class="ds-header__desc">
+          Botones píldora con gradientes, píldoras de servicio, conmutador bilingüe <code>ES / EN</code> y los 3 sellos circulares SVG calibrados para girar continuamente a 360°.
+        </p>
+      </div>
+
+      <div class="ds-box-grid">
+        <!-- Primary & Action Buttons -->
+        <div class="ds-box">
+          <div class="ds-box__label">
+            <span>Botones Principales de Acción</span>
+            <span class="ds-box__code">.btn-gradient-pill / .btn-pastel-blue</span>
+          </div>
+          <div class="ds-box__canvas">
+            <a href="#buttons-stamps" class="btn-gradient-pill">Iniciar una conversación</a>
+            <a href="#buttons-stamps" class="btn-pastel-blue">Cotizar mi proyecto</a>
+            <a href="#buttons-stamps" class="srv-pill-btn">Cotizar</a>
+          </div>
+        </div>
+
+        <!-- Header Pill & Language Switcher -->
+        <div class="ds-box">
+          <div class="ds-box__label">
+            <span>Header Pill CTA, Switcher &amp; Form Buttons</span>
+            <span class="ds-box__code">.nav-contact-pill / .lang-switcher</span>
+          </div>
+          <div class="ds-box__canvas">
+            <a href="#buttons-stamps" class="nav-contact-pill">Contacto</a>
+            <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+              <button type="button" class="lang-btn active">ES</button>
+              <span class="lang-sep">/</span>
+              <button type="button" class="lang-btn">EN</button>
+            </div>
+            <button type="button" class="btn-form-wa" style="padding: 10px 18px; font-size: 0.85rem;">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Enviar por WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 3 Rotating Stamps -->
+      <h3 class="ds-group-title">Los 3 Sellos Rotatorios SVG (Shortcodes Nativos en Bricks)</h3>
+      <div class="ds-box-grid">
+        <!-- Stamp 1: Hero -->
+        <div class="ds-box" style="align-items: center; text-align: center;">
+          <div class="ds-box__label" style="width: 100%;">
+            <span>01. Hero Scroll Stamp</span>
+            <span class="ds-box__code">[up_scroll_stamp]</span>
+          </div>
+          <div class="ds-box__canvas" style="justify-content: center; padding: 24px 0;">
+            <a href="#cards-bento" class="scroll-stamp" style="position: relative; bottom: auto; left: auto; transform: none;" aria-label="Ver proyectos">
+              <svg class="scroll-stamp__svg" viewBox="0 0 120 120">
+                <defs>
+                  <path id="dsStampHero" d="M 60, 60 m -46, 0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"/>
+                </defs>
+                <text class="scroll-stamp__text">
+                  <textPath href="#dsStampHero" textLength="279" lengthAdjust="spacing">UP GROUP STUDIO • GUATEMALA &amp; HOUSTON •</textPath>
+                </text>
+              </svg>
+              <span class="scroll-stamp__icon">
+                <i class="fa-solid fa-angles-down"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Stamp 2: Manifesto Dark -->
+        <div class="ds-box" style="align-items: center; text-align: center;">
+          <div class="ds-box__label" style="width: 100%;">
+            <span>02. Manifesto 1 (Dark)</span>
+            <span class="ds-box__code">[up_manifesto_stamp_dark]</span>
+          </div>
+          <div class="ds-box__canvas" style="justify-content: center; padding: 24px 0;">
+            <div class="rotating-stamp">
+              <svg class="rotating-stamp__svg" viewBox="0 0 120 120">
+                <defs>
+                  <path id="dsStampDark" d="M 60, 60 m -46, 0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"/>
+                </defs>
+                <text class="rotating-stamp__text">
+                  <textPath href="#dsStampDark" textLength="278" lengthAdjust="spacing">WE SPEAK GEEK, BUT WE'RE FRIENDLY •</textPath>
+                </text>
+              </svg>
+              <span class="rotating-stamp__center">
+                <i class="fa-solid fa-code"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stamp 3: Manifesto Light -->
+        <div class="ds-box" style="align-items: center; text-align: center; background: #FAF9F6; color: #09090B;">
+          <div class="ds-box__label" style="width: 100%; border-bottom-color: rgba(9,9,11,0.1); color: #52525B;">
+            <span>03. Manifesto 2 (Light)</span>
+            <span class="ds-box__code">[up_manifesto_stamp_light]</span>
+          </div>
+          <div class="ds-box__canvas" style="justify-content: center; padding: 24px 0;">
+            <div class="rotating-stamp rotating-stamp--light">
+              <svg class="rotating-stamp__svg" viewBox="0 0 120 120">
+                <defs>
+                  <path id="dsStampLight" d="M 60, 60 m -46, 0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"/>
+                </defs>
+                <text class="rotating-stamp__text">
+                  <textPath href="#dsStampLight" textLength="278" lengthAdjust="spacing">ZERO COPY-PASTE • PIXEL OBSESSED •</textPath>
+                </text>
+              </svg>
+              <span class="rotating-stamp__center">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       04. ACT I COMPONENTS: PORTFOLIO BENTO CARDS
+       ===================================================================== -->
+  <section class="ds-section" id="cards-bento">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">04 / Componentes del Acto I (Dark Zone)</span>
+          <h2 class="ds-header__title">Tarjetas Bento de Portafolio (Hover Reveal)</h2>
+        </div>
+        <p class="ds-header__desc">
+          Tarjetas pastel redondeadas (<code>.bento-card</code>) con emblema central y capa de revelado interactivo al pasar el cursor (<code>.bento-card__hover-reveal</code>).
+        </p>
+      </div>
+
+      <div class="portfolio-bento">
+        <article class="bento-item">
+          <a href="project.html?id=nanajuana" class="bento-card bento-card--lilac">
+            <div class="bento-card__center">
+              <div class="bento-emblem">
+                <i class="fa-solid fa-anchor bento-emblem__icon"></i>
+                <span class="bento-emblem__name">NANAJUANA</span>
+                <span class="bento-emblem__sub">RÍO DULCE &bull; MARINA &amp; RESORT</span>
+              </div>
+            </div>
+            <div class="bento-card__hover-reveal">
+              <span class="reveal-pill">UI/UX &bull; Booking Engine &bull; Brand Content</span>
+              <p class="reveal-desc">Experiencia digital inmersiva y reservas directas para el destino náutico más exclusivo de Guatemala.</p>
+              <span class="reveal-cta"><span>Explorar caso</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+          </a>
+          <div class="bento-meta">
+            <h3 class="bento-title"><a href="project.html?id=nanajuana">Nanajuana Río Dulce</a></h3>
+            <p class="bento-category">Diseño Web &amp; Motor de Reservas (<code>.bento-card--lilac</code>)</p>
+          </div>
+        </article>
+
+        <article class="bento-item">
+          <a href="project.html?id=tikal-futura" class="bento-card bento-card--blue">
+            <div class="bento-card__center">
+              <div class="bento-emblem">
+                <i class="fa-solid fa-gem bento-emblem__icon"></i>
+                <span class="bento-emblem__name">TIKAL FUTURA</span>
+                <span class="bento-emblem__sub">GRAND HOTEL &amp; CONVENTION CENTER</span>
+              </div>
+            </div>
+            <div class="bento-card__hover-reveal">
+              <span class="reveal-pill">Arquitectura Corporativa &bull; Portal de Eventos</span>
+              <p class="reveal-desc">Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala.</p>
+              <span class="reveal-cta"><span>Explorar caso</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+          </a>
+          <div class="bento-meta">
+            <h3 class="bento-title"><a href="project.html?id=tikal-futura">Grand Tikal Futura</a></h3>
+            <p class="bento-category">Portal Corporativo &amp; Convenciones (<code>.bento-card--blue</code>)</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       05. ACT II COMPONENTS (WARM LIGHT ZONE #FAF9F6)
+       ===================================================================== -->
+  <section class="ds-section ds-section--light" id="light-zone-ui">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">05 / Componentes del Acto II (Warm Light Zone)</span>
+          <h2 class="ds-header__title">Tarjetas de Servicios, Liderazgo &amp; Píldoras</h2>
+        </div>
+        <p class="ds-header__desc">
+          Sobre el lienzo marfil <code>#FAF9F6</code>, las tarjetas de servicios (<code>.srv-card</code>) utilizan bloques oscuros con resplandor inferior (<em>aurora glow</em>).
+        </p>
+      </div>
+
+      <div class="ds-box-grid" style="align-items: start;">
+        <!-- Sample Service Card -->
+        <article class="srv-card srv-card--glow-1">
+          <div class="srv-card__icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="srv-card__body">
+            <h3 class="srv-card__title">Desarrollo de<br/>sitios web a medida</h3>
+            <p class="srv-card__desc">
+              Portales corporativos, sitios institucionales y plataformas web rápidas, seguras y adaptadas al 100% a tus objetivos comerciales.
+            </p>
+          </div>
+          <div class="srv-card__footer">
+            <a href="#light-zone-ui" class="srv-pill-btn">Cotizar</a>
+          </div>
+        </article>
+
+        <!-- Studio Duo Card & Form Pills -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <div class="duo-card">
+            <div class="duo-card__avatar duo-card__avatar--rodrigo">
+              <span>RC</span>
+            </div>
+            <div class="duo-card__info">
+              <div class="duo-card__head">
+                <h4>Rodrigo Campos</h4>
+                <span class="duo-badge">15+ YRS EXP</span>
+              </div>
+              <p class="duo-role">Founder &bull; Web Development &amp; Digital Product Design</p>
+              <div class="duo-links">
+                <a href="https://rodri8.com" target="_blank" rel="noopener noreferrer">rodri8.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ds-box">
+            <div class="ds-box__label">
+              <span>Selector de Servicios (Formulario)</span>
+              <span class="ds-box__code">.pill-check</span>
+            </div>
+            <div class="service-selector-pills">
+              <label class="pill-check">
+                <input type="checkbox" checked />
+                <span>Desarrollo Web</span>
+              </label>
+              <label class="pill-check">
+                <input type="checkbox" />
+                <span>UI/UX &amp; Branding</span>
+              </label>
+              <label class="pill-check">
+                <input type="checkbox" />
+                <span>E-Commerce</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       06. CASE STUDY SYSTEM (VML EDITORIAL LAYOUT)
+       ===================================================================== -->
+  <section class="ds-section ds-section--light" id="case-study-ui" style="padding-top: 20px;">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">06 / Sistema Editorial de Portafolio (VML Layout)</span>
+          <h2 class="ds-header__title">Componentes de Single Portfolio Case Study</h2>
+        </div>
+        <p class="ds-header__desc">
+          Diseñados para <code>project.html</code> y <code>single-portfolio.json</code>: banda de introducción con patrón <em>halftone</em> (<code>.case-intro-band</code>), acordeón de 4 etapas (<code>.case-accordion</code>) y métricas paginadas.
+        </p>
+      </div>
+    </div>
+
+    <!-- Full-Bleed Preview of Case Study Intro Band -->
+    <div class="case-intro-band" style="--case-brand-bg: #1E3A8A; margin-bottom: 48px;">
+      <div class="case-intro-band__halftone" aria-hidden="true"></div>
+      <div class="container">
+        <div class="case-intro-band__top">
+          <span class="case-kicker-label">Grand Tikal Futura — Hotel &amp; Convention Center</span>
+        </div>
+        <div class="case-intro-band__Offset">
+          <h3 class="case-headline" style="font-size: clamp(1.75rem, 3.2vw, 2.65rem);">
+            Renovación integral del centro de convenciones y complejo hotelero más icónico de Guatemala
+          </h3>
+          <div class="case-meta-grid">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Estudio</span>
+              <span class="case-meta-value">Guatemala &amp; Houston</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Cliente</span>
+              <span class="case-meta-value">Grand Tikal Futura</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Especialidad</span>
+              <span class="case-meta-value">Arquitectura Web &amp; UX</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Año</span>
+              <span class="case-meta-value">2025 — 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="ds-box-grid">
+        <div class="ds-box">
+          <div class="ds-box__label">
+            <span>Acordeón Narrativo (4 Etapas)</span>
+            <span class="ds-box__code">.case-accordion</span>
+          </div>
+          <div class="case-accordion" style="margin: 0;">
+            <div class="case-acc-item open">
+              <button type="button" class="case-acc-trigger" aria-expanded="true" onclick="this.parentElement.classList.toggle('open')">
+                <span class="case-acc-title">Challenge</span>
+                <i class="fa-solid fa-chevron-down case-acc-icon"></i>
+              </button>
+              <div class="case-acc-panel">
+                <p>Unificar las divisiones de hotel, centro de convenciones y eventos corporativos en una plataforma rápida y orientada a conversión.</p>
+              </div>
+            </div>
+            <div class="case-acc-item">
+              <button type="button" class="case-acc-trigger" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+                <span class="case-acc-title">Idea</span>
+                <i class="fa-solid fa-chevron-down case-acc-icon"></i>
+              </button>
+              <div class="case-acc-panel">
+                <p>Sistema de diseño modular en WordPress + Bricks Builder con cotizador de salones y tiempos de carga instantáneos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-box">
+          <div class="ds-box__label">
+            <span>Paginador &amp; Métricas de Caso</span>
+            <span class="ds-box__code">.case-metrics-grid / .case-pager</span>
+          </div>
+          <div>
+            <div class="case-metrics-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 20px;">
+              <div class="case-metric-card">
+                <span class="case-metric-value">+180%</span>
+                <span class="case-metric-label">Reservas Directas</span>
+              </div>
+              <div class="case-metric-card">
+                <span class="case-metric-value">98/100</span>
+                <span class="case-metric-label">Google PageSpeed</span>
+              </div>
+            </div>
+            <div class="case-pager">
+              <button type="button" class="case-pager__btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+              <span class="case-pager__count">1 / 2</span>
+              <button type="button" class="case-pager__btn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       07. RADII, SPACING & BRICKS BUILDER RULES
+       ===================================================================== -->
+  <section class="ds-section" id="layout-bricks">
+    <div class="container">
+      <div class="ds-header">
+        <div>
+          <span class="ds-header__num">07 / Geometría &amp; Integración WordPress</span>
+          <h2 class="ds-header__title">Radios de Borde &amp; Shortcodes Bricks Builder</h2>
+        </div>
+        <p class="ds-header__desc">
+          Tokens geométricos consistentes y resumen de los 7 shortcodes registrados en <code>child-theme/functions.php</code>.
+        </p>
+      </div>
+
+      <div class="ds-token-cards">
+        <div class="ds-box">
+          <div class="ds-radius-demo" style="border-radius: var(--radius-xl);">--radius-xl (28px)</div>
+          <p style="font-size: 0.82rem; color: var(--text-white-muted);">Contenedores mayores: <code>.hero-mesh-card</code>, <code>.split-rocket-card</code>, <code>.inquiry-form-card</code>.</p>
+        </div>
+        <div class="ds-box">
+          <div class="ds-radius-demo" style="border-radius: var(--radius-lg);">--radius-lg (24px)</div>
+          <p style="font-size: 0.82rem; color: var(--radius-lg); color: var(--text-white-muted);">Tarjetas principales: <code>.bento-card</code>, <code>.srv-card</code>, <code>.duo-card</code>.</p>
+        </div>
+        <div class="ds-box">
+          <div class="ds-radius-demo" style="border-radius: var(--radius-md);">--radius-md (16px)</div>
+          <p style="font-size: 0.82rem; color: var(--text-white-muted);">Campos de formulario, cajas del footer (<code>.footer-box</code>) y tarjetas internas.</p>
+        </div>
+        <div class="ds-box">
+          <div class="ds-radius-demo" style="border-radius: var(--radius-pill);">--radius-pill (9999px)</div>
+          <p style="font-size: 0.82rem; color: var(--text-white-muted);">Botones píldora, <code>.pill-check</code>, <code>.nav-contact-pill</code> y <code>.lang-switcher</code>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <aside class="floating-whatsapp-container" aria-label="Contacto rápido por WhatsApp">
+    <a href="https://wa.me/50237556857?text=Hola%20UP%20Group%20Studio,%20quisiera%20conversar%20sobre%20un%20proyecto."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="floating-whatsapp"
+       id="floatingWhatsapp"
+       aria-label="Chatear por WhatsApp">
+      <span class="floating-whatsapp__tooltip">¿Hablamos por WhatsApp?</span>
+      <span class="floating-whatsapp__btn">
+        <i class="fa-brands fa-whatsapp"></i>
+      </span>
+      <span class="floating-whatsapp__pulse"></span>
+    </a>
+  </aside>
+
+  <script src="js/main.js?v=3.1"></script>
+  <script>
+    // Click-to-copy token functionality for Design System swatches
+    document.querySelectorAll('.ds-swatch').forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        const token = swatch.getAttribute('data-copy');
+        const badge = swatch.querySelector('.ds-swatch__copy-badge');
+        if (navigator.clipboard && token) {
+          navigator.clipboard.writeText(token);
+          const prev = badge.textContent;
+          badge.textContent = '¡Copiado: ' + token + '!';
+          badge.style.opacity = '1';
+          badge.style.background = '#25D366';
+          badge.style.color = '#050505';
+          setTimeout(() => {
+            badge.textContent = prev;
+            badge.style.opacity = '';
+            badge.style.background = '';
+            badge.style.color = '';
+          }, 1600);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

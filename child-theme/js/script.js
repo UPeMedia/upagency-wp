@@ -1,5 +1,5 @@
 /**
- * UP Group Studio (studio.up.gt) — Interactive Preview & WordPress Bricks Builder Script
+ * UP Group Studio (up.gt) — Interactive Preview & WordPress Bricks Builder Script
  * Features:
  *  - ES / EN Bilingual Switcher (Preserving inline SVG doodles & formatting)
  *  - Service & Portfolio Card pre-selection into Inquiry Form
@@ -102,7 +102,7 @@ const i18nData = {
 
     'footer.box1': 'Chatear por WhatsApp',
     'footer.box2': 'Guatemala • Houston, Texas',
-    'footer.box3': 'Iniciar Proyecto • studio.up.gt',
+    'footer.box3': 'Iniciar Proyecto • up.gt',
     'footer.bigTitle': 'Es ahora que<br>todo comienza',
     'footer.scriptAccent': 'con nosotros',
     'footer.ctaBtn': 'Iniciar un proyecto',
@@ -207,7 +207,7 @@ const i18nData = {
 
     'footer.box1': 'Chat on WhatsApp',
     'footer.box2': 'Guatemala • Houston, Texas',
-    'footer.box3': 'Start a Project • studio.up.gt',
+    'footer.box3': 'Start a Project • up.gt',
     'footer.bigTitle': 'Now is when<br>everything begins',
     'footer.scriptAccent': 'with us',
     'footer.ctaBtn': 'Start a project',
@@ -219,7 +219,11 @@ const i18nData = {
   }
 };
 
-let currentLang = 'es';
+let currentLang = (
+  (window.upPolylang && window.upPolylang.current) ||
+  document.documentElement.lang ||
+  'es'
+).toLowerCase().startsWith('en') ? 'en' : 'es';
 
 function setLanguage(lang) {
   if (!i18nData[lang]) return;
@@ -274,16 +278,32 @@ window.submitInquiryForm = function () {
   const feedback = document.getElementById('formFeedback');
   if (feedback) {
     feedback.textContent = currentLang === 'en'
-      ? `✓ Thank you${name ? ', ' + name : ''}! Your project brief has been registered at studio.up.gt.`
-      : `✓ ¡Gracias${name ? ', ' + name : ''}! Tu solicitud ha sido registrada en studio.up.gt. Te contactaremos muy pronto.`;
+      ? `✓ Thank you${name ? ', ' + name : ''}! Your project brief has been registered at up.gt.`
+      : `✓ ¡Gracias${name ? ', ' + name : ''}! Tu solicitud ha sido registrada en up.gt. Te contactaremos muy pronto.`;
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Language switcher buttons
+  const pll = window.upPolylang || null;
+
+  // Sync active state on ES / EN switcher buttons from Polylang / HTML lang
   document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      setLanguage(btn.getAttribute('data-lang'));
+    const targetLang = btn.getAttribute('data-lang');
+    btn.classList.toggle('active', targetLang === currentLang);
+
+    btn.addEventListener('click', (e) => {
+      // 1. If in WordPress with Polylang URLs available, navigate to the real translated URL
+      const explicitUrl = btn.getAttribute('data-pll-url') || (pll && pll.urls && pll.urls[targetLang]);
+      if (pll && pll.isPolylang && explicitUrl) {
+        e.preventDefault();
+        window.location.href = explicitUrl;
+        return;
+      }
+      // 2. Fallback for local static preview (localhost:3000) or before Polylang is configured
+      if (!pll || !pll.isPolylang) {
+        e.preventDefault();
+        setLanguage(targetLang);
+      }
     });
   });
 
@@ -316,12 +336,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Pre-fill project reference when clicking a Bento Portfolio Card
-  document.querySelectorAll('.bento-card[data-project]').forEach((card) => {
+  // Pre-fill project reference when clicking a Bento Portfolio Card (supports Bricks Query Loop)
+  document.querySelectorAll('.bento-card').forEach((card) => {
     card.addEventListener('click', () => {
-      const projectName = card.getAttribute('data-project');
+      const projectName =
+        card.getAttribute('data-project') ||
+        card.closest('.bento-item')?.querySelector('.bento-title')?.textContent?.trim() ||
+        '';
       const scopeInput = document.getElementById('projectScope');
-      if (scopeInput && !scopeInput.value.includes(projectName)) {
+      if (projectName && scopeInput && !scopeInput.value.includes(projectName)) {
         scopeInput.value = currentLang === 'en'
           ? `Interested in a project similar to ${projectName}. `
           : `Me interesa un proyecto con el nivel visual y técnico de ${projectName}. `;
@@ -339,4 +362,12 @@ document.addEventListener('DOMContentLoaded', () => {
       trigger.setAttribute('aria-expanded', String(!isOpen));
     });
   });
+
+  // Support #proyectos hash alias -> smooth scroll to #works
+  if (window.location.hash === '#proyectos') {
+    const worksSec = document.getElementById('works');
+    if (worksSec) {
+      setTimeout(() => worksSec.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
+  }
 });
