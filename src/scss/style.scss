@@ -1605,7 +1605,37 @@ textarea {
 }
 
 .field-group--full {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}
+
+.form-consent-row {
+  margin-bottom: 22px;
+}
+
+.form-consent-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dark-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-consent-label input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  accent-color: #09090B;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-consent-label strong {
+  color: var(--text-dark);
+  font-weight: 700;
 }
 
 .field-group label {
@@ -1690,6 +1720,15 @@ textarea {
   font-size: 14px;
   font-weight: 600;
   color: #15803D;
+}
+
+.form-feedback--error {
+  color: #DC2626;
+}
+
+.btn-form-email[disabled] {
+  opacity: 0.65;
+  cursor: wait;
 }
 
 /* ==========================================================================

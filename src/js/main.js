@@ -97,6 +97,7 @@ const i18nData = {
     'form.emailLabel': 'Correo Electrónico *',
     'form.phoneLabel': 'WhatsApp / Teléfono *',
     'form.detailsLabel': 'Resumen de tu idea o necesidades',
+    'form.consent': 'Acepto que <strong>UP Group Studio</strong> almacene mis datos y me envíe seguimiento por correo electrónico o WhatsApp respecto a mi solicitud. Cero spam.',
     'form.btnSendWhatsApp': 'Enviar resumen por WhatsApp',
     'form.btnSendEmail': 'Enviar Solicitud',
 
@@ -202,6 +203,7 @@ const i18nData = {
     'form.emailLabel': 'Email Address *',
     'form.phoneLabel': 'WhatsApp / Phone *',
     'form.detailsLabel': 'Project summary or goals',
+    'form.consent': 'I agree that <strong>UP Group Studio</strong> may store my details and contact me via email or WhatsApp regarding my project inquiry. Zero spam.',
     'form.btnSendWhatsApp': 'Send summary via WhatsApp',
     'form.btnSendEmail': 'Submit Inquiry',
 
@@ -247,13 +249,118 @@ function getSelectedServices() {
   return checked.map((input) => input.value);
 }
 
-window.sendInquiryViaWhatsApp = function () {
+// ─── Lead Session Token & Smart Partial / Completed Capture ──────────────
+function getOrCreateLeadToken(forceNew = false) {
+  const key = 'up_lead_session_token';
+  try {
+    let token = forceNew ? null : sessionStorage.getItem(key);
+    if (!token) {
+      token = 'upl_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 10);
+      sessionStorage.setItem(key, token);
+    }
+    return token;
+  } catch (e) {
+    return 'upl_' + Date.now().toString(36);
+  }
+}
+
+let currentLeadToken = getOrCreateLeadToken(false);
+let lastPartialFingerprint = '';
+let partialDebounceTimer = null;
+let leadAlreadyCompleted = false;
+
+function getCookieValue(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? decodeURIComponent(match[2]) : '';
+}
+
+function collectFormPayload(submissionType) {
   const name = (document.getElementById('clientName')?.value || '').trim();
   const company = (document.getElementById('clientCompany')?.value || '').trim();
   const email = (document.getElementById('clientEmail')?.value || '').trim();
   const phone = (document.getElementById('clientPhone')?.value || '').trim();
   const scope = (document.getElementById('projectScope')?.value || '').trim();
-  const services = getSelectedServices().join(', ') || 'Desarrollo Web / Consultoría';
+  const consent = Boolean(document.getElementById('clientConsent')?.checked);
+  const honeypot = (document.getElementById('upWebsiteHp')?.value || '').trim();
+  const services = getSelectedServices().join(', ') || 'Desarrollo Web a Medida';
+
+  return {
+    action: 'up_save_lead',
+    nonce: (window.upPolylang && window.upPolylang.leadNonce) ? window.upPolylang.leadNonce : '',
+    lead_token: currentLeadToken,
+    submission_type: submissionType, // 'partial' | 'whatsapp' | 'completed'
+    lang: currentLang,
+    name,
+    company,
+    email,
+    phone,
+    services,
+    scope,
+    consent: consent ? '1' : '0',
+    up_website_hp: honeypot,
+    page_url: window.location.href,
+    page_title: document.title,
+    hutk: getCookieValue('hubspotutk')
+  };
+}
+
+function hasContactableInfo(payload) {
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email);
+  const digitsOnly = payload.phone.replace(/\D+/g, '');
+  const validPhone = digitsOnly.length >= 7;
+  return validEmail || validPhone;
+}
+
+function syncLeadToServer(submissionType = 'partial', useBeacon = false) {
+  const ajaxUrl = (window.upPolylang && window.upPolylang.ajaxUrl) ? window.upPolylang.ajaxUrl : '';
+  if (!ajaxUrl) {
+    return Promise.resolve({ ok: true, localPreview: true });
+  }
+
+  const payload = collectFormPayload(submissionType);
+  if (payload.up_website_hp) {
+    return Promise.resolve({ ok: true });
+  }
+
+  // For partial auto-save, only save if we have at least a valid email or phone, and something changed
+  if (submissionType === 'partial') {
+    if (leadAlreadyCompleted || !hasContactableInfo(payload)) {
+      return Promise.resolve({ skipped: true });
+    }
+    const fingerprint = [payload.name, payload.company, payload.email, payload.phone, payload.services, payload.scope, payload.consent].join('|');
+    if (fingerprint === lastPartialFingerprint) {
+      return Promise.resolve({ skipped: true });
+    }
+    lastPartialFingerprint = fingerprint;
+  }
+
+  const formData = new FormData();
+  Object.entries(payload).forEach(([k, v]) => formData.append(k, v));
+
+  if (useBeacon && navigator.sendBeacon) {
+    navigator.sendBeacon(ajaxUrl, formData);
+    return Promise.resolve({ ok: true, beacon: true });
+  }
+
+  return fetch(ajaxUrl, {
+    method: 'POST',
+    body: formData,
+    keepalive: true,
+    credentials: 'same-origin'
+  })
+    .then((res) => res.json())
+    .catch(() => ({ ok: false }));
+}
+
+window.sendInquiryViaWhatsApp = function () {
+  const payload = collectFormPayload('whatsapp');
+  const services = payload.services || 'Desarrollo Web / Consultoría';
+
+  // Save lead in WP + Google Sheets + HubSpot before opening WhatsApp
+  if (payload.name || payload.email || payload.phone || payload.scope) {
+    leadAlreadyCompleted = true;
+    syncLeadToServer('whatsapp', true);
+  }
 
   const greeting = currentLang === 'en'
     ? `Hello UP Group Studio! I'd like to discuss a project.`
@@ -262,11 +369,11 @@ window.sendInquiryViaWhatsApp = function () {
   const lines = [
     greeting,
     `• *Servicios:* ${services}`,
-    name ? `• *Nombre:* ${name}` : '',
-    company ? `• *Empresa:* ${company}` : '',
-    email ? `• *Email:* ${email}` : '',
-    phone ? `• *Tel/WA:* ${phone}` : '',
-    scope ? `• *Detalles:* ${scope}` : ''
+    payload.name ? `• *Nombre:* ${payload.name}` : '',
+    payload.company ? `• *Empresa:* ${payload.company}` : '',
+    payload.email ? `• *Email:* ${payload.email}` : '',
+    payload.phone ? `• *Tel/WA:* ${payload.phone}` : '',
+    payload.scope ? `• *Detalles:* ${payload.scope}` : ''
   ].filter(Boolean);
 
   const url = `https://wa.me/50237556857?text=${encodeURIComponent(lines.join('\n'))}`;
@@ -274,13 +381,49 @@ window.sendInquiryViaWhatsApp = function () {
 };
 
 window.submitInquiryForm = function () {
-  const name = (document.getElementById('clientName')?.value || '').trim();
+  const payload = collectFormPayload('completed');
   const feedback = document.getElementById('formFeedback');
-  if (feedback) {
-    feedback.textContent = currentLang === 'en'
-      ? `✓ Thank you${name ? ', ' + name : ''}! Your project brief has been registered at up.gt.`
-      : `✓ ¡Gracias${name ? ', ' + name : ''}! Tu solicitud ha sido registrada en up.gt. Te contactaremos muy pronto.`;
+  const submitBtn = document.getElementById('btnSubmitInquiry');
+
+  if (!payload.consent) {
+    if (feedback) {
+      feedback.classList.add('form-feedback--error');
+      feedback.textContent = currentLang === 'en'
+        ? 'Please accept the contact agreement checkbox before submitting.'
+        : 'Por favor acepta la casilla de consentimiento de contacto antes de enviar.';
+    }
+    return;
   }
+
+  if (feedback) {
+    feedback.classList.remove('form-feedback--error');
+    feedback.textContent = currentLang === 'en'
+      ? 'Sending your project inquiry...'
+      : 'Enviando tu solicitud...';
+  }
+  if (submitBtn) {
+    submitBtn.setAttribute('disabled', 'disabled');
+  }
+
+  leadAlreadyCompleted = true;
+  if (partialDebounceTimer) {
+    clearTimeout(partialDebounceTimer);
+  }
+
+  syncLeadToServer('completed', false).then(() => {
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+    }
+    if (feedback) {
+      feedback.classList.remove('form-feedback--error');
+      feedback.textContent = currentLang === 'en'
+        ? `✓ Thank you${payload.name ? ', ' + payload.name : ''}! Your project brief has been received by UP Group Studio. We will reply shortly.`
+        : `✓ ¡Gracias${payload.name ? ', ' + payload.name : ''}! Hemos recibido tu solicitud en UP Group Studio. Te contactaremos muy pronto.`;
+    }
+    // Prepare a fresh token in case the user submits another inquiry later
+    currentLeadToken = getOrCreateLeadToken(true);
+    lastPartialFingerprint = '';
+  });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -369,5 +512,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if (worksSec) {
       setTimeout(() => worksSec.scrollIntoView({ behavior: 'smooth' }), 100);
     }
+  }
+
+  // Attach Smart Partial / Abandoned Form Auto-Save Listeners
+  const formEl = document.getElementById('projectForm');
+  if (formEl) {
+    const schedulePartialSave = () => {
+      if (leadAlreadyCompleted) return;
+      if (partialDebounceTimer) clearTimeout(partialDebounceTimer);
+      partialDebounceTimer = setTimeout(() => {
+        syncLeadToServer('partial', false);
+      }, 2200);
+    };
+
+    formEl.querySelectorAll('input, textarea').forEach((input) => {
+      input.addEventListener('input', schedulePartialSave);
+      input.addEventListener('change', schedulePartialSave);
+      input.addEventListener('blur', () => {
+        if (!leadAlreadyCompleted) {
+          syncLeadToServer('partial', false);
+        }
+      });
+    });
+
+    // If user switches tab or closes window after filling email/phone without clicking Send
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden' && !leadAlreadyCompleted) {
+        syncLeadToServer('partial', true);
+      }
+    });
   }
 });

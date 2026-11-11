@@ -42,7 +42,9 @@
 /* ==========================================================================
    RESET & BASE
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -73,12 +75,15 @@ ul {
   list-style: none;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
   border: none;
@@ -415,7 +420,8 @@ button, input, textarea {
 }
 
 .mesh-blob {
-  display: none; /* Handled cleanly by layered radial mesh so overflow stays crisp */
+  display: none;
+  /* Handled cleanly by layered radial mesh so overflow stays crisp */
 }
 
 .mesh-grain {
@@ -1569,7 +1575,37 @@ button, input, textarea {
 }
 
 .field-group--full {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}
+
+.form-consent-row {
+  margin-bottom: 22px;
+}
+
+.form-consent-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dark-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-consent-label input[type=checkbox] {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  accent-color: #09090B;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-consent-label strong {
+  color: var(--text-dark);
+  font-weight: 700;
 }
 
 .field-group label {
@@ -1654,6 +1690,15 @@ button, input, textarea {
   font-size: 14px;
   font-weight: 600;
   color: #15803D;
+}
+
+.form-feedback--error {
+  color: #DC2626;
+}
+
+.btn-form-email[disabled] {
+  opacity: 0.65;
+  cursor: wait;
 }
 
 /* ==========================================================================
@@ -2369,7 +2414,9 @@ button, input, textarea {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.dot-r, .dot-y, .dot-g {
+.dot-r,
+.dot-y,
+.dot-g {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -2974,7 +3021,7 @@ button, input, textarea {
   border: 5px solid #22222E;
   box-shadow: 0 28px 65px rgba(9, 9, 11, 0.2);
   overflow: hidden;
-  max-width: 280px;
+  max-width: 220px;
   width: 100%;
   margin: 0 auto;
   position: relative;

@@ -542,7 +542,9 @@ def build_single_portfolio():
     b.add("text-basic", scr_r, label="Metric Label", tag="p", text="{acf_project_metric_1_label}")
 
     # Section 2: Colored Editorial Intro Band (VML Style)
-    sec_band = b.add("section", 0, css="case-intro-band", label="Colored Editorial Intro Band", extra_settings={"_cssId": "caseIntroBand"})
+    sec_band = b.add("section", 0, css="case-intro-band", label="Colored Editorial Intro Band",
+                     attrs={"style": "background-color: {acf_project_band_bg};"},
+                     extra_settings={"_cssId": "caseIntroBand"})
     b.add("block", sec_band, css="case-intro-band__halftone", label="Halftone Pattern Overlay")
     cnt_band = b.add("container", sec_band, css="container", label="Intro Band Container")
     top_bar = b.add("block", cnt_band, css="case-intro-band__top", label="Top Kicker Divider")

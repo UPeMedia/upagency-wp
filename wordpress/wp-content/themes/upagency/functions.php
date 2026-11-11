@@ -51,6 +51,8 @@ if ( ! function_exists( 'up_polylang_urls' ) ) {
             'isWordPress'=> true,
             'current'    => $current,
             'urls'       => $urls,
+            'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
+            'leadNonce'  => wp_create_nonce( 'up_lead_nonce' ),
         ];
     }
 }
@@ -411,17 +413,36 @@ add_shortcode( 'up_inquiry_form', function() {
           <textarea id="projectScope" rows="2" placeholder="<?php echo $is_en ? 'e.g. We want to redesign our corporate website, improve page speed, or launch an online store...' : 'Ej. Buscamos rediseñar nuestro portal corporativo, mejorar tiempos de carga o lanzar tienda online...'; ?>"></textarea>
         </div>
 
+        <!-- Anti-spam Honeypot (hidden from humans) -->
+        <div class="up-hp-wrap" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+          <input type="text" id="upWebsiteHp" name="up_website_hp" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Privacy & Email/WhatsApp Follow-up Consent Disclaimer -->
+        <div class="form-consent-row">
+          <label class="form-consent-label" for="clientConsent">
+            <input type="checkbox" id="clientConsent" name="client_consent" checked required>
+            <span data-i18n="form.consent">
+              <?php if ( $is_en ) : ?>
+                I agree that <strong>UP Group Studio</strong> may store my details and contact me via email or WhatsApp regarding my project inquiry. Zero spam.
+              <?php else : ?>
+                Acepto que <strong>UP Group Studio</strong> almacene mis datos y me envíe seguimiento por correo electrónico o WhatsApp respecto a mi solicitud. Cero spam.
+              <?php endif; ?>
+            </span>
+          </label>
+        </div>
+
         <div class="project-form__actions">
           <button type="button" class="btn-form-wa" onclick="sendInquiryViaWhatsApp()">
             <i class="fa-brands fa-whatsapp"></i>
             <span data-i18n="form.btnSendWhatsApp"><?php echo $is_en ? 'Send summary via WhatsApp' : 'Enviar resumen por WhatsApp'; ?></span>
           </button>
-          <button type="submit" class="btn-form-email">
+          <button type="submit" id="btnSubmitInquiry" class="btn-form-email">
             <i class="fa-regular fa-paper-plane"></i>
             <span data-i18n="form.btnSendEmail"><?php echo $is_en ? 'Submit Inquiry' : 'Enviar Solicitud'; ?></span>
           </button>
         </div>
-        <div id="formFeedback" class="form-feedback"></div>
+        <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
       </form>
     </div>
     <?php
@@ -484,14 +505,47 @@ add_shortcode( 'up_marquee_ribbons', function() {
     return ob_get_clean();
 } );
 
+// 4.8 Helper: Read Project ACF/Meta Field with Automatic Polylang Translation Fallback (ES <-> EN)
+if ( ! function_exists( 'up_get_project_field' ) ) {
+    function up_get_project_field( $field_name, $post_id = 0, $ignore_default_color = false ) {
+        if ( ! $post_id ) {
+            $post_id = get_the_ID();
+        }
+        $val = function_exists( 'get_field' ) ? get_field( $field_name, $post_id ) : get_post_meta( $post_id, $field_name, true );
+
+        $is_empty = empty( $val ) || ( $ignore_default_color && is_string( $val ) && strtolower( trim( $val ) ) === '#205466' );
+
+        if ( $is_empty && function_exists( 'pll_get_post_translations' ) ) {
+            $translations = pll_get_post_translations( $post_id );
+            if ( is_array( $translations ) ) {
+                foreach ( $translations as $lang_code => $tr_id ) {
+                    if ( (int) $tr_id !== (int) $post_id && $tr_id > 0 ) {
+                        $tr_val = function_exists( 'get_field' ) ? get_field( $field_name, $tr_id ) : get_post_meta( $tr_id, $field_name, true );
+                        if ( ! empty( $tr_val ) && ! ( $ignore_default_color && is_string( $tr_val ) && strtolower( trim( $tr_val ) ) === '#205466' ) ) {
+                            return $tr_val;
+                        }
+                    }
+                }
+            }
+        }
+        return $val;
+    }
+}
+
 // 4.8 Case Study Auto-Scrolling Desktop & Mobile Device Frames Shortcode
 add_shortcode( 'up_case_hero_devices', function() {
     $post_id     = get_the_ID();
     $title       = get_the_title( $post_id );
-    $desktop_img = function_exists( 'get_field' ) ? get_field( 'project_screenshot_desktop', $post_id ) : get_post_meta( $post_id, 'project_screenshot_desktop', true );
-    $mobile_img  = function_exists( 'get_field' ) ? get_field( 'project_screenshot_mobile', $post_id )  : get_post_meta( $post_id, 'project_screenshot_mobile', true );
-    $live_url    = function_exists( 'get_field' ) ? get_field( 'project_live_url', $post_id )           : get_post_meta( $post_id, 'project_live_url', true );
-    $band_bg     = function_exists( 'get_field' ) ? get_field( 'project_band_bg', $post_id )            : get_post_meta( $post_id, 'project_band_bg', true );
+    $desktop_img = up_get_project_field( 'project_screenshot_desktop', $post_id );
+    $mobile_img  = up_get_project_field( 'project_screenshot_mobile', $post_id );
+    $live_url    = up_get_project_field( 'project_live_url', $post_id );
+    $band_bg     = up_get_project_field( 'project_band_bg', $post_id, true );
+    if ( empty( $band_bg ) ) {
+        $band_bg = up_get_project_field( 'project_theme_color', $post_id, true );
+    }
+    if ( empty( $band_bg ) ) {
+        $band_bg = up_get_project_field( 'project_band_bg', $post_id, false );
+    }
 
     // Resolve image URL if ACF returns array or ID
     if ( is_array( $desktop_img ) && isset( $desktop_img['url'] ) ) {
@@ -556,8 +610,8 @@ add_shortcode( 'up_case_hero_devices', function() {
 add_shortcode( 'up_case_media_actions', function() {
     $post_id   = get_the_ID();
     $is_en     = ( up_current_lang() === 'en' );
-    $live_url  = function_exists( 'get_field' ) ? get_field( 'project_live_url', $post_id )  : get_post_meta( $post_id, 'project_live_url', true );
-    $video_url = function_exists( 'get_field' ) ? get_field( 'project_video_url', $post_id ) : get_post_meta( $post_id, 'project_video_url', true );
+    $live_url  = up_get_project_field( 'project_live_url', $post_id );
+    $video_url = up_get_project_field( 'project_video_url', $post_id );
 
     if ( empty( $live_url ) && empty( $video_url ) ) {
         return '';
@@ -604,4 +658,680 @@ add_shortcode( 'up_case_media_actions', function() {
     <?php
     return ob_get_clean();
 } );
+
+// ─── 5. Dynamic Project Theme Color & Cover Image Injector (Single Project ES & EN Templates) ───
+// Works seamlessly on both Bricks templates:
+//  - up-group-studio-single-portfolio-case-study-vml-layout (ES)
+//  - up-group-studio-single-portfolio-case-study-vml-layout-en (EN)
+add_action( 'wp_head', function() {
+    if ( ! is_singular( 'project' ) ) {
+        return;
+    }
+
+    $post_id  = get_the_ID();
+    $band_bg  = up_get_project_field( 'project_band_bg', $post_id, true );
+    if ( empty( $band_bg ) ) {
+        $band_bg = up_get_project_field( 'project_theme_color', $post_id, true );
+    }
+    if ( empty( $band_bg ) ) {
+        $band_bg = up_get_project_field( 'project_band_bg', $post_id, false );
+    }
+    $band_bg = ! empty( $band_bg ) ? trim( (string) $band_bg ) : '#205466';
+
+    // Determine high-contrast text color (#FFFFFF for dark backgrounds, #14110F for light backgrounds)
+    $band_text = '#FFFFFF';
+    $hex       = ltrim( $band_bg, '#' );
+    if ( strlen( $hex ) === 3 ) {
+        $hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+    }
+    if ( strlen( $hex ) === 6 && ctype_xdigit( $hex ) ) {
+        $r   = hexdec( substr( $hex, 0, 2 ) );
+        $g   = hexdec( substr( $hex, 2, 2 ) );
+        $b   = hexdec( substr( $hex, 4, 2 ) );
+        $lum = ( 0.299 * $r + 0.587 * $g + 0.114 * $b ) / 255;
+        if ( $lum > 0.60 ) {
+            $band_text = '#14110F';
+        }
+    }
+
+    $thumb_url = get_the_post_thumbnail_url( $post_id, 'full' );
+    if ( empty( $thumb_url ) && function_exists( 'pll_get_post_translations' ) ) {
+        $translations = pll_get_post_translations( $post_id );
+        if ( is_array( $translations ) ) {
+            foreach ( $translations as $tr_id ) {
+                if ( (int) $tr_id !== (int) $post_id && $tr_id > 0 ) {
+                    $tr_thumb = get_the_post_thumbnail_url( $tr_id, 'full' );
+                    if ( ! empty( $tr_thumb ) ) {
+                        $thumb_url = $tr_thumb;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    ?>
+    <style id="up-case-dynamic-theme">
+      :root {
+        --case-brand-color: <?php echo esc_attr( $band_bg ); ?>;
+        --case-band-text: <?php echo esc_attr( $band_text ); ?>;
+      }
+      /* 1. Colored Editorial Intro Band (Section 2) */
+      #caseIntroBand,
+      .case-intro-band {
+        background-color: var(--case-brand-color) !important;
+        color: var(--case-band-text) !important;
+      }
+      /* 2. Hero Cover Stage Accents & Featured Image Backdrop (Section 1) */
+      <?php if ( ! empty( $thumb_url ) ) : ?>
+      #caseHeroCover .cover-stage-art,
+      .case-hero-cover .cover-stage-art {
+        background-image: linear-gradient(135deg, rgba(7, 7, 11, 0.84) 0%, rgba(7, 7, 11, 0.68) 50%, rgba(7, 7, 11, 0.88) 100%), url('<?php echo esc_url( $thumb_url ); ?>');
+        background-size: cover;
+        background-position: center;
+      }
+      <?php endif; ?>
+      .cover-device--left .cover-device__screen {
+        background: linear-gradient(145deg, var(--case-brand-color), #111118);
+      }
+      .cover-device--right .cover-device__screen {
+        background: linear-gradient(165deg, #111118, var(--case-brand-color));
+      }
+      /* 3. Key Impact Metrics Numbers & Live Button Hover (Section 3) */
+      .case-metric-number {
+        color: var(--case-brand-color);
+      }
+      .up-case-action-btn--primary:hover {
+        background-color: var(--case-brand-color);
+        color: var(--case-band-text);
+      }
+    </style>
+    <?php
+}, 30 );
+
+// ─── 6. Automatic Open Graph (WhatsApp / LinkedIn / Meta) & Twitter Card Meta Tags ───
+add_action( 'wp_head', function() {
+    // Avoid duplicate OG tags if an SEO plugin is already outputting og:image
+    if ( defined( 'WPSEO_VERSION' ) || class_exists( 'RankMath' ) || defined( 'SEOPRESS_VERSION' ) ) {
+        return;
+    }
+
+    $is_en    = ( up_current_lang() === 'en' );
+    $site_url = home_url( $_SERVER['REQUEST_URI'] ?? '/' );
+    $og_img   = get_stylesheet_directory_uri() . '/assets/' . ( $is_en ? 'og-share-en.jpg' : 'og-share-es.jpg' );
+    $og_type  = 'website';
+
+    if ( is_singular( 'project' ) ) {
+        $post_id   = get_the_ID();
+        $og_type   = 'article';
+        $headline  = up_get_project_field( 'project_headline', $post_id );
+        $og_title  = get_the_title( $post_id ) . ' — ' . ( $is_en ? 'Case Study | UP Group Studio' : 'Caso de Estudio | UP Group Studio' );
+        $og_desc   = has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : ( $headline ? $headline : '' );
+        $thumb_url = get_the_post_thumbnail_url( $post_id, 'large' );
+        if ( ! empty( $thumb_url ) ) {
+            $og_img = $thumb_url;
+        }
+    } else {
+        $og_title = $is_en
+            ? 'UP Group Studio | Ignite Your Online Potential — Guatemala & Houston, TX'
+            : 'UP Group Studio | Enciende tu Potencial Digital — Guatemala & Houston, TX';
+        $og_desc  = $is_en
+            ? 'Boutique digital product & creative studio in Guatemala and Houston, TX. 15+ years crafting custom websites, UI/UX design, e-commerce, and high-converting platforms.'
+            : 'Estudio digital en Guatemala y Houston, TX. Más de 15 años creando sitios web a medida, diseño UI/UX, e-commerce e identidades visuales que cautivan y convierten.';
+    }
+    ?>
+    <!-- UP Group Studio — Open Graph & WhatsApp Preview -->
+    <meta property="og:locale" content="<?php echo $is_en ? 'en_US' : 'es_GT'; ?>">
+    <meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>">
+    <meta property="og:site_name" content="UP Group Studio">
+    <meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>">
+    <meta property="og:description" content="<?php echo esc_attr( wp_strip_all_tags( $og_desc ) ); ?>">
+    <meta property="og:url" content="<?php echo esc_url( $site_url ); ?>">
+    <meta property="og:image" content="<?php echo esc_url( $og_img ); ?>">
+    <meta property="og:image:secure_url" content="<?php echo esc_url( $og_img ); ?>">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="<?php echo esc_attr( $og_title ); ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo esc_attr( $og_title ); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr( wp_strip_all_tags( $og_desc ) ); ?>">
+    <meta name="twitter:image" content="<?php echo esc_url( $og_img ); ?>">
+    <?php
+}, 5 );
+
+// ─── 7. Lead Capture CRM Engine (WP Database + Partial Auto-Save + Email + Google Sheets + HubSpot) ───
+
+// 7.1 Register Private CPT `up_lead` ("Leads / Contactos")
+add_action( 'init', function() {
+    register_post_type( 'up_lead', [
+        'labels' => [
+            'name'               => 'Leads / Contactos',
+            'singular_name'      => 'Lead',
+            'menu_name'          => 'Leads / Contactos',
+            'all_items'          => 'Todos los Leads',
+            'view_item'          => 'Ver Lead',
+            'edit_item'          => 'Detalle del Lead',
+            'search_items'       => 'Buscar Leads',
+            'not_found'          => 'Aún no hay leads registrados.',
+            'not_found_in_trash' => 'No hay leads en la papelera.',
+        ],
+        'public'              => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_position'       => 6,
+        'menu_icon'           => 'dashicons-email-alt2',
+        'supports'            => [ 'title' ],
+        'capability_type'     => 'post',
+        'capabilities'        => [
+            'create_posts' => 'do_not_allow',
+        ],
+        'map_meta_cap'        => true,
+    ] );
+} );
+
+// 7.2 Custom Columns for `up_lead` Admin Table
+add_filter( 'manage_up_lead_posts_columns', function( $columns ) {
+    return [
+        'cb'          => '<input type="checkbox" />',
+        'lead_status' => 'Estado',
+        'title'       => 'Contacto / Empresa',
+        'lead_contact'=> 'Email & WhatsApp',
+        'lead_srv'    => 'Servicios de Interés',
+        'lead_consent'=> 'Consentimiento',
+        'lead_sync'   => 'Integraciones',
+        'date'        => 'Fecha',
+    ];
+} );
+
+add_action( 'manage_up_lead_posts_custom_column', function( $column, $post_id ) {
+    $status  = get_post_meta( $post_id, '_up_lead_status', true ) ?: 'partial';
+    $email   = get_post_meta( $post_id, '_up_lead_email', true );
+    $phone   = get_post_meta( $post_id, '_up_lead_phone', true );
+    $srv     = get_post_meta( $post_id, '_up_lead_services', true );
+    $consent = get_post_meta( $post_id, '_up_lead_consent', true );
+    $lang    = strtoupper( get_post_meta( $post_id, '_up_lead_lang', true ) ?: 'es' );
+    $em_sent = get_post_meta( $post_id, '_up_lead_email_sent', true );
+    $gs_sent = get_post_meta( $post_id, '_up_lead_gsheets_synced', true );
+    $hs_sent = get_post_meta( $post_id, '_up_lead_hubspot_synced', true );
+
+    switch ( $column ) {
+        case 'lead_status':
+            if ( $status === 'completed' ) {
+                echo '<span style="display:inline-block;padding:4px 10px;border-radius:99px;background:#DCFCE7;color:#166534;font-weight:700;font-size:11.5px;">🟢 Completado (' . esc_html( $lang ) . ')</span>';
+            } elseif ( $status === 'whatsapp' ) {
+                echo '<span style="display:inline-block;padding:4px 10px;border-radius:99px;background:#D1FAE5;color:#065F46;font-weight:700;font-size:11.5px;">💬 Vía WhatsApp (' . esc_html( $lang ) . ')</span>';
+            } else {
+                echo '<span style="display:inline-block;padding:4px 10px;border-radius:99px;background:#FEF3C7;color:#92400E;font-weight:700;font-size:11.5px;">🟡 Parcial / Sin enviar (' . esc_html( $lang ) . ')</span>';
+            }
+            break;
+
+        case 'lead_contact':
+            if ( $email ) {
+                echo '<div><a href="mailto:' . esc_attr( $email ) . '" style="font-weight:600;">' . esc_html( $email ) . '</a></div>';
+            }
+            if ( $phone ) {
+                $clean_wa = preg_replace( '/\D+/', '', $phone );
+                echo '<div style="margin-top:3px;"><a href="https://wa.me/' . esc_attr( $clean_wa ) . '" target="_blank" rel="noopener" style="color:#15803D;font-weight:600;">📱 ' . esc_html( $phone ) . '</a></div>';
+            }
+            break;
+
+        case 'lead_srv':
+            echo '<span style="font-size:12px;color:#3F3F46;">' . esc_html( $srv ?: '—' ) . '</span>';
+            break;
+
+        case 'lead_consent':
+            if ( $consent === '1' ) {
+                echo '<span style="color:#166534;font-weight:600;font-size:12px;">✓ Opt-In Aceptado</span>';
+            } else {
+                echo '<span style="color:#71717A;font-size:12px;">—</span>';
+            }
+            break;
+
+        case 'lead_sync':
+            $badges = [];
+            if ( $em_sent ) $badges[] = '<span title="Email enviado" style="background:#E0E7FF;color:#1E40AF;padding:2px 7px;border-radius:6px;font-size:11px;font-weight:600;">✉️ Email</span>';
+            if ( $gs_sent ) $badges[] = '<span title="Sincronizado con Google Sheets" style="background:#DCFCE7;color:#166534;padding:2px 7px;border-radius:6px;font-size:11px;font-weight:600;">📊 Sheets</span>';
+            if ( $hs_sent ) $badges[] = '<span title="Sincronizado con HubSpot" style="background:#FFEDD5;color:#9A3412;padding:2px 7px;border-radius:6px;font-size:11px;font-weight:600;">🟠 HubSpot</span>';
+            echo ! empty( $badges ) ? implode( ' ', $badges ) : '<span style="color:#A1A1AA;font-size:11.5px;">Local DB</span>';
+            break;
+    }
+}, 10, 2 );
+
+// 7.3 Lead Detail Meta Box in WP Admin
+add_action( 'add_meta_boxes', function() {
+    add_meta_box(
+        'up_lead_details_box',
+        'Ficha Completa del Prospecto (UP Group Studio)',
+        function( $post ) {
+            $fields = [
+                'Estado del Lead'         => get_post_meta( $post->ID, '_up_lead_status', true ),
+                'Nombre Completo'         => get_post_meta( $post->ID, '_up_lead_name', true ),
+                'Empresa / Marca'         => get_post_meta( $post->ID, '_up_lead_company', true ),
+                'Correo Electrónico'      => get_post_meta( $post->ID, '_up_lead_email', true ),
+                'WhatsApp / Teléfono'     => get_post_meta( $post->ID, '_up_lead_phone', true ),
+                'Servicios Seleccionados' => get_post_meta( $post->ID, '_up_lead_services', true ),
+                'Resumen del Proyecto'    => get_post_meta( $post->ID, '_up_lead_scope', true ),
+                'Consentimiento (Opt-In)' => get_post_meta( $post->ID, '_up_lead_consent', true ) === '1' ? 'Sí — Aceptó recibir seguimiento por correo/WhatsApp' : 'No marcado',
+                'Idioma de Navegación'    => strtoupper( get_post_meta( $post->ID, '_up_lead_lang', true ) ?: 'ES' ),
+                'URL de Origen'           => get_post_meta( $post->ID, '_up_lead_page_url', true ),
+                'Token de Sesión'         => get_post_meta( $post->ID, '_up_lead_token', true ),
+                'Última Actualización'    => get_post_meta( $post->ID, '_up_lead_updated_at', true ),
+            ];
+            echo '<table class="widefat striped" style="margin-top:8px;"><tbody>';
+            foreach ( $fields as $label => $val ) {
+                echo '<tr><th style="width:220px;font-weight:700;">' . esc_html( $label ) . '</th><td>' . nl2br( esc_html( $val ?: '—' ) ) . '</td></tr>';
+            }
+            echo '</tbody></table>';
+        },
+        'up_lead',
+        'normal',
+        'high'
+    );
+} );
+
+// 7.4 Settings Submenu: "Leads / Contactos -> Configuración & Integraciones"
+add_action( 'admin_menu', function() {
+    add_submenu_page(
+        'edit.php?post_type=up_lead',
+        'Configuración de Leads & Integraciones',
+        '⚙️ Configuración & CRM',
+        'manage_options',
+        'up-leads-settings',
+        'up_render_leads_settings_page'
+    );
+} );
+
+function up_render_leads_settings_page() {
+    if ( ! current_user_can( 'manage_options' ) ) {
+        return;
+    }
+
+    if ( isset( $_POST['up_leads_settings_nonce'] ) && wp_verify_nonce( $_POST['up_leads_settings_nonce'], 'up_save_leads_settings' ) ) {
+        update_option( 'up_lead_notify_email', sanitize_text_field( $_POST['up_lead_notify_email'] ?? '' ) );
+        update_option( 'up_lead_enable_partial', isset( $_POST['up_lead_enable_partial'] ) ? '1' : '0' );
+        update_option( 'up_lead_gsheets_webhook', esc_url_raw( trim( $_POST['up_lead_gsheets_webhook'] ?? '' ) ) );
+        update_option( 'up_lead_hubspot_portal_id', sanitize_text_field( trim( $_POST['up_lead_hubspot_portal_id'] ?? '' ) ) );
+        update_option( 'up_lead_hubspot_form_guid', sanitize_text_field( trim( $_POST['up_lead_hubspot_form_guid'] ?? '' ) ) );
+        update_option( 'up_lead_hubspot_token', sanitize_text_field( trim( $_POST['up_lead_hubspot_token'] ?? '' ) ) );
+        echo '<div class="notice notice-success is-dismissible"><p><strong>✓ Configuración guardada correctamente.</strong></p></div>';
+    }
+
+    $notify_email  = get_option( 'up_lead_notify_email', get_option( 'admin_email' ) );
+    $enable_partial= get_option( 'up_lead_enable_partial', '1' );
+    $gs_webhook    = get_option( 'up_lead_gsheets_webhook', '' );
+    $hs_portal_id  = get_option( 'up_lead_hubspot_portal_id', '' );
+    $hs_form_guid  = get_option( 'up_lead_hubspot_form_guid', '' );
+    $hs_token      = get_option( 'up_lead_hubspot_token', '' );
+    ?>
+    <div class="wrap" style="max-width:920px;">
+      <h1>⚙️ Configuración de Formulario, Google Sheets &amp; HubSpot — UP Group Studio</h1>
+      <p>Desde aquí controlas adónde se envían los contactos capturados por el formulario <code>[up_inquiry_form]</code> (tanto los enviados como los borradores parciales/abandonados).</p>
+
+      <form method="post" action="">
+        <?php wp_nonce_field( 'up_save_leads_settings', 'up_leads_settings_nonce' ); ?>
+
+        <table class="form-table" role="presentation">
+          <tr>
+            <th scope="row"><label for="up_lead_notify_email">📧 Correo(s) para recibir Notificaciones</label></th>
+            <td>
+              <input type="text" id="up_lead_notify_email" name="up_lead_notify_email" value="<?php echo esc_attr( $notify_email ); ?>" class="regular-text" style="width:100%;max-width:480px;">
+              <p class="description">Puedes separar varios correos con coma (ej. <code>rodrigo@up.gt, hola@up.gt</code>). Nunca se expone en el código público.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">🟡 Captura de Formularios Abandonados (Parciales)</th>
+            <td>
+              <label>
+                <input type="checkbox" name="up_lead_enable_partial" value="1" <?php checked( $enable_partial, '1' ); ?>>
+                Guardar automáticamente en WordPress (y Google Sheets) cuando el usuario escribe su correo o teléfono aunque no presione «Enviar»
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="up_lead_gsheets_webhook">📊 Google Sheets Webhook URL</label></th>
+            <td>
+              <input type="url" id="up_lead_gsheets_webhook" name="up_lead_gsheets_webhook" value="<?php echo esc_attr( $gs_webhook ); ?>" class="regular-text" style="width:100%;max-width:620px;" placeholder="https://script.google.com/macros/s/.../exec">
+              <p class="description">Pega aquí la URL de tu aplicación web de Google Apps Script (abajo tienes el código listo para copiar y pegar).</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="up_lead_hubspot_portal_id">🟠 HubSpot Portal ID (Hub ID)</label></th>
+            <td>
+              <input type="text" id="up_lead_hubspot_portal_id" name="up_lead_hubspot_portal_id" value="<?php echo esc_attr( $hs_portal_id ); ?>" class="regular-text" placeholder="Ej. 45829102">
+              <p class="description">Opcional: Si usas HubSpot Forms API, coloca tu Portal ID y abajo el Form GUID.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="up_lead_hubspot_form_guid">🟠 HubSpot Form GUID</label></th>
+            <td>
+              <input type="text" id="up_lead_hubspot_form_guid" name="up_lead_hubspot_form_guid" value="<?php echo esc_attr( $hs_form_guid ); ?>" class="regular-text" style="width:100%;max-width:480px;" placeholder="Ej. 8a3f1b2c-4d5e-6f7a-8b9c-0d1e2f3a4b5c">
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="up_lead_hubspot_token">🔑 HubSpot Private App Token (Alternativo)</label></th>
+            <td>
+              <input type="password" id="up_lead_hubspot_token" name="up_lead_hubspot_token" value="<?php echo esc_attr( $hs_token ); ?>" class="regular-text" style="width:100%;max-width:480px;" placeholder="pat-na1-...">
+              <p class="description">Opcional: Si prefieres crear/actualizar contactos directo vía HubSpot CRM Contacts API v3 sin crear un formulario en HubSpot, pega aquí tu Private App Token con permiso <code>crm.objects.contacts.write</code>.</p>
+            </td>
+          </tr>
+        </table>
+
+        <?php submit_button( 'Guardar Configuración de Leads' ); ?>
+      </form>
+
+      <hr style="margin:32px 0;">
+      <h2>📋 Código listo para conectar Google Sheets (en 60 segundos)</h2>
+      <ol>
+        <li>Crea una hoja de cálculo nueva en <strong>Google Sheets</strong>.</li>
+        <li>En el menú superior haz clic en <strong>Extensiones → Apps Script</strong>.</li>
+        <li>Borra lo que haya y pega este bloque de código (actualiza automáticamente la fila si un lead pasa de <code>PARCIAL</code> a <code>COMPLETADO</code> sin duplicar filas):</li>
+      </ol>
+      <pre style="background:#18181B;color:#F4F4F5;padding:18px;border-radius:10px;overflow-x:auto;font-size:12.5px;line-height:1.5;">function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(['Fecha', 'Estado', 'Idioma', 'Nombre', 'Empresa', 'Email', 'WhatsApp / Tel', 'Servicios', 'Detalles', 'Opt-In', 'URL Origen', 'Token']);
+  }
+  var data = JSON.parse(e.postData.contents);
+  var token = data.lead_token || '';
+  var rowValues = [
+    new Date(),
+    data.status_label || data.submission_type,
+    (data.lang || 'es').toUpperCase(),
+    data.name || '',
+    data.company || '',
+    data.email || '',
+    data.phone || '',
+    data.services || '',
+    data.scope || '',
+    data.consent === '1' ? 'Sí' : 'No',
+    data.page_url || '',
+    token
+  ];
+
+  // Si ya existe el Token en la columna 12 (porque entró antes como Parcial), actualiza esa misma fila
+  if (token && sheet.getLastRow() > 1) {
+    var tokens = sheet.getRange(2, 12, sheet.getLastRow() - 1, 1).getValues();
+    for (var i = 0; i < tokens.length; i++) {
+      if (tokens[i][0] === token) {
+        sheet.getRange(i + 2, 1, 1, rowValues.length).setValues([rowValues]);
+        return ContentService.createTextOutput(JSON.stringify({ result: 'updated', row: i + 2 })).setMimeType(ContentService.MimeType.JSON);
+      }
+    }
+  }
+
+  sheet.appendRow(rowValues);
+  return ContentService.createTextOutput(JSON.stringify({ result: 'inserted' })).setMimeType(ContentService.MimeType.JSON);
+}</pre>
+      <p>4. Haz clic en <strong>Implementar → Nueva implementación → Tipo: Aplicación web</strong>, elige <em>«Cualquier usuario (Anyone)»</em> en quién tiene acceso, copia la URL generada y pégala arriba en <strong>Google Sheets Webhook URL</strong>.</p>
+    </div>
+    <?php
+}
+
+// 7.5 AJAX Handler (`up_save_lead`) — Saves/Updates WP Lead, Sends Email, Syncs Google Sheets & HubSpot
+add_action( 'wp_ajax_up_save_lead', 'up_handle_save_lead_ajax' );
+add_action( 'wp_ajax_nopriv_up_save_lead', 'up_handle_save_lead_ajax' );
+
+function up_handle_save_lead_ajax() {
+    // 1. Anti-spam Honeypot check
+    $honeypot = sanitize_text_field( $_POST['up_website_hp'] ?? '' );
+    if ( ! empty( $honeypot ) ) {
+        wp_send_json_success( [ 'status' => 'ignored' ] );
+    }
+
+    $submission_type = sanitize_key( $_POST['submission_type'] ?? 'partial' );
+    if ( ! in_array( $submission_type, [ 'partial', 'whatsapp', 'completed' ], true ) ) {
+        $submission_type = 'partial';
+    }
+
+    // Check if partial capture is enabled
+    if ( $submission_type === 'partial' && get_option( 'up_lead_enable_partial', '1' ) !== '1' ) {
+        wp_send_json_success( [ 'status' => 'partial_disabled' ] );
+    }
+
+    $lead_token = sanitize_text_field( $_POST['lead_token'] ?? '' );
+    $lang       = sanitize_key( $_POST['lang'] ?? 'es' );
+    $name       = sanitize_text_field( $_POST['name'] ?? '' );
+    $company    = sanitize_text_field( $_POST['company'] ?? '' );
+    $email      = sanitize_email( $_POST['email'] ?? '' );
+    $phone      = sanitize_text_field( $_POST['phone'] ?? '' );
+    $services   = sanitize_text_field( $_POST['services'] ?? '' );
+    $scope      = sanitize_textarea_field( $_POST['scope'] ?? '' );
+    $consent    = ( $_POST['consent'] ?? '0' ) === '1' ? '1' : '0';
+    $page_url   = esc_url_raw( $_POST['page_url'] ?? home_url( '/' ) );
+    $page_title = sanitize_text_field( $_POST['page_title'] ?? 'UP Group Studio' );
+    $hutk       = sanitize_text_field( $_POST['hutk'] ?? '' );
+
+    // Require at least email or phone (or name/scope on WhatsApp click)
+    if ( empty( $email ) && empty( $phone ) && empty( $name ) ) {
+        wp_send_json_error( [ 'message' => 'Empty lead data' ] );
+    }
+
+    // 2. Find existing lead by `lead_token` (or recent partial with same email) so we update instead of duplicating
+    $existing_id = 0;
+    if ( ! empty( $lead_token ) ) {
+        $existing = get_posts( [
+            'post_type'      => 'up_lead',
+            'post_status'    => 'publish',
+            'posts_per_page' => 1,
+            'fields'         => 'ids',
+            'meta_query'     => [
+                [
+                    'key'   => '_up_lead_token',
+                    'value' => $lead_token,
+                ],
+            ],
+        ] );
+        if ( ! empty( $existing ) ) {
+            $existing_id = (int) $existing[0];
+        }
+    }
+
+    $display_name  = $name ?: ( $email ?: $phone );
+    $post_title    = $company ? "{$display_name} — {$company}" : $display_name;
+    $status_labels = [
+        'completed' => 'COMPLETADO (Formulario)',
+        'whatsapp'  => 'ENVIADO POR WHATSAPP',
+        'partial'   => 'PARCIAL / ABANDONADO',
+    ];
+    $status_label  = $status_labels[ $submission_type ];
+
+    if ( $existing_id > 0 ) {
+        // Never downgrade a 'completed' lead back to 'partial'
+        $prev_status = get_post_meta( $existing_id, '_up_lead_status', true );
+        if ( $prev_status === 'completed' && $submission_type === 'partial' ) {
+            $submission_type = 'completed';
+            $status_label    = $status_labels['completed'];
+        }
+        wp_update_post( [
+            'ID'         => $existing_id,
+            'post_title' => $post_title,
+        ] );
+        $lead_id = $existing_id;
+    } else {
+        $lead_id = wp_insert_post( [
+            'post_type'   => 'up_lead',
+            'post_status' => 'publish',
+            'post_title'  => $post_title,
+        ] );
+    }
+
+    if ( ! $lead_id || is_wp_error( $lead_id ) ) {
+        wp_send_json_error( [ 'message' => 'Could not save lead' ] );
+    }
+
+    // Save all metadata
+    update_post_meta( $lead_id, '_up_lead_token', $lead_token );
+    update_post_meta( $lead_id, '_up_lead_status', $submission_type );
+    update_post_meta( $lead_id, '_up_lead_lang', $lang );
+    update_post_meta( $lead_id, '_up_lead_name', $name );
+    update_post_meta( $lead_id, '_up_lead_company', $company );
+    update_post_meta( $lead_id, '_up_lead_email', $email );
+    update_post_meta( $lead_id, '_up_lead_phone', $phone );
+    update_post_meta( $lead_id, '_up_lead_services', $services );
+    update_post_meta( $lead_id, '_up_lead_scope', $scope );
+    update_post_meta( $lead_id, '_up_lead_consent', $consent );
+    update_post_meta( $lead_id, '_up_lead_page_url', $page_url );
+    update_post_meta( $lead_id, '_up_lead_updated_at', current_time( 'mysql' ) );
+
+    // 3. Send Email Notification on 'completed' or 'whatsapp' (only once per final submission)
+    $already_emailed = get_post_meta( $lead_id, '_up_lead_email_sent_' . $submission_type, true );
+    if ( in_array( $submission_type, [ 'completed', 'whatsapp' ], true ) && ! $already_emailed ) {
+        $notify_to = get_option( 'up_lead_notify_email', get_option( 'admin_email' ) );
+        if ( ! empty( $notify_to ) ) {
+            $subj_prefix = ( $submission_type === 'whatsapp' ) ? '💬 [Lead WhatsApp up.gt]' : '🚀 [Nuevo Proyecto up.gt]';
+            $subject     = "{$subj_prefix} {$post_title}";
+            $wa_clean    = preg_replace( '/\D+/', '', $phone );
+
+            $body  = '<div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;background:#09090B;color:#FFFFFF;border-radius:16px;overflow:hidden;border:1px solid #27272A;">';
+            $body .= '<div style="padding:24px 28px;background:linear-gradient(135deg,#EB5F69 0%,#F4A261 50%,#669ACA 100%);color:#FFFFFF;">';
+            $body .= '<div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;">UP GROUP STUDIO • LEAD NOTIFICATION</div>';
+            $body .= '<h2 style="margin:6px 0 0;font-size:22px;font-weight:800;">' . esc_html( $post_title ) . '</h2>';
+            $body .= '</div>';
+            $body .= '<div style="padding:26px 28px;background:#FFFFFF;color:#18181B;">';
+            $body .= '<p style="margin:0 0 16px;"><strong>Estado:</strong> ' . esc_html( $status_label ) . ' (' . strtoupper( esc_html( $lang ) ) . ')</p>';
+            $body .= '<table style="width:100%;border-collapse:collapse;font-size:14px;">';
+            $body .= '<tr><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;width:150px;"><strong>Nombre:</strong></td><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;">' . esc_html( $name ?: '—' ) . '</td></tr>';
+            $body .= '<tr><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;"><strong>Empresa / Marca:</strong></td><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;">' . esc_html( $company ?: '—' ) . '</td></tr>';
+            $body .= '<tr><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;"><strong>Email:</strong></td><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;">' . ( $email ? '<a href="mailto:' . esc_attr( $email ) . '">' . esc_html( $email ) . '</a>' : '—' ) . '</td></tr>';
+            $body .= '<tr><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;"><strong>WhatsApp / Tel:</strong></td><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;">' . esc_html( $phone ?: '—' ) . '</td></tr>';
+            $body .= '<tr><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;"><strong>Servicios:</strong></td><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;">' . esc_html( $services ?: '—' ) . '</td></tr>';
+            $body .= '<tr><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;"><strong>Resumen:</strong></td><td style="padding:8px 0;border-bottom:1px solid #E4E4E7;">' . nl2br( esc_html( $scope ?: '—' ) ) . '</td></tr>';
+            $body .= '<tr><td style="padding:8px 0;"><strong>Consentimiento:</strong></td><td style="padding:8px 0;">' . ( $consent === '1' ? '✓ Aceptó recibir correo/WhatsApp' : 'No marcado' ) . '</td></tr>';
+            $body .= '</table>';
+            if ( ! empty( $wa_clean ) ) {
+                $body .= '<div style="margin-top:22px;"><a href="https://wa.me/' . esc_attr( $wa_clean ) . '" style="display:inline-block;padding:12px 22px;background:#25D366;color:#051B0C;text-decoration:none;font-weight:800;border-radius:99px;font-size:13.5px;">Responder por WhatsApp</a></div>';
+            }
+            $body .= '</div></div>';
+
+            $headers = [ 'Content-Type: text/html; charset=UTF-8' ];
+            if ( ! empty( $email ) && is_email( $email ) ) {
+                $headers[] = 'Reply-To: ' . ( $name ? $name : $email ) . ' <' . $email . '>';
+            }
+
+            $sent = wp_mail( $notify_to, $subject, $body, $headers );
+            if ( $sent ) {
+                update_post_meta( $lead_id, '_up_lead_email_sent', 1 );
+                update_post_meta( $lead_id, '_up_lead_email_sent_' . $submission_type, 1 );
+            }
+        }
+    }
+
+    // 4. Sync with Google Sheets Webhook (both partial & completed/whatsapp — Apps Script updates row by lead_token)
+    $gs_webhook = get_option( 'up_lead_gsheets_webhook', '' );
+    if ( ! empty( $gs_webhook ) ) {
+        $gs_payload = [
+            'lead_id'         => $lead_id,
+            'lead_token'      => $lead_token,
+            'submission_type' => $submission_type,
+            'status_label'    => $status_label,
+            'lang'            => $lang,
+            'name'            => $name,
+            'company'         => $company,
+            'email'           => $email,
+            'phone'           => $phone,
+            'services'        => $services,
+            'scope'           => $scope,
+            'consent'         => $consent,
+            'page_url'        => $page_url,
+            'timestamp'       => current_time( 'mysql' ),
+        ];
+        $gs_res = wp_remote_post( $gs_webhook, [
+            'headers' => [ 'Content-Type' => 'application/json' ],
+            'body'    => wp_json_encode( $gs_payload ),
+            'timeout' => 5,
+        ] );
+        if ( ! is_wp_error( $gs_res ) ) {
+            update_post_meta( $lead_id, '_up_lead_gsheets_synced', 1 );
+        }
+    }
+
+    // 5. Sync with HubSpot (Forms API v3 or Contacts API v3) when email is valid
+    if ( ! empty( $email ) && is_email( $email ) && in_array( $submission_type, [ 'completed', 'whatsapp', 'partial' ], true ) ) {
+        $hs_portal_id = get_option( 'up_lead_hubspot_portal_id', '' );
+        $hs_form_guid = get_option( 'up_lead_hubspot_form_guid', '' );
+        $hs_token     = get_option( 'up_lead_hubspot_token', '' );
+
+        // Split name into firstname / lastname for HubSpot
+        $name_parts = preg_split( '/\s+/', trim( $name ), 2 );
+        $firstname  = $name_parts[0] ?? '';
+        $lastname   = $name_parts[1] ?? '';
+
+        // 5A: HubSpot Forms API v3
+        if ( ! empty( $hs_portal_id ) && ! empty( $hs_form_guid ) ) {
+            $hs_url    = "https://api.hsforms.com/submissions/v3/integration/submit/" . rawurlencode( $hs_portal_id ) . "/" . rawurlencode( $hs_form_guid );
+            $hs_fields = [
+                [ 'name' => 'email',     'value' => $email ],
+                [ 'name' => 'firstname', 'value' => $firstname ],
+                [ 'name' => 'lastname',  'value' => $lastname ],
+                [ 'name' => 'phone',     'value' => $phone ],
+                [ 'name' => 'company',   'value' => $company ],
+                [ 'name' => 'message',   'value' => "[{$status_label}] Servicios: {$services} | Resumen: {$scope}" ],
+            ];
+            $hs_context = [
+                'pageUri'  => $page_url,
+                'pageName' => $page_title,
+            ];
+            if ( ! empty( $hutk ) ) {
+                $hs_context['hutk'] = $hutk;
+            }
+            $hs_body = [
+                'fields'  => $hs_fields,
+                'context' => $hs_context,
+            ];
+            if ( $consent === '1' ) {
+                $hs_body['legalConsentOptions'] = [
+                    'consent' => [
+                        'consentToProcess' => true,
+                        'text'             => 'Acepto que UP Group Studio almacene mis datos y me contacte por correo electrónico o WhatsApp.',
+                    ],
+                ];
+            }
+            $hs_res = wp_remote_post( $hs_url, [
+                'headers' => [ 'Content-Type' => 'application/json' ],
+                'body'    => wp_json_encode( $hs_body ),
+                'timeout' => 5,
+            ] );
+            if ( ! is_wp_error( $hs_res ) && wp_remote_retrieve_response_code( $hs_res ) < 300 ) {
+                update_post_meta( $lead_id, '_up_lead_hubspot_synced', 1 );
+            }
+        }
+
+        // 5B: HubSpot Private App Token (Contacts API v3)
+        if ( ! empty( $hs_token ) ) {
+            $hs_api_res = wp_remote_post( 'https://api.hubapi.com/crm/v3/objects/contacts', [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $hs_token,
+                    'Content-Type'  => 'application/json',
+                ],
+                'body'    => wp_json_encode( [
+                    'properties' => [
+                        'email'      => $email,
+                        'firstname'  => $firstname,
+                        'lastname'   => $lastname,
+                        'phone'      => $phone,
+                        'company'    => $company,
+                        'lifecyclestage' => 'lead',
+                    ],
+                ] ),
+                'timeout' => 5,
+            ] );
+            if ( ! is_wp_error( $hs_api_res ) && in_array( wp_remote_retrieve_response_code( $hs_api_res ), [ 200, 201, 409 ], true ) ) {
+                update_post_meta( $lead_id, '_up_lead_hubspot_synced', 1 );
+            }
+        }
+    }
+
+    wp_send_json_success( [
+        'lead_id' => $lead_id,
+        'status'  => $submission_type,
+    ] );
+}
+
+
+
 

@@ -650,17 +650,30 @@
               <textarea id="projectScope" rows="2" placeholder="Ej. Buscamos rediseñar nuestro portal corporativo, mejorar tiempos de carga o lanzar tienda online..."></textarea>
             </div>
 
+            <!-- Anti-spam Honeypot (hidden from humans) -->
+            <div class="up-hp-wrap" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+              <input type="text" id="upWebsiteHp" name="up_website_hp" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Privacy & Email/WhatsApp Follow-up Consent Disclaimer -->
+            <div class="form-consent-row">
+              <label class="form-consent-label" for="clientConsent">
+                <input type="checkbox" id="clientConsent" name="client_consent" checked required>
+                <span data-i18n="form.consent">Acepto que <strong>UP Group Studio</strong> almacene mis datos y me envíe seguimiento por correo electrónico o WhatsApp respecto a mi solicitud. Cero spam.</span>
+              </label>
+            </div>
+
             <div class="project-form__actions">
               <button type="button" class="btn-form-wa" onclick="sendInquiryViaWhatsApp()">
                 <i class="fa-brands fa-whatsapp"></i>
                 <span data-i18n="form.btnSendWhatsApp">Enviar resumen por WhatsApp</span>
               </button>
-              <button type="submit" class="btn-form-email">
+              <button type="submit" id="btnSubmitInquiry" class="btn-form-email">
                 <i class="fa-regular fa-paper-plane"></i>
                 <span data-i18n="form.btnSendEmail">Enviar Solicitud</span>
               </button>
             </div>
-            <div id="formFeedback" class="form-feedback"></div>
+            <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
           </form>
         </div>
 

@@ -302,20 +302,27 @@
       "name": "section",
       "parent": 0,
       "children": [
-        "kb5be2",
-        "oae36f"
+        "oae36f",
+        "l510d9"
       ],
       "settings": {
         "_cssClasses": "case-intro-band",
         "_hidden": {
           "_cssClasses": "case-intro-band"
         },
+        "_attributes": [
+          {
+            "id": "kb5be2",
+            "name": "style",
+            "value": "background-color: {acf_project_band_bg};"
+          }
+        ],
         "_cssId": "caseIntroBand"
       },
       "label": "Colored Editorial Intro Band"
     },
     {
-      "id": "kb5be2",
+      "id": "oae36f",
       "name": "block",
       "parent": "kd1205",
       "children": [],
@@ -328,12 +335,12 @@
       "label": "Halftone Pattern Overlay"
     },
     {
-      "id": "oae36f",
+      "id": "l510d9",
       "name": "container",
       "parent": "kd1205",
       "children": [
-        "l510d9",
-        "m75392"
+        "a3c1b7",
+        "rd5825"
       ],
       "settings": {
         "_cssClasses": "container",
@@ -344,11 +351,11 @@
       "label": "Intro Band Container"
     },
     {
-      "id": "l510d9",
+      "id": "a3c1b7",
       "name": "block",
-      "parent": "oae36f",
+      "parent": "l510d9",
       "children": [
-        "a3c1b7"
+        "m75392"
       ],
       "settings": {
         "_cssClasses": "case-intro-band__top",
@@ -359,9 +366,9 @@
       "label": "Top Kicker Divider"
     },
     {
-      "id": "a3c1b7",
+      "id": "m75392",
       "name": "text-basic",
-      "parent": "l510d9",
+      "parent": "a3c1b7",
       "children": [],
       "settings": {
         "_cssClasses": "case-kicker-label",
@@ -374,12 +381,12 @@
       "label": "Kicker Text"
     },
     {
-      "id": "m75392",
+      "id": "rd5825",
       "name": "block",
-      "parent": "oae36f",
+      "parent": "l510d9",
       "children": [
-        "rd5825",
-        "vc0f33"
+        "vc0f33",
+        "n818e9"
       ],
       "settings": {
         "_cssClasses": "case-intro-band__Offset",
@@ -390,9 +397,9 @@
       "label": "Indented Editorial Content"
     },
     {
-      "id": "rd5825",
+      "id": "vc0f33",
       "name": "heading",
-      "parent": "m75392",
+      "parent": "rd5825",
       "children": [],
       "settings": {
         "_cssClasses": "case-headline",
@@ -405,14 +412,14 @@
       "label": "Case Study Headline"
     },
     {
-      "id": "vc0f33",
+      "id": "n818e9",
       "name": "block",
-      "parent": "m75392",
+      "parent": "rd5825",
       "children": [
-        "n818e9",
-        "k9e33a",
-        "b79ddd",
-        "fa9d37"
+        "na9ad5",
+        "e7c3ac",
+        "kb7ef0",
+        "ydd8ae"
       ],
       "settings": {
         "_cssClasses": "case-meta-grid",
@@ -423,12 +430,12 @@
       "label": "Case Metadata Row"
     },
     {
-      "id": "n818e9",
+      "id": "na9ad5",
       "name": "block",
-      "parent": "vc0f33",
+      "parent": "n818e9",
       "children": [
-        "na9ad5",
-        "ue94bb"
+        "ue94bb",
+        "k9e33a"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -439,9 +446,9 @@
       "label": "Meta Ubicación"
     },
     {
-      "id": "na9ad5",
+      "id": "ue94bb",
       "name": "text-basic",
-      "parent": "n818e9",
+      "parent": "na9ad5",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -454,9 +461,9 @@
       "label": "Ubicación"
     },
     {
-      "id": "ue94bb",
+      "id": "k9e33a",
       "name": "text-basic",
-      "parent": "n818e9",
+      "parent": "na9ad5",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -469,12 +476,12 @@
       "label": "{post_terms_project_location:plain}"
     },
     {
-      "id": "k9e33a",
+      "id": "e7c3ac",
       "name": "block",
-      "parent": "vc0f33",
+      "parent": "n818e9",
       "children": [
-        "e7c3ac",
-        "ud4dfd"
+        "ud4dfd",
+        "b79ddd"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -485,9 +492,9 @@
       "label": "Meta Cliente"
     },
     {
-      "id": "e7c3ac",
+      "id": "ud4dfd",
       "name": "text-basic",
-      "parent": "k9e33a",
+      "parent": "e7c3ac",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -500,9 +507,9 @@
       "label": "Cliente"
     },
     {
-      "id": "ud4dfd",
+      "id": "b79ddd",
       "name": "text-basic",
-      "parent": "k9e33a",
+      "parent": "e7c3ac",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -515,12 +522,12 @@
       "label": "{acf_project_client}"
     },
     {
-      "id": "b79ddd",
+      "id": "kb7ef0",
       "name": "block",
-      "parent": "vc0f33",
+      "parent": "n818e9",
       "children": [
-        "kb7ef0",
-        "deab0e"
+        "deab0e",
+        "fa9d37"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -531,9 +538,9 @@
       "label": "Meta Categorías"
     },
     {
-      "id": "kb7ef0",
+      "id": "deab0e",
       "name": "text-basic",
-      "parent": "b79ddd",
+      "parent": "kb7ef0",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -546,9 +553,9 @@
       "label": "Categorías"
     },
     {
-      "id": "deab0e",
+      "id": "fa9d37",
       "name": "text-basic",
-      "parent": "b79ddd",
+      "parent": "kb7ef0",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -561,12 +568,12 @@
       "label": "{post_terms_project_category:plain}"
     },
     {
-      "id": "fa9d37",
+      "id": "ydd8ae",
       "name": "block",
-      "parent": "vc0f33",
+      "parent": "n818e9",
       "children": [
-        "ydd8ae",
-        "c77dc6"
+        "c77dc6",
+        "jaee7d"
       ],
       "settings": {
         "_cssClasses": "case-meta-item",
@@ -577,9 +584,9 @@
       "label": "Meta Año"
     },
     {
-      "id": "ydd8ae",
+      "id": "c77dc6",
       "name": "text-basic",
-      "parent": "fa9d37",
+      "parent": "ydd8ae",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-label",
@@ -592,9 +599,9 @@
       "label": "Año"
     },
     {
-      "id": "c77dc6",
+      "id": "jaee7d",
       "name": "text-basic",
-      "parent": "fa9d37",
+      "parent": "ydd8ae",
       "children": [],
       "settings": {
         "_cssClasses": "case-meta-value",
@@ -607,11 +614,11 @@
       "label": "{acf_project_year}"
     },
     {
-      "id": "jaee7d",
+      "id": "u8d73e",
       "name": "section",
       "parent": 0,
       "children": [
-        "u8d73e"
+        "ubb432"
       ],
       "settings": {
         "_cssClasses": "case-light-canvas",
@@ -622,13 +629,13 @@
       "label": "Case Study Editorial Body"
     },
     {
-      "id": "u8d73e",
+      "id": "ubb432",
       "name": "container",
-      "parent": "jaee7d",
+      "parent": "u8d73e",
       "children": [
-        "ubb432",
         "kadd50",
-        "m82217"
+        "xf24b0",
+        "g2ef92"
       ],
       "settings": {
         "_cssClasses": "container",
@@ -639,9 +646,9 @@
       "label": "Case Body Container"
     },
     {
-      "id": "ubb432",
+      "id": "kadd50",
       "name": "shortcode",
-      "parent": "u8d73e",
+      "parent": "ubb432",
       "children": [],
       "settings": {
         "shortcode": "[up_case_hero_devices]"
@@ -649,14 +656,14 @@
       "label": "Auto-Scrolling Desktop & Mobile Frames"
     },
     {
-      "id": "kadd50",
+      "id": "xf24b0",
       "name": "block",
-      "parent": "u8d73e",
+      "parent": "ubb432",
       "children": [
-        "xf24b0",
         "abeb4d",
         "zd187b",
-        "bdf164"
+        "b4dbcf",
+        "s55499"
       ],
       "settings": {
         "_cssClasses": "case-editorial-col",
@@ -667,9 +674,9 @@
       "label": "Narrow Editorial Column"
     },
     {
-      "id": "xf24b0",
+      "id": "abeb4d",
       "name": "text-basic",
-      "parent": "kadd50",
+      "parent": "xf24b0",
       "children": [],
       "settings": {
         "_cssClasses": "case-lead-copy",
@@ -682,9 +689,9 @@
       "label": "Lead Overview Paragraph"
     },
     {
-      "id": "abeb4d",
+      "id": "zd187b",
       "name": "shortcode",
-      "parent": "kadd50",
+      "parent": "xf24b0",
       "children": [],
       "settings": {
         "shortcode": "[up_case_media_actions]"
@@ -692,14 +699,14 @@
       "label": "Optional Live Link & Video Player"
     },
     {
-      "id": "zd187b",
+      "id": "b4dbcf",
       "name": "block",
-      "parent": "kadd50",
+      "parent": "xf24b0",
       "children": [
-        "b4dbcf",
-        "ed979c",
-        "f38b2c",
-        "bbe19d"
+        "f69e68",
+        "e89170",
+        "qe9bd3",
+        "qaedeb"
       ],
       "settings": {
         "_cssClasses": "case-accordion",
@@ -710,12 +717,12 @@
       "label": "4-Row Case Accordion"
     },
     {
-      "id": "b4dbcf",
+      "id": "f69e68",
       "name": "block",
-      "parent": "zd187b",
+      "parent": "b4dbcf",
       "children": [
-        "f69e68",
-        "oe2aad"
+        "bda9da",
+        "r03201"
       ],
       "settings": {
         "_cssClasses": "case-acc-item open",
@@ -726,12 +733,12 @@
       "label": "El Reto (Challenge)"
     },
     {
-      "id": "f69e68",
+      "id": "bda9da",
       "name": "block",
-      "parent": "b4dbcf",
+      "parent": "f69e68",
       "children": [
-        "ac2f13",
-        "e3883c"
+        "e3883c",
+        "oe2aad"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -741,7 +748,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "bda9da",
+            "id": "ac2f13",
             "name": "aria-expanded",
             "value": "true"
           }
@@ -750,9 +757,9 @@
       "label": "Trigger El Reto (Challenge)"
     },
     {
-      "id": "ac2f13",
+      "id": "e3883c",
       "name": "text-basic",
-      "parent": "f69e68",
+      "parent": "bda9da",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -765,9 +772,9 @@
       "label": "El Reto (Challenge)"
     },
     {
-      "id": "e3883c",
+      "id": "oe2aad",
       "name": "icon",
-      "parent": "f69e68",
+      "parent": "bda9da",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -783,11 +790,11 @@
       "label": "Icon"
     },
     {
-      "id": "oe2aad",
+      "id": "r03201",
       "name": "block",
-      "parent": "b4dbcf",
+      "parent": "f69e68",
       "children": [
-        "r03201"
+        "ed979c"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -798,9 +805,9 @@
       "label": "Panel El Reto (Challenge)"
     },
     {
-      "id": "r03201",
+      "id": "ed979c",
       "name": "text-basic",
-      "parent": "oe2aad",
+      "parent": "r03201",
       "children": [],
       "settings": {
         "tag": "p",
@@ -809,12 +816,12 @@
       "label": "Panel Copy"
     },
     {
-      "id": "ed979c",
+      "id": "e89170",
       "name": "block",
-      "parent": "zd187b",
+      "parent": "b4dbcf",
       "children": [
-        "e89170",
-        "pf2e22"
+        "q966b1",
+        "dfa9ab"
       ],
       "settings": {
         "_cssClasses": "case-acc-item",
@@ -825,12 +832,12 @@
       "label": "Inspiración (Inspiration)"
     },
     {
-      "id": "e89170",
+      "id": "q966b1",
       "name": "block",
-      "parent": "ed979c",
+      "parent": "e89170",
       "children": [
-        "e61cd8",
-        "ifb51e"
+        "ifb51e",
+        "pf2e22"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -840,7 +847,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "q966b1",
+            "id": "e61cd8",
             "name": "aria-expanded",
             "value": "false"
           }
@@ -849,9 +856,9 @@
       "label": "Trigger Inspiración (Inspiration)"
     },
     {
-      "id": "e61cd8",
+      "id": "ifb51e",
       "name": "text-basic",
-      "parent": "e89170",
+      "parent": "q966b1",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -864,9 +871,9 @@
       "label": "Inspiración (Inspiration)"
     },
     {
-      "id": "ifb51e",
+      "id": "pf2e22",
       "name": "icon",
-      "parent": "e89170",
+      "parent": "q966b1",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -882,11 +889,11 @@
       "label": "Icon"
     },
     {
-      "id": "pf2e22",
+      "id": "dfa9ab",
       "name": "block",
-      "parent": "ed979c",
+      "parent": "e89170",
       "children": [
-        "dfa9ab"
+        "f38b2c"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -897,9 +904,9 @@
       "label": "Panel Inspiración (Inspiration)"
     },
     {
-      "id": "dfa9ab",
+      "id": "f38b2c",
       "name": "text-basic",
-      "parent": "pf2e22",
+      "parent": "dfa9ab",
       "children": [],
       "settings": {
         "tag": "p",
@@ -908,12 +915,12 @@
       "label": "Panel Copy"
     },
     {
-      "id": "f38b2c",
+      "id": "qe9bd3",
       "name": "block",
-      "parent": "zd187b",
+      "parent": "b4dbcf",
       "children": [
-        "qe9bd3",
-        "o1453a"
+        "gbce24",
+        "fce68a"
       ],
       "settings": {
         "_cssClasses": "case-acc-item",
@@ -924,12 +931,12 @@
       "label": "La Solución (Idea)"
     },
     {
-      "id": "qe9bd3",
+      "id": "gbce24",
       "name": "block",
-      "parent": "f38b2c",
+      "parent": "qe9bd3",
       "children": [
-        "ua33e0",
-        "fa6717"
+        "fa6717",
+        "o1453a"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -939,7 +946,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "gbce24",
+            "id": "ua33e0",
             "name": "aria-expanded",
             "value": "false"
           }
@@ -948,9 +955,9 @@
       "label": "Trigger La Solución (Idea)"
     },
     {
-      "id": "ua33e0",
+      "id": "fa6717",
       "name": "text-basic",
-      "parent": "qe9bd3",
+      "parent": "gbce24",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -963,9 +970,9 @@
       "label": "La Solución (Idea)"
     },
     {
-      "id": "fa6717",
+      "id": "o1453a",
       "name": "icon",
-      "parent": "qe9bd3",
+      "parent": "gbce24",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -981,11 +988,11 @@
       "label": "Icon"
     },
     {
-      "id": "o1453a",
+      "id": "fce68a",
       "name": "block",
-      "parent": "f38b2c",
+      "parent": "qe9bd3",
       "children": [
-        "fce68a"
+        "bbe19d"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -996,9 +1003,9 @@
       "label": "Panel La Solución (Idea)"
     },
     {
-      "id": "fce68a",
+      "id": "bbe19d",
       "name": "text-basic",
-      "parent": "o1453a",
+      "parent": "fce68a",
       "children": [],
       "settings": {
         "tag": "p",
@@ -1007,12 +1014,12 @@
       "label": "Panel Copy"
     },
     {
-      "id": "bbe19d",
+      "id": "qaedeb",
       "name": "block",
-      "parent": "zd187b",
+      "parent": "b4dbcf",
       "children": [
-        "qaedeb",
-        "n5c220"
+        "vd4d55",
+        "l7c88c"
       ],
       "settings": {
         "_cssClasses": "case-acc-item",
@@ -1023,12 +1030,12 @@
       "label": "Impacto (Growth)"
     },
     {
-      "id": "qaedeb",
+      "id": "vd4d55",
       "name": "block",
-      "parent": "bbe19d",
+      "parent": "qaedeb",
       "children": [
-        "b168e3",
-        "gb915d"
+        "gb915d",
+        "n5c220"
       ],
       "settings": {
         "_cssClasses": "case-acc-trigger",
@@ -1038,7 +1045,7 @@
         "tag": "button",
         "_attributes": [
           {
-            "id": "vd4d55",
+            "id": "b168e3",
             "name": "aria-expanded",
             "value": "false"
           }
@@ -1047,9 +1054,9 @@
       "label": "Trigger Impacto (Growth)"
     },
     {
-      "id": "b168e3",
+      "id": "gb915d",
       "name": "text-basic",
-      "parent": "qaedeb",
+      "parent": "vd4d55",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-title",
@@ -1062,9 +1069,9 @@
       "label": "Impacto (Growth)"
     },
     {
-      "id": "gb915d",
+      "id": "n5c220",
       "name": "icon",
-      "parent": "qaedeb",
+      "parent": "vd4d55",
       "children": [],
       "settings": {
         "_cssClasses": "case-acc-icon",
@@ -1080,11 +1087,11 @@
       "label": "Icon"
     },
     {
-      "id": "n5c220",
+      "id": "l7c88c",
       "name": "block",
-      "parent": "bbe19d",
+      "parent": "qaedeb",
       "children": [
-        "l7c88c"
+        "bdf164"
       ],
       "settings": {
         "_cssClasses": "case-acc-panel",
@@ -1095,9 +1102,9 @@
       "label": "Panel Impacto (Growth)"
     },
     {
-      "id": "l7c88c",
+      "id": "bdf164",
       "name": "text-basic",
-      "parent": "n5c220",
+      "parent": "l7c88c",
       "children": [],
       "settings": {
         "tag": "p",
@@ -1106,11 +1113,11 @@
       "label": "Panel Copy"
     },
     {
-      "id": "bdf164",
+      "id": "s55499",
       "name": "block",
-      "parent": "kadd50",
+      "parent": "xf24b0",
       "children": [
-        "s55499"
+        "r13024"
       ],
       "settings": {
         "_cssClasses": "case-metrics-block",
@@ -1121,13 +1128,13 @@
       "label": "Impact Metrics Strip"
     },
     {
-      "id": "s55499",
+      "id": "r13024",
       "name": "block",
-      "parent": "bdf164",
+      "parent": "s55499",
       "children": [
-        "r13024",
-        "g816b2",
-        "j109d0"
+        "r00cb1",
+        "kea766",
+        "db39c5"
       ],
       "settings": {
         "_cssClasses": "case-metrics-grid",
@@ -1138,12 +1145,12 @@
       "label": "Metrics 3-Column Grid"
     },
     {
-      "id": "r13024",
+      "id": "r00cb1",
       "name": "block",
-      "parent": "s55499",
+      "parent": "r13024",
       "children": [
-        "r00cb1",
-        "g992ec"
+        "g992ec",
+        "g816b2"
       ],
       "settings": {
         "_cssClasses": "case-metric-card",
@@ -1154,9 +1161,9 @@
       "label": "Metric {acf_project_metric_1_val}"
     },
     {
-      "id": "r00cb1",
+      "id": "g992ec",
       "name": "text-basic",
-      "parent": "r13024",
+      "parent": "r00cb1",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-number",
@@ -1169,9 +1176,9 @@
       "label": "{acf_project_metric_1_val}"
     },
     {
-      "id": "g992ec",
+      "id": "g816b2",
       "name": "text-basic",
-      "parent": "r13024",
+      "parent": "r00cb1",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-label",
@@ -1184,12 +1191,12 @@
       "label": "{acf_project_metric_1_label}"
     },
     {
-      "id": "g816b2",
+      "id": "kea766",
       "name": "block",
-      "parent": "s55499",
+      "parent": "r13024",
       "children": [
-        "kea766",
-        "o14801"
+        "o14801",
+        "j109d0"
       ],
       "settings": {
         "_cssClasses": "case-metric-card",
@@ -1200,9 +1207,9 @@
       "label": "Metric {acf_project_metric_2_val}"
     },
     {
-      "id": "kea766",
+      "id": "o14801",
       "name": "text-basic",
-      "parent": "g816b2",
+      "parent": "kea766",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-number",
@@ -1215,9 +1222,9 @@
       "label": "{acf_project_metric_2_val}"
     },
     {
-      "id": "o14801",
+      "id": "j109d0",
       "name": "text-basic",
-      "parent": "g816b2",
+      "parent": "kea766",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-label",
@@ -1230,12 +1237,12 @@
       "label": "{acf_project_metric_2_label}"
     },
     {
-      "id": "j109d0",
+      "id": "db39c5",
       "name": "block",
-      "parent": "s55499",
+      "parent": "r13024",
       "children": [
-        "db39c5",
-        "c54e28"
+        "c54e28",
+        "m82217"
       ],
       "settings": {
         "_cssClasses": "case-metric-card",
@@ -1246,9 +1253,9 @@
       "label": "Metric {acf_project_metric_3_val}"
     },
     {
-      "id": "db39c5",
+      "id": "c54e28",
       "name": "text-basic",
-      "parent": "j109d0",
+      "parent": "db39c5",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-number",
@@ -1261,9 +1268,9 @@
       "label": "{acf_project_metric_3_val}"
     },
     {
-      "id": "c54e28",
+      "id": "m82217",
       "name": "text-basic",
-      "parent": "j109d0",
+      "parent": "db39c5",
       "children": [],
       "settings": {
         "_cssClasses": "case-metric-label",
@@ -1276,12 +1283,12 @@
       "label": "{acf_project_metric_3_label}"
     },
     {
-      "id": "m82217",
+      "id": "g2ef92",
       "name": "block",
-      "parent": "u8d73e",
+      "parent": "ubb432",
       "children": [
-        "g2ef92",
-        "d174dd"
+        "s50e35",
+        "r1e839"
       ],
       "settings": {
         "_cssClasses": "case-keep-reading",
@@ -1292,9 +1299,9 @@
       "label": "Keep Reading Section"
     },
     {
-      "id": "g2ef92",
+      "id": "s50e35",
       "name": "heading",
-      "parent": "m82217",
+      "parent": "g2ef92",
       "children": [],
       "settings": {
         "_cssClasses": "case-keep-reading__heading",
@@ -1305,7 +1312,7 @@
         "text": "Seguir explorando",
         "_attributes": [
           {
-            "id": "s50e35",
+            "id": "d174dd",
             "name": "data-i18n",
             "value": "case.keepReading"
           }
@@ -1314,11 +1321,11 @@
       "label": "Seguir explorando"
     },
     {
-      "id": "d174dd",
+      "id": "r1e839",
       "name": "block",
-      "parent": "m82217",
+      "parent": "g2ef92",
       "children": [
-        "r1e839"
+        "w4e6e2"
       ],
       "settings": {
         "_cssClasses": "case-related-grid",
@@ -1329,13 +1336,13 @@
       "label": "Related 2-Column Grid"
     },
     {
-      "id": "r1e839",
+      "id": "w4e6e2",
       "name": "block",
-      "parent": "d174dd",
+      "parent": "r1e839",
       "children": [
-        "w4e6e2",
-        "fbb52a",
-        "f0b52e"
+        "y6bdcf",
+        "f0b52e",
+        "gfd083"
       ],
       "settings": {
         "_cssClasses": "related-case-card",
@@ -1355,11 +1362,11 @@
       "label": "Related Project (Query Loop)"
     },
     {
-      "id": "w4e6e2",
+      "id": "y6bdcf",
       "name": "block",
-      "parent": "r1e839",
+      "parent": "w4e6e2",
       "children": [
-        "y6bdcf"
+        "lce9a5"
       ],
       "settings": {
         "_cssClasses": "related-case-card__thumb bento-card--blue",
@@ -1375,12 +1382,12 @@
       "label": "Related Thumbnail"
     },
     {
-      "id": "y6bdcf",
+      "id": "lce9a5",
       "name": "block",
-      "parent": "w4e6e2",
+      "parent": "y6bdcf",
       "children": [
-        "lce9a5",
-        "e432ef"
+        "e432ef",
+        "fbb52a"
       ],
       "settings": {
         "_cssClasses": "related-case-card__emblem",
@@ -1391,9 +1398,9 @@
       "label": "Related Emblem"
     },
     {
-      "id": "lce9a5",
+      "id": "e432ef",
       "name": "text-basic",
-      "parent": "y6bdcf",
+      "parent": "lce9a5",
       "children": [],
       "settings": {
         "tag": "span",
@@ -1402,9 +1409,9 @@
       "label": "Post Title"
     },
     {
-      "id": "e432ef",
+      "id": "fbb52a",
       "name": "text-basic",
-      "parent": "y6bdcf",
+      "parent": "lce9a5",
       "children": [],
       "settings": {
         "tag": "small",
@@ -1413,9 +1420,9 @@
       "label": "Case Study Label"
     },
     {
-      "id": "fbb52a",
+      "id": "f0b52e",
       "name": "heading",
-      "parent": "r1e839",
+      "parent": "w4e6e2",
       "children": [],
       "settings": {
         "_cssClasses": "related-case-card__title",
@@ -1432,9 +1439,9 @@
       "label": "Related Title"
     },
     {
-      "id": "f0b52e",
+      "id": "gfd083",
       "name": "text-basic",
-      "parent": "r1e839",
+      "parent": "w4e6e2",
       "children": [],
       "settings": {
         "_cssClasses": "related-case-card__desc",
