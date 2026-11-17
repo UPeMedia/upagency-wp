@@ -107,9 +107,11 @@ Fluent in English and native Spanish, aligned with U.S. business hours for seaml
 - **HighLevel (GoHighLevel) Certification** *(2024)*
 
 ### Historial Laboral Clave
-1. **VML — Frontend Developer** *(Junio 2025 – Presente | Guatemala)*
-   - Soluciones web enterprise con Adobe Experience Manager (AEM), HTL, SCSS, JavaScript, TypeScript, Vue.js y React.js.
-   - Desarrollo accesible (WCAG/A11y) en equipos ágiles remotos (SCRUM, Jira, Git/Bitbucket/GitHub).
+1. **VML — Frontend Developer & Component Architect (Global Automotive OEM / Mazda USA — Anonymized on public Upwork portfolio)** *(Junio 2025 – Presente | Guatemala)*
+   - Desarrollo e implementación de componentes escalables y herramientas interactivas sobre **Adobe Experience Manager (AEM)** para plataforma web automotriz de EE. UU.
+   - Módulos clave construidos para la experiencia de compra y navegación: **Compare Trims & Specs**, **Estimated Pricing**, **Timeline Carousel** y **menús responsivos**.
+   - Creación de utilidades CSS dentro del **Design System en Storybook**.
+   - Enfoque en rendimiento web, arquitectura limpia (`JavaScript`, `HTML/HTL`, `SCSS`, `TypeScript`, `Vue.js/React`), accesibilidad (**WCAG 2.1 AA**) y aseguramiento de calidad mediante **Pull Request (PR) code reviews** constantes en equipos ágiles (SCRUM/Jira).
 2. **UP Agency (`UP Group Studio`) — Solutions Man / Founder** *(Mayo 2008 – Presente | Guatemala & Houston, TX)*
    - +50 sitios web a medida, landing pages de tráfico pagado y embudos de conversión en EE. UU. y Latinoamérica (`90%` retención de clientes).
    - Integraciones de captura y atribución end-to-end: WordPress + HubSpot, Salesforce, HighLevel, Zapier, Meta CAPI, GA4, GTM, Google Ads, Cloudbeds y Experience-Hotel.
